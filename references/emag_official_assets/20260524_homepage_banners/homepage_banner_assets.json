@@ -1,0 +1,36 @@
+{
+  "allCount": 52,
+  "candidates": [
+    {
+      "alt": "image",
+      "className": "widget-newsletter-bg d-none d-md-block",
+      "index": 42,
+      "left": 236,
+      "naturalHeight": 530,
+      "naturalWidth": 707,
+      "parentHref": "",
+      "parentText": "Abonează-te la newsletter și află cu prioritate despre reducerile și ofertele exclusive din eMAG\n        \n\n        \n            Vei primi un email în care te rugăm să confirmi abonarea.\n        \n\n    ",
+      "renderedHeight": 330,
+      "renderedWidth": 440,
+      "src": "https://s13emagst.akamaized.net/layout/ro/static-upload/widget-subscribe-left-side-homepage2.png",
+      "top": 12598
+    },
+    {
+      "alt": "image",
+      "className": "widget-newsletter-bg d-md-none",
+      "index": 43,
+      "left": 0,
+      "naturalHeight": 530,
+      "naturalWidth": 707,
+      "parentHref": "",
+      "parentText": "Abonează-te la newsletter și află cu prioritate despre reducerile și ofertele exclusive din eMAG\n        \n\n        \n            Vei primi un email în care te rugăm să confirmi abonarea.\n        \n\n    ",
+      "renderedHeight": 0,
+      "renderedWidth": 0,
+      "src": "https://s13emagst.akamaized.net/layout/ro/static-upload/widget-subscribe-left-side-homepage2-mobile.png",
+      "top": 0
+    }
+  ],
+  "title": "eMAG.ro - Căutarea nu se oprește niciodată",
+  "url": "https://www.emag.ro/?captcha_status=ok",
+  "capturedAt": "2026-05-24T08:26:51.067Z"
+}

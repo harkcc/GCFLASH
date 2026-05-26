@@ -1,0 +1,90 @@
+{
+  "capturedAt": "2026-05-24T08:00:00Z",
+  "dimensions": [
+    {
+      "url": "https://s13emagst.akamaized.net/layout/ro/images/db//139/208099.jpg",
+      "naturalWidth": 420,
+      "naturalHeight": 480,
+      "bytes": 29263,
+      "format": "JPEG",
+      "ok": true
+    },
+    {
+      "url": "https://s13emagst.akamaized.net/layout/ro/images/db//139/208089.jpg",
+      "naturalWidth": 420,
+      "naturalHeight": 480,
+      "bytes": 38007,
+      "format": "JPEG",
+      "ok": true
+    },
+    {
+      "url": "https://s13emagst.akamaized.net/layout/ro/images/db//136/203792.jpg",
+      "naturalWidth": 420,
+      "naturalHeight": 480,
+      "bytes": 44695,
+      "format": "JPEG",
+      "ok": true
+    },
+    {
+      "url": "https://s13emagst.akamaized.net/layout/ro/images/db//139/207800.jpg",
+      "naturalWidth": 420,
+      "naturalHeight": 480,
+      "bytes": 38560,
+      "format": "JPEG",
+      "ok": true
+    },
+    {
+      "url": "https://s13emagst.akamaized.net/layout/ro/images/db//139/207797.jpg",
+      "naturalWidth": 420,
+      "naturalHeight": 480,
+      "bytes": 32167,
+      "format": "JPEG",
+      "ok": true
+    },
+    {
+      "url": "https://s13emagst.akamaized.net/layout/ro/images/db//138/207314.jpg",
+      "ok": false,
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    },
+    {
+      "url": "https://s13emagst.akamaized.net/layout/ro/images/db//139/208091.jpg",
+      "naturalWidth": 420,
+      "naturalHeight": 480,
+      "bytes": 31489,
+      "format": "JPEG",
+      "ok": true
+    },
+    {
+      "url": "https://s13emagst.akamaized.net/layout/ro/images/db//139/208125.jpg",
+      "naturalWidth": 420,
+      "naturalHeight": 480,
+      "bytes": 52369,
+      "format": "JPEG",
+      "ok": true
+    },
+    {
+      "url": "https://s13emagst.akamaized.net/layout/ro/images/db//139/208117.jpg",
+      "naturalWidth": 420,
+      "naturalHeight": 480,
+      "bytes": 45112,
+      "format": "JPEG",
+      "ok": true
+    },
+    {
+      "url": "https://s13emagst.akamaized.net/layout/ro/images/db//139/208093.jpg",
+      "naturalWidth": 420,
+      "naturalHeight": 480,
+      "bytes": 23980,
+      "format": "JPEG",
+      "ok": true
+    },
+    {
+      "url": "https://s13emagst.akamaized.net/layout/ro/images/db//130/195535.jpeg",
+      "naturalWidth": 1200,
+      "naturalHeight": 225,
+      "bytes": 73804,
+      "format": "JPEG",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "id": "default_scale_validation_pack",
+  "name": "Default marketplace validation style pack",
+  "purpose": "A neutral style system for validating template mechanics before user brand assets arrive.",
+  "font_system": {
+    "primary": "Arial",
+    "display": "Arial Bold",
+    "number": "Arial Bold",
+    "fallback": "Helvetica Neue",
+    "rules": [
+      "Use one display headline per card.",
+      "Use short labels with 3-7 words whenever possible.",
+      "Use tabular-feeling bold numerals for specs such as PSI, count, size, or quantity.",
+      "Avoid thin text over image details.",
+      "Mobile preview must remain readable at 360px width."
+    ]
+  },
+  "marketplace_profiles": {
+    "amazon": {
+      "canvas": {
+        "width": 1600,
+        "height": 1600,
+        "safe_margin": 96
+      },
+      "palette": {
+        "background": "#F7F9FC",
+        "surface": "#FFFFFF",
+        "ink": "#132238",
+        "muted": "#667085",
+        "accent": "#2F6FEA",
+        "accent_2": "#F5B400",
+        "danger": "#E45C67"
+      },
+      "frame": {
+        "radius": 30,
+        "stroke": "#DCE5F2",
+        "shadow": "#D7DFEA"
+      }
+    },
+    "ozon_wb": {
+      "canvas": {
+        "width": 1200,
+        "height": 1600,
+        "safe_margin": 72
+      },
+      "palette": {
+        "background": "#101820",
+        "surface": "#FFFFFF",
+        "ink": "#101820",
+        "muted": "#D0D7E2",
+        "accent": "#0EA5E9",
+        "accent_2": "#FACC15",
+        "danger": "#F43F5E"
+      },
+      "frame": {
+        "radius": 34,
+        "stroke": "#223041",
+        "shadow": "#07111D"
+      }
+    },
+    "qa": {
+      "canvas": {
+        "width": 1600,
+        "height": 1200,
+        "safe_margin": 80
+      },
+      "palette": {
+        "background": "#F4F7FB",
+        "surface": "#FFFFFF",
+        "ink": "#172033",
+        "muted": "#667085",
+        "accent": "#16A34A",
+        "accent_2": "#7C3AED",
+        "danger": "#DC2626"
+      },
+      "frame": {
+        "radius": 26,
+        "stroke": "#D6DEE9",
+        "shadow": "#D7DFEA"
+      }
+    }
+  },
+  "badge_system": {
+    "shape": "rounded pill or compact rounded square",
+    "stroke_width": 3,
+    "icon_policy": "simple symbolic marks only; no invented certification icons",
+    "max_badges_per_image": 4
+  },
+  "text_density_profiles": {
+    "low": {
+      "max_text_groups": 1,
+      "mobile_min_font_px": 42
+    },
+    "medium": {
+      "max_text_groups": 3,
+      "mobile_min_font_px": 34
+    },
+    "high": {
+      "max_text_groups": 5,
+      "mobile_min_font_px": 30
+    }
+  }
+}

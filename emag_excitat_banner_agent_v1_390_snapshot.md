@@ -1,0 +1,21 @@
+- generic [ref=e2] [box=0,22,390,1457]:
+  - heading "EXCITAT Banner + HTML Agent Stable Route v1" [level=2] [ref=e3] [box=8,22,374,53]
+  - paragraph [ref=e4] [box=8,89,374,150]:
+    - img "EXCITAT product scene banner" [ref=e5] [box=8,89,374,150]
+  - paragraph [ref=e6] [box=8,258,374,71]: Fluxul incepe cu scena produsului, apoi trece in dovada vizuala, Q&A, review preview si brand module. Fiecare modul are ruta si validator separat.
+  - paragraph [ref=e7] [box=8,353,374,141]:
+    - img "cropped product proof banner" [ref=e8] [box=8,353,374,141]
+  - paragraph [ref=e9] [box=8,514,374,154]:
+    - img "QA stable banner" [ref=e10] [box=8,514,374,154]
+  - heading "Review / feedback template" [level=2] [ref=e11] [box=8,698,374,26]
+  - paragraph [ref=e12] [box=8,739,374,164]:
+    - img "review feedback preview banner" [ref=e13] [box=8,739,374,164]
+  - generic [ref=e14] [box=8,923,374,107]:
+    - strong [ref=e15] [box=36,944,38,17]: "Nota:"
+    - text: feedback-ul este template vizual. In productie se inlocuieste cu review-uri reale, sursa, data si rating verificabil.
+  - heading "Motion route" [level=2] [ref=e16] [box=8,1060,374,26]
+  - paragraph [ref=e17] [box=8,1100,374,171]:
+    - img "step highlight GIF" [ref=e18] [box=8,1100,374,171]
+  - heading "Brand / category fixed banner" [level=2] [ref=e19] [box=8,1301,374,26]
+  - paragraph [ref=e20] [box=8,1341,374,138]:
+    - img "EXCITAT fixed brand category banner GIF" [ref=e21] [box=8,1341,374,138]

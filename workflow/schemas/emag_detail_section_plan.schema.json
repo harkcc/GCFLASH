@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "emag_detail_section_plan.schema.json",
+  "title": "eMAG Detail Section Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "product_id",
+    "template_families",
+    "sections"
+  ],
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "template_families": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "minimal_clean",
+          "dense_feature",
+          "spec_first",
+          "conversion_modular",
+          "premium_dark_brand",
+          "faq_objection"
+        ]
+      }
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "section_id",
+          "section_type",
+          "buyer_question",
+          "title",
+          "body_points",
+          "proof_mode",
+          "compliance_notes"
+        ],
+        "properties": {
+          "section_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "section_type": {
+            "type": "string",
+            "enum": [
+              "hero",
+              "benefit",
+              "feature_proof",
+              "scenario",
+              "specs",
+              "compatibility",
+              "package_contents",
+              "safety_or_usage",
+              "brand_proof",
+              "social_proof",
+              "faq",
+              "closing"
+            ]
+          },
+          "module_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "buyer_question": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "body_points": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "proof_mode": {
+            "type": "string",
+            "minLength": 1
+          },
+          "image_slot": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "compliance_notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

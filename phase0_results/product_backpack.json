@@ -1,0 +1,81 @@
+{
+  "sku": "TAYGEER-TB-PINK",
+  "brand": "Taygeer",
+  "product_name": "Travel Backpack for Women — Carry-On Weekender",
+  "product_name_cn": "女士旅行双肩背包（登机通勤+多场景）",
+  "category": "Travel Accessories / Women's Backpacks",
+  "category_code": "travel_accessory_backpack_women",
+  "source_listing": "https://www.amazon.com/dp/B09MQWWP87",
+
+  "specifications": {
+    "laptop_compartment": "15.6 inch",
+    "capacity_liters_est": 35,
+    "dimensions_inch": "17.7 x 12.2 x 8.7",
+    "weight_lb_est": 1.9,
+    "material": "Water-resistant Oxford fabric",
+    "colors": ["Pink (main)", "Black", "Gray", "Navy"],
+    "tsa_approved": true,
+    "features": [
+      "15.6\" laptop compartment",
+      "Side water bottle pocket",
+      "Shoe pouch (separated)",
+      "USB charging port",
+      "Luggage strap (slips over roller handle)",
+      "Anti-theft back pocket"
+    ]
+  },
+
+  "key_features": [
+    "TSA 登机尺寸认证 — 随身行李不用托运",
+    "15.6 寸笔记本隔层 — 商务通勤兼顾",
+    "独立鞋袋 — 健身/出差鞋与衣物分区",
+    "侧置水瓶袋 — 旅途取水不脱包",
+    "USB 充电外接口 — 移动电源走线不乱",
+    "箱带插扣 — 套在行李箱拉杆上省力",
+    "防泼水牛津布 — 雨天不慌",
+    "防盗后置隐蔽袋 — 钱包护照分区"
+  ],
+
+  "target_audience": [
+    "25-40 岁职场女性",
+    "护士、医护工作者（12 小时班次需求）",
+    "周末短途旅行女性（Weekender）",
+    "女性商务差旅用户",
+    "健身通勤女性（需鞋袋）",
+    "喜欢一包多用的极简主义者"
+  ],
+
+  "pain_points_solved": [
+    "普通背包没有鞋袋，脏鞋和衣服混在一起",
+    "旅行包太大不能登机，要托运还要等行李",
+    "商务包装不下笔记本或防震不够",
+    "背包没水瓶袋，水瓶只能塞主仓挤压物品",
+    "健身后没有地方放汗湿衣服",
+    "拉杆箱 + 背包两手不够用（需要背包插在行李箱上）",
+    "地铁/机场被偷钱包（前置口袋不够安全）"
+  ],
+
+  "unique_selling_points": [
+    "1 个包覆盖通勤+差旅+健身+旅行 4 场景",
+    "女性定位设计（容量、肩带宽度、色彩针对女性）",
+    "独立鞋袋在这个价位少见",
+    "TSA 登机尺寸严格合规"
+  ],
+
+  "competitors_amazon": [
+    "MATEIN Travel Laptop Backpack",
+    "Kroser Anti-Theft Travel Backpack",
+    "Kaka Travel Backpack",
+    "Della Gao Laptop Backpack for Women"
+  ],
+
+  "price_range_usd": "$30-45",
+
+  "brand_visual_identity": {
+    "primary_color": "#E8A5B8 (dusty pink)",
+    "secondary_color": "#FFF3E7 (cream)",
+    "accent_color": "#B8860B (soft gold)",
+    "logo_style": "Minimalist feminine script",
+    "tone": "Soft, confident, modern female traveler"
+  }
+}

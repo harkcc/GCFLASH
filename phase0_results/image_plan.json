@@ -1,0 +1,86 @@
+[
+  {
+    "image_number": 1,
+    "image_type": "hero",
+    "psychological_hook": "What is this? It looks premium and powerful.",
+    "headline_text": "Sound Meets Light",
+    "subtext": "40W Bluetooth Lantern Speaker with RGB Glow",
+    "prompt_flux": "Professional product photography of a cylindrical portable bluetooth lantern speaker, matte black body with brushed metal accents, glowing with vibrant rainbow RGB LED light emanating from the top diffuser, placed on a dark slate surface, dramatic low-key lighting from the side, the RGB glow illuminates surrounding mist/fog creating colorful light rays, shot with Sony A7R IV, 85mm f/1.4 lens, shallow depth of field, dark moody background fading to black, product centered in frame with slight upward angle, hyper-realistic material rendering showing metal texture and soft-touch rubber grip, cinematic color grading with deep blacks and vivid RGB highlights, 8K resolution, commercial product photography quality",
+    "prompt_ideogram": "Professional product photo of a premium bluetooth lantern speaker with rainbow RGB LED glow on dark background. Bold white text \"SOUND MEETS LIGHT\" at top, smaller text \"40W Bluetooth Lantern Speaker\" below. Dark moody atmosphere with colorful light rays emanating from the speaker's LED diffuser. Cinematic product photography, 8K quality, dramatic side lighting, mist effects. The text should be clean, modern sans-serif font integrated with the lighting effects.",
+    "prompt_qwen": "A premium bluetooth lantern speaker product photo, dark background, RGB rainbow LED glow from the top diffuser creating colorful light rays in misty atmosphere. Bold white title 'SOUND MEETS LIGHT' elegantly placed at top. Professional commercial photography, 85mm lens, shallow depth of field, cinematic lighting, 8K resolution.",
+    "negative_prompt": "blurry, low quality, overexposed, cluttered background, cheap looking, cartoon, illustration, watermark, text artifacts, deformed product",
+    "style_notes": "This is the hero shot. Maximum visual impact. The RGB glow is the star — it should light up the surrounding atmosphere. Dark/moody background makes the product pop. No humans in this shot."
+  },
+  {
+    "image_number": 2,
+    "image_type": "lifestyle",
+    "psychological_hook": "I can totally see myself using this at my next party.",
+    "headline_text": "Life of the Party",
+    "subtext": "Turn any gathering into an unforgettable experience",
+    "prompt_flux": "A group of diverse young adults in their late 20s enjoying an evening backyard garden party, string lights overhead, a cylindrical black bluetooth lantern speaker with vivid RGB purple and blue LED glow sits on a wooden patio table in the foreground, people are laughing and socializing in the warm background bokeh, twilight sky with deep blue and orange gradient, warm ambient lighting mixed with the cool RGB speaker glow, shot at 35mm f/2.0 on full frame, natural candid composition with the speaker at lower-right third, warm skin tones, summer evening atmosphere, photojournalistic style, 4K quality",
+    "prompt_ideogram": "Evening backyard party scene with friends socializing around a glowing RGB bluetooth lantern speaker on a wooden table. Bold white text \"LIFE OF THE PARTY\" overlaid at top, smaller text \"Turn any gathering into an unforgettable experience\" below. Twilight sky, string lights, warm ambient glow mixed with vivid purple-blue RGB light from the speaker. Natural candid photography style, 35mm lens, warm tones, 4K quality.",
+    "prompt_qwen": "Backyard evening party, young friends laughing around a wooden table with a glowing RGB bluetooth lantern speaker. Twilight sky, string lights, warm atmosphere. White bold title 'LIFE OF THE PARTY' at top. Natural photography, 35mm lens, warm color grading, 4K.",
+    "negative_prompt": "artificial looking people, stiff poses, studio lighting, daytime, indoor, empty scene, no people, ugly faces, distorted hands",
+    "style_notes": "Lifestyle shot — natural, aspirational, warm. The speaker should be clearly visible but not dominating the frame. People are the emotional hook. Evening/twilight lighting creates atmosphere."
+  },
+  {
+    "image_number": 3,
+    "image_type": "benefit",
+    "psychological_hook": "Wow, 40 watts is seriously loud — and the light syncs to music!",
+    "headline_text": "40W Dual-Driver Power",
+    "subtext": "Room-filling stereo sound with beat-synced RGB lighting",
+    "prompt_flux": "Dynamic close-up product shot of a black bluetooth lantern speaker with visible sound waves and bass vibrations radiating outward from dual speaker drivers, RGB LED on top cycling through red-orange-yellow spectrum synced to an invisible beat, the speaker sits on a reflective dark surface creating mirror effect, dramatic rim lighting from behind highlighting the speaker grille texture, visible air distortion around the drivers suggesting powerful bass, dark gradient background, shot with macro lens perspective 50mm f/2.8, ultra-sharp detail on the speaker mesh and driver cones, energy and movement conveyed through light trails, commercial product photography, 8K",
+    "prompt_ideogram": "Dynamic product shot of bluetooth lantern speaker with visible sound wave effects and vibrant RGB LED glow cycling red-orange-yellow. Bold white text \"40W DUAL-DRIVER POWER\" at top, smaller text \"Room-filling stereo sound with beat-synced RGB\" below. Dark reflective surface, dramatic rim lighting, sound energy visualization around the speaker. Modern tech product photography style, 8K quality, clean sans-serif typography.",
+    "prompt_qwen": "Bluetooth lantern speaker with powerful sound wave visualization and RGB LED glow in red-orange spectrum. Dark reflective surface, dramatic rim lighting. Bold white text '40W DUAL-DRIVER POWER' at top. Tech product photography, 8K, dynamic energy.",
+    "negative_prompt": "static, boring, flat lighting, no energy, cartoon sound waves, cheap graphics, cluttered text",
+    "style_notes": "This sells the SOUND quality. Visual metaphors for power — sound waves, bass vibrations, energy. The RGB syncing to music is the secondary hook. Keep it dramatic and tech-forward."
+  },
+  {
+    "image_number": 4,
+    "image_type": "detail",
+    "psychological_hook": "The build quality looks solid — premium materials, not plastic junk.",
+    "headline_text": "Crafted to Last",
+    "subtext": "IPX5 waterproof body with premium soft-touch finish",
+    "prompt_flux": "Extreme close-up macro product photography of a bluetooth lantern speaker's surface details, showing the premium soft-touch rubber coating texture with visible micro-grain pattern, brushed aluminum accent ring with fine machined lines catching light, water droplets beading on the waterproof surface, the speaker grille mesh in sharp detail showing precision engineering, warm directional lighting from upper-left creating depth and shadow in the texture, shallow depth of field with beautiful bokeh of blurred RGB light in background, shot with 100mm macro lens f/4, dark moody atmosphere, every material clearly distinguishable — rubber, metal, fabric mesh, 8K resolution, product detail photography",
+    "prompt_ideogram": "Macro close-up of bluetooth speaker surface showing water droplets on waterproof coating, brushed aluminum ring, and precision speaker mesh. Bold white text \"CRAFTED TO LAST\" at top, smaller text \"IPX5 waterproof with premium soft-touch finish\" below. Warm directional lighting, shallow depth of field with RGB bokeh background. Premium material showcase photography, 8K, clean modern typography.",
+    "prompt_qwen": "Extreme close-up of bluetooth speaker showing water droplets on waterproof surface, brushed aluminum accents, speaker mesh detail. White bold text 'CRAFTED TO LAST' at top. Macro photography, warm lighting, shallow depth of field, RGB bokeh, 8K.",
+    "negative_prompt": "wide shot, full product, people, cheap plastic look, scratches, damage, blurry details, flat lighting",
+    "style_notes": "Detail/quality shot. Macro perspective sells craftsmanship. Water droplets demonstrate waterproofing visually. Each material (rubber, metal, mesh) should be distinctly visible and feel premium."
+  },
+  {
+    "image_number": 5,
+    "image_type": "specs",
+    "psychological_hook": "Let me check the specs — battery life, size, connectivity all look great.",
+    "headline_text": "Built for Adventure",
+    "subtext": "Everything you need, nothing you don't",
+    "prompt_flux": "Clean technical product layout photography of a bluetooth lantern speaker shown from a 3/4 elevated angle on a minimal dark charcoal background, the speaker is illuminated with soft even lighting showing all physical features clearly — the retractable handle on top, USB-C port, solar panel strip, speaker grille, RGB diffuser, physical buttons — subtle dimension lines and measurement indicators floating near the product, clean minimal composition with generous negative space around the product for text/icon overlay zones at top and bottom, professional catalog style photography, sharp focus throughout, 8K resolution, neutral color temperature",
+    "prompt_ideogram": "Technical product layout of bluetooth lantern speaker on dark charcoal background. Bold white text \"BUILT FOR ADVENTURE\" at top. Clean spec callouts around the product: \"20+ Hours Battery\" \"IPX5 Waterproof\" \"Bluetooth 5.3\" \"USB-C + Solar\" \"8 RGB Modes\" \"TWS Pairing\" shown as minimal white icons with labels. Elevated 3/4 angle view, soft even lighting, professional catalog photography, clean sans-serif typography, 8K quality.",
+    "prompt_qwen": "Technical product photo of bluetooth lantern speaker on dark background, 3/4 elevated angle. White text 'BUILT FOR ADVENTURE' at top. Spec icons around product: 20+ Hours, IPX5, Bluetooth 5.3, USB-C, Solar, TWS. Clean catalog style, even lighting, 8K.",
+    "negative_prompt": "cluttered, too many specs, tiny text, bright background, lifestyle scene, people, artistic effects",
+    "style_notes": "Specs/parameter image. Clean, informational, but still stylish. The dark background maintains brand consistency. Icons should be simple linear style. This is where Ideogram's text rendering really matters — or we use HTML template overlay."
+  },
+  {
+    "image_number": 6,
+    "image_type": "differentiator",
+    "psychological_hook": "Solar charging AND a lantern? No other speaker does this.",
+    "headline_text": "Speaker + Lantern + Solar",
+    "subtext": "The only 3-in-1 outdoor companion you'll ever need",
+    "prompt_flux": "Split composition product photography showing a bluetooth lantern speaker in three scenarios seamlessly blended: LEFT third — the speaker hanging from a tent pole inside a camping tent at night, its warm white LED providing lantern light illuminating the tent interior; CENTER — the speaker outdoors in golden hour sunlight with its solar panel strip visibly absorbing sunlight, lens flare and sun rays; RIGHT third — the speaker at a beach bonfire with full RGB party mode casting colorful lights on sand, dark sky above. The three scenes blend through smooth gradient transitions. Each scene lit naturally for its context. Cinematic wide composition, 16:9 aspect feel compressed to square, warm to cool color progression left to right, 8K quality",
+    "prompt_ideogram": "Triptych product image showing bluetooth lantern speaker in three modes: camping lantern (warm glow in tent), solar charging (golden sunlight outdoors), party speaker (RGB lights at beach bonfire). Bold white text \"SPEAKER + LANTERN + SOLAR\" at top, smaller text \"The only 3-in-1 outdoor companion\" below. Scenes blend through smooth gradients. Cinematic lighting per scene, warm-to-cool color progression. Clean modern typography, 8K quality.",
+    "prompt_qwen": "Three-scene composite: bluetooth lantern speaker as camping lantern in tent (warm glow), solar charging in sunlight (golden hour), RGB party at beach bonfire. White bold text 'SPEAKER + LANTERN + SOLAR' at top. Smooth gradient transitions between scenes, cinematic lighting, 8K.",
+    "negative_prompt": "single scene, boring composition, no differentiation, harsh transitions, collage look, cheap grid layout",
+    "style_notes": "This is the differentiator — showing the 3-in-1 value proposition. The triptych/split composition is ambitious but very impactful if done well. May need template compositing if single-generation doesn't nail it. Each scene must look natural."
+  },
+  {
+    "image_number": 7,
+    "image_type": "trust",
+    "psychological_hook": "This would make an amazing gift — and people seem to love it.",
+    "headline_text": "The Perfect Gift",
+    "subtext": "Premium unboxing experience for every occasion",
+    "prompt_flux": "Elegant gift-giving scene photography, a bluetooth lantern speaker in an open premium matte black gift box with magnetic closure, tissue paper and branded ribbon, the speaker's RGB LED glowing soft warm colors creating ambient light on the packaging, hands of a person receiving the gift with excited expression barely visible at top of frame, bokeh of warm string lights and candles in background suggesting birthday or holiday setting, rich warm color palette with blacks golds and warm whites, shot with 50mm f/1.8 creating creamy background blur, the unboxing moment captured from slightly above, luxury product photography style, 8K resolution, warm color grading",
+    "prompt_ideogram": "Elegant gift unboxing scene with bluetooth lantern speaker in premium black gift box, RGB LED glowing warmly. Bold white text \"THE PERFECT GIFT\" at top, smaller text \"Premium unboxing experience for every occasion\" below. Warm bokeh background with string lights, hands receiving the gift visible at top. Luxury product photography, 50mm lens, warm tones, holiday atmosphere. Clean modern sans-serif typography, 8K quality.",
+    "prompt_qwen": "Bluetooth lantern speaker in premium black gift box being unboxed, RGB LED glowing warmly. String lights bokeh background, hands receiving gift. White bold text 'THE PERFECT GIFT' at top. Luxury photography, 50mm lens, warm tones, 8K.",
+    "negative_prompt": "cheap packaging, plain cardboard, no atmosphere, harsh lighting, clinical look, no emotion, solo product without context",
+    "style_notes": "Trust/gift image — the emotional close. This creates desire ('I want to give/receive this'). Premium packaging suggests quality. The warm, intimate atmosphere builds positive association. This is the final push to Buy Now."
+  }
+]

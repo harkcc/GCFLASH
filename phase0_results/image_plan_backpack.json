@@ -1,0 +1,121 @@
+[
+  {
+    "image_number": 1,
+    "image_type": "hero",
+    "sales_task": "抓眼球 — 一眼看出这是啥，质感拉满",
+    "headline_text": "Travel Light, Live Fully",
+    "subtext": "TSA Carry-On Backpack · 15.6\" Laptop · Shoe Pouch",
+    "prompt_flux": "Minimalist lifestyle product photography of a pink women's travel backpack standing upright on a cream linen surface, soft natural daylight streaming from the left side, dried pampas grass in a ceramic vase out of focus in the background, a small gold-rimmed ceramic coffee cup and an open hardcover notebook beside the backpack, magazine editorial composition, 50mm lens f/2.8, airy and bright atmosphere, shallow depth of field, warm soft shadows, hyper-realistic oxford fabric texture visible on the bag, 8K resolution, commercial lifestyle photography, product centered in frame, no text on image",
+    "prompt_ideogram": "Minimalist lifestyle shot of pink women's travel backpack on cream linen surface with dried pampas grass and coffee cup. Elegant title 'Travel Light, Live Fully' in Playfair Display at top. Subtitle 'TSA Carry-On · 15.6\" Laptop · Shoe Pouch' below. Soft natural light, editorial composition, warm shadows, 8K.",
+    "prompt_qwen": "Pink women's travel backpack on cream linen, pampas grass, coffee cup. Elegant serif title 'Travel Light, Live Fully' at top. Soft natural light, editorial style, 8K.",
+    "negative_prompt": "cluttered, harsh lighting, masculine tough, industrial, cartoon, blurry, watermark, deformed straps, wrong pocket count",
+    "bbox_hint": [280, 180, 744, 900],
+    "tool_chain": ["birefnet_remove_bg", "flux_generate_scene", "pillow_composite_bbox"],
+    "style_notes": "主图学 Everlane/Away 这类简约女性品牌的视觉语言。温柔但不软绵，自信但不侵略。"
+  },
+
+  {
+    "image_number": 2,
+    "image_type": "pain_point",
+    "sales_task": "戳痛点 — 普通背包的混乱",
+    "headline_text": "Is Your Bag Chaos?",
+    "subtext": "Laptop, shoes, and lunch all in one black hole",
+    "prompt_flux": "Overhead flat lay messy chaotic scene of a woman's open generic black backpack with contents spilled out — tangled phone charger cable, crumpled receipts, a lunch container, sneakers mixed with clean clothes, laptop awkwardly wedged, wet umbrella staining fabric, scattered makeup items, keys hidden somewhere, shot from directly above with natural overhead window light, muted desaturated tones suggesting frustration, shallow focus on the chaos, realistic modern woman's commute bag meltdown moment, 8K, magazine documentary style, no branded backpack visible",
+    "prompt_ideogram": "Overhead flat lay of messy spilled black backpack with chaos: tangled cables, crumpled papers, shoes with clean clothes, squeezed laptop, wet umbrella, makeup scattered. Serif italic text 'Is Your Bag Chaos?' at top, subtext 'Laptop, shoes, and lunch all in one black hole'. Desaturated muted tones, documentary style, 8K.",
+    "prompt_qwen": "Messy backpack contents scattered: cables, papers, shoes with clothes, laptop, umbrella. Overhead shot, muted tones. Text 'Is Your Bag Chaos?' at top. Documentary style, 8K.",
+    "negative_prompt": "organized, tidy, clean, branded visible backpack, cheerful mood, bright colors, no mess, empty bag",
+    "bbox_hint": null,
+    "tool_chain": ["flux_direct"],
+    "style_notes": "不显示我们产品。展示竞争对手（普通黑背包）的问题，建立对比。"
+  },
+
+  {
+    "image_number": 3,
+    "image_type": "solution",
+    "sales_task": "给方案 — 我们的包就是解决这个混乱",
+    "headline_text": "A Place for Everything",
+    "subtext": "5 compartments · separate shoe pouch · zipped water bottle sleeve",
+    "prompt_flux": "Organized elegant flat lay of an open pink women's travel backpack with all compartments visible and neatly filled — a 15.6 inch laptop in the padded main compartment, a pair of white sneakers in a dedicated separated shoe pouch, a water bottle in a side sleeve, a folded light scarf and small leather pouch in the top pocket, phone and charger neatly coiled, shot from above with bright natural soft light, cream linen background surface, everything has its place, satisfying organization aesthetic, 8K resolution, lifestyle editorial photography style, warm inviting shadows",
+    "prompt_ideogram": "Elegant overhead flat lay of organized open pink women's backpack with 15.6 laptop, sneakers in shoe pouch, water bottle in side sleeve, scarf and pouch in top pocket. Title 'A Place for Everything' at top in Playfair Display, subtext '5 compartments · separate shoe pouch · zipped water bottle sleeve'. Natural soft light, cream linen, 8K.",
+    "prompt_qwen": "Open organized pink backpack from above: laptop, sneakers in separate pouch, water bottle, scarf. Title 'A Place for Everything' at top. Natural light, cream surface, 8K.",
+    "negative_prompt": "messy, cluttered, black backpack, wrong color, deformed shape, hollow empty",
+    "bbox_hint": [180, 220, 844, 900],
+    "tool_chain": ["birefnet_remove_bg", "flux_generate_scene", "pillow_composite_bbox"],
+    "style_notes": "before/after 的 after 状态。所有内容摆放极简整洁，给用户'看了就想收纳'的情绪。"
+  },
+
+  {
+    "image_number": 4,
+    "image_type": "detail",
+    "sales_task": "秀细节 — 面料做工、鞋袋、USB口",
+    "headline_text": "Thoughtful Details",
+    "subtext": "Water-resistant Oxford · YKK zippers · Hidden USB port",
+    "prompt_flux": "Macro detail shot of a pink women's travel backpack showing premium details — closeup on the YKK zipper pull with brand logo visible, water-resistant oxford fabric texture with water droplets beading on surface, the USB charging port on the side with a small LED indicator, a glimpse of the padded laptop compartment interior with soft fleece lining, gold-tone metal accent hardware, shot with 100mm macro lens f/4, dramatic warm side lighting from upper-right, shallow depth of field, editorial product detail style, each material clearly distinguishable — woven oxford, metal hardware, fleece interior, 8K ultra-detail",
+    "prompt_ideogram": "Macro detail of pink women's backpack: YKK zipper closeup, water droplets on oxford fabric, USB charging port with LED, fleece laptop compartment interior, gold metal accents. Title 'Thoughtful Details' at top, subtext 'Water-resistant Oxford · YKK zippers · Hidden USB port'. 100mm macro, warm side light, 8K.",
+    "prompt_qwen": "Macro of pink backpack details: zipper, water droplets on fabric, USB port, fleece interior, gold metal. Title 'Thoughtful Details' at top. Macro lens, warm light, 8K.",
+    "negative_prompt": "full backpack visible, wide shot, cheap fabric, plastic look, low detail, flat lighting",
+    "bbox_hint": null,
+    "tool_chain": ["flux_direct"],
+    "style_notes": "微距细节图。没有面板特写源图，flux_direct 自由发挥，接受产品不完全一致（细节图主要卖'品质感'不卖'认出是哪款'）。"
+  },
+
+  {
+    "image_number": 5,
+    "image_type": "scene_multi_use",
+    "sales_task": "看场景 — 4 个使用场景",
+    "headline_text": "One Bag. Every Day.",
+    "subtext": "Commute · Travel · Gym · Nurse Shift",
+    "prompt_flux": "Four-panel lifestyle grid of a pink women's travel backpack in 4 scenarios: TOP-LEFT — young woman in business casual attire walking through a modern office lobby with the backpack on her back at morning, natural light streaming through windows; TOP-RIGHT — same pink backpack on airport terminal floor next to a rolling suitcase, boarding pass in hand visible, warm sunrise light through terminal windows; BOTTOM-LEFT — pink backpack beside a yoga mat at a gym entrance with clean sneakers peeking out of the shoe pouch, bright morning light; BOTTOM-RIGHT — pink backpack hanging on a hook in a hospital nurse locker room, with a stethoscope draped over it, clean clinical lighting. Consistent pink backpack design across all four panels, subtle natural color grading variations per scene, clean composition with thin white dividers between quadrants, 1:1 format, 8K editorial photography",
+    "prompt_ideogram": "Four-panel grid of pink women's backpack: TOP-LEFT commute office lobby, TOP-RIGHT airport terminal with suitcase, BOTTOM-LEFT gym with yoga mat and sneakers, BOTTOM-RIGHT nurse locker room with stethoscope. Title 'One Bag. Every Day.' overlaid, subtext 'Commute · Travel · Gym · Nurse Shift'. Consistent pink backpack across all panels, editorial photography style, 8K.",
+    "prompt_qwen": "Four scenes with pink backpack: office commute, airport terminal, gym with yoga mat, nurse locker. Title 'One Bag. Every Day.' Consistent pink backpack, editorial grid, 8K.",
+    "negative_prompt": "different backpacks per panel, inconsistent design, wrong color, cluttered, distorted faces, too many people",
+    "bbox_hint": null,
+    "tool_chain": ["composite_x4_grid"],
+    "style_notes": "这张是跨品类压力测试的核心。ST08 multi_use 里 4 个产品全变了，这次必须用 composite 强制一致性。"
+  },
+
+  {
+    "image_number": 6,
+    "image_type": "trust",
+    "sales_task": "建信任 — 内部组织/空间",
+    "headline_text": "Thoughtfully Organized",
+    "subtext": "Everything has its place",
+    "prompt_flux": "Elegant overhead flat lay of a pink women's travel backpack fully opened to show its internal compartment structure, multiple organized pockets visible — padded laptop sleeve, zipped mesh pockets, pen slots, card slots, main compartment, shoe pouch with divider, everything clean and empty except soft interior lining visible, the bag laid flat on cream linen background, natural soft top light, 50mm f/4, clean elegant composition showing the bag's full organizational capability, 8K editorial product photography",
+    "prompt_ideogram": "Open pink women's backpack from above showing all internal compartments empty and clean — laptop sleeve, mesh pockets, pen slots, shoe pouch divider. Title 'Thoughtfully Organized' in serif, subtext 'Everything has its place'. Cream linen background, soft top light, 8K editorial.",
+    "prompt_qwen": "Open pink backpack top-down showing internal compartments: laptop sleeve, mesh pockets, pen slots, shoe pouch. Title 'Thoughtfully Organized' at top. Clean, soft light, 8K.",
+    "negative_prompt": "closed bag, filled with items, messy, black color, wrong product",
+    "bbox_hint": null,
+    "tool_chain": ["flux_direct"],
+    "style_notes": "需要内部视角，手头无源图——接受 flux_direct，产品外形小有偏差，但内部布局展示足够有说服力。"
+  },
+
+  {
+    "image_number": 7,
+    "image_type": "specs",
+    "sales_task": "选规格 — 参数和尺寸",
+    "headline_text": "Built for the Journey",
+    "subtext": "Every dimension measured for the modern traveler",
+    "prompt_flux": "Clean technical catalog photography of a pink women's travel backpack on a minimal cream background, shown from a slight 3/4 front angle with even soft studio lighting revealing every external feature — main zipper, side water bottle pocket, shoe pouch access, luggage strap, top handle, padded back panel partially visible, generous negative space around the product for spec callouts to be added later, no text rendered in the image itself, neutral color palette, sharp focus throughout, 8K catalog photography",
+    "prompt_ideogram": "Technical catalog shot of pink women's backpack on cream background, 3/4 front angle, soft even lighting. Title 'Built for the Journey' at top in elegant serif. Spec callouts around product with thin minimal lines: '17.7\" x 12.2\" x 8.7\"', '35L capacity', '15.6\" laptop', 'TSA approved', 'Water-resistant', 'YKK zippers', 'Weight: 1.9 lb'. Minimalist sans-serif text for specs, 8K.",
+    "prompt_qwen": "Pink women's backpack on cream background, 3/4 angle. Title 'Built for the Journey' at top. Spec callouts: 17.7x12.2x8.7, 35L, 15.6 laptop, TSA, water-resistant, YKK. Clean catalog, 8K.",
+    "negative_prompt": "cluttered, lifestyle scene, people, dark background, garbled text, too many callouts, tiny illegible labels",
+    "bbox_hint": [312, 200, 712, 800],
+    "tool_chain": ["birefnet_remove_bg", "flux_generate_scene", "pillow_composite_bbox", "playwright_html_overlay"],
+    "style_notes": "和 ST08 一样，规格图底图用 composite 保真，文字参数用 Playwright HTML 叠（本轮暂略）。"
+  },
+
+  {
+    "image_number": 8,
+    "image_type": "cta_gift",
+    "sales_task": "促下单 — 情感收尾",
+    "headline_text": "She's Ready. Are You?",
+    "subtext": "The travel companion that understands her",
+    "prompt_flux": "Warm golden hour lifestyle scene of a pink women's travel backpack sitting on a hotel room bed with crisp white linen bedding and a soft cream blanket, a passport and boarding pass resting on top of the bag, a half-packed rolling suitcase slightly visible at the edge of frame, late afternoon sun streaming through sheer curtains casting a warm amber glow, a small bouquet of eucalyptus in a vase on a nightstand visible softly out of focus, 50mm lens f/2.0 creamy background blur, aspirational travel moment captured, editorial lifestyle photography, 8K",
+    "prompt_ideogram": "Golden hour hotel room scene: pink women's backpack on white linen bed with passport and boarding pass on top, half-packed suitcase in frame, eucalyptus in vase, warm sun through curtains. Elegant serif title 'She's Ready. Are You?' at top, subtext 'The travel companion that understands her'. 50mm f/2.0, editorial lifestyle, 8K.",
+    "prompt_qwen": "Pink backpack on white linen bed, passport on top, suitcase nearby, eucalyptus vase, golden hour sun. Title 'She's Ready. Are You?' at top. 50mm, editorial, 8K.",
+    "negative_prompt": "harsh lighting, cluttered, cheap look, cartoon, bad faces, wrong color backpack",
+    "bbox_hint": [280, 250, 744, 850],
+    "tool_chain": ["birefnet_remove_bg", "flux_generate_scene", "pillow_composite_bbox"],
+    "style_notes": "情感收尾。护照+登机牌暗示旅行在即，温暖光感营造'马上出发'的期待。"
+  }
+]

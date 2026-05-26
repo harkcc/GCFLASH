@@ -1,0 +1,475 @@
+
+--- PAGE 1 ---
+How to harness AI  
+to create stunning product photos 
+for websites, ads and social media
+®
+
+
+--- PAGE 2 ---
+— 2 —
+Nano Banana is a codename the Google developers gave to the 
+image generation app for Gemini. Gemini flash 2.5 is the official name, 
+but all the cool kids still call it Nano Banana. 
+Nano Banana is an AI tool that uses plain text, called prompts, to 
+create images. The more focused and descriptive your prompt is, the 
+more likely you are to get the image you’re trying to create. 
+Nano Banana is free to use, though free usage is limited. T o get 
+started, go to gemini.google.com and sign up for a free account. The 
+free account will give you about three to five free images each day. 
+Each edit counts as an image so it’s pretty easy to burn through the 
+free credits. A subscription is about $20/month. 
+Creating product photos with Nano Banana is both magical and 
+frustrating. When you nail it, the resulting image is a joy to behold. 
+A few sentences and “Voilà!” a stunning image you can use for ads, 
+emails, websites and social media. No photographer, no wait, just 
+WOW! 
+The flip side is, if you don’t nail it on the first go, it can be a hair 
+pulling experience to get what you want. (I’m going to help you avoid 
+that part.) 
+I started my career as a professional photographer and for 15 years 
+shot everything from china and sterling, to industrial shaker tables, 
+food, and a lot of people smiling and shaking hands. I then switched 
+to art direction and worked for and with companies like L.L. Bean, 
+International Paper, Mrs. Beasleys, and Harrington’s of Vermont.  
+AI generated images have fascinated me from the beginning and, even 
+with a background in photography and art direction, it has not always 
+gone according to plan. The good news is you don’t have to start from 
+the beginning like I did, and once you understand the basics, you can 
+get great results quickly.
+In this guide I will walk you through how to structure your prompt, 
+what to include, and how to reset when things don’t turn out the way 
+you want them too. 
+Pro Tip: Once you’ve created stunning product images with AI, Stylaquin 
+helps shoppers engage with them longer. Beautiful images in Stylaquin’s 
+Look Book format can increase product views by 104% and boost 
+conversions by 41%. Learn more on page 9.
+Denslow Dry Goods upgraded 
+their product images with AI. 
+These show off the Pillow 
+collection. The original images of 
+the pillows (left) were silhouetted 
+images created in Printify.
+
+
+--- PAGE 3 ---
+— 3 —
+The Core 5: 
+What Nano Banana Needs
+These are the non-negotiables. Without these, the AI has to guess, and it often guesses wrong.
+AI can’t see the image in your head, so you must be specific about what you want, or you’ll get random results. This can 
+be good, if you aren’t sure what you want and you don’t care about a specific outcome, or if you just want to get your 
+creative juices flowing. Let’s say you want an image of someone looking at an overflowing closet with nothing to wear. 
+The image just needs to look frustrating and a bit out of control. But if you want a specific image, you need to be specific 
+about what you ask for. Being hyper-specific takes some getting used to, so when you start out, use the handy Perfect 
+Prompt Worksheet at the end of this guide. Think through the shot and start with these five must have descriptions.
+The Subject 
+(What is it?)
+If you’re creating a product shot, you need to start by 
+saying you want to create a product shot and give Nano 
+Banana a reference. Let’s say you want to show a new 
+pair of slippers in a home situation, but all you have is the 
+manufacturers shot of the slippers on a white background. 
+(This is known as a silhouette, or silo.) Y ou need to give 
+Nano Banana the silo as a reference, as well as specific 
+instructions. The more specific you are the more likely you 
+are to get the outcome you want. If you want a product 
+shot with the slippers as the hero, you need to say that. If 
+you want to show a woman lounging by a fire, you need to 
+say that. The subject tells Nano Banana what to focus on.
+The Environment 
+(Where is it?)
+A product floating in white space looks like a clip-art icon. 
+A product in a “place” looks like a photograph. The more 
+information you provide about where your product is, the 
+closer the result will be to your expectations. 
+Prompt Tip: “holding a cup of coffee in a sunlit kitchen” or even 
+better, “woman holding a rustic mug of coffee in a cozy sunlit 
+log cabin setting with mountains showing through the window 
+and a Bernese Mountain Dog puppy sleeping at her feet.”
+The Lighting 
+(How is it lit?)
+Lighting dictates the mood and realism. Bad lighting is the 
+#1 reason AI images look “fake. If you want the product 
+to look like it’s in a large store, you need to say that and 
+specify overhead lighting. If you want it to look like it’s in 
+a home environment specify soft lighting, window lighting, 
+light falling from an overhead light with a spill of natural 
+light from a window that is on the right but out of frame.
+Prompt Tip: Keywords like “golden hour,” “soft window light” 
+(for natural/organic products), or “studio neon lighting” (often 
+used for tech/gaming products).
+The Medium/Style 
+(What kind of image is this?)
+Nano Banana can create a 3D render, a watercolor 
+painting, or a sketch. Y ou need to tell it to be a camera. 
+Sounds super obvious, but to a machine that can do 
+anything from anime, to a child’s drawing style, to 
+impressionism, it’s a basic starting point. 
+Prompt Tip:  For product photography use “High-resolution 
+professional product photography”, “macro lens shot” (if 
+you want a closeup), or “4k DSLR.” to get super clear, high 
+resolution output.
+The Composition 
+(How is it framed?)
+This controls where the product sits in the image. Imagine 
+it your mind’s eye. Are you looking down on it? Are you 
+looking straight at it? Y ou can tell Nano Banana how much 
+or how little background to show in the image. T elling 
+Nano Banana to “shoot from eye-level, crop in tight, and 
+make the background out of focus” gets you the classic 
+hero product shot. 
+Prompt Tip: “Eye-level shot,” “top-down flat lay” (great for 
+organizing items), or “close-up low angle.”
+
+--- PAGE 4 ---
+— 4 —
+The “Pro” 5: The Secret Sauce
+These details turn a “good” image into a “brand-ready” image. Once you get the hang of creating prompts with the 5 must-
+haves we covered earlier, these five pro tips will help you really dial it in so they will work in different formats and will showcase 
+your brand. Remember, while AI is amazing, it is also new to your project every time. Kind of like the movie 50 First Dates. It 
+may seem like it remembers, but it doesn’t, so you will have to give it your brand colors and specifics every time. 
+Do not give it your logo. It amazes me that it can take a product image and recreate it perfectly (though you always have to 
+check) and yet it is very bad at adding a logo. I asked Nano Banana why that is and it said it doesn’t do a good job with text or 
+specific graphic elements like logos. If you need to add a logo, it’s easy to create templates with layers in any design program, 
+then just add a logo on a separate layer from the image. 
+Mood & Vibe 
+(T arget Customer)
+This is where you use your target customer data. Think about 
+who this image needs to connect with, outdoor adventures, 
+sophisticates, active seniors, etc.
+Instead of saying “for Gen Z,” describe the vibe that appeals 
+to them: “Y2K aesthetic, vibrant pink and acid green colors, 
+playful energy.”
+Instead of “for professionals,” use: “sleek, minimalist, 
+desaturated tones, organized.”
+Y ou need to describe the environment that will be most 
+attractive to your audience. Y ou can say “‘70’s groovy vibe 
+with bold colors and curvy lines.” Don’t say “Like the artist 
+Peter Max” That is a copyright infringement.
+Negative Prompts 
+(What to avoid)
+Sometimes it helps to tell Nano Banana what not to do. It’s 
+hard to think of what you don’t want in the first try at a new 
+image. Nano Banana does a pretty good job of editing things 
+out once you tell it what to take out. It’s worth thinking 
+about obvious things you don’t want in the beginning.  
+Example: “No text, no humans, no blurry background, no  
+distortion.”
+Aspect Ratio
+(What size)
+Nano Banana will output whatever it wants unless you tell 
+it to give you a specific size. Because the output is in pixels 
+it’s easier to provide an aspect ratio than it is to give it 
+dimensions. Nano Banana does not do well with dimensions. 
+Square images (1:1) are fine for Instagram, but terrible for a 
+website banner. I have provided a cheat sheet for the most 
+used aspect ratios at the end of this guide. 
+Nano Banana outputs high-resolution images suitable for web 
+and social media. Right-click to save, or use the download 
+icon.
+Tip: Specify “Wide 16:9 aspect ratio” for banners or “Tall 
+9:16” for Stories/TikTok.
+Brand Color Palette
+(Y our colors)
+Nano Banana can understand color codes or specific 
+color names. If you have specific brand colors you should 
+provide them as Hex codes ( # and six numbers or 
+letters.) Canva or Adobe Express are good places to find 
+the hex codes for specific colors.
+Tip: “The background should be a soft pastel pink (Hex 
+#FFD1DC)” or “featuring accents of electric blue.”
+Reference Images
+Y ou can often upload a photo of your actual product and 
+ask Nano Banana to “place this product in a [scene].” 
+Check carefully that the rendered image matches what 
+you uploaded. AI hallucinates—meaning it invents details 
+that weren’t in your reference—and makes up things. 
+If it goes wrong the first time, start over and re-upload 
+the image. It often helps to give the image a new name 
+before uploading it the second time.  Limit the number 
+of reference images you give Nano Banana. The more you 
+give it, the more likely it is to make mistakes.
+Tip: This is the most powerful tool for stores. It ensures the AI 
+doesn’t hallucinate a different version of their product. Less is 
+typically more, but experiment. 
+Quick Summary
+Think like a photographer, not a writer. T ell it what the 
+camera sees (“soft light hitting a blue bottle on a beach”). 
+Try to be specific and structured in how you describe the 
+image you want. Avoid referring to famous artist’s work 
+unless the work is over 120 years old, which puts it in the 
+public domain. So don’t say “Make it look like a Richard 
+Avedon image”, that’s copyright infringement and doesn’t 
+respect the artist’s right to their work or their brand.  
+
+--- PAGE 5 ---
+— 5 —
+Let’s look at how actual prompts match output. For 
+this example we’ll try to create an inspiring image of 
+Air Jordans for a social media post.
+Prompt 1
+(T oo Vague)
+Prompt text: “A photo of air jordans in a locker 
+room.”
+The Result: Nano Banana didn’t know this was 
+supposed to be a product shot. Honestly, for a 
+prompt with almost no information, it’s pretty 
+impressive.
+Prompt 2
+(Good start)
+Prompt text: “A pair of Nike Air Jordan men’s 
+high top basketball sneakers,  [Subject]. In a busy 
+locker room with used towels and athletic bags. 
+[Environment]. overhead lighting with some window 
+light coming from a large window on the right that 
+is out of frame. [Lighting]. High-resolution macro 
+product photography, sharp focus on the sneakers 
+[Style/Medium]. Modern, professional vibe [Mood].”
+The Result: Better than the first prompt. It looks 
+like an Air Jordan product shot, it has a “vibe” and it 
+could work for a social media post on how having the 
+right gear helps you reach your full potential. 
+Prompt 3
+(Strong Product image)
+Prompt text: “Professional styled product shot of 
+A pair of Nike Air Jordan men’s high top basketball 
+sneakers [Subject].  In a luxurious, tech-integrated, 
+wellness-focused locker room with sleek, modern 
+design and folded towels at the end of the bench.  
+[Environment]. Soft hidden overhead lighting with 
+some window light coming from a large window 
+on the right that is out of frame. [Lighting]. High-
+resolution macro product photography, sharp focus 
+on the sneakers and the background blurred out. 
+Make sure the sneakers are visually separated from 
+the background and the sneakers take up most of 
+the image. [Style/Medium]. Modern, clean, high end 
+profession athlete [Mood].”
+The Result: This elevates the sneakers. Depending 
+on your target audience that may, or may not, be 
+the right direction. Notice that Nano Banana kept 
+the shoes the same size even though the prompt 
+specifically said to make them take up most of the 
+image. It also changed the aspect ratio to square.
+Three Prompts, Three Different Results
+
+--- PAGE 6 ---
+— 6 —
+How to recover when things go wrong
+No matter what you do, no matter how carefully you prepare your prompt, at some 
+point you will get a result that is not what you were looking for. 
+After the initial prompt you can give additional instructions and, for some things, it can 
+work really well. Say you have a product image and the handbag that randomly appeared 
+in the background needs to go. Y ou can ask Nano Banana to remove the handbag and 
+replace it with flowers. It might work perfectly. It might go very wrong. 
+After giving Nano Banana instructions that add to the original prompt, if you aren’t happy, 
+try changing one of the main characteristics of the image, like how the camera sees the 
+image, the vibe or something fairly significant. If that fails, you’ll need to start over.
+Starting over is just part of the game. T elling Nano Banana to reduce the size of a pattern 
+on a fabric will get you nowhere. if it has removed a part of a lapel or added zippers to 
+something a few times, the AI is fried. Before you start throwing things, tell it to start 
+over. It also helps to change the name of the reference image— make a copy and add a 
+v2 to the end will work. If Nano Banana gets stuck, it often can’t get itself unstuck. T ell 
+it you want to start over, and change the prompt enough that it doesn’t keep using the 
+original image it created as the starting point. 
+The strength of Nano Banana’s image capabilities is that it magically creates amazing 
+images with very little information, the weakness is that it often stumbles on specific  
+iterations and small changes. 
+If you get stuck, ask Nano Banana what to do. Seriously. One of the best ways to 
+understand how to talk to AI is simply to ask questions. 
+Nano Banana does not do retouching well. It can remove backgrounds and then replace 
+them, but it doesn’t work well for fine tuning. If you need to retouch an image you will 
+do better with Adobe Photoshop. Don’t focus on details that don’t matter. Remember 
+that every photographer out there will shoot a different image of the same product, 
+because every artist has a different vision. None of the big brands have matching images 
+for every product. Don’t get caught up in the fine detail, just start over.
+When to give up
+If Nano Banana doesn’t nail it within three tries, it probably isn’t going to get it. Adjust 
+the prompt and tell it to start over. If it’s really getting stuck on something and just 
+can’t let go, you can start a new chat or wait a day or two and try it again. Nano 
+Banana is a random image generator, so time does seem to change things. If you want 
+the same look as a previous image, you should use that as a reference, but it may just 
+limit what you get for output. Again—random image generator. The more you play, the 
+better you’ll become. Given how AI works, there is always going to be some magic to 
+the output that you can’t control. 
+What the future holds
+When PCs first came out, users had one floppy drive for the program and another for 
+the project. Take a moment to revel in the wonder of how far we’ve come. Have fun 
+with it. AI is in its infancy and it’s only going to get better. Y ou can’t break it, so learn 
+with the fearless enthusiasm of a child.
+Second prompt added “Make sure 
+the sneakers are visually separated 
+from the background and the 
+sneakers take up most of the image.” 
+Nano Banana got stuck and even 
+though the prompt changed, the 
+output didn’t. 
+I told it to start over and gave it the 
+second prompt again. It did a much 
+better job of pulling the sneakers 
+off the background. It also randomly 
+changed the aspect ratio and made it 
+a square because I didn’t specify an 
+aspect ratio in my prompt. 
+First prompt didn’t have enough 
+separation between the sneakers and 
+the lockers. 
+
+
+--- PAGE 7 ---
+— 7 —
+Adding a Background
+I was able to create a new shot of a coat that 
+had been cropped tightly.  This is a good example 
+of how to use Nano Banana to adjust styling for 
+different target audiences. 
+It took several tries but I was able to get the image 
+I wanted by:
+1. Editing the prompt to correct the mistakes.
+2. Starting over when Nano Banana hit a wall. 
+3. Adding a “2” to the reference image name and 
+re-uploading it when I started over.
+First Prompt
+Use the reference image provided and create a photo 
+showing the model wearing the jacket shown in the 
+reference image, walking down the street in a quaint 
+Maine village. Give the scene magic hour light. High 
+resolution professional image. Show the model wearing 
+white jeans, horizontal striped shirt and English 
+riding boots. The model is happy and confident. 3:2 
+vertical. Keep the colors cool and muted so they don’t 
+overpower the jacket.
+Final Prompt
+Start over. Use the reference image provided and create a photo showing 
+the model wearing the jacket shown in the reference image, it should 
+have a wide continuous collar without a notch. The model should be 
+walking down the street in a quaint Maine village. Give the scene magic 
+hour light. High resolution professional image. Show the model wearing 
+white jeans, horizontal striped shirt and English riding boots. The jacket 
+will be below knee length and cover the top of the boots. The model is 
+happy and confident. 3:2 vertical. Keep the colors cool and muted so 
+they don’t overpower the jacket.
+Reference 
+Image
+First Image
+Wrong image orientation, Jacket is too short, collar 
+notched, and there are too many buttons.
+
+
+--- PAGE 8 ---
+— 8 —
+The Subject 
+(What is it?)
+The Environment 
+(Where is it?)
+The Lighting 
+(How is it lit?)
+The Medium/Style 
+(What kind of image is this?)
+The Composition 
+(How is it framed?)
+Most used Aspect Ratios
+Ratio, Common Name, Primary Use Case
+16:9, Widescreen, TVs, Y ouT ube, Monitors
+9:16, Vertical, TikT ok, Reels, Stories
+4:3, Standard / Fullscreen, iPads, Old TV, Smartphone Photos
+3:2, 35mm, Professional Photography (DSLR)
+1:1, Square, Instagram Feed, Profile Pics
+4:5 Vertical Feed Facebook, LinkedIn
+Mood & Vibe 
+(What the T arget Likes)
+Negative Prompts 
+(What to avoid)
+Aspect Ratio
+(What size)
+Brand Color Palette
+(Y our colors)
+Reference Images
+(Nothing copyrighted)
+Perfect Prompt Worksheet
+® The easy way to get shoppers to stay longer, view 
+more products, come back more often, and buy 
+more when they do.
+Sample Prompt:
+Core 5:
+Use the reference image provided 
+and create a photo showing the 
+model wearing the jacket shown in 
+the reference image, it should have 
+a wide continuous collar without 
+a notch. Show the model wearing 
+white jeans, horizontal striped shirt 
+and English riding boots. The jacket 
+will fall below knee length and 
+cover the top of the boots. [Subject 
+and Reference]. The model should 
+be walking down the street in a 
+quaint Maine village. [Environment]. 
+Give the scene magic hour 
+light. [Lighting]. High resolution 
+professional image. [Style/Medium].
+Pro 5: 
+The model is happy and confident.  
+[Mood & Vibe] No text [Negative 
+Prompts] 3:2 vertical. [Aspect 
+Ratio] Keep the colors cool and 
+muted so they don’t overpower the 
+jacket [Color Palette]
+Reference 
+Image 
+Used:
+
+
+--- PAGE 9 ---
+— 9 —
+Stylaquin
+®
+ Makes Online Shopping Fun
+Makes 
+mobile 
+shopping 
+more fun!
+Stylaquin is a Shopify app that adds a visual, shareable shopping experience that increases time on 
+site, product views, return visits, and conversions.
+What Stylaquin shoppers do differently:
+•  32% longer session duration
+•  104% more products viewed
+• 81% more likely to return
+•  41% increase in conversion rate
+Roughly 15% of new visitors and 25% of returning shoppers choose to shop with Stylaquin.  That uplift 
+tells Google shoppers live your site, which increases organic traffic. One store saw a 700% increase. 
+Learn more at Stylaquin.com/SEO.
+Installs in about 15 minutes
+• No theme changes or developer needed
+• Easy to customize colors and fonts for your brand
+• T est mode lets you deploy with confidence
+Shoppers can explore visually, save, and even share curated boards. 
+They stay longer, return more often, and buy more when they do.
+®
+Idea  BoardLook Book
+?
+sfletcher@stylaquin.com | www.stylaquin.com | 401.524.6097
+®
+The Look Book
+Shoppers can flip through your site like a magazine 
+by simply dragging products onto the Stylaquin 
+bar. It’s fast, immersive, and visually compelling.  
+SEO-Lifting Engagement: Every interaction 
+increases time on site, product depth, and 
+return visits—key signals Google uses to rank. 
+Delight that increases conversions: 
+Stylaquin’s Look Book makes shopping 
+enjoyable, and sites have seen up to 41% 
+more conversions from Stylaquin shoppers.  
+The Idea Board
+More than just a static wishlist. The Idea Board lets 
+shoppers save, sort, and organize products with a 
+Pinterest-like layout—shoppers create their own 
+curated collections that are shareable and interactive.  
+Share & Save: Shoppers can create multiple 
+boards, revisit them across devices, and 
+share on social media and with friends. 
+Shop with Me: Invite others to your board 
+and shop together in real time. Perfect for 
+friends, quilting groups, and sewing projects.

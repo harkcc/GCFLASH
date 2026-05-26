@@ -1,0 +1,134 @@
+{
+  "version": "0.1.0",
+  "updated_at": "2026-04-17",
+  "description": "工具手册 — Gemini Planner 根据 ImageSpec 从这里选工具链。执行端按 tool_id 路由到具体 fal endpoint 或本地函数。",
+
+  "tools": [
+    {
+      "tool_id": "birefnet_remove_bg",
+      "display_name": "BiRefNet 抠图",
+      "purpose": "从白底产品图抽出产品前景和遮罩",
+      "suitable_for": ["产品为主角的所有图（hero/detail/solution/trust/specs/cta）"],
+      "not_suitable_for": ["pain_point 等纯场景图"],
+      "provider": "fal",
+      "endpoint": "fal-ai/birefnet",
+      "cost_usd": 0.005,
+      "inputs": { "image_url": "string" },
+      "outputs": { "foreground_url": "string", "mask_url": "string" },
+      "notes": "首选 heavy 模型，对电子产品边缘保留好"
+    },
+    {
+      "tool_id": "flux_direct",
+      "display_name": "FLUX 直接生图",
+      "purpose": "根据 prompt 生成纯场景或氛围图",
+      "suitable_for": ["pain_point 情绪图", "无产品或产品占比<20%", "纯场景"],
+      "not_suitable_for": ["产品高保真要求"],
+      "provider": "fal",
+      "endpoint": "fal-ai/flux-pro/v1.1",
+      "cost_usd": 0.05,
+      "inputs": { "prompt": "string", "width": "int", "height": "int" },
+      "outputs": { "image_url": "string" }
+    },
+    {
+      "tool_id": "flux_generate_scene",
+      "display_name": "FLUX 生成场景底图（为产品留位）",
+      "purpose": "生成带有产品位（bbox 外）的场景图，后续 composite 贴产品",
+      "suitable_for": ["hero", "solution", "detail", "trust", "specs", "cta"],
+      "provider": "fal",
+      "endpoint": "fal-ai/flux-general",
+      "cost_usd": 0.075,
+      "inputs": { "prompt": "string", "bbox_to_reserve": "tuple(4 int)", "width": "int", "height": "int" },
+      "outputs": { "image_url": "string" },
+      "notes": "bbox_to_reserve 区域让 AI 少画元素，给产品留空间"
+    },
+    {
+      "tool_id": "iclight_relight",
+      "display_name": "IC-Light 重打光",
+      "purpose": "调整产品图的光源方向和色温以匹配场景",
+      "suitable_for": ["solution", "cta"],
+      "not_suitable_for": ["产品占比极小或无产品"],
+      "provider": "fal",
+      "endpoint": "fal-ai/iclight-v2",
+      "cost_usd": 0.015,
+      "inputs": { "product_image_url": "string", "light_direction": "string", "color_temperature": "int" },
+      "outputs": { "image_url": "string" },
+      "notes": "目前已知在人像上效果好，产品图需实测"
+    },
+    {
+      "tool_id": "controlnet_canny_addon",
+      "display_name": "Canny 边缘保真（addon）",
+      "purpose": "保证复杂产品（有按钮、镂空、网格）的轮廓和细节不被 AI 改动",
+      "suitable_for": ["detail", "hero"],
+      "is_addon": true,
+      "addon_to": ["flux_generate_scene"],
+      "provider": "fal",
+      "endpoint": "fal-ai/flux-general (controlnet: canny)",
+      "cost_usd_delta": 0.0,
+      "inputs": { "canny_map_url": "string", "conditioning_scale": "float" }
+    },
+    {
+      "tool_id": "in_context_lora_multi_variant",
+      "display_name": "In-Context-LoRA 多变体",
+      "purpose": "从一张参考图生成多张风格一致的变体（不同场景/光线，但产品一致）",
+      "suitable_for": ["scene_multi_use", "套图整体风格统一"],
+      "provider": "fal",
+      "endpoint": "fal-ai/flux-general (lora: ali-vilab/In-Context-LoRA)",
+      "cost_usd": 0.15,
+      "inputs": { "reference_image_url": "string", "prompts_list": "array" },
+      "outputs": { "image_urls": "array" },
+      "notes": "license 为 MIT，商用友好"
+    },
+    {
+      "tool_id": "pillow_composite",
+      "display_name": "Pillow Mask 合成",
+      "purpose": "按遮罩将产品贴到场景图上，带边缘羽化",
+      "suitable_for": ["所有需要产品像素级保真的图"],
+      "provider": "local",
+      "endpoint": "Pillow (本地 Python)",
+      "cost_usd": 0.0,
+      "inputs": { "bg_url": "string", "fg_url": "string", "mask_url": "string", "feather_radius_px": "int" },
+      "outputs": { "image_path": "string" }
+    },
+    {
+      "tool_id": "pillow_grid_compose",
+      "display_name": "Pillow 网格合成",
+      "purpose": "把多张图拼成 2x2 / 1x4 等网格布局",
+      "suitable_for": ["scene_multi_use"],
+      "provider": "local",
+      "cost_usd": 0.0
+    },
+    {
+      "tool_id": "qwen_text_overlay",
+      "display_name": "Qwen-Image 文字图层",
+      "purpose": "生成中文/复杂文字层，覆盖在成图上",
+      "suitable_for": ["中文标题", "复杂排版文字"],
+      "provider": "fal",
+      "endpoint": "fal-ai/qwen-image-2",
+      "cost_usd": 0.035,
+      "inputs": { "prompt": "string", "transparent_bg": true }
+    },
+    {
+      "tool_id": "playwright_html_overlay",
+      "display_name": "Playwright HTML 模板叠字",
+      "purpose": "用 HTML/CSS 渲染精确控制的文字层（规格表、参数图、CTA 按钮）",
+      "suitable_for": ["specs", "cta_gift", "需要精准排版的图"],
+      "provider": "local",
+      "cost_usd": 0.0,
+      "inputs": { "html_template": "string", "variables": "object" },
+      "outputs": { "image_path": "string" }
+    },
+    {
+      "tool_id": "gemini_quality_score",
+      "display_name": "Gemini 图片质量打分",
+      "purpose": "按 rubric 给生成图打分，输出不合格原因和改进建议",
+      "suitable_for": ["所有成图的 Step 4 审核"],
+      "provider": "gemini",
+      "endpoint": "gemini-3.1-pro-preview",
+      "cost_usd": 0.01,
+      "inputs": { "image_url": "string", "rubric": "object", "image_spec": "object" },
+      "outputs": { "score": "float 0-10", "dimensions": "object", "fail_reasons": "array", "suggestions": "array" }
+    }
+  ],
+
+  "planner_hint": "每张图的 tool_chain 字段已经在 image_plan_*.json 里预填。Planner Agent 的职责是：在这些 tool_chain 执行失败或评分不及格时，查阅此 registry 选择替代链路（例如 flux_generate_scene 失败→回退到 flux_direct + 文字层叠加）"
+}

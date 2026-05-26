@@ -1,0 +1,54 @@
+{
+  "id": "brandshootkit_route_comparison_suite",
+  "name": "Brand Shoot Kit style route comparison",
+  "scale_baseline": "scale_c_brandshootkit_qa_reroll",
+  "marketplace_profile": "qa",
+  "source_logic": "Preservation brief + shot plan + QA/reroll route comparison on one SKU.",
+  "suite_consistency_rules": [
+    "Use the same product truth pack for every route.",
+    "Compare route failure modes, not only visual appeal.",
+    "Every failed route must produce a typed repair action.",
+    "The winning route should be suitable for review frontend packaging."
+  ],
+  "slots": [
+    {
+      "slot": 1,
+      "slot_type": "legacy_image2_keyword_route",
+      "template_card": "FeatureRightTextCard",
+      "template_product_type": "single_image_template",
+      "buyer_question": "What fails if we use the older loose Image2 keyword route?",
+      "image_job": "baseline risk comparison",
+      "layout_family": "route_baseline",
+      "route": "legacy_image2_keyword_route",
+      "text_density": "medium",
+      "headline": "Legacy Draft Route",
+      "badges": ["Fast", "Loose", "High drift risk"]
+    },
+    {
+      "slot": 2,
+      "slot_type": "template_reverse_route",
+      "template_card": "AmazonPurpleFeatureGridCard",
+      "template_product_type": "suite_template",
+      "buyer_question": "Can reference-template extraction create a reusable card?",
+      "image_job": "template reverse-engineering route",
+      "layout_family": "template_reverse_grid",
+      "route": "template_reverse_route",
+      "text_density": "high",
+      "headline": "Template-Reversed Card",
+      "badges": ["Layout locked", "Copy slots", "Font system"]
+    },
+    {
+      "slot": 3,
+      "slot_type": "preservation_composite_route",
+      "template_card": "PackageTrustCard",
+      "template_product_type": "psd_template",
+      "buyer_question": "Does preserve-first composite reduce product drift?",
+      "image_job": "product-fidelity route with locked layers",
+      "layout_family": "preservation_composite",
+      "route": "preservation_composite_route",
+      "text_density": "medium",
+      "headline": "Preserve-First Route",
+      "badges": ["Real product layer", "Locked text", "QA reroll"]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+[
+  {
+    "image_number": 1,
+    "image_type": "hero",
+    "sales_task": "抓眼球 — 是什么 + 核心卖点",
+    "psychological_hook": "一眼看出这是高端车载打气泵，150 PSI 数字看起来很专业很能打",
+    "headline_text": "150 PSI IN 5 MINUTES",
+    "subtext": "Digital Precision Tire Inflator · Car · Moto · Bike · Ball",
+    "prompt_flux": "Professional product photography of a portable digital tire inflator in black and bright yellow, sitting centered on a dark charcoal gradient background, the digital LED display glowing bright green showing '150 PSI', integrated LED work light illuminated casting a soft white beam, chrome nozzle attachments arranged next to the unit, 12V car plug cable coiled elegantly, shot from slight 3/4 front angle with 50mm lens f/4, dramatic rim lighting from upper-left highlighting the yellow accents and brushed aluminum grille, soft fill light from below reducing hard shadows, clean studio setup, hyper-realistic material rendering showing matte black ABS plastic and metallic yellow accents, industrial product photography style, 8K resolution, commercial catalog quality, product fills 70% of frame",
+    "prompt_ideogram": "Premium product photo of a black and yellow portable tire inflator with glowing digital LED display reading '150 PSI', LED work light beam visible, chrome nozzles beside unit. Bold white headline '150 PSI IN 5 MINUTES' at top of frame, subtext 'Digital Precision Tire Inflator · Car · Moto · Bike · Ball' below in smaller weight. Dark charcoal gradient background, dramatic rim lighting, 3/4 front angle, clean industrial style typography, 8K.",
+    "prompt_qwen": "Black and yellow portable digital tire inflator, LED screen showing 150 PSI, LED work light on, chrome nozzles. White bold text '150 PSI IN 5 MINUTES' at top. Dark gradient background, rim lighting, 3/4 front view, 8K.",
+    "negative_prompt": "cluttered background, low quality, cheap plastic look, missing display, dim lighting, toy-like appearance, cartoon, watermark, blurry",
+    "bbox_hint": [200, 250, 820, 830],
+    "tool_chain": ["birefnet_remove_bg", "flux_generate_scene", "pillow_composite"],
+    "style_notes": "主图。产品必须居中占 70%+，清晰干净，LED 数字 150 PSI 必须可读。这是客户第一眼看到的图，信息密度不能高——一个核心数字 + 一句话卖点足够。"
+  },
+
+  {
+    "image_number": 2,
+    "image_type": "pain_point",
+    "sales_task": "戳痛点 — 触动烦恼产生共鸣",
+    "psychological_hook": "我上周/上个月刚遇到过这种情况，糟心透了",
+    "headline_text": "FLAT TIRE. NO GAS STATION. NIGHT.",
+    "subtext": "Every driver's nightmare — until it's yours",
+    "prompt_flux": "Atmospheric automotive photography at dusk on a dark empty rural road, a silver sedan pulled over on the shoulder with visibly flat right front tire, emergency hazard lights blinking amber casting intermittent warm glow on wet asphalt, no other cars in sight, distant storm clouds on the horizon, a stressed driver figure silhouetted beside the car with hands on head, rain droplets on the car window, cinematic wide shot with 35mm lens f/2.8, moody blue-black color grading with amber hazard light accents, shallow depth of field, isolation and tension atmosphere, shot style of a documentary photograph, 8K, no product in this frame — pure emotional pain point setup",
+    "prompt_ideogram": "Cinematic scene of a car with flat tire pulled over on empty rural road at dusk, hazard lights flashing amber, driver silhouette in stress pose, moody storm atmosphere. Bold white text 'FLAT TIRE. NO GAS STATION. NIGHT.' at top of frame, smaller subtext 'Every driver's nightmare — until it's yours' below. Dark blue-amber color grading, wide 35mm documentary style, 8K.",
+    "prompt_qwen": "Car with flat tire on empty road at dusk, hazard lights flashing, stressed driver silhouette, storm clouds. White bold text 'FLAT TIRE. NO GAS STATION. NIGHT.' at top. Moody cinematic photography, 8K.",
+    "negative_prompt": "product visible, happy mood, daylight bright scene, clean tire, crowd, gas station in frame, comic style, cartoon",
+    "bbox_hint": null,
+    "tool_chain": ["flux_direct"],
+    "style_notes": "这张图不显示产品。纯情绪铺垫，让用户脑中回放自己的糟糕经历。颜色冷蓝+琥珀色警示灯，构图压抑。下一张（方案）再把产品作为救命稻草呈现。"
+  },
+
+  {
+    "image_number": 3,
+    "image_type": "solution",
+    "sales_task": "给方案 — 产品怎么解决痛点",
+    "psychological_hook": "原来那种情况下，有这个东西 5 分钟就能搞定",
+    "headline_text": "FLAT TO FULL IN 5 MIN",
+    "subtext": "Plug into 12V · Set target PSI · Walk away. Auto-stops.",
+    "prompt_flux": "Before/after automotive photography split composition: LEFT side shows a deflated flat car tire on asphalt at evening blue hour, slightly desaturated cool tones suggesting problem state; RIGHT side shows the same tire fully inflated and firm, the ST08 portable inflator visible at bottom right of frame with its LED display glowing showing '35 PSI', the 12V cigarette lighter plug cable running into the car window, LED work light from the inflator illuminating the tire area in a warm pool of light, smooth gradient transition in the middle joining the two halves, shot with 24mm wide lens f/4 from tire-level perspective, blue cool tones on left transitioning to warm amber on right, 8K cinematic quality, realistic mechanical detail on tire sidewall and rim",
+    "prompt_ideogram": "Split image: LEFT flat car tire in cool blue evening tones, RIGHT same tire fully inflated with black and yellow portable inflator visible, LED screen showing '35 PSI', LED work light glowing warm white on tire. Bold white text 'FLAT TO FULL IN 5 MIN' at top of frame, subtext 'Plug into 12V · Set target PSI · Walk away. Auto-stops.' below. Color gradient left cool to right warm, 24mm wide angle, 8K cinematic.",
+    "prompt_qwen": "Split image: left flat car tire cool tones, right inflated tire with black-yellow inflator, LED showing 35 PSI, warm work light. White text 'FLAT TO FULL IN 5 MIN' at top. Cinematic, 8K.",
+    "negative_prompt": "multiple products, confusing layout, no visible difference between tires, interior shot, people faces, text on product wrong",
+    "bbox_hint": [600, 550, 900, 830],
+    "tool_chain": ["birefnet_remove_bg", "flux_generate_scene", "iclight_relight", "pillow_composite"],
+    "style_notes": "左右对比是视觉最强的方案表达。产品出现在右侧救场位。配合色调从冷到暖的过渡传达'问题解决'的情绪。"
+  },
+
+  {
+    "image_number": 4,
+    "image_type": "detail",
+    "sales_task": "秀细节 — 做工/芯片/面板",
+    "psychological_hook": "这做工看起来挺扎实的，不是廉价货",
+    "headline_text": "PRECISION YOU CAN READ",
+    "subtext": "Digital LED · ±1.5 PSI accuracy · PSI / BAR / KG·CM² switchable",
+    "prompt_flux": "Extreme macro close-up photography of the digital control panel of a portable tire inflator, the bright LED display glowing in sharp focus showing '150 PSI' in green seven-segment digits, physical buttons labeled '+', 'R', '-' in clean embossed lettering, power button with yellow accent ring, LED light switch with subtle glow indicator, yellow warning sticker visible in soft focus, water droplets on the matte black plastic surface catching directional light, brushed aluminum accent strip running across the unit, shot with 100mm macro lens f/4, dramatic side lighting from upper-right creating depth in the texture, shallow depth of field with creamy background blur, every material distinguishable — display glass, plastic buttons, metal accent, rubber grip, 8K ultra-detail, premium product detail photography",
+    "prompt_ideogram": "Extreme macro of tire inflator control panel: glowing green digital display '150 PSI', physical buttons '+ R -', power button with yellow ring, LED indicator, brushed aluminum strip, water droplets on matte black surface. Bold white text 'PRECISION YOU CAN READ' at top, subtext 'Digital LED · ±1.5 PSI accuracy · PSI / BAR / KG·CM² switchable' below. 100mm macro, dramatic side lighting, 8K premium detail photography.",
+    "prompt_qwen": "Macro close-up of tire inflator digital panel: green LED showing 150 PSI, buttons + R -, power button with yellow ring, brushed aluminum, water droplets on matte black. White text 'PRECISION YOU CAN READ' at top. Macro 100mm, side lighting, 8K.",
+    "negative_prompt": "full product visible, cheap plastic texture, cartoon buttons, pixelated display, damaged surface, fingerprints heavy, flat lighting",
+    "bbox_hint": [100, 200, 900, 900],
+    "tool_chain": ["birefnet_remove_bg", "flux_generate_scene", "controlnet_canny_addon", "pillow_composite"],
+    "style_notes": "细节图的核心是让用户感受'精密仪器感'。LED 数字必须锐利可读，按钮阴影有层次，水珠暗示防泼溅质感（虽然产品没宣称防水，但水珠视觉暗示 durability）。需要 ControlNet Canny 保住按钮布局。"
+  },
+
+  {
+    "image_number": 5,
+    "image_type": "scene_multi_use",
+    "sales_task": "看场景 — 降低想象成本",
+    "psychological_hook": "家里车、自行车、孩子的球，一个就够了",
+    "headline_text": "ONE PUMP FOR EVERYTHING",
+    "subtext": "Car 5min · Motorcycle 2min · Bike 40s · Ball 25s",
+    "prompt_flux": "Four-panel product scene layout showing the ST08 tire inflator in use across four scenarios, each quadrant seamlessly blended: TOP-LEFT — inflator connected to a silver sedan tire in a home garage, warm overhead lighting, approximate 5-minute inflation suggested by visible digital timer; TOP-RIGHT — inflator nozzle on a sport motorcycle tire at a riders' meetup, late afternoon golden hour; BOTTOM-LEFT — inflator on a mountain bike tire in a park bike rack setting, dappled morning sunlight through trees; BOTTOM-RIGHT — inflator nozzle on an orange basketball on a wooden indoor court floor, dramatic sports arena lighting. The inflator unit is consistent across panels — same unit, different contexts. Subtle color grading variations per scene (garage warm, moto golden, park green-natural, court cool-bright). Clean composite with thin white dividing lines between quadrants. Square 1:1 format, 8K quality.",
+    "prompt_ideogram": "Four-panel grid showing ST08 tire inflator in action: TOP-LEFT car tire in garage '≈5 min', TOP-RIGHT motorcycle tire golden hour '≈2 min', BOTTOM-LEFT mountain bike tire in park '≈40 sec', BOTTOM-RIGHT basketball on wood court '≈25 sec'. Bold white header 'ONE PUMP FOR EVERYTHING'. Each panel has small timing label. Thin white dividers. Consistent product across scenes. 8K quality.",
+    "prompt_qwen": "Four scenes of ST08 inflator in use: car tire garage, motorcycle golden hour, mountain bike park, basketball on wood court. Each with small timing text: 5min, 2min, 40sec, 25sec. White header 'ONE PUMP FOR EVERYTHING'. Grid layout, 8K.",
+    "negative_prompt": "product variations between panels, inconsistent inflator design, cluttered layout, people faces prominent, warped product, collage cheap look",
+    "bbox_hint": null,
+    "tool_chain": ["in_context_lora_multi_variant", "pillow_grid_compose"],
+    "style_notes": "四格场景图是传达'通用性'的最快方式。核心挑战是四个场景中产品必须是同一个外观（In-Context-LoRA 擅长这个）。每格小字标注对应官方宣传的充气时间。"
+  },
+
+  {
+    "image_number": 6,
+    "image_type": "trust",
+    "sales_task": "建信任 — 打开盒子看里面都有啥",
+    "psychological_hook": "配件挺全的，买一个省心",
+    "headline_text": "EVERYTHING INCLUDED",
+    "subtext": "1 inflator · 4 nozzles · 1 spare fuse — no extras to buy",
+    "prompt_flux": "Top-down flat lay product photography on a clean light wood or warm beige surface, the ST08 tire inflator positioned in the center left with its cable coiled neatly beside it, the four inflation nozzles arranged in a precise row to the right — car valve adapter, motorcycle valve adapter, Presta/needle for balls, inflation tip — a small spare fuse displayed in a blister pack or next to the nozzles, 12V cigarette lighter plug visible, soft overhead diffused lighting with very subtle shadows, shot straight down 90-degree angle with 50mm lens f/5.6, everything in sharp focus, magazine flat-lay composition style, generous negative space top and bottom for text overlay, warm inviting neutral color palette, 8K resolution, professional product catalog photography",
+    "prompt_ideogram": "Top-down flat lay on light wood surface: ST08 black-yellow tire inflator center-left with coiled cable, 4 inflation nozzles arranged in a row to the right, 12V plug visible, spare fuse displayed. Bold white/dark text 'EVERYTHING INCLUDED' at top, subtext '1 inflator · 4 nozzles · 1 spare fuse — no extras to buy' below. Soft overhead lighting, 50mm straight-down angle, magazine flat-lay style, 8K.",
+    "prompt_qwen": "Top-down flat lay on wood: black-yellow tire inflator with coiled cable, 4 nozzles in a row, 12V plug, spare fuse. White/dark text 'EVERYTHING INCLUDED' at top. Soft overhead light, 50mm, 8K.",
+    "negative_prompt": "missing accessories, extra unlabeled items, cluttered, messy cable, uneven lighting, tilted angle, hands visible",
+    "bbox_hint": [100, 300, 900, 800],
+    "tool_chain": ["birefnet_remove_bg", "flux_generate_scene", "pillow_composite"],
+    "style_notes": "平铺图（flat lay）是建立信任的经典手法——让用户像 unboxing 视频那样看到'你买的就是这些'。配件数量和种类必须精准对应文案。"
+  },
+
+  {
+    "image_number": 7,
+    "image_type": "specs",
+    "sales_task": "选规格 — 参数一目了然",
+    "psychological_hook": "规格齐全，我要的点都有",
+    "headline_text": "BUILT FOR THE JOB",
+    "subtext": "Specs that match real roadside demands",
+    "prompt_flux": "Clean technical catalog product layout photography of the ST08 tire inflator shown from a slight 3/4 elevated angle on a minimal dark charcoal background, even soft studio lighting revealing every physical feature — the digital LED display, the button panel, the LED work light, the air outlet hose, the 12V plug, the foldable handle — generous negative space around the product with subtle guide lines suggesting measurement callouts at positions where text/icons would overlay, no text rendered in the base image itself, neutral gray-to-charcoal gradient background, sharp focus throughout, 8K resolution, clean catalog photography style",
+    "prompt_ideogram": "Technical catalog layout of ST08 tire inflator on dark charcoal background, elevated 3/4 angle. Bold white headline 'BUILT FOR THE JOB' at top. Spec callouts with thin linear icons around the product: '150 PSI max', '35 L/min airflow', '12V · 100W', '3.5m cable', 'Digital ±1.5 PSI', 'LED work light', '4 nozzles incl.', '95 dB silent mode'. Minimal sans-serif text, icons in thin white outline, 8K technical catalog style.",
+    "prompt_qwen": "ST08 tire inflator on dark charcoal, 3/4 angle. White bold text 'BUILT FOR THE JOB' at top. Spec icons: 150 PSI, 35 L/min, 12V 100W, 3.5m cable, ±1.5 PSI, LED light, 4 nozzles. Clean catalog style, 8K.",
+    "negative_prompt": "cluttered, tiny illegible text, lifestyle scene, people, colored spec boxes, cheap infographic style",
+    "bbox_hint": [300, 250, 720, 700],
+    "tool_chain": ["birefnet_remove_bg", "flux_generate_scene", "pillow_composite", "playwright_html_overlay"],
+    "style_notes": "规格图用 HTML 模板叠字最稳——Ideogram/Qwen 生成 8 个小字可能会乱。建议 tool_chain 末尾用 Playwright 本地合成文字层。"
+  },
+
+  {
+    "image_number": 8,
+    "image_type": "cta_gift",
+    "sales_task": "促下单 — 礼物/紧迫感",
+    "psychological_hook": "送给爸/男朋友/刚拿驾照的朋友正合适",
+    "headline_text": "THE PRACTICAL GIFT",
+    "subtext": "For the driver who has everything — except a working pump",
+    "prompt_flux": "Warm elegant gift-giving scene photography, the ST08 tire inflator presented inside an open matte black gift box with yellow branded tissue paper, wrapped with a black ribbon bow partially untied, the product's LED display showing a subtle soft glow, placed on a dark walnut wood table, warm amber bokeh from string lights or candles in the soft-focus background, a small handwritten-style gift tag in the corner reading 'Drive safe.' in elegant script, shot at 50mm f/2.0 from slightly above, creamy background blur, rich warm color grading with blacks yellows and warm whites, luxury practical gift photography aesthetic, 8K resolution",
+    "prompt_ideogram": "Gift scene: ST08 black-yellow tire inflator in open matte black gift box with yellow tissue, black ribbon partially untied, LED display soft-glowing, on dark walnut wood. Warm amber bokeh background, gift tag 'Drive safe.' in corner. Bold white text 'THE PRACTICAL GIFT' at top, subtext 'For the driver who has everything — except a working pump' below. Warm 50mm luxury photography, 8K.",
+    "prompt_qwen": "Tire inflator in black gift box with yellow tissue, black ribbon, on walnut wood, warm bokeh. White text 'THE PRACTICAL GIFT' at top. Luxury gift photography, 50mm, 8K.",
+    "negative_prompt": "cheap packaging, plastic wrap, holiday cliché, Christmas tree visible, cartoon, busy background, harsh lighting",
+    "bbox_hint": [250, 280, 770, 780],
+    "tool_chain": ["birefnet_remove_bg", "flux_generate_scene", "iclight_relight", "pillow_composite"],
+    "style_notes": "促下单图走情绪不走折扣。'实用礼物'定位避开红蓝促销 banner 风格，保持产品高级感。对标人群：送给爱车的爸爸/男友/新手司机。"
+  }
+]

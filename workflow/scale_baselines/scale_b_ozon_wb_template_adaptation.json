@@ -1,0 +1,39 @@
+{
+  "id": "scale_b_ozon_wb_template_adaptation",
+  "name": "Scale B - Ozon/WB template adaptation route",
+  "method_family": "marketplace_card_template_adaptation",
+  "source_references": [
+    "Ozon/WB seller videos: competitor analysis + ready template + background removal + edit text/layout",
+    "Bitypixel: upload product, AI analyzes, remove background, adapt 3:4 templates, edit text/icon/badges",
+    "Sozdai and Behance Ozon/WB card examples: one slide per benefit, high information density, short headline, large product"
+  ],
+  "validation_goal": "Verify whether Ozon/WB style 3:4 cards can be generated through template adaptation instead of free-form AI image generation.",
+  "template_product_types": [
+    "single_image_template",
+    "suite_template",
+    "psd_template"
+  ],
+  "generator_policy": {
+    "primary": "reference_template_extraction_plus_locked_layout_render",
+    "allowed_generators": [
+      "template_render_mvp",
+      "fabric_template_render",
+      "gpt_image_2_for_background_or_scene_only",
+      "comfyui_productfix_for_product_preservation"
+    ],
+    "not_allowed_as_main_route": [
+      "amazon_white_main_image_clone",
+      "uncontrolled_dense_model_text"
+    ]
+  },
+  "qa_focus": [
+    "3_4_mobile_card_readability",
+    "large_product_ratio",
+    "short_text_density",
+    "icon_badge_consistency",
+    "template_reusability",
+    "product_fidelity",
+    "claim_safety"
+  ],
+  "pass_condition": "At least 4 of 5 cards must remain readable as a mobile marketplace tile and must not depend on model-rendered long text."
+}

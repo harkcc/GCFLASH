@@ -1,0 +1,101 @@
+{
+  "sku": "ST08",
+  "brand": "Excitat",
+  "product_name": "ST08 Portable Digital Tire Inflator 150 PSI",
+  "product_name_cn": "车载便携数显充气泵 150 PSI",
+  "category": "Automotive / Tire Inflators",
+  "category_code": "auto_accessory_inflator",
+  "source_listing": "https://www.emag.ro/compresor-auto-st08-excitat-r-inflatie-150-psi-12v-display-digital-led-silentios-lampa-lucru-cu-duza-de-umflare-lungime-cablu-3-5m-pompa-aer-electrica-pentru-anvelope-masina-moto-bicicleta-minge-negru/pd/DG84K5YBM/",
+
+  "specifications": {
+    "voltage": "12V",
+    "max_pressure": "150 PSI",
+    "power": "100W",
+    "air_flow": "35 L/min",
+    "noise_level": "95 dB",
+    "continuous_runtime": "5-20 minutes (15 min cooldown after 15 min use)",
+    "pressure_accuracy": "±1.5 PSI",
+    "cable_length": "3.5 m (10.83 ft)",
+    "pressure_units": ["PSI", "BAR", "KG/CM²"],
+    "display_type": "Digital LED",
+    "materials": ["Aluminum", "ABS"],
+    "weight_g": 1005,
+    "package_dimensions_cm": "24 x 15 x 11",
+    "color": "Black with yellow accents",
+    "power_source": "12V car cigarette lighter (wired)"
+  },
+
+  "key_features": [
+    "150 PSI max pressure — inflates 195/65R15 car tire from 0 to 35 PSI in ~5 minutes",
+    "Programmable auto-shutoff — set target pressure, device stops automatically",
+    "Digital LED display with ±1.5 PSI precision, switchable units (PSI/BAR/KG/CM²)",
+    "Built-in LED work light for nighttime tire changes",
+    "4 nozzles + 1 spare fuse — covers car, motorcycle, bike, basketball, sports equipment",
+    "3.5m long power cable — reaches all 4 tires without repositioning",
+    "Foldable handle — compact storage in trunk",
+    "Silent-optimized airflow design"
+  ],
+
+  "inflation_benchmarks": [
+    { "target": "195/65R15 car tire",           "time": "≈ 5 minutes" },
+    { "target": "100/90-10 motorcycle tire",    "time": "≈ 2 minutes" },
+    { "target": "26x1.95 bicycle tire",         "time": "≈ 40 seconds" },
+    { "target": "standard basketball",          "time": "≈ 25 seconds" }
+  ],
+
+  "accessories_in_box": [
+    "1 × ST08 compressor unit",
+    "4 × inflation nozzles (car valve, motorcycle valve, Presta/ball needle, inflation tip)",
+    "1 × spare fuse"
+  ],
+
+  "target_audience": [
+    "Car owners (daily commuters, weekend drivers)",
+    "Motorcycle and scooter riders",
+    "Cyclists (road / MTB / family)",
+    "Parents needing to inflate kids' bikes and sports balls",
+    "Outdoor enthusiasts, road trippers",
+    "Gift buyers looking for practical presents"
+  ],
+
+  "pain_points_solved": [
+    "Roadside flat tire emergency, no gas station nearby",
+    "Low tire pressure in cold weather (common daily issue)",
+    "Multiple devices needed for car + bike + ball — replaced by one",
+    "Dark/night tire changes with no work light",
+    "Analog gauge inaccuracy — digital precision instead",
+    "Overinflation risk — auto-shutoff prevents it",
+    "Short cable can't reach all 4 tires — 3.5m solves it"
+  ],
+
+  "unique_selling_points": [
+    "150 PSI max (higher than most consumer inflators ~100 PSI)",
+    "Programmable auto-shutoff with ±1.5 PSI accuracy",
+    "LED work light integrated (rare at this price point)",
+    "3.5m cable reaches all 4 tires without moving the unit",
+    "4 nozzles included — true multi-use (car/moto/bike/ball)"
+  ],
+
+  "competitors_amazon": [
+    "VIAIR 85P",
+    "AstroAI Digital Tire Inflator",
+    "EPAuto Tire Inflator",
+    "Black+Decker ASI300"
+  ],
+
+  "price_range_usd": "$30-55",
+
+  "brand_visual_identity": {
+    "primary_color": "#FFD500 (EXCITAT yellow)",
+    "secondary_color": "#1A1A1A (jet black)",
+    "accent_color": "#FFFFFF (white)",
+    "logo_style": "Bold italic sans-serif, yellow outlined",
+    "tone": "Practical, powerful, trustworthy — working-class confidence"
+  },
+
+  "safety_notes": [
+    "Do not run continuously for more than 15 minutes; allow 15 min cooldown",
+    "Always set target pressure above current tire pressure",
+    "Monitor the device during inflation; do not leave unattended"
+  ]
+}

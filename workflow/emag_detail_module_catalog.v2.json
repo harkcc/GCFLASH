@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "catalog_version": "2026-05-24.v2",
+  "target": "eMAG detail HTML and detail-image generation",
+  "rendering_baseline": {
+    "layout": "mobile-first single column",
+    "preferred_canvas_width_px": 1140,
+    "fallback_canvas_width_px": 800,
+    "live_sample_common_width_px": 1140,
+    "max_images_per_row": 1,
+    "safe_html_core": ["p", "h1", "h2", "h3", "strong", "br", "img", "ul", "li"],
+    "live_proven_gray_zone": ["table", "tr", "td", "div", "blockquote", "inline_style", "gif"],
+    "validated_on": "2026-05-24",
+    "validation_artifact": "experiments/20260524_emag_banner_css_validation/validation_report.json"
+  },
+  "verified_live_dimensions": {
+    "brand_trust_gif_banner": {
+      "source_px": "1200x480",
+      "rendered_px": "1140x456",
+      "usage": "brand familiarity, service cues, platform-like trust context",
+      "html_form": "p text-align:center + img width=1140",
+      "motion": "gif allowed when it proves brand, usage, installation, or result"
+    },
+    "product_tech_hero_banner": {
+      "source_px": "1280x366 or 1400x400",
+      "rendered_px": "1140x326",
+      "usage": "technical products where the buyer needs compatibility, safety, or feature confidence first",
+      "html_form": "p text-align:center + img width=1140",
+      "motion": "static by default"
+    },
+    "official_promo_reference_tiles": {
+      "source_px": "420x480 tiles plus 1200x225 campaign strip",
+      "usage": "reference for people/category mood only; do not reuse commercially unless rights are confirmed",
+      "html_form": "source material for generated banner layouts, not direct proof content"
+    }
+  },
+  "banner_style_selector": [
+    {
+      "style_id": "premium_dark_brand_trust",
+      "best_for": ["low brand familiarity", "general store trust", "multi-product seller pages"],
+      "prompt_anchor": "dark premium background, real people or parcel scene, 3 service cues maximum, deterministic text overlay",
+      "avoid": ["fake platform logo", "unsupported delivery/return/warranty claims", "model-written small text"]
+    },
+    {
+      "style_id": "product_tech_context",
+      "best_for": ["EV chargers", "tools", "electronics", "measurement devices"],
+      "prompt_anchor": "product cutout, technical background, usage scene, compatibility/safety chips",
+      "avoid": ["overloaded spec walls", "unverified certification badges"]
+    },
+    {
+      "style_id": "official_blue_people_category",
+      "best_for": ["app-first promotion tests", "beauty", "baby", "sports", "consumables"],
+      "prompt_anchor": "bright marketplace blue, person plus category objects, rounded floating product tiles",
+      "avoid": ["direct eMAG logo use without permission", "discount claims", "crowded floating objects"]
+    }
+  ],
+  "module_groups": [
+    {
+      "group_id": "attention_and_desire",
+      "label": "3-second result hook",
+      "purpose": "Open with the outcome the buyer wants, not a neutral product definition.",
+      "modules": [
+        {
+          "module_id": "emotional_result_hero",
+          "allowed_section_types": ["hero"],
+          "buyer_question": "What result do I get if I buy this?",
+          "copy_rule": "Lead with relief, solved scenario, or gained convenience; avoid price, discount, and exaggerated claims.",
+          "visual_rule": "Large product/lifestyle composition, one dominant headline, 2-3 proof chips only.",
+          "evidence_required": ["product_truth_pack", "image_asset_or_generated_concept"],
+          "html_form": "img-first board or table-backed panel",
+          "risk_flags": ["unsupported_result_claim", "promo_language"]
+        },
+        {
+          "module_id": "pain_scene_solution",
+          "allowed_section_types": ["scenario", "benefit"],
+          "buyer_question": "Which annoying situation does this remove?",
+          "copy_rule": "Name the buyer's frustration, then connect one feature to one practical relief.",
+          "visual_rule": "Before/after scene, simple icon pair, or color-banded contrast panel.",
+          "evidence_required": ["product_truth_pack", "review_or_qa_signal_optional"],
+          "html_form": "single image board plus short paragraph",
+          "risk_flags": ["fearmongering", "unsupported_before_after"]
+        }
+      ]
+    },
+    {
+      "group_id": "guided_reasoning",
+      "label": "Buyer-question flow",
+      "purpose": "Replace the buyer's mental objections with explicit answers in page order.",
+      "modules": [
+        {
+          "module_id": "buyer_question_answer_block",
+          "allowed_section_types": ["feature_proof", "benefit", "compatibility", "safety_or_usage"],
+          "buyer_question": "Why should I believe this feature matters?",
+          "copy_rule": "Question title plus answer; each block explains one concern only.",
+          "visual_rule": "Use a small anchor symbol, bold question, then 2-4 lines of answer.",
+          "evidence_required": ["product_truth_pack"],
+          "html_form": "text panel, color band, or image board",
+          "risk_flags": ["multi_claim_overload"]
+        },
+        {
+          "module_id": "faq_objection_closer",
+          "allowed_section_types": ["faq", "closing"],
+          "buyer_question": "What would the buyer otherwise go back to check?",
+          "copy_rule": "Use actual reviews, Q&A, competitor comments, or category questions; do not invent named customer claims.",
+          "visual_rule": "Plain white FAQ or light color-band list, no decoration-heavy layout.",
+          "evidence_required": ["review_signal_or_category_qa", "product_truth_pack"],
+          "html_form": "h3 plus p list or ul/li",
+          "risk_flags": ["fabricated_review", "unsupported_answer"]
+        }
+      ]
+    },
+    {
+      "group_id": "visual_order",
+      "label": "Visual hierarchy anchors",
+      "purpose": "Make long mobile detail pages scannable without relying on dense paragraphs.",
+      "modules": [
+        {
+          "module_id": "color_band_feature_stack",
+          "allowed_section_types": ["benefit", "feature_proof"],
+          "buyer_question": "What are the main reasons to keep reading?",
+          "copy_rule": "Feature name first, benefit second, no more than 8 bullets per band.",
+          "visual_rule": "One restrained background color per band; no nested cards; clear left alignment.",
+          "evidence_required": ["product_truth_pack"],
+          "html_form": "table-backed color band or generated image board",
+          "risk_flags": ["low_contrast", "too_many_bullets"]
+        },
+        {
+          "module_id": "first_screen_anchor_triplet",
+          "allowed_section_types": ["hero", "benefit", "compatibility", "feature_proof"],
+          "buyer_question": "What are the 3 highest-priority reasons to keep reading after the banner?",
+          "copy_rule": "Use exactly 3 short buyer-facing decision anchors. Each anchor must be one purchase role: fit/compatibility, result/control, safety/proof, scene relief, or trust. Do not write internal SOP explanations.",
+          "visual_rule": "Mobile-first stacked cards, full available width, very light background, one colored left rail per card, bold 01/02/03 title, 1-2 lines of support text. Keep it calmer than a banner and more readable than icon chips.",
+          "evidence_required": ["product_truth_pack", "module_plan"],
+          "html_form": "blockquote stack or div stack with inline style; can degrade to p/strong blocks",
+          "content_examples": {
+            "ev_charger": ["Compatibil cu vehicule Tip 2", "Control WiFi + RFID", "Protectie IP65 pentru exterior"],
+            "home_cleaning": ["Curata rapid masina", "Fara fir, usor de tinut", "Duze pentru spatii inguste"],
+            "beauty": ["Confort in rutina", "Contact bland cu pielea", "Curatare usoara"],
+            "baby": ["Siguranta inainte de functie", "Pasi simpli pentru parinti", "Piese usor de curatat"],
+            "brand_trust": ["Brand usor de recunoscut", "Dovezi reale, nu promisiuni", "Suport clar cand ai intrebari"]
+          },
+          "risk_flags": ["internal_sop_copy", "generic_claims", "too_much_text", "unsupported_service_claim"]
+        },
+        {
+          "module_id": "symbol_anchor_sequence",
+          "allowed_section_types": ["benefit", "feature_proof", "specs"],
+          "buyer_question": "Where should my eye go first?",
+          "copy_rule": "Use a repeated marker only as a reading anchor, not as decoration.",
+          "visual_rule": "Small symbol, short bold label, then supporting text.",
+          "evidence_required": ["product_truth_pack"],
+          "html_form": "inline text, light table row, or image board",
+          "risk_flags": ["decorative_noise"]
+        }
+      ]
+    },
+    {
+      "group_id": "trust_and_brand",
+      "label": "Brand and platform familiarity",
+      "purpose": "Build trust without repeating a logo as empty branding.",
+      "modules": [
+        {
+          "module_id": "brand_platform_trust_banner",
+          "allowed_section_types": ["brand_proof", "closing"],
+          "buyer_question": "Can I trust this brand and buying context?",
+          "copy_rule": "Use only platform/service claims that are true for the listing or seller; otherwise keep it to brand values and support process.",
+          "visual_rule": "Dark premium banner, real people or platform-style parcel scene, 3 service icons maximum.",
+          "evidence_required": ["seller_or_platform_service_fact", "brand_style_pack"],
+          "html_form": "generated banner image or gif; avoid complex HTML",
+          "risk_flags": ["unsupported_delivery_claim", "unsupported_return_claim", "trademark_misuse"]
+        },
+        {
+          "module_id": "testimonial_evidence_board",
+          "allowed_section_types": ["social_proof"],
+          "buyer_question": "Did real buyers have the same concern?",
+          "copy_rule": "Only quote or summarize real review data. If no review data exists, convert it to 'common questions' instead of fake testimonials.",
+          "visual_rule": "Dark background, review cards, star rating only when sourced.",
+          "evidence_required": ["actual_reviews_or_review_summary"],
+          "html_form": "generated image board",
+          "risk_flags": ["fabricated_review", "misleading_rating"]
+        }
+      ]
+    },
+    {
+      "group_id": "facts_and_decision",
+      "label": "Decision facts",
+      "purpose": "Give the buyer enough concrete facts to decide without leaving the detail page.",
+      "modules": [
+        {
+          "module_id": "spec_table_clean",
+          "allowed_section_types": ["specs"],
+          "buyer_question": "Does it fit my requirement?",
+          "copy_rule": "Use source specs only; translate units consistently.",
+          "visual_rule": "Two-column table, light zebra rows, strong labels.",
+          "evidence_required": ["product_truth_pack"],
+          "html_form": "table gray-zone or image board",
+          "risk_flags": ["missing_source_spec"]
+        },
+        {
+          "module_id": "package_and_usage",
+          "allowed_section_types": ["package_contents", "safety_or_usage"],
+          "buyer_question": "What arrives and how do I use it correctly?",
+          "copy_rule": "List package contents and usage cautions factually.",
+          "visual_rule": "Product flat lay, numbered usage steps, concise labels.",
+          "evidence_required": ["product_truth_pack", "source_images_optional"],
+          "html_form": "img plus ul/li",
+          "risk_flags": ["unsupported_accessory"]
+        }
+      ]
+    }
+  ],
+  "app_tool_controls": {
+    "module_picker": ["required", "optional", "disabled"],
+    "output_mode": ["html_only", "image_board", "html_plus_image_boards"],
+    "evidence_mode": ["strict_source_only", "source_plus_category_qa", "concept_preview"],
+    "style_intensity": ["clean", "commercial", "premium_dark"],
+    "review_usage": ["actual_only", "summary_only", "faq_instead"]
+  }
+}

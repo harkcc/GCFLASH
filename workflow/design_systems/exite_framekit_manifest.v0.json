@@ -1,0 +1,130 @@
+{
+  "name": "EXITE FrameKit",
+  "version": "0.0.1",
+  "canvas": {
+    "width": 1200,
+    "height": 1200,
+    "safe_margin_min": 42,
+    "safe_margin_max": 70
+  },
+  "source_references": {
+    "extracted_frames": "experiments/20260522_excitat_41_frame_extract/design_frame_layers",
+    "strict_edges": "experiments/20260522_excitat_41_frame_extract/strict_edge_layers",
+    "manifest": "experiments/20260522_excitat_41_frame_extract/frame_extract_manifest.csv",
+    "replication_blueprint": "workflow/design_systems/exite_41_reference_replication.BLUEPRINT.md"
+  },
+  "runtime_policy": {
+    "product_integrity": "Product pixels are preserved from the input cutout. AI may generate background and decoration, but must not redraw the product.",
+    "brand_integrity": "EXITE wordmark must be deterministic vector/raster asset, not generated freely by prompt.",
+    "layout_control": "Frame, brand shelf, product slot, bottom bar, side panel, and text modules are placed by renderer coordinates.",
+    "open_design_role": "Open Design style tools can be used for visual exploration and editable template authoring. Production requires exported layer structure or conversion into FrameKit module specs.",
+    "ai_scope": [
+      "paper texture",
+      "ornamental border pattern",
+      "neon glow",
+      "botanical line art",
+      "soft scene background",
+      "secondary decorative elements"
+    ]
+  },
+  "common_modules": [
+    "outer_sleeve",
+    "inner_product_field",
+    "brand_shard",
+    "brand_wordmark",
+    "brand_shadow",
+    "bottom_title_bar",
+    "bottom_spec_chips",
+    "side_proof_cards",
+    "corner_ornaments",
+    "technical_line_frame",
+    "product_shadow",
+    "foreground_overlap"
+  ],
+  "qa_rubric": {
+    "brand_wordmark_readability": 15,
+    "correct_family_selected": 15,
+    "border_proportion_matches_reference": 15,
+    "product_primary_anchor": 15,
+    "product_frame_collision_handling": 10,
+    "category_decoration_quality": 10,
+    "bottom_or_side_module_usefulness": 10,
+    "thumbnail_impact": 10,
+    "accept_min_score": 75,
+    "production_target_score": 82
+  },
+  "families": [
+    {
+      "family_id": "teal_paper_sleeve",
+      "name": "Teal Paper Sleeve",
+      "reference_ids": [2, 7, 22, 25],
+      "category_triggers": ["baby", "home_appliance", "clean_accessory", "compatibility_accessory"],
+      "brand_slot": { "x": 610, "y": 24, "width": 560, "height": 150 },
+      "default_product_safe_area": { "x": 85, "y": 180, "width": 760, "height": 735 },
+      "modules": ["outer_sleeve", "inner_product_field", "brand_shard", "brand_wordmark", "bottom_title_bar", "side_icon_stack", "product_shadow"],
+      "palette": ["teal", "aqua", "white", "black_underside", "orange_micro_accent"],
+      "prompt_modifier": "teal paper sleeve, white inner product panel, subtle paper grain, baby home appliance e-commerce card",
+      "negative_prompt": "no tiny logo, no empty plain border, no thick cyber frame, no product collision"
+    },
+    {
+      "family_id": "green_botanical_functional",
+      "name": "Green Botanical Functional",
+      "reference_ids": [5, 16, 27, 38],
+      "category_triggers": ["garden", "ventilation", "household", "food_storage", "comfort"],
+      "brand_slot": { "x": 610, "y": 24, "width": 560, "height": 150 },
+      "default_product_safe_area": { "x": 100, "y": 190, "width": 760, "height": 720 },
+      "modules": ["outer_sleeve", "leaf_pattern", "brand_shard", "brand_wordmark", "bottom_spec_chips", "corner_ornaments", "product_shadow"],
+      "palette": ["green", "mint", "white", "yellow_logo_accent", "dark_green"],
+      "prompt_modifier": "green botanical frame, leaf line pattern, white product panel, functional metric chips",
+      "negative_prompt": "no full wallpaper, no overly busy leaves, no hidden product, no long paragraph text"
+    },
+    {
+      "family_id": "orange_tool_poster",
+      "name": "Orange Tool Poster",
+      "reference_ids": [4, 13, 29, 33, 39],
+      "category_triggers": ["tool", "hardware", "security", "repair", "measurement", "auto_accessory"],
+      "brand_slot": { "x": 600, "y": 18, "width": 590, "height": 165 },
+      "default_product_safe_area": { "x": 85, "y": 220, "width": 760, "height": 640 },
+      "modules": ["top_wedge", "outer_sleeve", "brand_shard", "brand_wordmark", "right_proof_cards", "bottom_spec_bar", "diagonal_corner_lines", "product_shadow"],
+      "palette": ["orange", "red_orange", "black", "grey", "white", "gold"],
+      "prompt_modifier": "orange hardware poster frame, black underside brand shelf, diagonal safety lines, bottom black spec band, right proof cards",
+      "negative_prompt": "no cute rounded cards, no soft pastel style, no weak brand logo, no oversized product covering proof cards"
+    },
+    {
+      "family_id": "dark_neon_tech",
+      "name": "Dark Neon Tech",
+      "reference_ids": [1, 12, 20, 23, 31, 34, 36],
+      "category_triggers": ["gaming", "rgb", "ev", "auto", "robot", "sci_fi_toy", "strong_electronics"],
+      "brand_slot": { "x": 585, "y": 18, "width": 610, "height": 175 },
+      "default_product_safe_area": { "x": 120, "y": 240, "width": 780, "height": 620 },
+      "modules": ["dark_stage", "neon_outer_sleeve", "brand_shard", "brand_wordmark", "bottom_spec_chips", "light_streaks", "foreground_overlap", "rim_light"],
+      "palette": ["black", "purple", "cyan", "magenta", "electric_blue", "white"],
+      "prompt_modifier": "dark neon stage, cyan magenta rim light, angular sci-fi frame, energetic e-commerce tech poster",
+      "negative_prompt": "no generic same cyber frame for every product, no unreadable brand, no product deformation"
+    },
+    {
+      "family_id": "ornamental_gift_beauty",
+      "name": "Ornamental Gift Beauty",
+      "reference_ids": [15, 19, 26, 28, 30, 32, 40],
+      "category_triggers": ["beauty", "kids", "puzzle", "gift", "soft_goods", "decorative"],
+      "brand_slot": { "x": 600, "y": 28, "width": 560, "height": 150 },
+      "default_product_safe_area": { "x": 120, "y": 200, "width": 760, "height": 690 },
+      "modules": ["ornamental_border", "inner_product_field", "brand_shard", "brand_wordmark_soft", "corner_ornaments", "bottom_title_bar", "soft_icons"],
+      "palette": ["pink", "black", "mint", "white", "gold", "soft_cyan"],
+      "prompt_modifier": "black pink ornamental border, soft white inner card, floral puzzle pearl accents, premium gift product card",
+      "negative_prompt": "no hard industrial style, no heavy cyber frame, no messy floral overload, no hidden product"
+    },
+    {
+      "family_id": "clean_technical_infographic",
+      "name": "Clean Technical Infographic",
+      "reference_ids": [3, 6, 10, 14, 17, 18, 35, 37, 41],
+      "category_triggers": ["kit", "component_set", "parameter_heavy", "compatibility", "appliance", "technical_accessory"],
+      "brand_slot": { "x": 610, "y": 24, "width": 540, "height": 135 },
+      "default_product_safe_area": { "x": 90, "y": 190, "width": 650, "height": 700 },
+      "modules": ["technical_line_frame", "right_info_panel", "accessory_grid", "brand_marker", "bottom_spec_bar", "module_cards"],
+      "palette": ["teal", "cyan", "grey", "white", "black", "taupe"],
+      "prompt_modifier": "technical line frame, accessory grid, right information panel, precise catalog layout, clean product card",
+      "negative_prompt": "no decorative clutter, no random text, no distorted icons, no crowded unreadable parameters"
+    }
+  ]
+}

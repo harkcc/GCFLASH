@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TemplateCard",
+  "type": "object",
+  "required": [
+    "template_id",
+    "image_role",
+    "business_goal",
+    "viewer_question",
+    "layout_pattern",
+    "product_weight",
+    "text_zones",
+    "badge_zones",
+    "scene_zones",
+    "color_style",
+    "prompt_keep_rules",
+    "prompt_change_rules",
+    "negative_constraints",
+    "text_policy",
+    "best_for_categories",
+    "best_for_marketplaces",
+    "scoring_focus"
+  ],
+  "properties": {
+    "template_id": { "type": "string" },
+    "name": { "type": "string" },
+    "image_role": {
+      "type": "string",
+      "enum": [
+        "hero",
+        "pain_solution",
+        "proof_detail",
+        "lifestyle",
+        "comparison",
+        "infographic",
+        "white_ticket",
+        "detail_page"
+      ]
+    },
+    "business_goal": { "type": "string" },
+    "viewer_question": { "type": "string" },
+    "layout_pattern": { "type": "string" },
+    "product_weight": { "type": "string" },
+    "text_zones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "position", "policy"],
+        "properties": {
+          "id": { "type": "string" },
+          "position": { "type": "string" },
+          "policy": { "type": "string" }
+        }
+      }
+    },
+    "badge_zones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "position", "content"],
+        "properties": {
+          "id": { "type": "string" },
+          "position": { "type": "string" },
+          "content": { "type": "string" }
+        }
+      }
+    },
+    "scene_zones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "position", "role"],
+        "properties": {
+          "id": { "type": "string" },
+          "position": { "type": "string" },
+          "role": { "type": "string" }
+        }
+      }
+    },
+    "color_style": { "type": "string" },
+    "prompt_keep_rules": { "type": "array", "items": { "type": "string" } },
+    "prompt_change_rules": { "type": "array", "items": { "type": "string" } },
+    "negative_constraints": { "type": "array", "items": { "type": "string" } },
+    "text_policy": { "type": "string" },
+    "best_for_categories": { "type": "array", "items": { "type": "string" } },
+    "best_for_marketplaces": { "type": "array", "items": { "type": "string" } },
+    "model_notes": {
+      "type": "object",
+      "properties": {
+        "gpt_image_2": { "type": "string" },
+        "flux": { "type": "string" },
+        "nano_banana": { "type": "string" },
+        "midjourney": { "type": "string" }
+      }
+    },
+    "scoring_focus": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

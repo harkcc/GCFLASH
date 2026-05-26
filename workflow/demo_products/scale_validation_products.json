@@ -1,0 +1,29 @@
+{
+  "id": "scale_validation_products",
+  "products": [
+    {
+      "id": "pink_backpack",
+      "role": "soft_goods_lifestyle_and_organization",
+      "source_image": "experiments/20260504_img2img_validation/source_products/pink_backpack.jpg",
+      "truth_source": "experiments/20260504_img2img_validation/product_truth_packs.json",
+      "truth_key": "pink_backpack",
+      "primary_scale": "scale_a_nexscope_amazon_7"
+    },
+    {
+      "id": "portable_tire_inflator",
+      "role": "tool_specs_detail_and_comparison",
+      "source_image": "experiments/20260504_img2img_validation/source_products/portable_tire_inflator.jpg",
+      "truth_source": "experiments/20260504_img2img_validation/product_truth_packs.json",
+      "truth_key": "portable_tire_inflator",
+      "primary_scale": "scale_b_ozon_wb_template_adaptation"
+    },
+    {
+      "id": "usb_cable_accessory_set",
+      "role": "accessory_packaging_connectors_dense_info",
+      "source_image": "experiments/20260504_img2img_validation/source_products/usb_cable_accessory_set.jpg",
+      "truth_source": "experiments/20260504_img2img_validation/product_truth_packs.json",
+      "truth_key": "usb_cable_accessory_set",
+      "primary_scale": "scale_c_brandshootkit_qa_reroll"
+    }
+  ]
+}

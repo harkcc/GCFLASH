@@ -1,0 +1,22 @@
+{
+  "assets": [
+    {
+      "className": "widget-slider-carousel",
+      "href": "",
+      "id": "",
+      "index": 267,
+      "left": 236,
+      "renderedHeight": 587,
+      "renderedWidth": 1500,
+      "tag": "DIV",
+      "text": "",
+      "top": 96,
+      "urls": [
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA8AAAAG/AQMAAACt8yzlAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAEtJREFUeNrtwQENAAAAwiD7pzbHN2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFBzTRwABw2NiVgAAAABJRU5ErkJggg=="
+      ]
+    }
+  ],
+  "title": "eMAG.ro - Căutarea nu se oprește niciodată",
+  "url": "https://www.emag.ro/?captcha_status=ok",
+  "capturedAt": "2026-05-24T08:27:30.107Z"
+}

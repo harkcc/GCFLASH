@@ -1,0 +1,37 @@
+{
+  "id": "scale_a_nexscope_amazon_7",
+  "name": "Scale A - Nexscope/Amazon 7 image strategy",
+  "method_family": "amazon_listing_strategy",
+  "source_references": [
+    "Nexscope Amazon Listing Images skill: 7-image strategy, main image optimization, infographic layouts, lifestyle scenes, size/scale reference, mobile readability, A/B testing",
+    "Nexscope GPT Image 2 Amazon workflow: start with product references, define the image job, lock facts, generate directions, review, finalize in editable tool",
+    "tryclair Amazon listing image type catalog: hero, lifestyle, main features, main benefits, us-vs-them, what's included, size guide, size comparison"
+  ],
+  "validation_goal": "Verify whether one product image plus ProductTruthPack can become a coherent 7 image Amazon suite where every slot has a buyer question and mobile-readable commercial job.",
+  "template_product_types": [
+    "suite_template",
+    "single_image_template"
+  ],
+  "generator_policy": {
+    "primary": "template_reverse_brief_plus_candidate_generation",
+    "allowed_generators": [
+      "gpt_image_2_reference_edit",
+      "template_render_mvp",
+      "fabric_or_psd_template_render"
+    ],
+    "not_allowed_as_main_route": [
+      "one_prompt_per_image_without_suite_state",
+      "model_generated_long_final_text"
+    ]
+  },
+  "qa_focus": [
+    "slot_sequence_logic",
+    "buyer_question_fit",
+    "product_fidelity",
+    "mobile_readability",
+    "copy_claim_safety",
+    "suite_style_consistency",
+    "ab_test_hypothesis"
+  ],
+  "pass_condition": "At least 6 of 7 slots must have distinct buyer questions, safe claims, readable text zones, and the same product identity."
+}

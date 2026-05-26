@@ -1,0 +1,78 @@
+[
+  {
+    "source": "Amazon.com",
+    "title": "Amazon.com: BIGMONAT Bedside Table Lamp Kids with Remote ...",
+    "url": "https://www.amazon.com/BIGMONAT-Changing-Dimmable-Nightstand-Computer/dp/B0BF41DYXD",
+    "price": {},
+    "rating": null,
+    "reviews": null,
+    "image_count": 12,
+    "images": [
+      "https://m.media-amazon.com/images/I/71vAPgo4ujL._AC_UF350,350_QL80_.jpg",
+      "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQj0B0Sp3EKPPU6h9Ra67VaKP3RkVsMl4Gy0ufskTFNe-gwnM00",
+      "https://m.media-amazon.com/images/I/61ZCH48026L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71WIdi1LZ9L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71BPrR+l-qL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71vAPgo4ujL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71LyOgbDU-L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71cF1MHo2YL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71rELtoVfLL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61ZCH48026L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/31E+PEMxgDL._SS64_.jpg",
+      "https://m.media-amazon.com/images/I/412vQjMWpOL._SS64_.jpg"
+    ],
+    "judgment": {
+      "suitable_as_reference": false,
+      "reason": "'candidates'"
+    }
+  },
+  {
+    "source": "Amazon.com",
+    "title": "Amazon.com: NOTOKA Mini Portable Bluetooth Speakers Wireless ...",
+    "url": "https://www.amazon.com/NOTOKA-Portable-Bluetooth-Speakers-Christmas/dp/B0DKJYMVSP",
+    "price": {},
+    "rating": null,
+    "reviews": null,
+    "image_count": 12,
+    "images": [
+      "https://m.media-amazon.com/images/I/71Mp+XbCrdL._AC_UF894,1000_QL80_.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq4rZDoxMkb7cLzbPxuhucS1NYlaWsnWHZq_HjlljirU4bIR_5",
+      "https://m.media-amazon.com/images/I/71Mp+XbCrdL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61oTImuh3bL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71g7ouJCIJL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81cs1KsQJiL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71H-dJoKwZL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71iMUbAgZRL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/718m3MmyOkL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61FLQag2K9L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61zmdmiZI5L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71Mp+XbCrdL._AC_SY300_SX300_QL70_FMwebp_.jpg"
+    ],
+    "judgment": {}
+  },
+  {
+    "source": "Amazon.com",
+    "title": "Amazon.com: FoxFlame Bluetooth Outdoor Speakers-Realistic ...",
+    "url": "https://www.amazon.com/Bluetooth-Outdoor-Speakers-Realistic-Tailgating/dp/B0FC7NG9LG",
+    "price": {},
+    "rating": null,
+    "reviews": null,
+    "image_count": 13,
+    "images": [
+      "https://m.media-amazon.com/images/I/81RQrFdPduL.jpg",
+      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQsbsSwSGA_vW-zQ7ql7acrYvezuhyfOyAJ0ky2EjNSPfzoTft8",
+      "https://m.media-amazon.com/images/I/814IBzxS2WL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81RQrFdPduL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71qoLjnFEbL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81hDkBKPwKL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81HwE7klLjL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/819SFxDRveL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81d0a5SZRuL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81XYkgUL2hL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/814IBzxS2WL._AC_SX342_SY445_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/514P-h8ph8L._SS64_.jpg",
+      "https://m.media-amazon.com/images/I/51OLPPssf7L._SS64_.jpg"
+    ],
+    "judgment": {}
+  }
+]

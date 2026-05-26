@@ -1,0 +1,37 @@
+{
+  "id": "scale_c_brandshootkit_qa_reroll",
+  "name": "Scale C - Brand Shoot Kit style preserve/QA/reroll route",
+  "method_family": "preservation_qa_reroll",
+  "source_references": [
+    "Brand Shoot Kit: scout, preservation brief, shot plan, prompt pack, generation, QA, reroll, export, review frontend",
+    "ComfyUI-productfix: Latent Injection, OCR text masks, detail transfer, IC-Light, IP-Adapter, ControlNet depth for product detail preservation",
+    "Fabric/yft/gzm/vue-fabric-editor: editable template, PSD import, custom fonts, layer management, export"
+  ],
+  "validation_goal": "Compare legacy prompt/image route, template-reverse route, and preservation/composite route on the same SKU to identify where product fidelity fails and which repair action should be used.",
+  "template_product_types": [
+    "single_image_template",
+    "psd_template"
+  ],
+  "generator_policy": {
+    "primary": "preserve_first_then_generate_scene_or_template",
+    "allowed_generators": [
+      "preservation_composite",
+      "comfyui_productfix",
+      "gpt_image_2_reference_edit",
+      "fabric_or_psd_template_render"
+    ],
+    "baseline_to_compare_against": [
+      "legacy_image2_keyword_route"
+    ]
+  },
+  "qa_focus": [
+    "product_fidelity",
+    "connector_or_part_count",
+    "logo_or_text_preservation",
+    "template_compliance",
+    "font_system_control",
+    "repair_action_specificity",
+    "review_frontend_readiness"
+  ],
+  "pass_condition": "The report must identify a winning route and produce typed repair actions instead of generic regenerate advice."
+}

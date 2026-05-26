@@ -1,0 +1,202 @@
+{
+  "sampleRoot": "/Users/cc/Desktop/photo_show/references/user_cases/20260521_emag_cangswjp",
+  "scrapedAt": "2026-05-23T17:35:52.338Z",
+  "productCount": 41,
+  "results": [
+    {
+      "productId": "DMJHW83BM",
+      "status": "missing"
+    },
+    {
+      "productId": "D5YN6S3BM",
+      "status": "missing"
+    },
+    {
+      "productId": "DV2XYC3BM",
+      "status": "missing"
+    },
+    {
+      "productId": "DWLFYC3BM",
+      "status": "missing"
+    },
+    {
+      "productId": "DZ9JSS3BM",
+      "status": "missing"
+    },
+    {
+      "productId": "DZ63HS3BM",
+      "status": "missing"
+    },
+    {
+      "productId": "DD1RM22BM",
+      "status": "missing"
+    },
+    {
+      "productId": "DR990W3BM",
+      "status": "missing"
+    },
+    {
+      "productId": "DB96MV3BM",
+      "status": "missing"
+    },
+    {
+      "productId": "DFVT4S3BM",
+      "status": "missing"
+    },
+    {
+      "productId": "DBG0VS3BM",
+      "status": "error",
+      "error": "goto: net::ERR_ABORTED at https://www.emag.ro/uscator-de-par-excitatr-montare-pe-perete-fara-gaururi-turbo-thermo-control-3-trepte-de-temperatura-2-trepte-de-viteza-2200w-220-240v-durabil-si-fiabil-pentru-hotel-vestiare-sau-baie-alb-aant-2508-nn-/pd/DBG0VS3BM/\nCall log:\n\u001b[2m  - navigating to \"https://www.emag.ro/uscator-de-par-excitatr-montare-pe-perete-fara-gaururi-turbo-thermo-control-3-trepte-de-temperatura-2-trepte-de-viteza-2200w-220-240v-durabil-si-fiabil-pentru-hotel-vestiare-sau-baie-alb-aant-2508-nn-/pd/DBG0VS3BM/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "productId": "D6MHW43BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "D393L43BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DDQ5ZS3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DNBX0S3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DQ3BGS3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DGFGJW3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DC2ZLS3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DYKFJW3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "D5ZHSW3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DMF1PY2BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "D0HYFS3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "D9S4DV3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "D3JCBV3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DBZFYC3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "D8QH0S3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "D31FLS3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DHS2SS3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DWSHGS3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DVXCBB2BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DDD60W3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DCNYHS3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DMH7JS3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "D346JS3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "D0RH0S3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "D263HS3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DQ2ZLS3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "D718XW3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "D8LFYC3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "D7NN9S3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    },
+    {
+      "productId": "DBCC7C3BM",
+      "status": "error",
+      "error": "goto: Target page, context or browser has been closed"
+    }
+  ]
+}

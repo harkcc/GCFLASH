@@ -1,0 +1,842 @@
+ 
+Today, we're testing out GPT Image 2 for
+Today, we're testing out GPT Image 2 for
+ 
+Today, we're testing out GPT Image 2 for
+product photography. Has OpenAI finally
+product photography. Has OpenAI finally
+ 
+product photography. Has OpenAI finally
+solved the text label problems for AI
+solved the text label problems for AI
+ 
+solved the text label problems for AI
+images? Is it the Nano Banana killer?
+images? Is it the Nano Banana killer?
+ 
+images? Is it the Nano Banana killer?
+And why is nobody talking about its
+And why is nobody talking about its
+ 
+And why is nobody talking about its
+biggest weakness? Welcome back to the
+biggest weakness? Welcome back to the
+ 
+biggest weakness? Welcome back to the
+channel. And if you're new here, my name
+channel. And if you're new here, my name
+ 
+channel. And if you're new here, my name
+is Thomas, and I make videos about AI
+is Thomas, and I make videos about AI
+ 
+is Thomas, and I make videos about AI
+product photography. GPT Images 2
+product photography. GPT Images 2
+ 
+product photography. GPT Images 2
+released last week, and everyone has
+released last week, and everyone has
+ 
+released last week, and everyone has
+been calling it the Nano Banana killer,
+been calling it the Nano Banana killer,
+ 
+been calling it the Nano Banana killer,
+and that graphic design has changed
+and that graphic design has changed
+ 
+and that graphic design has changed
+forever. I have spent the last week
+forever. I have spent the last week
+ 
+forever. I have spent the last week
+testing it out with different products
+testing it out with different products
+ 
+testing it out with different products
+and different prompts to see if it's
+and different prompts to see if it's
+ 
+and different prompts to see if it's
+really better than Nano Banana Pro. You
+really better than Nano Banana Pro. You
+ 
+really better than Nano Banana Pro. You
+can, of course, use GPT Image 2 directly
+can, of course, use GPT Image 2 directly
+ 
+can, of course, use GPT Image 2 directly
+within Chat GPT, but to get maximum
+within Chat GPT, but to get maximum
+ 
+within Chat GPT, but to get maximum
+fidelity and 4K quality images, I have
+fidelity and 4K quality images, I have
+ 
+fidelity and 4K quality images, I have
+been using it on Higgsfield, who were
+been using it on Higgsfield, who were
+ 
+been using it on Higgsfield, who were
+kind enough to give me access to the
+kind enough to give me access to the
+ 
+kind enough to give me access to the
+model and also sponsor this video. And
+model and also sponsor this video. And
+ 
+model and also sponsor this video. And
+towards the end of this video, we're
+towards the end of this video, we're
+ 
+towards the end of this video, we're
+going to combine GPT Image 2 with C
+going to combine GPT Image 2 with C
+ 
+going to combine GPT Image 2 with C
+Dance 2 to create professional-looking
+Dance 2 to create professional-looking
+ 
+Dance 2 to create professional-looking
+product commercials. And if you want to
+product commercials. And if you want to
+ 
+product commercials. And if you want to
+do this for yourself, there's going to
+do this for yourself, there's going to
+ 
+do this for yourself, there's going to
+be a link in the description below, but
+be a link in the description below, but
+ 
+be a link in the description below, but
+now let's get into the examples. The
+now let's get into the examples. The
+ 
+now let's get into the examples. The
+first thing I wanted to test out was the
+first thing I wanted to test out was the
+ 
+first thing I wanted to test out was the
+label text rendering and how it compares
+label text rendering and how it compares
+ 
+label text rendering and how it compares
+to Nano Banana Pro. And for this, we're
+to Nano Banana Pro. And for this, we're
+ 
+to Nano Banana Pro. And for this, we're
+going to use these four products as
+going to use these four products as
+ 
+going to use these four products as
+examples. To start out with, we're going
+examples. To start out with, we're going
+ 
+examples. To start out with, we're going
+to create frames for an action camera
+to create frames for an action camera
+ 
+to create frames for an action camera
+commercial with different text elements
+commercial with different text elements
+ 
+commercial with different text elements
+that's then going to be animated using C
+that's then going to be animated using C
+ 
+that's then going to be animated using C
+Dance 2. And if you've been watching
+Dance 2. And if you've been watching
+ 
+Dance 2. And if you've been watching
+some of my other videos, you know I like
+some of my other videos, you know I like
+ 
+some of my other videos, you know I like
+to start with the ending hero shot of
+to start with the ending hero shot of
+ 
+to start with the ending hero shot of
+the commercial to then fill out the
+the commercial to then fill out the
+ 
+the commercial to then fill out the
+commercial backwards so we can end up
+commercial backwards so we can end up
+ 
+commercial backwards so we can end up
+where we want to. So, I created this as
+where we want to. So, I created this as
+ 
+where we want to. So, I created this as
+the ending frame with a couple of
+the ending frame with a couple of
+ 
+the ending frame with a couple of
+different specs that I'm then thinking
+different specs that I'm then thinking
+ 
+different specs that I'm then thinking
+we're going to animate in individually
+we're going to animate in individually
+ 
+we're going to animate in individually
+in different frames during the
+in different frames during the
+ 
+in different frames during the
+commercial. So, for the first specs,
+commercial. So, for the first specs,
+ 
+commercial. So, for the first specs,
+which was 8K 120 FPS, I wanted to create
+which was 8K 120 FPS, I wanted to create
+ 
+which was 8K 120 FPS, I wanted to create
+an image where a snowboarder turns and
+an image where a snowboarder turns and
+ 
+an image where a snowboarder turns and
+kind of snow blows up and the text forms
+kind of snow blows up and the text forms
+ 
+kind of snow blows up and the text forms
+from the snow blowing up in the air. So,
+from the snow blowing up in the air. So,
+ 
+from the snow blowing up in the air. So,
+I used our hero image as reference along
+I used our hero image as reference along
+ 
+I used our hero image as reference along
+with this prompt, and we got this
+with this prompt, and we got this
+ 
+with this prompt, and we got this
+result. And here, we run into the
+result. And here, we run into the
+ 
+result. And here, we run into the
+biggest problem that I have noticed with
+biggest problem that I have noticed with
+ 
+biggest problem that I have noticed with
+GPT Image 2. The text effect looks
+GPT Image 2. The text effect looks
+ 
+GPT Image 2. The text effect looks
+really good, and at first, everything
+really good, and at first, everything
+ 
+really good, and at first, everything
+seems fine. But on landscape images, if
+seems fine. But on landscape images, if
+ 
+seems fine. But on landscape images, if
+we zoom in a bit, you can see that
+we zoom in a bit, you can see that
+ 
+we zoom in a bit, you can see that
+there's this weird noise pattern in the
+there's this weird noise pattern in the
+ 
+there's this weird noise pattern in the
+images that keeps on happening when I
+images that keeps on happening when I
+ 
+images that keeps on happening when I
+generate something that has a landscape
+generate something that has a landscape
+ 
+generate something that has a landscape
+environment. And it's really weird
+environment. And it's really weird
+ 
+environment. And it's really weird
+because if we look at the other images
+because if we look at the other images
+ 
+because if we look at the other images
+we generated for this action cam
+we generated for this action cam
+ 
+we generated for this action cam
+commercial, some of them have absolutely
+commercial, some of them have absolutely
+ 
+commercial, some of them have absolutely
+no noise pattern in them. But then
+no noise pattern in them. But then
+ 
+no noise pattern in them. But then
+again, this one, which is underwater,
+again, this one, which is underwater,
+ 
+again, this one, which is underwater,
+has kind of the same weird pattern in
+has kind of the same weird pattern in
+ 
+has kind of the same weird pattern in
+the bubbles. So, it's some weird thing
+the bubbles. So, it's some weird thing
+ 
+the bubbles. So, it's some weird thing
+in the model that makes it hard to do
+in the model that makes it hard to do
+ 
+in the model that makes it hard to do
+certain patterns, especially for
+certain patterns, especially for
+ 
+certain patterns, especially for
+environments. And just to see the
+environments. And just to see the
+ 
+environments. And just to see the
+difference, I ran the exact same prompt
+difference, I ran the exact same prompt
+ 
+difference, I ran the exact same prompt
+with Nano Banana Pro, and this was the
+with Nano Banana Pro, and this was the
+ 
+with Nano Banana Pro, and this was the
+result. I would say the text effect is
+result. I would say the text effect is
+ 
+result. I would say the text effect is
+better in GPT Image 2, but the overall
+better in GPT Image 2, but the overall
+ 
+better in GPT Image 2, but the overall
+image quality is better in Nano Banana
+image quality is better in Nano Banana
+ 
+image quality is better in Nano Banana
+Pro. But looking at the accuracy of the
+Pro. But looking at the accuracy of the
+ 
+Pro. But looking at the accuracy of the
+text and the product in these images,
+text and the product in these images,
+ 
+text and the product in these images,
+it's really good. I mean, even the small
+it's really good. I mean, even the small
+ 
+it's really good. I mean, even the small
+power text on the side of the product is
+power text on the side of the product is
+ 
+power text on the side of the product is
+correct. But you might be thinking, this
+correct. But you might be thinking, this
+ 
+correct. But you might be thinking, this
+product doesn't even kind of have a text
+product doesn't even kind of have a text
+ 
+product doesn't even kind of have a text
+label. And yes, I hear you. So, next up,
+label. And yes, I hear you. So, next up,
+ 
+label. And yes, I hear you. So, next up,
+we're going to try with this whiskey
+we're going to try with this whiskey
+ 
+we're going to try with this whiskey
+bottle. And I already know that Nano
+bottle. And I already know that Nano
+ 
+bottle. And I already know that Nano
+Banana Pro will not handle the small
+Banana Pro will not handle the small
+ 
+Banana Pro will not handle the small
+intricate text details on this label.
+intricate text details on this label.
+ 
+intricate text details on this label.
+So, let's see if GPT Image 2 can handle
+So, let's see if GPT Image 2 can handle
+ 
+So, let's see if GPT Image 2 can handle
+it. For this one, I have to say I was
+it. For this one, I have to say I was
+ 
+it. For this one, I have to say I was
+really impressed with the text rendering
+really impressed with the text rendering
+ 
+really impressed with the text rendering
+capabilities of GPT Image 2. It got
+capabilities of GPT Image 2. It got
+ 
+capabilities of GPT Image 2. It got
+every single word right on the label and
+every single word right on the label and
+ 
+every single word right on the label and
+didn't mess up once. Comparing the label
+didn't mess up once. Comparing the label
+ 
+didn't mess up once. Comparing the label
+accuracy to the image generated by Nano
+accuracy to the image generated by Nano
+ 
+accuracy to the image generated by Nano
+Banana Pro, we can see that Nano Banana
+Banana Pro, we can see that Nano Banana
+ 
+Banana Pro, we can see that Nano Banana
+Pro made a lot of mistakes on the small
+Pro made a lot of mistakes on the small
+ 
+Pro made a lot of mistakes on the small
+text on the label, while GPT Image 2
+text on the label, while GPT Image 2
+ 
+text on the label, while GPT Image 2
+kept everything perfect. Comparing the
+kept everything perfect. Comparing the
+ 
+kept everything perfect. Comparing the
+images side by side, not taking into
+images side by side, not taking into
+ 
+images side by side, not taking into
+account the label accuracy errors in
+account the label accuracy errors in
+ 
+account the label accuracy errors in
+Nano Banana Pro, I would say that the
+Nano Banana Pro, I would say that the
+ 
+Nano Banana Pro, I would say that the
+image from Nano Banana Pro looks a bit
+image from Nano Banana Pro looks a bit
+ 
+image from Nano Banana Pro looks a bit
+more photorealistic.
+more photorealistic.
+ 
+more photorealistic.
+But then again, the overall design
+But then again, the overall design
+ 
+But then again, the overall design
+language and also the label accuracy of
+language and also the label accuracy of
+ 
+language and also the label accuracy of
+GPT Image 2 makes it the only usable
+GPT Image 2 makes it the only usable
+ 
+GPT Image 2 makes it the only usable
+image. I wanted to make it even harder
+image. I wanted to make it even harder
+ 
+image. I wanted to make it even harder
+for the models to get the label right.
+for the models to get the label right.
+ 
+for the models to get the label right.
+So, that's why I prompted for a pouring
+So, that's why I prompted for a pouring
+ 
+So, that's why I prompted for a pouring
+shot of the bottle where the label will
+shot of the bottle where the label will
+ 
+shot of the bottle where the label will
+have to be sideways in the image. From
+have to be sideways in the image. From
+ 
+have to be sideways in the image. From
+many painful experiences, I have also
+many painful experiences, I have also
+ 
+many painful experiences, I have also
+learned that Nano Banana Pro usually
+learned that Nano Banana Pro usually
+ 
+learned that Nano Banana Pro usually
+struggles with getting the label
+struggles with getting the label
+ 
+struggles with getting the label
+correctly right when you turn the
+correctly right when you turn the
+ 
+correctly right when you turn the
+product on the side inside the image.
+product on the side inside the image.
+ 
+product on the side inside the image.
+Now, looking at this result from GPT
+Now, looking at this result from GPT
+ 
+Now, looking at this result from GPT
+Image 2, it's almost flawless. There
+Image 2, it's almost flawless. There
+ 
+Image 2, it's almost flawless. There
+might be the slightest weirdness going
+might be the slightest weirdness going
+ 
+might be the slightest weirdness going
+on around the badger word on the label,
+on around the badger word on the label,
+ 
+on around the badger word on the label,
+but other than that, it's perfect. And
+but other than that, it's perfect. And
+ 
+but other than that, it's perfect. And
+to my surprise, Nano Banana Pro actually
+to my surprise, Nano Banana Pro actually
+ 
+to my surprise, Nano Banana Pro actually
+got this pouring shot right as well. So,
+got this pouring shot right as well. So,
+ 
+got this pouring shot right as well. So,
+I guess this one is a tie. Next, I
+I guess this one is a tie. Next, I
+ 
+I guess this one is a tie. Next, I
+wanted to see how well it would
+wanted to see how well it would
+ 
+wanted to see how well it would
+understand me asking for a woman
+understand me asking for a woman
+ 
+understand me asking for a woman
+balancing a shampoo bottle on her
+balancing a shampoo bottle on her
+ 
+balancing a shampoo bottle on her
+shoulder while running her fingers
+shoulder while running her fingers
+ 
+shoulder while running her fingers
+through her hair, and if it would break
+through her hair, and if it would break
+ 
+through her hair, and if it would break
+the product accuracy. It took a couple
+the product accuracy. It took a couple
+ 
+the product accuracy. It took a couple
+of generations to get it just as I
+of generations to get it just as I
+ 
+of generations to get it just as I
+wanted it, but I have to say I was
+wanted it, but I have to say I was
+ 
+wanted it, but I have to say I was
+really impressed with this result.
+really impressed with this result.
+ 
+really impressed with this result.
+Again, the design style of the text is
+Again, the design style of the text is
+ 
+Again, the design style of the text is
+nice, and the product label is
+nice, and the product label is
+ 
+nice, and the product label is
+completely accurate. I'm also impressed
+completely accurate. I'm also impressed
+ 
+completely accurate. I'm also impressed
+how it placed the product in between her
+how it placed the product in between her
+ 
+how it placed the product in between her
+shoulder and her hair and the
+shoulder and her hair and the
+ 
+shoulder and her hair and the
+interaction between those. Comparing the
+interaction between those. Comparing the
+ 
+interaction between those. Comparing the
+results to Nano Banana Pro, the images
+results to Nano Banana Pro, the images
+ 
+results to Nano Banana Pro, the images
+are very similar, but there just seems
+are very similar, but there just seems
+ 
+are very similar, but there just seems
+to be a bit more pop in the GPT 2
+to be a bit more pop in the GPT 2
+ 
+to be a bit more pop in the GPT 2
+images. So, GPT 2 wins this one. I did
+images. So, GPT 2 wins this one. I did
+ 
+images. So, GPT 2 wins this one. I did
+another test with this product as well,
+another test with this product as well,
+ 
+another test with this product as well,
+with the bottle floating amongst bubbles
+with the bottle floating amongst bubbles
+ 
+with the bottle floating amongst bubbles
+with different catchphrases related to
+with different catchphrases related to
+ 
+with different catchphrases related to
+the shampoo. And I think you can guess
+the shampoo. And I think you can guess
+ 
+the shampoo. And I think you can guess
+which one is GPT Image 2 and which one
+which one is GPT Image 2 and which one
+ 
+which one is GPT Image 2 and which one
+is Nano Banana Pro as the story is the
+is Nano Banana Pro as the story is the
+ 
+is Nano Banana Pro as the story is the
+same for this one. Nano Banana Pro's
+same for this one. Nano Banana Pro's
+ 
+same for this one. Nano Banana Pro's
+result just looks more boring and dull,
+result just looks more boring and dull,
+ 
+result just looks more boring and dull,
+while the result from GPT Image 2 just
+while the result from GPT Image 2 just
+ 
+while the result from GPT Image 2 just
+has something about it that makes it a
+has something about it that makes it a
+ 
+has something about it that makes it a
+better design. Next up, we're going to
+better design. Next up, we're going to
+ 
+better design. Next up, we're going to
+use this energy drink to test out the
+use this energy drink to test out the
+ 
+use this energy drink to test out the
+design and text capabilities of both
+design and text capabilities of both
+ 
+design and text capabilities of both
+models to see which one can make a
+models to see which one can make a
+ 
+models to see which one can make a
+better kind of poster design where all
+better kind of poster design where all
+ 
+better kind of poster design where all
+the ingredients are laid out next to the
+the ingredients are laid out next to the
+ 
+the ingredients are laid out next to the
+energy drink. And these were the two
+energy drink. And these were the two
+ 
+energy drink. And these were the two
+results. Now, which one do you think is
+results. Now, which one do you think is
+ 
+results. Now, which one do you think is
+better before I reveal which model made
+better before I reveal which model made
+ 
+better before I reveal which model made
+which image? And here again, I would say
+which image? And here again, I would say
+ 
+which image? And here again, I would say
+that the same thing is repeating itself.
+that the same thing is repeating itself.
+ 
+that the same thing is repeating itself.
+The design language of GPT Image 2 is
+The design language of GPT Image 2 is
+ 
+The design language of GPT Image 2 is
+slightly better. It's just more polished
+slightly better. It's just more polished
+ 
+slightly better. It's just more polished
+and looks more professional. But the
+and looks more professional. But the
+ 
+and looks more professional. But the
+weird pattern comes up again in the
+weird pattern comes up again in the
+ 
+weird pattern comes up again in the
+environment and in some parts of the
+environment and in some parts of the
+ 
+environment and in some parts of the
+liquid. So, I don't know how to call
+liquid. So, I don't know how to call
+ 
+liquid. So, I don't know how to call
+this one. I maybe have to give it a tie.
+this one. I maybe have to give it a tie.
+ 
+this one. I maybe have to give it a tie.
+Now, if you want to take these assets
+Now, if you want to take these assets
+ 
+Now, if you want to take these assets
+one step further and turn them into
+one step further and turn them into
+ 
+one step further and turn them into
+professional product commercials, you
+professional product commercials, you
+ 
+professional product commercials, you
+can jump over to the video tab in
+can jump over to the video tab in
+ 
+can jump over to the video tab in
+Higgsfield and choose C Dance 2. Now, if
+Higgsfield and choose C Dance 2. Now, if
+ 
+Higgsfield and choose C Dance 2. Now, if
+you haven't seen my full tutorial of how
+you haven't seen my full tutorial of how
+ 
+you haven't seen my full tutorial of how
+to turn images like this into a
+to turn images like this into a
+ 
+to turn images like this into a
+professional product commercial using C
+professional product commercial using C
+ 
+professional product commercial using C
+Dance, you can check it out here after
+Dance, you can check it out here after
+ 
+Dance, you can check it out here after
+the video. But basically, all we have to
+the video. But basically, all we have to
+ 
+the video. But basically, all we have to
+do is pick C Dance 2 from the model
+do is pick C Dance 2 from the model
+ 
+do is pick C Dance 2 from the model
+drop-down menu and load in our assets
+drop-down menu and load in our assets
+ 
+drop-down menu and load in our assets
+that we just created. Then, using the C
+that we just created. Then, using the C
+ 
+that we just created. Then, using the C
+Dance 2 multi-shot prompter skill that I
+Dance 2 multi-shot prompter skill that I
+ 
+Dance 2 multi-shot prompter skill that I
+created and you can download from the
+created and you can download from the
+ 
+created and you can download from the
+description below, we're going to get a
+description below, we're going to get a
+ 
+description below, we're going to get a
+long, complicated multi-shot prompt that
+long, complicated multi-shot prompt that
+ 
+long, complicated multi-shot prompt that
+looks like this. Then, we can take that
+looks like this. Then, we can take that
+ 
+looks like this. Then, we can take that
+prompt and paste it into Higgsfield, and
+prompt and paste it into Higgsfield, and
+ 
+prompt and paste it into Higgsfield, and
+we're going to get commercials that
+we're going to get commercials that
+ 
+we're going to get commercials that
+looks like this.
+ 
+ 
+ 
+&gt;&gt; [music]
+ 
+ 
+ 
+[music]
+ 
+ 
+ 
+&gt;&gt; Overall, GPT Image 2 is extremely good
+&gt;&gt; Overall, GPT Image 2 is extremely good
+ 
+&gt;&gt; Overall, GPT Image 2 is extremely good
+at text rendering, but it has some flaws
+at text rendering, but it has some flaws
+ 
+at text rendering, but it has some flaws
+when it comes to more wide environment
+when it comes to more wide environment
+ 
+when it comes to more wide environment
+shots and these weird noise patterns
+shots and these weird noise patterns
+ 
+shots and these weird noise patterns
+that come up in some environments. If
+that come up in some environments. If
+ 
+that come up in some environments. If
+you want access to all the prompts I use
+you want access to all the prompts I use
+ 
+you want access to all the prompts I use
+in this video and all my other videos,
+in this video and all my other videos,
+ 
+in this video and all my other videos,
+you can join the school community from
+you can join the school community from
+ 
+you can join the school community from
+the link below. And if you want to make
+the link below. And if you want to make
+ 
+the link below. And if you want to make
+your own product commercial using GPT
+your own product commercial using GPT
+ 
+your own product commercial using GPT
+Image 2 and C Dance 2, make sure to
+Image 2 and C Dance 2, make sure to
+ 
+Image 2 and C Dance 2, make sure to
+check out Higgsfield and the full
+check out Higgsfield and the full
+ 
+check out Higgsfield and the full
+tutorial I made on that, but otherwise,
+tutorial I made on that, but otherwise,
+ 
+tutorial I made on that, but otherwise,
+I'll see you in the next one.

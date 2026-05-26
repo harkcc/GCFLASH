@@ -1,0 +1,105 @@
+{
+  "category_code": "travel_accessory_backpack_women",
+  "parent_category": "travel_accessories",
+  "display_name_en": "Women's Travel Backpack",
+  "display_name_cn": "女士旅行背包",
+
+  "color_palette": {
+    "description": "柔美、生活感、现代女性——粉+奶+金，与 ST08 的黑黄工业感完全相反",
+    "theme_color":      "#E8A5B8",
+    "background_color": "#FFF3E7",
+    "secondary_bg":     "#F5E0D3",
+    "text_color":       "#3E2723",
+    "accent_color":     "#B8860B",
+    "cta_color":        "#E8A5B8",
+    "ratio_75_25_5": {
+      "75_dominant":  "#FFF3E7",
+      "25_theme":     "#E8A5B8",
+      "5_accent":     "#B8860B"
+    }
+  },
+
+  "light_config": {
+    "primary_direction": "soft top diffuse",
+    "color_temperature_kelvin": 5600,
+    "fill_ratio": 0.85,
+    "rim_light": false,
+    "shadow_softness": "very soft",
+    "iclight_preset": "lifestyle_natural"
+  },
+
+  "bbox_presets": {
+    "hero":          [280, 180, 744, 900],
+    "pain_point":    null,
+    "solution":      [180, 220, 844, 900],
+    "detail":        [150, 150, 874, 874],
+    "scene":         null,
+    "trust":         [200, 200, 824, 824],
+    "specs":         [312, 200, 712, 800],
+    "cta":           [280, 250, 744, 850]
+  },
+
+  "canvas_size": [1024, 1024],
+
+  "mask_params": {
+    "feather_radius_px": 10,
+    "shrink_erode_px":   0,
+    "reason": "布料、编织带、软质边缘——羽化要比 ST08 大（电子产品硬边 4px → 布料软边 10px）"
+  },
+
+  "prompt_fragments": {
+    "positive_style_base": "lifestyle product photography, soft natural light, warm cozy atmosphere, magazine editorial style, hyper-realistic fabric texture rendering, 8K resolution, commercial quality",
+    "positive_mood": "modern, independent, stylish, effortless, aspirational",
+    "negative_base": "cartoon, masculine tough lighting, harsh shadows, industrial, low quality, blurry, watermark, deformed bag, wrong strap count, extra pockets, low-poly",
+    "scene_pool": [
+      "minimalist cafe with warm wood and greenery",
+      "airport lounge with natural light streaming in",
+      "cozy hotel room bed with linen bedding",
+      "sunlit apartment entryway with marble floor",
+      "rooftop garden at golden hour",
+      "hiking trail at sunrise with dewy grass",
+      "urban street cafe outdoor seating morning",
+      "office lobby with pastel decor",
+      "nurse locker room at hospital",
+      "gym entrance with soft lighting"
+    ],
+    "human_presence": "occasional — young woman mid-20s to mid-30s, lifestyle candid moments, face can be visible but often 3/4 back view holding the bag"
+  },
+
+  "typography": {
+    "headline_font": "Playfair Display Bold / Cormorant Garamond / Freight Display",
+    "headline_case": "Title Case",
+    "headline_weight": 700,
+    "subtext_font": "Inter Regular / Lato Light",
+    "subtext_case": "Sentence case",
+    "max_headline_words": 6,
+    "max_subtext_words": 15,
+    "contrast_min_ratio": 5.0
+  },
+
+  "quality_rubric": {
+    "product_fidelity_weight": 0.30,
+    "text_legibility_weight":  0.15,
+    "composition_weight":      0.15,
+    "lighting_weight":         0.20,
+    "brand_consistency_weight":0.20,
+    "pass_threshold": 7.0
+  },
+
+  "8_image_sequence_default": [
+    "hero",
+    "pain_point",
+    "solution",
+    "detail",
+    "scene_multi_use",
+    "trust",
+    "specs",
+    "cta_gift"
+  ],
+
+  "notes_for_future": [
+    "与 ST08 的关键差异：光线柔和（5600K vs 5000K）、fill 高（0.85 vs 0.6）、无 rim light（off vs on）、羽化大（10 vs 4）",
+    "场景池大量人物元素——需要特别注意 human_presence 的 consistency，避免诡异面部",
+    "品类调性：这类产品视觉语言已经很成熟，大量参考 Everlane / Away / Calpak 这些品牌的视觉"
+  ]
+}

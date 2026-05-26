@@ -1,0 +1,81 @@
+{
+  "template_id": "FirstScreenAnchorTriplet",
+  "name": "First Screen Anchor Triplet",
+  "image_role": "detail_page",
+  "business_goal": "turn the first post-banner screen into three clear purchase-decision anchors",
+  "viewer_question": "看完首图后，我最该先确认哪三件事？",
+  "layout_pattern": "mobile-first stacked cards; each card has a colored left rail, 01/02/03 number, bold short title, and one concise support sentence",
+  "product_weight": "0%; this is a text/HTML decision module placed after banner and before deeper product proof images",
+  "text_zones": [
+    {
+      "id": "anchor_title",
+      "position": "top line inside each card",
+      "policy": "buyer-facing decision label, max 8 Romanian words"
+    },
+    {
+      "id": "anchor_support",
+      "position": "second line inside each card",
+      "policy": "one evidence-backed reason or usage outcome, max 1-2 lines on mobile"
+    }
+  ],
+  "badge_zones": [
+    {
+      "id": "number_marker",
+      "position": "left of title",
+      "content": "01, 02, 03"
+    },
+    {
+      "id": "left_rail",
+      "position": "far left edge of each card",
+      "content": "category-coded color rail; not a claim badge"
+    }
+  ],
+  "scene_zones": [
+    {
+      "id": "previous_scene",
+      "position": "immediately above",
+      "role": "banner or hero image that creates attention"
+    },
+    {
+      "id": "next_scene",
+      "position": "immediately below",
+      "role": "product proof image, detail image, or feature band that expands the three anchors"
+    }
+  ],
+  "color_style": "white or near-white card, restrained accent rails, high contrast text, generous padding",
+  "prompt_keep_rules": [
+    "Keep the component as a calm reading aid, not a decorative banner.",
+    "Each anchor must map to ProductTruthPack evidence or a planned proof module."
+  ],
+  "prompt_change_rules": [
+    "Select the three anchors by product type: compatibility/control/safety for technical products; pain scene/portability/accessories for cleaning; comfort/safety/routine for beauty or baby; service/evidence/familiarity for brand trust.",
+    "Translate anchors into the listing target language after ProductTruthPack is finalized."
+  ],
+  "negative_constraints": [
+    "Do not write internal SOP phrases such as 'specifications come after image' in customer-facing output.",
+    "Do not include unsupported warranty, delivery, seller rating, return, or platform claims.",
+    "Do not use more than three anchors or long paragraphs; the component must stay scannable on mobile."
+  ],
+  "text_policy": "Deterministic HTML text only; do not render this text with an image model unless exporting the whole module as a board.",
+  "best_for_categories": [
+    "EV chargers",
+    "tools",
+    "electronics",
+    "home cleaning",
+    "baby",
+    "beauty",
+    "coffee and kitchen",
+    "brand trust pages"
+  ],
+  "best_for_marketplaces": [
+    "eMAG"
+  ],
+  "scoring_focus": [
+    "mobile_readability",
+    "buyer_question_fit",
+    "evidence_alignment",
+    "module_sequence_fit",
+    "text_density",
+    "claim_safety"
+  ]
+}

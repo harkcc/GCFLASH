@@ -1,0 +1,88 @@
+{
+  "id": "ecommerce_5_to_8_suite_plan",
+  "version": "0.1",
+  "purpose": "Define the logical order of a 5-8 image ecommerce product suite.",
+  "principle": "Each image answers one buyer question. The suite progresses from click stop, to interest, to proof, to use imagination, to conversion support.",
+  "slots": [
+    {
+      "slot": 1,
+      "role": "search_stop_hero",
+      "buyer_question": "What is this and why should I stop scrolling?",
+      "default_template_cards": ["HeroCleanCenterCard", "OzonHighConversionMainCard"],
+      "product_weight": "55-70%",
+      "copy_policy": "0-1 badge, no long text",
+      "risk": "over-clutter kills CTR"
+    },
+    {
+      "slot": 2,
+      "role": "pain_solution_or_primary_selling_point",
+      "buyer_question": "What problem does it solve for me?",
+      "default_template_cards": ["FeatureRightTextCard", "CalloutAroundProductCard"],
+      "product_weight": "45-65%",
+      "copy_policy": "2-4 short selling points",
+      "risk": "model may invent claims if ProductTruthPack is weak"
+    },
+    {
+      "slot": 3,
+      "role": "proof_detail",
+      "buyer_question": "Is the product real, durable, and trustworthy?",
+      "default_template_cards": ["IndustrialDarkDetailCard", "DetailMacroCard", "PackageTrustCard"],
+      "product_weight": "35-55%",
+      "copy_policy": "proof labels, material/part callouts, no unsupported specs",
+      "risk": "detail panels may hallucinate product internals"
+    },
+    {
+      "slot": 4,
+      "role": "lifestyle_scene",
+      "buyer_question": "Where will I use it and what does ownership feel like?",
+      "default_template_cards": ["HeroLifestyleSceneCard"],
+      "product_weight": "35-60%",
+      "copy_policy": "little or no text; reserve overlay zone",
+      "risk": "scene generation can alter product identity"
+    },
+    {
+      "slot": 5,
+      "role": "comparison_or_before_after",
+      "buyer_question": "Why this instead of the alternative?",
+      "default_template_cards": ["BeforeAfterSplitCard", "MultiSceneGridCard"],
+      "product_weight": "35-55%",
+      "copy_policy": "truthful comparison only; no fake performance claims",
+      "risk": "before/after can become legally or factually risky"
+    },
+    {
+      "slot": 6,
+      "role": "package_trust",
+      "buyer_question": "What is included and what reduces purchase risk?",
+      "default_template_cards": ["PackageTrustCard"],
+      "product_weight": "35-55%",
+      "copy_policy": "included items, warranty, package quantity, compatibility",
+      "risk": "quantity/warranty must come from listing or manufacturer source"
+    },
+    {
+      "slot": 7,
+      "role": "platform_style_attachment",
+      "buyer_question": "Can I quickly scan all major benefits?",
+      "default_template_cards": ["AmazonPurpleFeatureGridCard", "JapaneseRakutenTrustBannerCard"],
+      "product_weight": "30-50%",
+      "copy_policy": "PSD/HTML text layer strongly recommended",
+      "risk": "model text and icons are usually not production safe"
+    },
+    {
+      "slot": 8,
+      "role": "white_background_ticket",
+      "buyer_question": "Can the marketplace algorithm clearly identify the SKU?",
+      "default_template_cards": ["HeroCleanCenterCard"],
+      "product_weight": "70-85%",
+      "copy_policy": "no text",
+      "risk": "boring but useful for platform recognition"
+    }
+  ],
+  "suite_consistency_rules": [
+    "Use one design system per suite.",
+    "Use one accent palette across all slots.",
+    "Repeat product scale logic, badge shape, shadow direction, and typography.",
+    "Do not repeat the same selling point in every image.",
+    "Keep exact product facts in ProductTruthPack and forbidden claims in every prompt."
+  ]
+}
+

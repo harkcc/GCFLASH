@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProductTruthPack",
+  "type": "object",
+  "required": [
+    "sku",
+    "category",
+    "marketplace",
+    "source_images",
+    "immutable_traits",
+    "selling_points",
+    "forbidden_changes"
+  ],
+  "properties": {
+    "sku": { "type": "string" },
+    "category": { "type": "string" },
+    "marketplace": { "type": "string" },
+    "language": { "type": "string" },
+    "source_images": {
+      "type": "object",
+      "properties": {
+        "product": { "type": "string" },
+        "cutout": { "type": "string" },
+        "brand_reference": { "type": "string" },
+        "template_reference": { "type": "string" }
+      }
+    },
+    "immutable_traits": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "allowed_changes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "forbidden_changes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "selling_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "claim", "visual_translation"],
+        "properties": {
+          "id": { "type": "string" },
+          "claim": { "type": "string" },
+          "proof": { "type": "string" },
+          "visual_translation": { "type": "string" },
+          "short_badge": { "type": "string" }
+        }
+      }
+    },
+    "text_copy": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    }
+  }
+}

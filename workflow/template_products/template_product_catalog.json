@@ -1,0 +1,64 @@
+{
+  "id": "template_product_catalog_v1",
+  "purpose": "Classify the three template products that the prototype must support.",
+  "template_products": [
+    {
+      "type": "single_image_template",
+      "definition": "A single excellent image layout reverse-engineered into reusable composition parameters.",
+      "extracted_fields": [
+        "canvas_ratio",
+        "product_weight",
+        "product_zone",
+        "text_zones",
+        "badge_zones",
+        "font_hierarchy",
+        "color_roles",
+        "negative_constraints",
+        "qa_risks"
+      ],
+      "example_sources": [
+        "references/user_cases/20260504_lark_examples/05.jpg",
+        "references/user_cases/20260504_lark_examples/11.jpg",
+        "references/user_cases/20260504_lark_examples/12.jpg",
+        "references/user_cases/20260504_lark_examples/13.jpg"
+      ]
+    },
+    {
+      "type": "suite_template",
+      "definition": "A complete sequence of slots, each slot mapped to a buyer question and a TemplateCard.",
+      "extracted_fields": [
+        "slot_order",
+        "buyer_question",
+        "image_job",
+        "template_card",
+        "copy_density",
+        "suite_consistency_rules",
+        "ab_test_hypothesis"
+      ],
+      "example_sources": [
+        "Nexscope Amazon 7 image strategy",
+        "tryclair Amazon image type catalog",
+        "Ozon/WB template-card workflows"
+      ]
+    },
+    {
+      "type": "psd_template",
+      "definition": "A layered delivery/control template with replaceable product, text, badge, icon, frame, and background layers.",
+      "extracted_fields": [
+        "layer_manifest",
+        "product_slot",
+        "text_layers",
+        "badge_layers",
+        "brand_frame",
+        "font_tokens",
+        "export_targets"
+      ],
+      "example_sources": [
+        "experiments/20260504_img2img_validation/psd_validation/amazon_purple_feature_grid.psd_manifest.json",
+        "yft-design PSD import",
+        "gzm-design PSD import",
+        "vue-fabric-editor custom fonts and templates"
+      ]
+    }
+  ]
+}

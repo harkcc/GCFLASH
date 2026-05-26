@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TextCopyPlan",
+  "type": "object",
+  "required": ["sku", "marketplace", "language", "text_policy", "slots"],
+  "properties": {
+    "sku": { "type": "string" },
+    "marketplace": { "type": "string" },
+    "language": { "type": "string" },
+    "text_policy": {
+      "type": "string",
+      "enum": ["no_text", "reserve_text_zone", "deterministic_overlay", "model_exact_text"]
+    },
+    "font_system": {
+      "type": "object",
+      "properties": {
+        "primary_font": { "type": "string" },
+        "display_font": { "type": "string" },
+        "number_font": { "type": "string" },
+        "fallback_font": { "type": "string" }
+      }
+    },
+    "slots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "role", "copy", "placement", "priority"],
+        "properties": {
+          "id": { "type": "string" },
+          "role": {
+            "type": "string",
+            "enum": ["headline", "subheadline", "badge", "callout", "proof", "footer", "inset_label"]
+          },
+          "copy": { "type": "string" },
+          "source": {
+            "type": "string",
+            "enum": ["user_approved", "listing", "manufacturer", "competitor_inspired", "generated_draft"]
+          },
+          "placement": { "type": "string" },
+          "priority": {
+            "type": "string",
+            "enum": ["primary", "secondary", "tertiary"]
+          },
+          "max_lines": { "type": "integer", "minimum": 1, "maximum": 4 },
+          "max_chars": { "type": "integer", "minimum": 1, "maximum": 80 },
+          "style": {
+            "type": "object",
+            "properties": {
+              "font_weight": { "type": "string" },
+              "case": { "type": "string" },
+              "color_role": { "type": "string" },
+              "background_role": { "type": "string" }
+            }
+          },
+          "translation_required": { "type": "boolean" },
+          "overlay_required": { "type": "boolean" },
+          "locked": { "type": "boolean" }
+        }
+      }
+    },
+    "forbidden_text": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "notes": { "type": "string" }
+  }
+}

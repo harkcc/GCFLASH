@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-04-17T01:28:38.071Z",
+  "steps": [
+    {
+      "name": "1_generate_product",
+      "elapsed_s": 7.099,
+      "url": "https://v3b.fal.media/files/b/0a968e14/hZJwnFgG3zq2DDbFIu97T_7ea14043fe7f4e59876fcc5142b0af62.jpg",
+      "local": "/Users/cc/Desktop/photo_show/phase0_results/output_st08_test/hero_00_product_1776389318071.jpg",
+      "cost": 0.05
+    },
+    {
+      "name": "2_birefnet",
+      "elapsed_s": 4.901,
+      "fg": "/Users/cc/Desktop/photo_show/phase0_results/output_st08_test/hero_01_fg_1776389318071.png",
+      "mask": "/Users/cc/Desktop/photo_show/phase0_results/output_st08_test/hero_02_mask_1776389318071.png",
+      "cost": 0.005
+    },
+    {
+      "name": "3_scene",
+      "elapsed_s": 6.893,
+      "url": "https://v3b.fal.media/files/b/0a968e15/5heK8k3g4f08klXi3vF5c_22d31ffa01d9468294c80ef4ce9b181a.jpg",
+      "local": "/Users/cc/Desktop/photo_show/phase0_results/output_st08_test/hero_03_scene_1776389318071.jpg",
+      "cost": 0.05
+    },
+    {
+      "name": "4_composite",
+      "elapsed_s": 0.49,
+      "final": "/Users/cc/Desktop/photo_show/phase0_results/output_st08_test/hero_04_final_1776389318071.jpg",
+      "feather_px": 4,
+      "cost": 0
+    }
+  ],
+  "total_cost_usd": 0.10500000000000001,
+  "total_elapsed_s": 19.383,
+  "final_output": "/Users/cc/Desktop/photo_show/phase0_results/output_st08_test/hero_04_final_1776389318071.jpg"
+}

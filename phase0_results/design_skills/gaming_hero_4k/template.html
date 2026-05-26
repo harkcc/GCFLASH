@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@900&family=Oswald:wght@700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: {{canvas_px}}px;
+    height: {{canvas_px}}px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Oswald', 'Arial Black', sans-serif;
+    background: #000;
+  }
+  .bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  /* HERO NUMBER — top-left, huge stroke text (4K / 150PSI) */
+  .hero-number {
+    position: absolute;
+    top: 2.5%;
+    left: 3%;
+    z-index: 10;
+    font-family: 'Inter', 'Arial Black', sans-serif;
+    font-size: {{hero_number_font_size}}px;
+    font-weight: 900;
+    color: white;
+    -webkit-text-stroke: 6px #000;
+    line-height: 0.85;
+    letter-spacing: -4px;
+    text-shadow: 0 8px 16px rgba(0,0,0,0.45);
+  }
+
+  /* BRAND WORDMARK — top-right, italic stroke colored */
+  .brand {
+    position: absolute;
+    top: 4%;
+    right: 3%;
+    z-index: 10;
+    font-family: 'Oswald', sans-serif;
+    font-size: {{brand_font_size}}px;
+    font-weight: 900;
+    font-style: italic;
+    color: {{brand_color}};
+    -webkit-text-stroke: 2.5px #000;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 4px 4px 0 #000, 0 4px 12px rgba(0,0,0,0.5);
+  }
+  .brand .accent-bar {
+    display: block;
+    width: 100%;
+    height: 6px;
+    background: {{brand_color}};
+    margin-top: -4px;
+  }
+
+  /* PRIMARY BADGE — slanted spec badge */
+  .badge {
+    position: absolute;
+    top: {{badge_top}}%;
+    left: 4%;
+    z-index: 10;
+    background: {{badge_color}};
+    color: white;
+    padding: 14px 28px 12px 28px;
+    font-family: 'Inter', sans-serif;
+    font-size: {{badge_font_size}}px;
+    font-weight: 900;
+    border-radius: 10px;
+    border: 4px solid #000;
+    transform: rotate(-3deg);
+    box-shadow: 6px 6px 0 #000, 0 12px 24px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+  }
+
+  /* RIGHT SPEC LINES — "31999+ Games", "23 Emulators" */
+  .spec-right {
+    position: absolute;
+    top: {{spec_top}}%;
+    right: 3%;
+    z-index: 10;
+    text-align: right;
+    font-family: 'Oswald', sans-serif;
+  }
+  .spec-right .line {
+    font-size: {{spec_font_size}}px;
+    font-weight: 900;
+    color: white;
+    -webkit-text-stroke: 2px #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 0 #000, 0 4px 8px rgba(0,0,0,0.5);
+    line-height: 1.15;
+    white-space: nowrap;
+  }
+
+  /* SUBTLE BOTTOM GRADIENT for polish */
+  .bottom-gradient {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 12%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    z-index: 5;
+  }
+</style>
+</head>
+<body>
+  <img class="bg" src="{{background_image_url}}" />
+
+  <div class="bottom-gradient"></div>
+
+  <div class="hero-number">{{hero_number}}</div>
+
+  <div class="brand">
+    {{brand_name}}
+    <span class="accent-bar"></span>
+  </div>
+
+  {{badge_html}}
+
+  {{spec_right_html}}
+</body>
+</html>

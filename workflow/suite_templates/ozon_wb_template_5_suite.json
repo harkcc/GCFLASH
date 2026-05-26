@@ -1,0 +1,76 @@
+{
+  "id": "ozon_wb_template_5_suite",
+  "name": "Ozon/WB 3:4 high-conversion card suite",
+  "scale_baseline": "scale_b_ozon_wb_template_adaptation",
+  "marketplace_profile": "ozon_wb",
+  "source_logic": "Ozon/WB seller workflow: competitor card analysis, template adaptation, short text, big product, 3:4 mobile tile.",
+  "suite_consistency_rules": [
+    "Use 3:4 canvas.",
+    "Product must be large enough to read in a marketplace grid.",
+    "Use high-contrast short labels.",
+    "Keep 2-4 badges maximum per card.",
+    "Do not copy a competitor image; extract layout logic only."
+  ],
+  "slots": [
+    {
+      "slot": 1,
+      "slot_type": "high_conversion_main_card",
+      "template_card": "OzonHighConversionMainCard",
+      "template_product_type": "single_image_template",
+      "buyer_question": "Can I understand product and key hook in under one second?",
+      "image_job": "large product, one numeric hammer, high-contrast card",
+      "layout_family": "ozon_main_card",
+      "text_density": "medium",
+      "headline": "150 PSI",
+      "badges": ["Digital display", "Portable", "Adapters"]
+    },
+    {
+      "slot": 2,
+      "slot_type": "feature_callout",
+      "template_card": "CalloutAroundProductCard",
+      "template_product_type": "single_image_template",
+      "buyer_question": "Which visible parts prove the value?",
+      "image_job": "show handle, hose, display, adapters as callouts",
+      "layout_family": "callout_around_product",
+      "text_density": "high",
+      "headline": "Ready for Roadside Use",
+      "badges": ["Handle", "Hose", "Display", "Nozzles"]
+    },
+    {
+      "slot": 3,
+      "slot_type": "multi_use_grid",
+      "template_card": "MultiSceneGridCard",
+      "template_product_type": "suite_template",
+      "buyer_question": "Where can I use it?",
+      "image_job": "show safe generic use cases without unsupported speed claims",
+      "layout_family": "multi_use_grid",
+      "text_density": "medium",
+      "headline": "Car + Bike + Ball",
+      "badges": ["Car", "Bike", "Ball"]
+    },
+    {
+      "slot": 4,
+      "slot_type": "package_trust",
+      "template_card": "PackageTrustCard",
+      "template_product_type": "psd_template",
+      "buyer_question": "What parts/accessories are included?",
+      "image_job": "show accessory awareness and reduce purchase uncertainty",
+      "layout_family": "package_trust",
+      "text_density": "medium",
+      "headline": "Adapters Included",
+      "badges": ["Nozzles", "Cable", "Compact"]
+    },
+    {
+      "slot": 5,
+      "slot_type": "detail_proof",
+      "template_card": "IndustrialDarkDetailCard",
+      "template_product_type": "single_image_template",
+      "buyer_question": "Does it look durable and real?",
+      "image_job": "detail board with product-safe close-up zones",
+      "layout_family": "industrial_detail",
+      "text_density": "medium",
+      "headline": "Built for Emergencies",
+      "badges": ["Rugged body", "Clear readout", "Compact"]
+    }
+  ]
+}

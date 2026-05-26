@@ -1,0 +1,502 @@
+ 
+If you are looking for a tool to
+If you are looking for a tool to
+ 
+If you are looking for a tool to
+generate Amazon listing images fast and
+generate Amazon listing images fast and
+ 
+generate Amazon listing images fast and
+with good quality, watch this. I am
+with good quality, watch this. I am
+ 
+with good quality, watch this. I am
+going to walk you through the entire
+going to walk you through the entire
+ 
+going to walk you through the entire
+process step by step, starting from a
+process step by step, starting from a
+ 
+process step by step, starting from a
+phone taken product photo. By the end of
+phone taken product photo. By the end of
+ 
+phone taken product photo. By the end of
+this video, you'll see exactly how AI
+this video, you'll see exactly how AI
+ 
+this video, you'll see exactly how AI
+generates Amazon listing images. And
+generates Amazon listing images. And
+ 
+generates Amazon listing images. And
+even if you don't use this tool, you'll
+even if you don't use this tool, you'll
+ 
+even if you don't use this tool, you'll
+learn a framework that helps you design
+learn a framework that helps you design
+ 
+learn a framework that helps you design
+better listing images with any AI tool.
+better listing images with any AI tool.
+ 
+better listing images with any AI tool.
+All right, you are on Greenion AI Amazon
+All right, you are on Greenion AI Amazon
+ 
+All right, you are on Greenion AI Amazon
+listing page. You upload one product
+listing page. You upload one product
+ 
+listing page. You upload one product
+photo. This is just a bag of dog food,
+photo. This is just a bag of dog food,
+ 
+photo. This is just a bag of dog food,
+nothing fancy. You can add a product
+nothing fancy. You can add a product
+ 
+nothing fancy. You can add a product
+description if you have one, but it is
+description if you have one, but it is
+ 
+description if you have one, but it is
+optional. Hit analyze product. So, the
+optional. Hit analyze product. So, the
+ 
+optional. Hit analyze product. So, the
+AI analyzed your photo and pulled out
+AI analyzed your photo and pulled out
+ 
+AI analyzed your photo and pulled out
+three things. First, what the product
+three things. First, what the product
+ 
+three things. First, what the product
+is, name, style, target, audience. Got
+is, name, style, target, audience. Got
+ 
+is, name, style, target, audience. Got
+it right. Second, 22 selling points.
+it right. Second, 22 selling points.
+ 
+it right. Second, 22 selling points.
+Grain-free, omega-3, real chicken,
+Grain-free, omega-3, real chicken,
+ 
+Grain-free, omega-3, real chicken,
+prebiotics, blueberries, all extracted
+prebiotics, blueberries, all extracted
+ 
+prebiotics, blueberries, all extracted
+from one image. Third, it mapped those
+from one image. Third, it mapped those
+ 
+from one image. Third, it mapped those
+selling points to nine image slots. Each
+selling points to nine image slots. Each
+ 
+selling points to nine image slots. Each
+slot has a clear purpose and specific
+slot has a clear purpose and specific
+ 
+slot has a clear purpose and specific
+features assigned to it. This is the
+features assigned to it. This is the
+ 
+features assigned to it. This is the
+framework part I mentioned. Let me show
+framework part I mentioned. Let me show
+ 
+framework part I mentioned. Let me show
+you the PDF report. It lays it out
+you the PDF report. It lays it out
+ 
+you the PDF report. It lays it out
+really clearly. Slot one, your hero
+really clearly. Slot one, your hero
+ 
+really clearly. Slot one, your hero
+image. Pure product shot on white.
+image. Pure product shot on white.
+ 
+image. Pure product shot on white.
+Amazon requires this. Slot two, feature
+Amazon requires this. Slot two, feature
+ 
+Amazon requires this. Slot two, feature
+callout infographic. This is where you
+callout infographic. This is where you
+ 
+callout infographic. This is where you
+highlight your top differentiators. Slot
+highlight your top differentiators. Slot
+ 
+highlight your top differentiators. Slot
+three, ingredients or materials
+three, ingredients or materials
+ 
+three, ingredients or materials
+breakdown. Show people what is actually
+breakdown. Show people what is actually
+ 
+breakdown. Show people what is actually
+in your product. Slot four, benefits
+in your product. Slot four, benefits
+ 
+in your product. Slot four, benefits
+showcase, the results your customer
+showcase, the results your customer
+ 
+showcase, the results your customer
+gets. Slot five, close-up and texture
+gets. Slot five, close-up and texture
+ 
+gets. Slot five, close-up and texture
+detail, prove the quality up close. Slot
+detail, prove the quality up close. Slot
+ 
+detail, prove the quality up close. Slot
+six, use cases, show your product in
+six, use cases, show your product in
+ 
+six, use cases, show your product in
+different scenarios. Slot seven, size
+different scenarios. Slot seven, size
+ 
+different scenarios. Slot seven, size
+and quantity, help your customer
+and quantity, help your customer
+ 
+and quantity, help your customer
+understand what they're getting. Slot
+understand what they're getting. Slot
+ 
+understand what they're getting. Slot
+eight, how to use or care instructions.
+eight, how to use or care instructions.
+ 
+eight, how to use or care instructions.
+And slot nine, a lifestyle scene. The
+And slot nine, a lifestyle scene. The
+ 
+And slot nine, a lifestyle scene. The
+emotional image that makes someone
+emotional image that makes someone
+ 
+emotional image that makes someone
+picture themselves using your product.
+picture themselves using your product.
+ 
+picture themselves using your product.
+That is the framework. Nine images, nine
+That is the framework. Nine images, nine
+ 
+That is the framework. Nine images, nine
+jobs. Even if you are doing this
+jobs. Even if you are doing this
+ 
+jobs. Even if you are doing this
+yourself in Gemini or chatpt, this is
+yourself in Gemini or chatpt, this is
+ 
+yourself in Gemini or chatpt, this is
+how you should structure your listing.
+how you should structure your listing.
+ 
+how you should structure your listing.
+Don't just throw features randomly at
+Don't just throw features randomly at
+ 
+Don't just throw features randomly at
+images. Give each image a purpose. Now,
+images. Give each image a purpose. Now,
+ 
+images. Give each image a purpose. Now,
+everything here is editable. You can
+everything here is editable. You can
+ 
+everything here is editable. You can
+remove tags, add your own, move them
+remove tags, add your own, move them
+ 
+remove tags, add your own, move them
+between slots. The AI gives you a
+between slots. The AI gives you a
+ 
+between slots. The AI gives you a
+starting point. You refine it. And that
+starting point. You refine it. And that
+ 
+starting point. You refine it. And that
+PDF report completely free. Download it,
+PDF report completely free. Download it,
+ 
+PDF report completely free. Download it,
+keep it, share it with your team. Next,
+keep it, share it with your team. Next,
+ 
+keep it, share it with your team. Next,
+hit generate image details. The AI is
+hit generate image details. The AI is
+ 
+hit generate image details. The AI is
+now writing copy planning layouts and
+now writing copy planning layouts and
+ 
+now writing copy planning layouts and
+designing each image. You can see it
+designing each image. You can see it
+ 
+designing each image. You can see it
+working. Text copy, design descriptions,
+working. Text copy, design descriptions,
+ 
+working. Text copy, design descriptions,
+specs. Each step shows progress so you
+specs. Each step shows progress so you
+ 
+specs. Each step shows progress so you
+know what is happening. When it is done,
+know what is happening. When it is done,
+ 
+know what is happening. When it is done,
+every slot has a full design brief. You
+every slot has a full design brief. You
+ 
+every slot has a full design brief. You
+can add your own instructions, upload a
+can add your own instructions, upload a
+ 
+can add your own instructions, upload a
+reference image for style matching, or
+reference image for style matching, or
+ 
+reference image for style matching, or
+just leave it as is. Hit generate.
+just leave it as is. Hit generate.
+ 
+just leave it as is. Hit generate.
+Images come in one by one. Hero
+Images come in one by one. Hero
+ 
+Images come in one by one. Hero
+infographic ingredients benefits about a
+infographic ingredients benefits about a
+ 
+infographic ingredients benefits about a
+minute and a half for all nine. Done.
+minute and a half for all nine. Done.
+ 
+minute and a half for all nine. Done.
+Nine listing images from one product
+Nine listing images from one product
+ 
+Nine listing images from one product
+photo. Let's look at these full size so
+photo. Let's look at these full size so
+ 
+photo. Let's look at these full size so
+you can actually judge the quality. Hero
+you can actually judge the quality. Hero
+ 
+you can actually judge the quality. Hero
+image, clean white background, product
+image, clean white background, product
+ 
+image, clean white background, product
+front and center. This is exactly what
+front and center. This is exactly what
+ 
+front and center. This is exactly what
+Amazon requires for your main image.
+Amazon requires for your main image.
+ 
+Amazon requires for your main image.
+Nothing extra, just the product looking
+Nothing extra, just the product looking
+ 
+Nothing extra, just the product looking
+its best. Feature call out. Grain-free,
+its best. Feature call out. Grain-free,
+ 
+its best. Feature call out. Grain-free,
+optimal digestion, coat health, natural
+optimal digestion, coat health, natural
+ 
+optimal digestion, coat health, natural
+ingredients. Each benefit has its own
+ingredients. Each benefit has its own
+ 
+ingredients. Each benefit has its own
+label and icon. Your customer can scan
+label and icon. Your customer can scan
+ 
+label and icon. Your customer can scan
+this in two seconds and understand what
+this in two seconds and understand what
+ 
+this in two seconds and understand what
+makes your product different.
+makes your product different.
+ 
+makes your product different.
+Ingredients breakdown. Real chicken,
+Ingredients breakdown. Real chicken,
+ 
+Ingredients breakdown. Real chicken,
+sweet potato, garden peas, blueberries.
+sweet potato, garden peas, blueberries.
+ 
+sweet potato, garden peas, blueberries.
+Notice how these look like actual food
+Notice how these look like actual food
+ 
+Notice how these look like actual food
+photography, not generic clip art. That
+photography, not generic clip art. That
+ 
+photography, not generic clip art. That
+is what makes it feel premium. Lifestyle
+is what makes it feel premium. Lifestyle
+ 
+is what makes it feel premium. Lifestyle
+scenes. And this is where AI generated
+scenes. And this is where AI generated
+ 
+scenes. And this is where AI generated
+images really shine for listings. Real
+images really shine for listings. Real
+ 
+images really shine for listings. Real
+dogs, real people, real settings. You'd
+dogs, real people, real settings. You'd
+ 
+dogs, real people, real settings. You'd
+need an actual photo shoot to get
+need an actual photo shoot to get
+ 
+need an actual photo shoot to get
+something like this. Otherwise, feeding
+something like this. Otherwise, feeding
+ 
+something like this. Otherwise, feeding
+guide, serving sizes by dog weight,
+guide, serving sizes by dog weight,
+ 
+guide, serving sizes by dog weight,
+transition tips, realable bag feature.
+transition tips, realable bag feature.
+ 
+transition tips, realable bag feature.
+This is the kind of image that answers
+This is the kind of image that answers
+ 
+This is the kind of image that answers
+questions before your customer even asks
+questions before your customer even asks
+ 
+questions before your customer even asks
+them. Less questions, fewer returns.
+them. Less questions, fewer returns.
+ 
+them. Less questions, fewer returns.
+Now, zoom out and look at these as a
+Now, zoom out and look at these as a
+ 
+Now, zoom out and look at these as a
+set. Notice how the colors are
+set. Notice how the colors are
+ 
+set. Notice how the colors are
+consistent across all nine. Same green
+consistent across all nine. Same green
+ 
+consistent across all nine. Same green
+palette, same font, same icon style. The
+palette, same font, same icon style. The
+ 
+palette, same font, same icon style. The
+lifestyle shots all have that warm,
+lifestyle shots all have that warm,
+ 
+lifestyle shots all have that warm,
+natural feel, and almost every image has
+natural feel, and almost every image has
+ 
+natural feel, and almost every image has
+dogs and people interacting with the
+dogs and people interacting with the
+ 
+dogs and people interacting with the
+product. That is not random. These are
+product. That is not random. These are
+ 
+product. That is not random. These are
+all things that increase conversion on
+all things that increase conversion on
+ 
+all things that increase conversion on
+Amazon. I'll do a deeper breakdown on
+Amazon. I'll do a deeper breakdown on
+ 
+Amazon. I'll do a deeper breakdown on
+listing image design principles in
+listing image design principles in
+ 
+listing image design principles in
+another video, but just know that
+another video, but just know that
+ 
+another video, but just know that
+consistency across your image set
+consistency across your image set
+ 
+consistency across your image set
+matters a lot. So, that is the full
+matters a lot. So, that is the full
+ 
+matters a lot. So, that is the full
+process. Nine images, one product photo,
+process. Nine images, one product photo,
+ 
+process. Nine images, one product photo,
+about 2 minutes total. And every step
+about 2 minutes total. And every step
+ 
+about 2 minutes total. And every step
+along the way, you had the option to
+along the way, you had the option to
+ 
+along the way, you had the option to
+edit, adjust, and customize. If you want
+edit, adjust, and customize. If you want
+ 
+edit, adjust, and customize. If you want
+to try this yourself, the product
+to try this yourself, the product
+ 
+to try this yourself, the product
+analysis step is completely free. No
+analysis step is completely free. No
+ 
+analysis step is completely free. No
+credit card needed. You can upload your
+credit card needed. You can upload your
+ 
+credit card needed. You can upload your
+product, see the full analysis and
+product, see the full analysis and
+ 
+product, see the full analysis and
+strategy report, and decide from there.
+strategy report, and decide from there.
+ 
+strategy report, and decide from there.
+Links in the description. Thanks for
+Links in the description. Thanks for
+ 
+Links in the description. Thanks for
+watching. See you in the next

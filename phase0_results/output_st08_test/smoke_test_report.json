@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-04-17T01:05:25.296Z",
+  "image_tested": "pain_point",
+  "model": "fal-ai/flux-pro/v1.1",
+  "elapsed_seconds": 8.7,
+  "image_url": "https://v3b.fal.media/files/b/0a968d88/xBZAeNliJ39GgWwdn9SWP_0a33e944fdc241b1aa721b59e0602879.jpg",
+  "local_path": "/Users/cc/Desktop/photo_show/phase0_results/output_st08_test/st08_pain_point_1776387923555.jpg",
+  "seed": 2038019289,
+  "cost_usd_est": 0.05,
+  "status": "SUCCESS"
+}

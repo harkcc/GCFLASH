@@ -1,0 +1,100 @@
+{
+  "id": "amazon_nexscope_7_suite",
+  "name": "Amazon 7 image strategy suite",
+  "scale_baseline": "scale_a_nexscope_amazon_7",
+  "marketplace_profile": "amazon",
+  "source_logic": "Nexscope 7-image planning + Amazon seller slot jobs + tryclair image type catalog",
+  "suite_consistency_rules": [
+    "Every image answers a distinct buyer question.",
+    "Use the same product truth pack and style pack for all slots.",
+    "Do not repeat the same selling point in every image.",
+    "Keep final text short and mobile-readable.",
+    "Do not use unsupported exact specs."
+  ],
+  "slots": [
+    {
+      "slot": 1,
+      "slot_type": "main_image_click",
+      "template_card": "HeroCleanCenterCard",
+      "template_product_type": "single_image_template",
+      "buyer_question": "What is this product before reading the title?",
+      "image_job": "win mobile search clarity while staying Amazon-main-image safe",
+      "layout_family": "amazon_main_clean",
+      "text_density": "low",
+      "headline": "Clean Daily Carry",
+      "badges": []
+    },
+    {
+      "slot": 2,
+      "slot_type": "core_benefit_infographic",
+      "template_card": "FeatureRightTextCard",
+      "template_product_type": "single_image_template",
+      "buyer_question": "What is the core benefit?",
+      "image_job": "turn the strongest feature into a mobile-readable benefit card",
+      "layout_family": "feature_right_stack",
+      "text_density": "medium",
+      "headline": "Organized Daily Carry",
+      "badges": ["Large-looking capacity", "Organized pockets", "Easy daily use"]
+    },
+    {
+      "slot": 3,
+      "slot_type": "size_scale_reference",
+      "template_card": "CalloutAroundProductCard",
+      "template_product_type": "single_image_template",
+      "buyer_question": "Will it fit my everyday items?",
+      "image_job": "show scale and capacity without unsupported exact dimensions",
+      "layout_family": "scale_reference",
+      "text_density": "medium",
+      "headline": "Fits Daily Essentials",
+      "badges": ["Bottle", "Notebook", "Travel items"]
+    },
+    {
+      "slot": 4,
+      "slot_type": "show_everything_packaging",
+      "template_card": "PackageTrustCard",
+      "template_product_type": "single_image_template",
+      "buyer_question": "What do I get and how is it organized?",
+      "image_job": "show product plus safe included/usage context",
+      "layout_family": "package_trust",
+      "text_density": "medium",
+      "headline": "What You Carry",
+      "badges": ["Main pocket", "Front pocket", "Side pockets"]
+    },
+    {
+      "slot": 5,
+      "slot_type": "detail_zoom",
+      "template_card": "DetailMacroCard",
+      "template_product_type": "single_image_template",
+      "buyer_question": "Can I trust the material and details?",
+      "image_job": "make visible details feel credible without inventing construction",
+      "layout_family": "detail_zoom_panels",
+      "text_density": "medium",
+      "headline": "Detail You Can See",
+      "badges": ["Gold zippers", "Soft fabric", "Clean stitching"]
+    },
+    {
+      "slot": 6,
+      "slot_type": "lifestyle_use_case",
+      "template_card": "HeroLifestyleSceneCard",
+      "template_product_type": "single_image_template",
+      "buyer_question": "Where will I use it?",
+      "image_job": "show ownership context and target-user fit",
+      "layout_family": "lifestyle_scene",
+      "text_density": "low",
+      "headline": "Commute Ready",
+      "badges": ["Work", "Travel", "Daily"]
+    },
+    {
+      "slot": 7,
+      "slot_type": "objection_or_comparison",
+      "template_card": "BeforeAfterSplitCard",
+      "template_product_type": "suite_template",
+      "buyer_question": "Why is this better than a messy carry setup?",
+      "image_job": "address clutter/organization objection with a truthful comparison",
+      "layout_family": "before_after_safe",
+      "text_density": "medium",
+      "headline": "From Clutter to Order",
+      "badges": ["Before", "After", "Organized"]
+    }
+  ]
+}

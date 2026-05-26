@@ -1,0 +1,89 @@
+{
+  "suite_template_id": "emag_excitat_reference_6_suite",
+  "source_reference": "references/user_cases/20260521_emag_cangswjp",
+  "marketplace_profile": "eMAG",
+  "design_system": "workflow/design_systems/emag_excitat_reference.DESIGN.md",
+  "intent": "Generate an eMAG-ready square gallery suite with a stronger, cleaner version of the Excitat-style brand-frame structure.",
+  "canvas": {
+    "main_gallery_ratio": "1:1",
+    "recommended_export_size": "1500x1500",
+    "detail_image_ratios": ["1:1", "2:1", "2.4:1", "4:5"]
+  },
+  "slots": [
+    {
+      "slot_id": "01_brand_frame_hero",
+      "buyer_question": "What is this product and why should I click it?",
+      "template_card": "OzonHighConversionMainCard",
+      "image_job": "product-preserving hero with brand frame, largest product, one primary proof point, and category palette",
+      "copy_density": "low",
+      "required_inputs": ["front_or_best_product_image", "brand_name", "primary_safe_claim"],
+      "qa_focus": ["thumbnail_readability", "product_fidelity", "claim_truth", "brand_frame_consistency"]
+    },
+    {
+      "slot_id": "02_core_feature_proof",
+      "buyer_question": "What are the 3-5 most important benefits?",
+      "template_card": "FeatureRightTextCard",
+      "image_job": "product plus short icon/proof modules, avoiding paragraphs",
+      "copy_density": "medium",
+      "required_inputs": ["approved_feature_list", "product_cutout"],
+      "qa_focus": ["text_legibility", "feature_truth", "layout_balance"]
+    },
+    {
+      "slot_id": "03_detail_or_material_proof",
+      "buyer_question": "Which physical detail proves quality or function?",
+      "template_card": "DetailMacroCard",
+      "image_job": "macro detail or cutaway tied to a real visible part",
+      "copy_density": "low",
+      "required_inputs": ["detail_source_image", "part_name", "approved_detail_claim"],
+      "qa_focus": ["detail_source_match", "no_invented_parts", "callout_accuracy"]
+    },
+    {
+      "slot_id": "04_parameters_or_compatibility",
+      "buyer_question": "Will it fit my use case, device, size, or power requirement?",
+      "template_card": "CalloutAroundProductCard",
+      "image_job": "dimensions, compatibility, power/capacity, or parameter strip around product",
+      "copy_density": "medium",
+      "required_inputs": ["dimensions_or_specs", "compatibility_list"],
+      "qa_focus": ["number_truth", "small_text_readability", "buyer_filter_alignment"]
+    },
+    {
+      "slot_id": "05_package_contents",
+      "buyer_question": "What exactly do I receive?",
+      "template_card": "PackageTrustCard",
+      "image_job": "all included items arranged clearly with labels",
+      "copy_density": "medium",
+      "required_inputs": ["package_contents", "accessory_images"],
+      "qa_focus": ["contents_match_listing", "no_missing_items", "no_extra_items"]
+    },
+    {
+      "slot_id": "06_usage_or_scenario",
+      "buyer_question": "Where and how will I use it?",
+      "template_card": "MultiSceneGridCard",
+      "image_job": "realistic usage or scenario grid, one scene per panel",
+      "copy_density": "low",
+      "required_inputs": ["target_scenarios", "safe_use_cases"],
+      "qa_focus": ["scene_relevance", "scale_not_misleading", "suite_non_redundancy"]
+    }
+  ],
+  "optional_slots": [
+    {
+      "slot_id": "07_comparison_or_objection",
+      "buyer_question": "Why is this better than the weak alternative?",
+      "template_card": "BeforeAfterSplitCard",
+      "gate": "Only use when comparison is factual and legally safe."
+    },
+    {
+      "slot_id": "08_instruction_steps",
+      "buyer_question": "How do I install, assemble, or operate it?",
+      "template_card": "MultiSceneGridCard",
+      "gate": "Use for tools, mounts, devices, and appliances where setup anxiety blocks purchase."
+    }
+  ],
+  "negative_constraints": [
+    "Do not copy the Excitat logo or exact artwork.",
+    "Do not invent certifications, language, specs, package contents, or compatibility.",
+    "Do not generate final marketplace text inside the image model; reserve zones and render text deterministically.",
+    "Do not reuse one visual claim across multiple slots.",
+    "Do not make the product smaller than the proof text on the hero card."
+  ]
+}

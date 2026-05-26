@@ -1,0 +1,83 @@
+{
+  "template_id": "MultiSceneGridCard",
+  "image_role": "detail_page",
+  "business_goal": "show multiple usage contexts",
+  "viewer_question": "这个产品适合哪些场景？",
+  "layout_pattern": "2x2 or 3x2 grid, one scene per panel, consistent product anchor",
+  "product_weight": "25-40%",
+  "text_zones": [
+    {
+      "id": "headline_zone",
+      "position": "top or primary safe area",
+      "policy": "short phrase or reserve for overlay"
+    },
+    {
+      "id": "support_zone",
+      "position": "side or bottom",
+      "policy": "2-4 short labels only"
+    }
+  ],
+  "badge_zones": [
+    {
+      "id": "numeric_badge",
+      "position": "top-left/top-right",
+      "content": "one large number or proof point"
+    },
+    {
+      "id": "trust_badge",
+      "position": "bottom/side",
+      "content": "warranty, package quantity, certification, accessory"
+    }
+  ],
+  "scene_zones": [
+    {
+      "id": "main_scene",
+      "position": "background or panel",
+      "role": "usage context or mood"
+    },
+    {
+      "id": "inset_scene",
+      "position": "corner/grid cell",
+      "role": "detail, result, before/after, or usage state"
+    }
+  ],
+  "color_style": "consistent panels, restrained header bars",
+  "prompt_keep_rules": [
+    "Keep exact product shape, color, material, visible labels/logos, ports, buttons, seams, proportions, and package/accessory structure.",
+    "Keep commercial hierarchy: product first, then 1-3 proof points, then scene/detail support."
+  ],
+  "prompt_change_rules": [
+    "Change background, usage scene, props, lighting, badge copy, and panel layout to fit the selected product and marketplace.",
+    "Translate technical parameters into visible proof instead of long copy."
+  ],
+  "negative_constraints": [
+    "No product deformation, no changed color, no extra parts, no fake accessories, no unreadable fake text, no busy background, no tiny text blocks.",
+    "Do not copy the phone screenshot UI or original post layout."
+  ],
+  "text_policy": "Prefer reserve_text_zone or overlay_later for final marketplace copy; model may render only short exact numbers/words in drafts.",
+  "best_for_categories": [
+    "small appliance",
+    "tools",
+    "pet products",
+    "digital accessories",
+    "backpack/storage",
+    "home goods"
+  ],
+  "best_for_marketplaces": [
+    "Amazon",
+    "Ozon",
+    "Rakuten",
+    "Walmart",
+    "eMAG"
+  ],
+  "scoring_focus": [
+    "product_fidelity",
+    "product_scale",
+    "template_compliance",
+    "selling_point_clarity",
+    "commercial_quality",
+    "text_safety",
+    "marketplace_fit",
+    "repairability"
+  ]
+}

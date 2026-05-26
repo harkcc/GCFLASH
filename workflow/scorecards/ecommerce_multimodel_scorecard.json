@@ -1,0 +1,58 @@
+{
+  "id": "ecommerce_multimodel_scorecard",
+  "version": "0.1",
+  "purpose": "Score ecommerce generated images with multiple reviewer roles and return repair instructions.",
+  "reviewer_roles": [
+    {
+      "id": "commercial_creative_reviewer",
+      "suggested_models": ["GPT-4o", "Claude", "Gemini"],
+      "focus": ["thumbnail stopping power", "marketplace fit", "visual hierarchy", "style consistency"],
+      "fail_if": ["product not visible first", "image looks like generic AI art", "style conflicts with target marketplace"]
+    },
+    {
+      "id": "product_truth_reviewer",
+      "suggested_models": ["GPT-4o vision", "Claude vision", "Gemini vision"],
+      "focus": ["product fidelity", "parts count", "material/color preservation", "fake details", "claim accuracy"],
+      "fail_if": ["new product parts are invented", "connector/port/button count changes", "unsupported numeric claim appears"]
+    },
+    {
+      "id": "layout_text_reviewer",
+      "suggested_models": ["GPT-4o vision", "Claude vision"],
+      "focus": ["text readability", "typos", "empty zones", "PSD need", "module balance"],
+      "fail_if": ["final text is unreadable", "too much small copy", "important text should be deterministic but is baked into image"]
+    }
+  ],
+  "dimensions": [
+    { "id": "product_fidelity", "max": 20 },
+    { "id": "commercial_appeal", "max": 20 },
+    { "id": "selling_point_accuracy", "max": 20 },
+    { "id": "layout_readability", "max": 15 },
+    { "id": "text_quality", "max": 10 },
+    { "id": "style_consistency", "max": 10 },
+    { "id": "technical_quality", "max": 5 }
+  ],
+  "thresholds": {
+    "pass": 82,
+    "repair": 75,
+    "fail": 60,
+    "manual_review_required_if_any_dimension_below": {
+      "product_fidelity": 14,
+      "selling_point_accuracy": 14,
+      "text_quality": 6
+    }
+  },
+  "output_contract": {
+    "score_json": {
+      "total": "number",
+      "dimension_scores": "object",
+      "reviewer_votes": "array",
+      "keep": "array",
+      "fix": "array",
+      "quick_wins": "array",
+      "repair_prompt": "string",
+      "psd_or_overlay_needed": "boolean"
+    },
+    "repair_rule": "Repeat product invariants, change only failed dimensions, never rewrite the whole prompt unless product truth was wrong."
+  }
+}
+

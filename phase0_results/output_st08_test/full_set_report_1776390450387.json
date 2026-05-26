@@ -1,0 +1,62 @@
+{
+  "run": "full_set_images_3_to_8",
+  "timestamp": "2026-04-17T01:47:30.387Z",
+  "images": [
+    {
+      "image_number": 3,
+      "image_type": "solution",
+      "elapsed_s": 10.4,
+      "final_path": "/Users/cc/Desktop/photo_show/phase0_results/output_st08_test/img3_solution_final_1776390450387.jpg",
+      "cost_usd": 0.05,
+      "method": "flux_scene + composite",
+      "status": "OK"
+    },
+    {
+      "image_number": 4,
+      "image_type": "detail",
+      "elapsed_s": 7,
+      "final_path": "/Users/cc/Desktop/photo_show/phase0_results/output_st08_test/img4_detail_final_1776390450387.jpg",
+      "cost_usd": 0.05,
+      "method": "flux_direct",
+      "status": "OK"
+    },
+    {
+      "image_number": 5,
+      "image_type": "scene_multi_use",
+      "elapsed_s": 32.1,
+      "final_path": "/Users/cc/Desktop/photo_show/phase0_results/output_st08_test/img5_scene_multi_use_final_1776390450387.jpg",
+      "cost_usd": 0.2,
+      "method": "4x flux_direct + pillow_grid",
+      "status": "OK"
+    },
+    {
+      "image_number": 6,
+      "image_type": "trust",
+      "elapsed_s": 8.6,
+      "final_path": "/Users/cc/Desktop/photo_show/phase0_results/output_st08_test/img6_trust_final_1776390450387.jpg",
+      "cost_usd": 0.05,
+      "method": "flux_direct",
+      "status": "OK"
+    },
+    {
+      "image_number": 7,
+      "image_type": "specs",
+      "elapsed_s": 10.9,
+      "final_path": "/Users/cc/Desktop/photo_show/phase0_results/output_st08_test/img7_specs_final_1776390450387.jpg",
+      "cost_usd": 0.05,
+      "method": "flux_scene + composite",
+      "status": "OK"
+    },
+    {
+      "image_number": 8,
+      "image_type": "cta_gift",
+      "elapsed_s": 9.3,
+      "final_path": "/Users/cc/Desktop/photo_show/phase0_results/output_st08_test/img8_cta_gift_final_1776390450387.jpg",
+      "cost_usd": 0.05,
+      "method": "flux_scene + composite",
+      "status": "OK"
+    }
+  ],
+  "total_elapsed_s": 78.2,
+  "total_cost_usd": 0.45
+}

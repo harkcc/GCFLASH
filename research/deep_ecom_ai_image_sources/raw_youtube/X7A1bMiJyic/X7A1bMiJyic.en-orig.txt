@@ -1,0 +1,950 @@
+ 
+Nano Banana 2 just dropped and yes, it's
+Nano Banana 2 just dropped and yes, it's
+ 
+Nano Banana 2 just dropped and yes, it's
+more fresh than these bananas with
+more fresh than these bananas with
+ 
+more fresh than these bananas with
+upgrades to visual fidelity, advanced
+upgrades to visual fidelity, advanced
+ 
+upgrades to visual fidelity, advanced
+world knowledge, and supposedly accurate
+world knowledge, and supposedly accurate
+ 
+world knowledge, and supposedly accurate
+label text rendering. It should also
+label text rendering. It should also
+ 
+label text rendering. It should also
+have stronger instruction following and
+have stronger instruction following and
+ 
+have stronger instruction following and
+subject consistency with up to five
+subject consistency with up to five
+ 
+subject consistency with up to five
+characters. And at the end of this
+characters. And at the end of this
+ 
+characters. And at the end of this
+video, I'm going to test the subject
+video, I'm going to test the subject
+ 
+video, I'm going to test the subject
+consistency with myself as the subject.
+consistency with myself as the subject.
+ 
+consistency with myself as the subject.
+And I actually found another AI image
+And I actually found another AI image
+ 
+And I actually found another AI image
+model that maybe does it even better
+model that maybe does it even better
+ 
+model that maybe does it even better
+than Nano Banana 2. Welcome back to the
+than Nano Banana 2. Welcome back to the
+ 
+than Nano Banana 2. Welcome back to the
+channel. And if you're new here, my name
+channel. And if you're new here, my name
+ 
+channel. And if you're new here, my name
+is Thomas and I make videos about AI
+is Thomas and I make videos about AI
+ 
+is Thomas and I make videos about AI
+product photography. You're probably
+product photography. You're probably
+ 
+product photography. You're probably
+thinking, didn't we already get Nano
+thinking, didn't we already get Nano
+ 
+thinking, didn't we already get Nano
+Banana 2? And yes, the naming here of
+Banana 2? And yes, the naming here of
+ 
+Banana 2? And yes, the naming here of
+the models is very confusing. So,
+the models is very confusing. So,
+ 
+the models is very confusing. So,
+basically, Nanobanana 2 has all the
+basically, Nanobanana 2 has all the
+ 
+basically, Nanobanana 2 has all the
+capabilities of Nanobanana Pro with a
+capabilities of Nanobanana Pro with a
+ 
+capabilities of Nanobanana Pro with a
+few upgrades and it's based on Gemini
+few upgrades and it's based on Gemini
+ 
+few upgrades and it's based on Gemini
+3.1 Flash, which means it's also much
+3.1 Flash, which means it's also much
+ 
+3.1 Flash, which means it's also much
+faster than Nano Banana Pro. You can of
+faster than Nano Banana Pro. You can of
+ 
+faster than Nano Banana Pro. You can of
+course use it in the Gemini app itself,
+course use it in the Gemini app itself,
+ 
+course use it in the Gemini app itself,
+but I need images without a watermark
+but I need images without a watermark
+ 
+but I need images without a watermark
+and in 4K quality. So that's why I'm
+and in 4K quality. So that's why I'm
+ 
+and in 4K quality. So that's why I'm
+using it over at Hicksfield AI where you
+using it over at Hicksfield AI where you
+ 
+using it over at Hicksfield AI where you
+can get the 4K quality and no watermark
+can get the 4K quality and no watermark
+ 
+can get the 4K quality and no watermark
+and you have access to all the different
+and you have access to all the different
+ 
+and you have access to all the different
+image models and video models available.
+image models and video models available.
+ 
+image models and video models available.
+Hicksfield were kind enough to sponsor
+Hicksfield were kind enough to sponsor
+ 
+Hicksfield were kind enough to sponsor
+this video and if you want to check them
+this video and if you want to check them
+ 
+this video and if you want to check them
+out, there's a link in the description
+out, there's a link in the description
+ 
+out, there's a link in the description
+below. As a product photographer, the
+below. As a product photographer, the
+ 
+below. As a product photographer, the
+most important thing I wanted to test
+most important thing I wanted to test
+ 
+most important thing I wanted to test
+and compare was the text rendering
+and compare was the text rendering
+ 
+and compare was the text rendering
+capabilities. So, we're going to take it
+capabilities. So, we're going to take it
+ 
+capabilities. So, we're going to take it
+from easy to extreme. Really stress
+from easy to extreme. Really stress
+ 
+from easy to extreme. Really stress
+testing the model and seeing if there's
+testing the model and seeing if there's
+ 
+testing the model and seeing if there's
+improvements and how does it compare to
+improvements and how does it compare to
+ 
+improvements and how does it compare to
+Nano Banana Pro. I started out with this
+Nano Banana Pro. I started out with this
+ 
+Nano Banana Pro. I started out with this
+simple iPhone image of the moisturizing
+simple iPhone image of the moisturizing
+ 
+simple iPhone image of the moisturizing
+product. And for this one, I wanted
+product. And for this one, I wanted
+ 
+product. And for this one, I wanted
+contrasting colors and just a soft
+contrasting colors and just a soft
+ 
+contrasting colors and just a soft
+element. So, I thought about the parrots
+element. So, I thought about the parrots
+ 
+element. So, I thought about the parrots
+soft feathers. And this is the result we
+soft feathers. And this is the result we
+ 
+soft feathers. And this is the result we
+got. For this one, the result is
+got. For this one, the result is
+ 
+got. For this one, the result is
+basically perfect. The parrot is very
+basically perfect. The parrot is very
+ 
+basically perfect. The parrot is very
+high quality and detailed. The text
+high quality and detailed. The text
+ 
+high quality and detailed. The text
+rendering is perfect with no errors
+rendering is perfect with no errors
+ 
+rendering is perfect with no errors
+whatsoever. And if you compare it to
+whatsoever. And if you compare it to
+ 
+whatsoever. And if you compare it to
+Nanob Banana Pro, the quality is on the
+Nanob Banana Pro, the quality is on the
+ 
+Nanob Banana Pro, the quality is on the
+same level, but it's just much faster.
+same level, but it's just much faster.
+ 
+same level, but it's just much faster.
+For the next example, we're going to
+For the next example, we're going to
+ 
+For the next example, we're going to
+make it even harder for the model. This
+make it even harder for the model. This
+ 
+make it even harder for the model. This
+is a simple iPhone photo of a bottle
+is a simple iPhone photo of a bottle
+ 
+is a simple iPhone photo of a bottle
+with a really complicated label with
+with a really complicated label with
+ 
+with a really complicated label with
+different graphic elements and text
+different graphic elements and text
+ 
+different graphic elements and text
+elements in different placements, which
+elements in different placements, which
+ 
+elements in different placements, which
+can really trip up the AI models. But
+can really trip up the AI models. But
+ 
+can really trip up the AI models. But
+using the iPhone image along with this
+using the iPhone image along with this
+ 
+using the iPhone image along with this
+prompt, we get this result. And here I
+prompt, we get this result. And here I
+ 
+prompt, we get this result. And here I
+have to say, I really didn't expect it
+have to say, I really didn't expect it
+ 
+have to say, I really didn't expect it
+to get it this spoton. There's basically
+to get it this spoton. There's basically
+ 
+to get it this spoton. There's basically
+no errors in the text or the graphics.
+no errors in the text or the graphics.
+ 
+no errors in the text or the graphics.
+Everything is just perfect. But we can't
+Everything is just perfect. But we can't
+ 
+Everything is just perfect. But we can't
+let Nano Banana 2 get away that easily.
+let Nano Banana 2 get away that easily.
+ 
+let Nano Banana 2 get away that easily.
+So I gave it this prompt with the
+So I gave it this prompt with the
+ 
+So I gave it this prompt with the
+shampoo bottle image. And this is the
+shampoo bottle image. And this is the
+ 
+shampoo bottle image. And this is the
+result we got. This prompt was really
+result we got. This prompt was really
+ 
+result we got. This prompt was really
+made to break the model on the text
+made to break the model on the text
+ 
+made to break the model on the text
+rendering because placing three bottles
+rendering because placing three bottles
+ 
+rendering because placing three bottles
+in a side position like this will make
+in a side position like this will make
+ 
+in a side position like this will make
+it really hard for it to generate every
+it really hard for it to generate every
+ 
+it really hard for it to generate every
+single detail. Right? But considering
+single detail. Right? But considering
+ 
+single detail. Right? But considering
+that we started only with a shitty
+that we started only with a shitty
+ 
+that we started only with a shitty
+iPhone image of the bottle and this is
+iPhone image of the bottle and this is
+ 
+iPhone image of the bottle and this is
+the accuracy and result is very very
+the accuracy and result is very very
+ 
+the accuracy and result is very very
+impressive. And again the same theme as
+impressive. And again the same theme as
+ 
+impressive. And again the same theme as
+before. Nano Banana 2 and Nano Banana
+before. Nano Banana 2 and Nano Banana
+ 
+before. Nano Banana 2 and Nano Banana
+Pro both performed quite on the same
+Pro both performed quite on the same
+ 
+Pro both performed quite on the same
+level. Nano Banana 2 is just faster. For
+level. Nano Banana 2 is just faster. For
+ 
+level. Nano Banana 2 is just faster. For
+the hint example, I wanted to see if it
+the hint example, I wanted to see if it
+ 
+the hint example, I wanted to see if it
+can handle the microscopic text on the
+can handle the microscopic text on the
+ 
+can handle the microscopic text on the
+label itself and how it would place the
+label itself and how it would place the
+ 
+label itself and how it would place the
+tagline in the advertisement. And using
+tagline in the advertisement. And using
+ 
+tagline in the advertisement. And using
+this image and this prompt, we got this
+this image and this prompt, we got this
+ 
+this image and this prompt, we got this
+result. And as expected, the microscopic
+result. And as expected, the microscopic
+ 
+result. And as expected, the microscopic
+text on the label isn't quite right. But
+text on the label isn't quite right. But
+ 
+text on the label isn't quite right. But
+overall, this is a very good result with
+overall, this is a very good result with
+ 
+overall, this is a very good result with
+the tagline being integrated into the
+the tagline being integrated into the
+ 
+the tagline being integrated into the
+design quite well. Actually, comparing
+design quite well. Actually, comparing
+ 
+design quite well. Actually, comparing
+this to the result from Nanobanana Pro
+this to the result from Nanobanana Pro
+ 
+this to the result from Nanobanana Pro
+using the exact same image and the exact
+using the exact same image and the exact
+ 
+using the exact same image and the exact
+same prompt, the tagline isn't
+same prompt, the tagline isn't
+ 
+same prompt, the tagline isn't
+integrated into the design as well in my
+integrated into the design as well in my
+ 
+integrated into the design as well in my
+opinion, and it also has the same small
+opinion, and it also has the same small
+ 
+opinion, and it also has the same small
+errors of the microscopic text on the
+errors of the microscopic text on the
+ 
+errors of the microscopic text on the
+label. So far, Nano Banana 2 has handled
+label. So far, Nano Banana 2 has handled
+ 
+label. So far, Nano Banana 2 has handled
+everything pretty well in my opinion,
+everything pretty well in my opinion,
+ 
+everything pretty well in my opinion,
+but now we're going to crank it up a
+but now we're going to crank it up a
+ 
+but now we're going to crank it up a
+notch and really push it to the limit
+notch and really push it to the limit
+ 
+notch and really push it to the limit
+with the text and graphical rendering
+with the text and graphical rendering
+ 
+with the text and graphical rendering
+and the subject consistency. And to do
+and the subject consistency. And to do
+ 
+and the subject consistency. And to do
+this, I created my own burger chain
+this, I created my own burger chain
+ 
+this, I created my own burger chain
+called Banana Burgers with these designs
+called Banana Burgers with these designs
+ 
+called Banana Burgers with these designs
+off the package and this exact chicken
+off the package and this exact chicken
+ 
+off the package and this exact chicken
+burger. First, I wanted to see if it can
+burger. First, I wanted to see if it can
+ 
+burger. First, I wanted to see if it can
+handle this harsh flash burger product
+handle this harsh flash burger product
+ 
+handle this harsh flash burger product
+photo style while keeping the burger
+photo style while keeping the burger
+ 
+photo style while keeping the burger
+exactly accurate to the reference and
+exactly accurate to the reference and
+ 
+exactly accurate to the reference and
+the graphics and the logo on the
+the graphics and the logo on the
+ 
+the graphics and the logo on the
+branding itself as well. And I have to
+branding itself as well. And I have to
+ 
+branding itself as well. And I have to
+say, the marketing team at Banana
+say, the marketing team at Banana
+ 
+say, the marketing team at Banana
+Burgers must be proud of this image
+Burgers must be proud of this image
+ 
+Burgers must be proud of this image
+because everything was kept perfectly
+because everything was kept perfectly
+ 
+because everything was kept perfectly
+accurate with the graphics, the text,
+accurate with the graphics, the text,
+ 
+accurate with the graphics, the text,
+and the details of the burger itself.
+and the details of the burger itself.
+ 
+and the details of the burger itself.
+And actually, let me know what you think
+And actually, let me know what you think
+ 
+And actually, let me know what you think
+about this using AI for food
+about this using AI for food
+ 
+about this using AI for food
+photography. Because when I was thinking
+photography. Because when I was thinking
+ 
+photography. Because when I was thinking
+about it first, my first reaction was
+about it first, my first reaction was
+ 
+about it first, my first reaction was
+that's not good. I want to have a
+that's not good. I want to have a
+ 
+that's not good. I want to have a
+picture of the real food. But then
+picture of the real food. But then
+ 
+picture of the real food. But then
+again, if you think about burger
+again, if you think about burger
+ 
+again, if you think about burger
+commercials, when do the burgers
+commercials, when do the burgers
+ 
+commercials, when do the burgers
+actually look like in the commercial
+actually look like in the commercial
+ 
+actually look like in the commercial
+itself? So, where does the line go? Give
+itself? So, where does the line go? Give
+ 
+itself? So, where does the line go? Give
+me your thoughts in the comment section
+me your thoughts in the comment section
+ 
+me your thoughts in the comment section
+below. But moving on and cranking up the
+below. But moving on and cranking up the
+ 
+below. But moving on and cranking up the
+difficulty even more for Nano Banana 2.
+difficulty even more for Nano Banana 2.
+ 
+difficulty even more for Nano Banana 2.
+I wanted to create like a hero billboard
+I wanted to create like a hero billboard
+ 
+I wanted to create like a hero billboard
+shot of a hand holding the exact chicken
+shot of a hand holding the exact chicken
+ 
+shot of a hand holding the exact chicken
+burger with towers of burger boxes
+burger with towers of burger boxes
+ 
+burger with towers of burger boxes
+around it. And this was the prompt I
+around it. And this was the prompt I
+ 
+around it. And this was the prompt I
+used along with these reference images.
+used along with these reference images.
+ 
+used along with these reference images.
+And this is the result we got. And
+And this is the result we got. And
+ 
+And this is the result we got. And
+again, looking at all the details of the
+again, looking at all the details of the
+ 
+again, looking at all the details of the
+Banana Burger branding, I have to say
+Banana Burger branding, I have to say
+ 
+Banana Burger branding, I have to say
+that it just made a really good job
+that it just made a really good job
+ 
+that it just made a really good job
+here. I mean, I only gave it a couple of
+here. I mean, I only gave it a couple of
+ 
+here. I mean, I only gave it a couple of
+simple reference images of the branding.
+simple reference images of the branding.
+ 
+simple reference images of the branding.
+In this case, I would actually say that
+In this case, I would actually say that
+ 
+In this case, I would actually say that
+Nano Banana 2 handled it better than
+Nano Banana 2 handled it better than
+ 
+Nano Banana 2 handled it better than
+Nanobanana Pro, but if you generate a
+Nanobanana Pro, but if you generate a
+ 
+Nanobanana Pro, but if you generate a
+couple of times, I think the results are
+couple of times, I think the results are
+ 
+couple of times, I think the results are
+quite similar. Next up, we're going to
+quite similar. Next up, we're going to
+ 
+quite similar. Next up, we're going to
+test the character consistency that was
+test the character consistency that was
+ 
+test the character consistency that was
+supposed to have an upgrade in Nano
+supposed to have an upgrade in Nano
+ 
+supposed to have an upgrade in Nano
+Banana 2. And to do that, I created
+Banana 2. And to do that, I created
+ 
+Banana 2. And to do that, I created
+these five characters that's going to go
+these five characters that's going to go
+ 
+these five characters that's going to go
+on a dinner date at Banana Burgers. And
+on a dinner date at Banana Burgers. And
+ 
+on a dinner date at Banana Burgers. And
+we're going to see how well it can keep
+we're going to see how well it can keep
+ 
+we're going to see how well it can keep
+both the object consistency, branding,
+both the object consistency, branding,
+ 
+both the object consistency, branding,
+and character consistency of five
+and character consistency of five
+ 
+and character consistency of five
+characters at the same time. And using
+characters at the same time. And using
+ 
+characters at the same time. And using
+these reference images and this prompt,
+these reference images and this prompt,
+ 
+these reference images and this prompt,
+this is the result we got. When it comes
+this is the result we got. When it comes
+ 
+this is the result we got. When it comes
+to character consistency and object
+to character consistency and object
+ 
+to character consistency and object
+consistency in this image, I have to
+consistency in this image, I have to
+ 
+consistency in this image, I have to
+give props to Nanob Banana 2. It got all
+give props to Nanob Banana 2. It got all
+ 
+give props to Nanob Banana 2. It got all
+the characters spoton and the branding
+the characters spoton and the branding
+ 
+the characters spoton and the branding
+and details of the burgers is also
+and details of the burgers is also
+ 
+and details of the burgers is also
+accurate. The only question I have is
+accurate. The only question I have is
+ 
+accurate. The only question I have is
+how is this guy eating three burgers for
+how is this guy eating three burgers for
+ 
+how is this guy eating three burgers for
+himself and he haven't even touched his
+himself and he haven't even touched his
+ 
+himself and he haven't even touched his
+banana fries. Now, that's of course
+banana fries. Now, that's of course
+ 
+banana fries. Now, that's of course
+impressive, but what if you don't have a
+impressive, but what if you don't have a
+ 
+impressive, but what if you don't have a
+professional quality character sheet
+professional quality character sheet
+ 
+professional quality character sheet
+with different angles, but only have
+with different angles, but only have
+ 
+with different angles, but only have
+iPhone images of your character that you
+iPhone images of your character that you
+ 
+iPhone images of your character that you
+want to use in your generation? If we
+want to use in your generation? If we
+ 
+want to use in your generation? If we
+try generating images of myself using
+try generating images of myself using
+ 
+try generating images of myself using
+just iPhone images as references, you
+just iPhone images as references, you
+ 
+just iPhone images as references, you
+can see that the results are not quite
+can see that the results are not quite
+ 
+can see that the results are not quite
+accurate and not consistent across
+accurate and not consistent across
+ 
+accurate and not consistent across
+images at all. But this is where
+images at all. But this is where
+ 
+images at all. But this is where
+Hicksfield's own image model, Soul 2,
+Hicksfield's own image model, Soul 2,
+ 
+Hicksfield's own image model, Soul 2,
+that they just launched, actually
+that they just launched, actually
+ 
+that they just launched, actually
+performs better than Nano Banana 2.
+performs better than Nano Banana 2.
+ 
+performs better than Nano Banana 2.
+Because in Soul 2, you can create a Soul
+Because in Soul 2, you can create a Soul
+ 
+Because in Soul 2, you can create a Soul
+ID character of yourself, where you can
+ID character of yourself, where you can
+ 
+ID character of yourself, where you can
+upload up to 80 images from different
+upload up to 80 images from different
+ 
+upload up to 80 images from different
+angles that will then create a
+angles that will then create a
+ 
+angles that will then create a
+consistent character that you can use
+consistent character that you can use
+ 
+consistent character that you can use
+across generations just by tagging it in
+across generations just by tagging it in
+ 
+across generations just by tagging it in
+the prompt itself. And as you can see
+the prompt itself. And as you can see
+ 
+the prompt itself. And as you can see
+from these examples, the accuracy of me
+from these examples, the accuracy of me
+ 
+from these examples, the accuracy of me
+in these images is night and day
+in these images is night and day
+ 
+in these images is night and day
+compared to the examples from Nano
+compared to the examples from Nano
+ 
+compared to the examples from Nano
+Banana 2 and Nano Banana Pro. But the
+Banana 2 and Nano Banana Pro. But the
+ 
+Banana 2 and Nano Banana Pro. But the
+real superpowers are enabled when you
+real superpowers are enabled when you
+ 
+real superpowers are enabled when you
+combine the character consistency
+combine the character consistency
+ 
+combine the character consistency
+capabilities of Soul 2 with the editing
+capabilities of Soul 2 with the editing
+ 
+capabilities of Soul 2 with the editing
+capabilities of Nano Banana, which makes
+capabilities of Nano Banana, which makes
+ 
+capabilities of Nano Banana, which makes
+it possible to create consistent
+it possible to create consistent
+ 
+it possible to create consistent
+characters wearing your products, for
+characters wearing your products, for
+ 
+characters wearing your products, for
+example. And not only can you get
+example. And not only can you get
+ 
+example. And not only can you get
+consistent characters, but you can use
+consistent characters, but you can use
+ 
+consistent characters, but you can use
+the hex color feature to also get
+the hex color feature to also get
+ 
+the hex color feature to also get
+consistent colors through different
+consistent colors through different
+ 
+consistent colors through different
+images with the character. So here I
+images with the character. So here I
+ 
+images with the character. So here I
+created this image of me standing in
+created this image of me standing in
+ 
+created this image of me standing in
+front of the metro and I used that image
+front of the metro and I used that image
+ 
+front of the metro and I used that image
+as the base image to get the color
+as the base image to get the color
+ 
+as the base image to get the color
+palette for the rest of the images that
+palette for the rest of the images that
+ 
+palette for the rest of the images that
+I generated. Then when I had the base
+I generated. Then when I had the base
+ 
+I generated. Then when I had the base
+images with the generic clothing, I
+images with the generic clothing, I
+ 
+images with the generic clothing, I
+could just use the Nanobanana Pro inpar
+ 
+ 
+ 
+brands that I created. And just like
+brands that I created. And just like
+ 
+brands that I created. And just like
+that, we had a consistent streetear
+that, we had a consistent streetear
+ 
+that, we had a consistent streetear
+photo shoot with me as the model and the
+photo shoot with me as the model and the
+ 
+photo shoot with me as the model and the
+colors being the exact same across all
+colors being the exact same across all
+ 
+colors being the exact same across all
+images, making them look like they
+images, making them look like they
+ 
+images, making them look like they
+belong together. And you can test out
+belong together. And you can test out
+ 
+belong together. And you can test out
+both the Soul ID character feature and
+both the Soul ID character feature and
+ 
+both the Soul ID character feature and
+Nano Banana 2 from the link in the
+Nano Banana 2 from the link in the
+ 
+Nano Banana 2 from the link in the
+description below. And if you want
+description below. And if you want
+ 
+description below. And if you want
+access to all the prompts and examples I
+access to all the prompts and examples I
+ 
+access to all the prompts and examples I
+showed you in this video, make sure to
+showed you in this video, make sure to
+ 
+showed you in this video, make sure to
+join my free school community. It's a
+join my free school community. It's a
+ 
+join my free school community. It's a
+place where I will be uploading all my
+place where I will be uploading all my
+ 
+place where I will be uploading all my
+prompts from my videos. And there's also
+prompts from my videos. And there's also
+ 
+prompts from my videos. And there's also
+a community of amazing people excited
+a community of amazing people excited
+ 
+a community of amazing people excited
+about AI where we can share knowledge
+about AI where we can share knowledge
+ 
+about AI where we can share knowledge
+and resources. So if that sounds like
+and resources. So if that sounds like
+ 
+and resources. So if that sounds like
+something that you are interested in,
+something that you are interested in,
+ 
+something that you are interested in,
+make sure to check out the link below.
+make sure to check out the link below.
+ 
+make sure to check out the link below.
+So to summarize Nano Banana 2, it seems
+So to summarize Nano Banana 2, it seems
+ 
+So to summarize Nano Banana 2, it seems
+like it's not a game-changing
+like it's not a game-changing
+ 
+like it's not a game-changing
+groundbreaking update. It's a welcome
+groundbreaking update. It's a welcome
+ 
+groundbreaking update. It's a welcome
+update with faster generations at the
+update with faster generations at the
+ 
+update with faster generations at the
+same quality and capabilities of Nano
+same quality and capabilities of Nano
+ 
+same quality and capabilities of Nano
+Banana Pro. If you like this type of
+Banana Pro. If you like this type of
+ 
+Banana Pro. If you like this type of
+content, make sure to subscribe. And
+content, make sure to subscribe. And
+ 
+content, make sure to subscribe. And
+next week there might be a seed dance 2
+next week there might be a seed dance 2
+ 
+next week there might be a seed dance 2
+video coming.

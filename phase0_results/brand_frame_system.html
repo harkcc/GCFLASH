@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Excitat Brand Frame System — Interactive Preview</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a2e;
+    color: #fff;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    padding: 24px;
+  }
+  h1 { font-size: 24px; margin-bottom: 8px; }
+  .subtitle { color: #888; font-size: 14px; margin-bottom: 24px; }
+
+  .controls {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+  }
+  .control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .control-group label {
+    font-size: 12px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .control-group input, .control-group select {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: #2a2a3e;
+    color: #fff;
+    font-size: 14px;
+  }
+  .control-group input[type="color"] {
+    width: 60px; height: 34px; padding: 2px; cursor: pointer;
+  }
+
+  .preview-grid {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* ==============================
+     THE LISTING FRAME (1200x1200 → scaled to 500x500 for preview)
+     ============================== */
+  .listing-frame {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+
+  /* Product image (background) */
+  .listing-frame .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* ===== DECORATIVE BORDER (SVG-based, color-adjustable) ===== */
+  .listing-frame .border-layer {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  /* ===== EXCITAT LOGO — Fixed artistic font ===== */
+  .listing-frame .excitat-logo {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    z-index: 20;
+    /* Using a stylized font that mimics the Excitat logo */
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    /* Default: red-gold gradient */
+    background: linear-gradient(180deg, var(--logo-color-1, #ffcc00) 0%, var(--logo-color-2, #cc3300) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
+  }
+
+  /* ===== GENIUS BADGE ===== */
+  .listing-frame .genius-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 20;
+    background: linear-gradient(135deg, #e91e8c, #9c27b0);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+  }
+
+  /* ===== BOTTOM INFO BAR (optional) ===== */
+  .listing-frame .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
+    padding: 10px 16px;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .bottom-bar .info-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+  .bottom-bar .info-bullet {
+    color: var(--border-color, #3366cc);
+    font-size: 18px;
+  }
+
+  /* Template label */
+  .template-label {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #888;
+  }
+</style>
+</head>
+<body>
+
+<h1>Excitat Brand Frame System</h1>
+<p class="subtitle">交互式预览 — 调整颜色后实时查看效果。固定元素：EXCITAT 艺术字 + genius 标签。可变元素：边框色、Logo 色、背景。</p>
+
+<!-- Controls -->
+<div class="controls">
+  <div class="control-group">
+    <label>边框主色</label>
+    <input type="color" id="borderColor" value="#2244aa">
+  </div>
+  <div class="control-group">
+    <label>边框副色</label>
+    <input type="color" id="borderColor2" value="#1a3388">
+  </div>
+  <div class="control-group">
+    <label>Logo 颜色 1</label>
+    <input type="color" id="logoColor1" value="#ffcc00">
+  </div>
+  <div class="control-group">
+    <label>Logo 颜色 2</label>
+    <input type="color" id="logoColor2" value="#cc3300">
+  </div>
+  <div class="control-group">
+    <label>边框样式</label>
+    <select id="borderStyle">
+      <option value="ornamental">装饰花纹边框</option>
+      <option value="gradient">渐变底框</option>
+      <option value="thin">细线边框</option>
+      <option value="none">无边框</option>
+    </select>
+  </div>
+  <div class="control-group">
+    <label>底栏文字</label>
+    <input type="text" id="bottomText" value="Coffee Machine Repair Kit • 45 Gaskets • 1 Tool Key" style="width:340px">
+  </div>
+  <div class="control-group">
+    <label>预设方案</label>
+    <select id="presets" onchange="applyPreset(this.value)">
+      <option value="">自定义</option>
+      <option value="blue_cool">蓝色冷调（鸡眼钳）</option>
+      <option value="red_warm">红橙暖调（咖啡配件）</option>
+      <option value="purple_gaming">紫色游戏（PS5支架）</option>
+      <option value="green_outdoor">绿色户外（音箱灯）</option>
+    </select>
+  </div>
+</div>
+
+<!-- Preview: 3 templates side by side -->
+<div class="preview-grid">
+
+  <!-- Template A: Ornamental Border (like 鸡眼钳 / 咖啡配件) -->
+  <div>
+    <div class="listing-frame" id="frameA">
+      <div class="bg" style="background: linear-gradient(135deg, #f8f4f0, #fff); display:flex; align-items:center; justify-content:center;">
+        <span style="color:#ccc; font-size:16px; z-index:2; position:relative;">产品图片区域</span>
+      </div>
+
+      <!-- SVG Decorative Border -->
+      <svg class="border-layer" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer frame -->
+        <rect x="4" y="4" width="492" height="492" rx="2" stroke="var(--border-color, #2244aa)" stroke-width="3" fill="none"/>
+        <!-- Inner frame -->
+        <rect x="10" y="10" width="480" height="480" rx="1" stroke="var(--border-color, #2244aa)" stroke-width="1.5" fill="none" opacity="0.6"/>
+        <!-- Decorative corner: top-left -->
+        <g class="corner-tl" fill="var(--border-color, #2244aa)" opacity="0.8">
+          <path d="M4,4 Q4,35 20,50 Q10,35 10,20 Q10,10 20,10 Q35,10 50,20 Q35,4 4,4Z"/>
+          <circle cx="28" cy="28" r="4" opacity="0.5"/>
+          <path d="M10,4 C10,4 10,20 25,30" stroke="var(--border-color, #2244aa)" stroke-width="1" fill="none" opacity="0.4"/>
+          <path d="M4,10 C4,10 20,10 30,25" stroke="var(--border-color, #2244aa)" stroke-width="1" fill="none" opacity="0.4"/>
+          <!-- Vine tendrils -->
+          <ellipse cx="45" cy="8" rx="12" ry="3" transform="rotate(-15 45 8)" opacity="0.3"/>
+          <ellipse cx="8" cy="45" rx="3" ry="12" transform="rotate(-15 8 45)" opacity="0.3"/>
+        </g>
+        <!-- Decorative corner: top-right -->
+        <g class="corner-tr" fill="var(--border-color, #2244aa)" opacity="0.8" transform="translate(500,0) scale(-1,1)">
+          <path d="M4,4 Q4,35 20,50 Q10,35 10,20 Q10,10 20,10 Q35,10 50,20 Q35,4 4,4Z"/>
+          <circle cx="28" cy="28" r="4" opacity="0.5"/>
+          <ellipse cx="45" cy="8" rx="12" ry="3" transform="rotate(-15 45 8)" opacity="0.3"/>
+          <ellipse cx="8" cy="45" rx="3" ry="12" transform="rotate(-15 8 45)" opacity="0.3"/>
+        </g>
+        <!-- Decorative corner: bottom-left -->
+        <g class="corner-bl" fill="var(--border-color, #2244aa)" opacity="0.8" transform="translate(0,500) scale(1,-1)">
+          <path d="M4,4 Q4,35 20,50 Q10,35 10,20 Q10,10 20,10 Q35,10 50,20 Q35,4 4,4Z"/>
+          <circle cx="28" cy="28" r="4" opacity="0.5"/>
+          <ellipse cx="45" cy="8" rx="12" ry="3" transform="rotate(-15 45 8)" opacity="0.3"/>
+          <ellipse cx="8" cy="45" rx="3" ry="12" transform="rotate(-15 8 45)" opacity="0.3"/>
+        </g>
+        <!-- Decorative corner: bottom-right -->
+        <g class="corner-br" fill="var(--border-color, #2244aa)" opacity="0.8" transform="translate(500,500) scale(-1,-1)">
+          <path d="M4,4 Q4,35 20,50 Q10,35 10,20 Q10,10 20,10 Q35,10 50,20 Q35,4 4,4Z"/>
+          <circle cx="28" cy="28" r="4" opacity="0.5"/>
+          <ellipse cx="45" cy="8" rx="12" ry="3" transform="rotate(-15 45 8)" opacity="0.3"/>
+          <ellipse cx="8" cy="45" rx="3" ry="12" transform="rotate(-15 8 45)" opacity="0.3"/>
+        </g>
+        <!-- Top/Bottom edge decorations -->
+        <line x1="60" y1="5" x2="440" y2="5" stroke="var(--border-color, #2244aa)" stroke-width="1" opacity="0.3" stroke-dasharray="2,6"/>
+        <line x1="60" y1="495" x2="440" y2="495" stroke="var(--border-color, #2244aa)" stroke-width="1" opacity="0.3" stroke-dasharray="2,6"/>
+        <line x1="5" y1="60" x2="5" y2="440" stroke="var(--border-color, #2244aa)" stroke-width="1" opacity="0.3" stroke-dasharray="2,6"/>
+        <line x1="495" y1="60" x2="495" y2="440" stroke="var(--border-color, #2244aa)" stroke-width="1" opacity="0.3" stroke-dasharray="2,6"/>
+      </svg>
+
+      <span class="excitat-logo">EXCITAT</span>
+      <span class="genius-badge">genius</span>
+
+      <div class="bottom-bar">
+        <span class="info-text" id="bottomBarText">Coffee Machine Repair Kit <span class="info-bullet">•</span> 45 Gaskets <span class="info-bullet">•</span> 1 Tool Key</span>
+      </div>
+    </div>
+    <div class="template-label">模板A：装饰边框款（适合白底/浅色产品图）</div>
+  </div>
+
+  <!-- Template B: Gradient Background (like PS5 Wall Mount) -->
+  <div>
+    <div class="listing-frame" id="frameB">
+      <div class="bg" id="frameBbg" style="background: linear-gradient(135deg, #0a0a2e, #1a0a3e, #0d1b4a);">
+        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#444; font-size:16px; z-index:2;">产品图片区域</div>
+      </div>
+
+      <!-- Subtle glow border instead of ornamental -->
+      <div style="position:absolute; top:0; left:0; right:0; bottom:0; z-index:5;
+        box-shadow: inset 0 0 30px rgba(var(--border-r,34), var(--border-g,68), var(--border-b,170), 0.4),
+                    inset 0 0 60px rgba(var(--border-r,34), var(--border-g,68), var(--border-b,170), 0.1);
+        pointer-events:none;"></div>
+
+      <span class="excitat-logo">EXCITAT</span>
+      <span class="genius-badge">genius</span>
+    </div>
+    <div class="template-label">模板B：渐变背景款（适合深色/科技感产品）</div>
+  </div>
+
+  <!-- Template C: Thin Border + Clean (hybrid) -->
+  <div>
+    <div class="listing-frame" id="frameC">
+      <div class="bg" style="background:#fff; display:flex; align-items:center; justify-content:center;">
+        <span style="color:#ccc; font-size:16px; z-index:2; position:relative;">产品图片区域</span>
+      </div>
+
+      <!-- Simple colored border -->
+      <div style="position:absolute; top:3px; left:3px; right:3px; bottom:3px; z-index:5;
+        border: 2.5px solid var(--border-color, #2244aa);
+        pointer-events:none;"></div>
+
+      <span class="excitat-logo">EXCITAT</span>
+      <span class="genius-badge">genius</span>
+
+      <div class="bottom-bar">
+        <span class="info-text" id="bottomBarTextC">Coffee Machine Repair Kit <span class="info-bullet">•</span> 45 Gaskets</span>
+      </div>
+    </div>
+    <div class="template-label">模板C：简约边线款（通用）</div>
+  </div>
+
+</div>
+
+<script>
+  // Color preset definitions
+  const presets = {
+    blue_cool: {
+      borderColor: '#2244aa', borderColor2: '#1a3388',
+      logoColor1: '#ff6644', logoColor2: '#cc2200',
+      borderStyle: 'ornamental',
+      bottomText: '1000 Pcs Grommet Kit • Heavy Duty Plier'
+    },
+    red_warm: {
+      borderColor: '#cc4422', borderColor2: '#993311',
+      logoColor1: '#ffcc00', logoColor2: '#cc3300',
+      borderStyle: 'ornamental',
+      bottomText: 'Coffee Machine Repair Kit • 45 Gaskets • 1 Tool Key'
+    },
+    purple_gaming: {
+      borderColor: '#7c3aed', borderColor2: '#4c1d95',
+      logoColor1: '#ffffff', logoColor2: '#c4b5fd',
+      borderStyle: 'gradient',
+      bottomText: ''
+    },
+    green_outdoor: {
+      borderColor: '#166534', borderColor2: '#14532d',
+      logoColor1: '#fbbf24', logoColor2: '#f59e0b',
+      borderStyle: 'thin',
+      bottomText: '40W Speaker • RGB Light • 20h Battery'
+    }
+  };
+
+  function applyPreset(name) {
+    if (!presets[name]) return;
+    const p = presets[name];
+    document.getElementById('borderColor').value = p.borderColor;
+    document.getElementById('borderColor2').value = p.borderColor2;
+    document.getElementById('logoColor1').value = p.logoColor1;
+    document.getElementById('logoColor2').value = p.logoColor2;
+    document.getElementById('borderStyle').value = p.borderStyle;
+    document.getElementById('bottomText').value = p.bottomText;
+    updateAllFrames();
+  }
+
+  function hexToRgb(hex) {
+    const r = parseInt(hex.slice(1,3), 16);
+    const g = parseInt(hex.slice(3,5), 16);
+    const b = parseInt(hex.slice(5,7), 16);
+    return { r, g, b };
+  }
+
+  function updateAllFrames() {
+    const bc = document.getElementById('borderColor').value;
+    const bc2 = document.getElementById('borderColor2').value;
+    const lc1 = document.getElementById('logoColor1').value;
+    const lc2 = document.getElementById('logoColor2').value;
+    const style = document.getElementById('borderStyle').value;
+    const bottomText = document.getElementById('bottomText').value;
+
+    const rgb = hexToRgb(bc);
+
+    // Update CSS variables on all frames
+    document.querySelectorAll('.listing-frame').forEach(frame => {
+      frame.style.setProperty('--border-color', bc);
+      frame.style.setProperty('--border-color-2', bc2);
+      frame.style.setProperty('--logo-color-1', lc1);
+      frame.style.setProperty('--logo-color-2', lc2);
+      frame.style.setProperty('--border-r', rgb.r);
+      frame.style.setProperty('--border-g', rgb.g);
+      frame.style.setProperty('--border-b', rgb.b);
+
+      // Update logo gradient
+      frame.querySelectorAll('.excitat-logo').forEach(logo => {
+        logo.style.background = `linear-gradient(180deg, ${lc1} 0%, ${lc2} 100%)`;
+        logo.style.webkitBackgroundClip = 'text';
+        logo.style.webkitTextFillColor = 'transparent';
+        logo.style.backgroundClip = 'text';
+      });
+    });
+
+    // Update SVG colors
+    document.querySelectorAll('svg.border-layer [fill="var(--border-color, #2244aa)"]').forEach(el => {
+      // SVG uses CSS var, should update automatically
+    });
+
+    // Update bottom bar text
+    const formattedText = bottomText.split('•').map(s => s.trim()).join(` <span class="info-bullet">•</span> `);
+    document.querySelectorAll('.bottom-bar .info-text').forEach(el => {
+      el.innerHTML = formattedText;
+    });
+
+    // Update gradient background
+    const bg = document.getElementById('frameBbg');
+    if (bg) {
+      bg.style.background = `linear-gradient(135deg, ${bc}22, ${bc2}44, ${bc}11)`;
+    }
+
+    // Update glow
+    document.querySelector('#frameB div[style*="box-shadow"]')?.setAttribute('style',
+      `position:absolute; top:0; left:0; right:0; bottom:0; z-index:5;
+       box-shadow: inset 0 0 30px rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.4),
+                   inset 0 0 60px rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.1);
+       pointer-events:none;`
+    );
+
+    // Update thin border
+    document.querySelector('#frameC div[style*="border:"]')?.setAttribute('style',
+      `position:absolute; top:3px; left:3px; right:3px; bottom:3px; z-index:5;
+       border: 2.5px solid ${bc}; pointer-events:none;`
+    );
+
+    // Show/hide bottom bars based on text
+    document.querySelectorAll('.bottom-bar').forEach(bar => {
+      bar.style.display = bottomText.trim() ? 'flex' : 'none';
+    });
+  }
+
+  // Attach change listeners
+  ['borderColor', 'borderColor2', 'logoColor1', 'logoColor2', 'borderStyle', 'bottomText'].forEach(id => {
+    document.getElementById(id)?.addEventListener('input', updateAllFrames);
+  });
+
+  // Initial render
+  updateAllFrames();
+</script>
+
+<div style="margin-top:32px; padding:20px; background:rgba(255,255,255,0.05); border-radius:8px;">
+  <h2 style="font-size:18px; margin-bottom:12px;">使用说明</h2>
+  <p style="color:#aaa; font-size:14px; line-height:1.8;">
+    <strong>固定元素：</strong>EXCITAT 艺术字（右上角）+ genius 标签（左上角）— 字体和位置不变，只改颜色。<br>
+    <strong>可变元素：</strong>边框颜色、Logo颜色 — 根据每个产品的主色调自动调整。<br>
+    <strong>三种模板：</strong><br>
+    &nbsp;&nbsp;• 模板A（装饰边框）— 适合白底/浅色产品图，类似你的鸡眼钳和咖啡配件<br>
+    &nbsp;&nbsp;• 模板B（渐变背景）— 适合科技/游戏产品，类似你的PS5支架<br>
+    &nbsp;&nbsp;• 模板C（简约边线）— 通用款<br><br>
+    <strong>实际生产流程：</strong><br>
+    1. AI 生成产品场景图（Flux/Ideogram）<br>
+    2. 根据产品图主色调提取配色 → 设置边框/Logo颜色<br>
+    3. Playwright 渲染 HTML 模板 → 产品图 + 品牌框合成<br>
+    4. 输出最终 1200×1200 图片<br><br>
+    <strong>关于 EXCITAT 艺术字：</strong>当前用 Georgia Italic 近似。如果你能提供原始 Logo 的 PNG 透明图（单独的 EXCITAT 文字），
+    我可以直接用那个图片替代，效果会更精确。
+  </p>
+</div>
+
+</body>
+</html>

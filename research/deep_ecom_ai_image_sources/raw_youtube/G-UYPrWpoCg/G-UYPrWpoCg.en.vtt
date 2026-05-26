@@ -1,0 +1,1288 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.320 --> 00:00:02.470 align:start position:0%
+ 
+E-commerce<00:00:00.960><c> photography</c><00:00:01.600><c> required</c><00:00:02.080><c> booking</c>
+
+00:00:02.470 --> 00:00:02.480 align:start position:0%
+E-commerce photography required booking
+ 
+
+00:00:02.480 --> 00:00:04.870 align:start position:0%
+E-commerce photography required booking
+studios,<00:00:03.360><c> coordinating</c><00:00:03.919><c> logistics,</c><00:00:04.640><c> and</c>
+
+00:00:04.870 --> 00:00:04.880 align:start position:0%
+studios, coordinating logistics, and
+ 
+
+00:00:04.880 --> 00:00:08.070 align:start position:0%
+studios, coordinating logistics, and
+spending<00:00:05.359><c> $300</c><00:00:06.160><c> per</c><00:00:06.480><c> product</c><00:00:06.799><c> shot.</c><00:00:07.600><c> Today,</c>
+
+00:00:08.070 --> 00:00:08.080 align:start position:0%
+spending $300 per product shot. Today,
+ 
+
+00:00:08.080 --> 00:00:10.150 align:start position:0%
+spending $300 per product shot. Today,
+that<00:00:08.320><c> physical</c><00:00:08.800><c> process</c><00:00:09.200><c> is</c><00:00:09.440><c> replaceable</c><00:00:10.000><c> by</c>
+
+00:00:10.150 --> 00:00:10.160 align:start position:0%
+that physical process is replaceable by
+ 
+
+00:00:10.160 --> 00:00:13.589 align:start position:0%
+that physical process is replaceable by
+a<00:00:10.400><c> 21cent</c><00:00:11.120><c> API</c><00:00:11.599><c> call.</c><00:00:12.400><c> Historically,</c><00:00:13.200><c> AI</c>
+
+00:00:13.589 --> 00:00:13.599 align:start position:0%
+a 21cent API call. Historically, AI
+ 
+
+00:00:13.599 --> 00:00:15.509 align:start position:0%
+a 21cent API call. Historically, AI
+image<00:00:13.920><c> generation</c><00:00:14.559><c> failed</c><00:00:14.880><c> in</c><00:00:15.120><c> commercial</c>
+
+00:00:15.509 --> 00:00:15.519 align:start position:0%
+image generation failed in commercial
+ 
+
+00:00:15.519 --> 00:00:17.029 align:start position:0%
+image generation failed in commercial
+settings<00:00:15.920><c> because</c><00:00:16.160><c> it</c><00:00:16.400><c> could</c><00:00:16.480><c> not</c><00:00:16.640><c> render</c>
+
+00:00:17.029 --> 00:00:17.039 align:start position:0%
+settings because it could not render
+ 
+
+00:00:17.039 --> 00:00:19.029 align:start position:0%
+settings because it could not render
+text<00:00:17.359><c> accurately,</c><00:00:18.160><c> and</c><00:00:18.400><c> it</c><00:00:18.640><c> lacked</c><00:00:18.880><c> a</c>
+
+00:00:19.029 --> 00:00:19.039 align:start position:0%
+text accurately, and it lacked a
+ 
+
+00:00:19.039 --> 00:00:21.109 align:start position:0%
+text accurately, and it lacked a
+mechanism<00:00:19.439><c> to</c><00:00:19.680><c> maintain</c><00:00:20.160><c> product</c><00:00:20.480><c> continuity</c>
+
+00:00:21.109 --> 00:00:21.119 align:start position:0%
+mechanism to maintain product continuity
+ 
+
+00:00:21.119 --> 00:00:24.070 align:start position:0%
+mechanism to maintain product continuity
+across<00:00:21.439><c> a</c><00:00:21.680><c> full</c><00:00:21.920><c> catalog.</c><00:00:22.960><c> OpenAI</c><00:00:23.680><c> released</c>
+
+00:00:24.070 --> 00:00:24.080 align:start position:0%
+across a full catalog. OpenAI released
+ 
+
+00:00:24.080 --> 00:00:28.070 align:start position:0%
+across a full catalog. OpenAI released
+GPT<00:00:24.640><c> image</c><00:00:25.119><c> 2</c><00:00:25.359><c> on</c><00:00:25.519><c> April</c><00:00:25.920><c> 21,</c><00:00:26.560><c> 2026</c><00:00:27.519><c> to</c><00:00:27.840><c> address</c>
+
+00:00:28.070 --> 00:00:28.080 align:start position:0%
+GPT image 2 on April 21, 2026 to address
+ 
+
+00:00:28.080 --> 00:00:30.390 align:start position:0%
+GPT image 2 on April 21, 2026 to address
+these<00:00:28.400><c> specific</c><00:00:28.880><c> technical</c><00:00:29.279><c> bottlenecks.</c>
+
+00:00:30.390 --> 00:00:30.400 align:start position:0%
+these specific technical bottlenecks.
+ 
+
+00:00:30.400 --> 00:00:32.950 align:start position:0%
+these specific technical bottlenecks.
+The<00:00:30.560><c> model</c><00:00:30.880><c> currently</c><00:00:31.279><c> holds</c><00:00:31.519><c> a</c><00:00:31.760><c> 242</c><00:00:32.800><c> point</c>
+
+00:00:32.950 --> 00:00:32.960 align:start position:0%
+The model currently holds a 242 point
+ 
+
+00:00:32.960 --> 00:00:35.030 align:start position:0%
+The model currently holds a 242 point
+lead<00:00:33.280><c> on</c><00:00:33.440><c> the</c><00:00:33.520><c> image</c><00:00:33.840><c> arena</c><00:00:34.239><c> leaderboard,</c>
+
+00:00:35.030 --> 00:00:35.040 align:start position:0%
+lead on the image arena leaderboard,
+ 
+
+00:00:35.040 --> 00:00:37.670 align:start position:0%
+lead on the image arena leaderboard,
+supporting<00:00:35.520><c> 99%</c><00:00:36.320><c> text</c><00:00:36.640><c> accuracy</c><00:00:37.280><c> across</c>
+
+00:00:37.670 --> 00:00:37.680 align:start position:0%
+supporting 99% text accuracy across
+ 
+
+00:00:37.680 --> 00:00:39.910 align:start position:0%
+supporting 99% text accuracy across
+seven<00:00:38.000><c> scripts</c><00:00:38.559><c> and</c><00:00:38.719><c> native</c><00:00:39.200><c> 16</c><00:00:39.600><c> image</c>
+
+00:00:39.910 --> 00:00:39.920 align:start position:0%
+seven scripts and native 16 image
+ 
+
+00:00:39.920 --> 00:00:42.069 align:start position:0%
+seven scripts and native 16 image
+reference<00:00:40.239><c> arrays.</c><00:00:41.200><c> This</c><00:00:41.360><c> model</c><00:00:41.760><c> functions</c>
+
+00:00:42.069 --> 00:00:42.079 align:start position:0%
+reference arrays. This model functions
+ 
+
+00:00:42.079 --> 00:00:44.150 align:start position:0%
+reference arrays. This model functions
+as<00:00:42.320><c> a</c><00:00:42.480><c> production</c><00:00:42.879><c> grade</c><00:00:43.120><c> asset</c><00:00:43.520><c> engine,</c>
+
+00:00:44.150 --> 00:00:44.160 align:start position:0%
+as a production grade asset engine,
+ 
+
+00:00:44.160 --> 00:00:46.069 align:start position:0%
+as a production grade asset engine,
+manufacturing<00:00:44.879><c> print</c><00:00:45.120><c> ready</c><00:00:45.360><c> and</c><00:00:45.520><c> web</c><00:00:45.840><c> ready</c>
+
+00:00:46.069 --> 00:00:46.079 align:start position:0%
+manufacturing print ready and web ready
+ 
+
+00:00:46.079 --> 00:00:48.389 align:start position:0%
+manufacturing print ready and web ready
+visuals<00:00:46.480><c> directly</c><00:00:46.879><c> from</c><00:00:47.120><c> structured</c><00:00:47.520><c> data.</c>
+
+00:00:48.389 --> 00:00:48.399 align:start position:0%
+visuals directly from structured data.
+ 
+
+00:00:48.399 --> 00:00:50.229 align:start position:0%
+visuals directly from structured data.
+Visual<00:00:48.800><c> asset</c><00:00:49.200><c> production</c><00:00:49.520><c> has</c><00:00:49.760><c> transitioned</c>
+
+00:00:50.229 --> 00:00:50.239 align:start position:0%
+Visual asset production has transitioned
+ 
+
+00:00:50.239 --> 00:00:51.910 align:start position:0%
+Visual asset production has transitioned
+from<00:00:50.399><c> a</c><00:00:50.640><c> creative</c><00:00:50.960><c> bottleneck</c><00:00:51.440><c> into</c><00:00:51.760><c> a</c>
+
+00:00:51.910 --> 00:00:51.920 align:start position:0%
+from a creative bottleneck into a
+ 
+
+00:00:51.920 --> 00:00:54.229 align:start position:0%
+from a creative bottleneck into a
+software<00:00:52.239><c> engineering</c><00:00:52.800><c> problem.</c><00:00:53.680><c> Operating</c>
+
+00:00:54.229 --> 00:00:54.239 align:start position:0%
+software engineering problem. Operating
+ 
+
+00:00:54.239 --> 00:00:56.389 align:start position:0%
+software engineering problem. Operating
+at<00:00:54.480><c> this</c><00:00:54.640><c> threshold</c><00:00:55.360><c> alters</c><00:00:55.760><c> the</c><00:00:56.000><c> margin</c>
+
+00:00:56.389 --> 00:00:56.399 align:start position:0%
+at this threshold alters the margin
+ 
+
+00:00:56.399 --> 00:00:58.869 align:start position:0%
+at this threshold alters the margin
+structure<00:00:56.800><c> of</c><00:00:57.039><c> direct</c><00:00:57.360><c> to</c><00:00:57.680><c> consumer</c><00:00:58.079><c> retail</c>
+
+00:00:58.869 --> 00:00:58.879 align:start position:0%
+structure of direct to consumer retail
+ 
+
+00:00:58.879 --> 00:01:01.110 align:start position:0%
+structure of direct to consumer retail
+allowing<00:00:59.280><c> for</c><00:00:59.600><c> highfidelity</c><00:01:00.399><c> branding</c><00:01:00.800><c> at</c>
+
+00:01:01.110 --> 00:01:01.120 align:start position:0%
+allowing for highfidelity branding at
+ 
+
+00:01:01.120 --> 00:01:03.830 align:start position:0%
+allowing for highfidelity branding at
+near<00:01:01.520><c> euro</c><00:01:01.920><c> marginal</c><00:01:02.399><c> cost.</c><00:01:03.280><c> You</c><00:01:03.520><c> must</c>
+
+00:01:03.830 --> 00:01:03.840 align:start position:0%
+near euro marginal cost. You must
+ 
+
+00:01:03.840 --> 00:01:05.990 align:start position:0%
+near euro marginal cost. You must
+construct<00:01:04.239><c> a</c><00:01:04.479><c> bifurcated</c><00:01:05.280><c> architecture</c><00:01:05.840><c> to</c>
+
+00:01:05.990 --> 00:01:06.000 align:start position:0%
+construct a bifurcated architecture to
+ 
+
+00:01:06.000 --> 00:01:08.310 align:start position:0%
+construct a bifurcated architecture to
+deploy<00:01:06.400><c> this</c><00:01:06.640><c> system.</c><00:01:07.439><c> This</c><00:01:07.760><c> deliberately</c>
+
+00:01:08.310 --> 00:01:08.320 align:start position:0%
+deploy this system. This deliberately
+ 
+
+00:01:08.320 --> 00:01:10.310 align:start position:0%
+deploy this system. This deliberately
+separates<00:01:08.799><c> the</c><00:01:09.040><c> logic</c><00:01:09.520><c> layer</c><00:01:09.920><c> where</c><00:01:10.159><c> you</c>
+
+00:01:10.310 --> 00:01:10.320 align:start position:0%
+separates the logic layer where you
+ 
+
+00:01:10.320 --> 00:01:12.630 align:start position:0%
+separates the logic layer where you
+define<00:01:10.640><c> the</c><00:01:10.880><c> brand</c><00:01:11.439><c> from</c><00:01:11.680><c> the</c><00:01:11.920><c> programmatic</c>
+
+00:01:12.630 --> 00:01:12.640 align:start position:0%
+define the brand from the programmatic
+ 
+
+00:01:12.640 --> 00:01:14.710 align:start position:0%
+define the brand from the programmatic
+layer<00:01:12.799><c> where</c><00:01:13.040><c> you</c><00:01:13.200><c> generate</c><00:01:13.600><c> the</c><00:01:13.760><c> volume.</c>
+
+00:01:14.710 --> 00:01:14.720 align:start position:0%
+layer where you generate the volume.
+ 
+
+00:01:14.720 --> 00:01:16.710 align:start position:0%
+layer where you generate the volume.
+Relying<00:01:15.119><c> on</c><00:01:15.360><c> standard</c><00:01:15.760><c> chat</c><00:01:16.080><c> prompts</c><00:01:16.479><c> to</c>
+
+00:01:16.710 --> 00:01:16.720 align:start position:0%
+Relying on standard chat prompts to
+ 
+
+00:01:16.720 --> 00:01:18.950 align:start position:0%
+Relying on standard chat prompts to
+maintain<00:01:17.119><c> brand</c><00:01:17.439><c> constraints</c><00:01:18.000><c> will</c><00:01:18.240><c> fail.</c>
+
+00:01:18.950 --> 00:01:18.960 align:start position:0%
+maintain brand constraints will fail.
+ 
+
+00:01:18.960 --> 00:01:20.870 align:start position:0%
+maintain brand constraints will fail.
+The<00:01:19.119><c> model's</c><00:01:19.600><c> interpretation</c><00:01:20.240><c> of</c><00:01:20.479><c> loose</c>
+
+00:01:20.870 --> 00:01:20.880 align:start position:0%
+The model's interpretation of loose
+ 
+
+00:01:20.880 --> 00:01:23.670 align:start position:0%
+The model's interpretation of loose
+adjectives<00:01:21.439><c> like</c><00:01:21.759><c> modern</c><00:01:22.159><c> or</c><00:01:22.560><c> soft</c><00:01:23.200><c> drifts</c>
+
+00:01:23.670 --> 00:01:23.680 align:start position:0%
+adjectives like modern or soft drifts
+ 
+
+00:01:23.680 --> 00:01:26.310 align:start position:0%
+adjectives like modern or soft drifts
+over<00:01:24.000><c> time.</c><00:01:24.799><c> Instead,</c><00:01:25.360><c> you</c><00:01:25.600><c> establish</c><00:01:26.080><c> a</c>
+
+00:01:26.310 --> 00:01:26.320 align:start position:0%
+over time. Instead, you establish a
+ 
+
+00:01:26.320 --> 00:01:28.310 align:start position:0%
+over time. Instead, you establish a
+central<00:01:26.720><c> logic</c><00:01:27.040><c> node</c><00:01:27.360><c> by</c><00:01:27.600><c> uploading</c><00:01:28.000><c> a</c>
+
+00:01:28.310 --> 00:01:28.320 align:start position:0%
+central logic node by uploading a
+ 
+
+00:01:28.320 --> 00:01:30.230 align:start position:0%
+central logic node by uploading a
+strictly<00:01:28.720><c> formatted</c><00:01:29.280><c> brand</c><00:01:29.520><c> specification</c>
+
+00:01:30.230 --> 00:01:30.240 align:start position:0%
+strictly formatted brand specification
+ 
+
+00:01:30.240 --> 00:01:33.030 align:start position:0%
+strictly formatted brand specification
+document<00:01:30.640><c> to</c><00:01:30.799><c> a</c><00:01:31.040><c> custom</c><00:01:31.360><c> GPT.</c><00:01:32.400><c> It</c><00:01:32.720><c> functions</c>
+
+00:01:33.030 --> 00:01:33.040 align:start position:0%
+document to a custom GPT. It functions
+ 
+
+00:01:33.040 --> 00:01:35.030 align:start position:0%
+document to a custom GPT. It functions
+as<00:01:33.280><c> a</c><00:01:33.439><c> persistent</c><00:01:34.000><c> knowledge</c><00:01:34.320><c> base</c>
+
+00:01:35.030 --> 00:01:35.040 align:start position:0%
+as a persistent knowledge base
+ 
+
+00:01:35.040 --> 00:01:37.350 align:start position:0%
+as a persistent knowledge base
+explicitly<00:01:35.680><c> defining</c><00:01:36.079><c> the</c><00:01:36.240><c> hex</c><00:01:36.560><c> codes,</c><00:01:37.040><c> font</c>
+
+00:01:37.350 --> 00:01:37.360 align:start position:0%
+explicitly defining the hex codes, font
+ 
+
+00:01:37.360 --> 00:01:39.270 align:start position:0%
+explicitly defining the hex codes, font
+stacks,<00:01:37.759><c> and</c><00:01:38.000><c> photography</c><00:01:38.560><c> recipes</c><00:01:39.040><c> the</c>
+
+00:01:39.270 --> 00:01:39.280 align:start position:0%
+stacks, and photography recipes the
+ 
+
+00:01:39.280 --> 00:01:41.830 align:start position:0%
+stacks, and photography recipes the
+model<00:01:39.600><c> must</c><00:01:39.840><c> reference</c><00:01:40.240><c> for</c><00:01:40.560><c> every</c><00:01:40.799><c> request.</c>
+
+00:01:41.830 --> 00:01:41.840 align:start position:0%
+model must reference for every request.
+ 
+
+00:01:41.840 --> 00:01:44.149 align:start position:0%
+model must reference for every request.
+This<00:01:42.079><c> setup</c><00:01:42.479><c> requires</c><00:01:42.960><c> regular</c><00:01:43.280><c> auditing.</c>
+
+00:01:44.149 --> 00:01:44.159 align:start position:0%
+This setup requires regular auditing.
+ 
+
+00:01:44.159 --> 00:01:46.149 align:start position:0%
+This setup requires regular auditing.
+Every<00:01:44.560><c> 50</c><00:01:44.799><c> generations,</c><00:01:45.520><c> you</c><00:01:45.759><c> check</c><00:01:46.000><c> the</c>
+
+00:01:46.149 --> 00:01:46.159 align:start position:0%
+Every 50 generations, you check the
+ 
+
+00:01:46.159 --> 00:01:48.230 align:start position:0%
+Every 50 generations, you check the
+output<00:01:46.560><c> against</c><00:01:46.880><c> your</c><00:01:47.040><c> specifications</c><00:01:48.000><c> and</c>
+
+00:01:48.230 --> 00:01:48.240 align:start position:0%
+output against your specifications and
+ 
+
+00:01:48.240 --> 00:01:50.149 align:start position:0%
+output against your specifications and
+tighten<00:01:48.640><c> the</c><00:01:48.799><c> brand</c><00:01:49.119><c> spec</c><00:01:49.439><c> file</c><00:01:49.680><c> to</c><00:01:49.920><c> correct</c>
+
+00:01:50.149 --> 00:01:50.159 align:start position:0%
+tighten the brand spec file to correct
+ 
+
+00:01:50.159 --> 00:01:52.870 align:start position:0%
+tighten the brand spec file to correct
+any<00:01:50.399><c> aesthetic</c><00:01:50.880><c> drift.</c><00:01:52.000><c> This</c><00:01:52.320><c> protocol</c>
+
+00:01:52.870 --> 00:01:52.880 align:start position:0%
+any aesthetic drift. This protocol
+ 
+
+00:01:52.880 --> 00:01:55.350 align:start position:0%
+any aesthetic drift. This protocol
+transforms<00:01:53.520><c> a</c><00:01:53.680><c> generic</c><00:01:54.240><c> chat</c><00:01:54.560><c> window</c><00:01:54.880><c> into</c><00:01:55.200><c> a</c>
+
+00:01:55.350 --> 00:01:55.360 align:start position:0%
+transforms a generic chat window into a
+ 
+
+00:01:55.360 --> 00:01:57.590 align:start position:0%
+transforms a generic chat window into a
+localized<00:01:56.000><c> logic</c><00:01:56.399><c> engine</c><00:01:56.720><c> that</c><00:01:57.040><c> enforces</c>
+
+00:01:57.590 --> 00:01:57.600 align:start position:0%
+localized logic engine that enforces
+ 
+
+00:01:57.600 --> 00:01:59.030 align:start position:0%
+localized logic engine that enforces
+brand<00:01:57.920><c> laws</c><00:01:58.240><c> through</c><00:01:58.399><c> a</c><00:01:58.560><c> structured</c>
+
+00:01:59.030 --> 00:01:59.040 align:start position:0%
+brand laws through a structured
+ 
+
+00:01:59.040 --> 00:02:01.429 align:start position:0%
+brand laws through a structured
+knowledge<00:01:59.360><c> base.</c><00:02:00.320><c> The</c><00:02:00.560><c> primary</c><00:02:00.960><c> technical</c>
+
+00:02:01.429 --> 00:02:01.439 align:start position:0%
+knowledge base. The primary technical
+ 
+
+00:02:01.439 --> 00:02:03.270 align:start position:0%
+knowledge base. The primary technical
+challenge<00:02:01.759><c> for</c><00:02:02.000><c> e-commerce</c><00:02:02.560><c> is</c><00:02:02.799><c> maintaining</c>
+
+00:02:03.270 --> 00:02:03.280 align:start position:0%
+challenge for e-commerce is maintaining
+ 
+
+00:02:03.280 --> 00:02:05.670 align:start position:0%
+challenge for e-commerce is maintaining
+multivariant<00:02:04.159><c> consistency</c><00:02:04.799><c> across</c><00:02:05.119><c> a</c><00:02:05.360><c> large</c>
+
+00:02:05.670 --> 00:02:05.680 align:start position:0%
+multivariant consistency across a large
+ 
+
+00:02:05.680 --> 00:02:08.790 align:start position:0%
+multivariant consistency across a large
+catalog.<00:02:06.799><c> You</c><00:02:07.040><c> solve</c><00:02:07.280><c> this</c><00:02:07.520><c> by</c><00:02:07.759><c> utilizing</c><00:02:08.399><c> 16</c>
+
+00:02:08.790 --> 00:02:08.800 align:start position:0%
+catalog. You solve this by utilizing 16
+ 
+
+00:02:08.800 --> 00:02:10.469 align:start position:0%
+catalog. You solve this by utilizing 16
+image<00:02:09.119><c> reference</c><00:02:09.440><c> arrays</c><00:02:09.759><c> and</c><00:02:10.000><c> a</c><00:02:10.160><c> character</c>
+
+00:02:10.469 --> 00:02:10.479 align:start position:0%
+image reference arrays and a character
+ 
+
+00:02:10.479 --> 00:02:12.710 align:start position:0%
+image reference arrays and a character
+anchor<00:02:10.879><c> pattern.</c><00:02:11.760><c> The</c><00:02:12.000><c> model</c><00:02:12.319><c> does</c><00:02:12.480><c> not</c>
+
+00:02:12.710 --> 00:02:12.720 align:start position:0%
+anchor pattern. The model does not
+ 
+
+00:02:12.720 --> 00:02:15.030 align:start position:0%
+anchor pattern. The model does not
+average<00:02:13.040><c> these</c><00:02:13.280><c> images.</c><00:02:14.160><c> It</c><00:02:14.319><c> processes</c><00:02:14.800><c> the</c>
+
+00:02:15.030 --> 00:02:15.040 align:start position:0%
+average these images. It processes the
+ 
+
+00:02:15.040 --> 00:02:16.869 align:start position:0%
+average these images. It processes the
+array<00:02:15.280><c> as</c><00:02:15.440><c> a</c><00:02:15.680><c> coordinated</c><00:02:16.239><c> mathematical</c>
+
+00:02:16.869 --> 00:02:16.879 align:start position:0%
+array as a coordinated mathematical
+ 
+
+00:02:16.879 --> 00:02:19.350 align:start position:0%
+array as a coordinated mathematical
+system<00:02:17.680><c> extracting</c><00:02:18.239><c> discrete</c><00:02:18.640><c> traits</c><00:02:19.040><c> like</c>
+
+00:02:19.350 --> 00:02:19.360 align:start position:0%
+system extracting discrete traits like
+ 
+
+00:02:19.360 --> 00:02:21.430 align:start position:0%
+system extracting discrete traits like
+fabric<00:02:19.760><c> texture</c><00:02:20.160><c> or</c><00:02:20.400><c> light</c><00:02:20.720><c> temperature</c><00:02:21.120><c> from</c>
+
+00:02:21.430 --> 00:02:21.440 align:start position:0%
+fabric texture or light temperature from
+ 
+
+00:02:21.440 --> 00:02:24.229 align:start position:0%
+fabric texture or light temperature from
+specific<00:02:21.840><c> inputs.</c><00:02:22.959><c> This</c><00:02:23.200><c> node</c><00:02:23.520><c> graph</c><00:02:23.760><c> shows</c><00:02:24.000><c> a</c>
+
+00:02:24.229 --> 00:02:24.239 align:start position:0%
+specific inputs. This node graph shows a
+ 
+
+00:02:24.239 --> 00:02:25.750 align:start position:0%
+specific inputs. This node graph shows a
+central<00:02:24.560><c> source</c><00:02:24.879><c> image</c><00:02:25.200><c> connecting</c><00:02:25.520><c> to</c>
+
+00:02:25.750 --> 00:02:25.760 align:start position:0%
+central source image connecting to
+ 
+
+00:02:25.760 --> 00:02:27.910 align:start position:0%
+central source image connecting to
+satellite<00:02:26.160><c> nodes</c><00:02:26.560><c> for</c><00:02:26.720><c> lighting</c><00:02:27.360><c> style,</c>
+
+00:02:27.910 --> 00:02:27.920 align:start position:0%
+satellite nodes for lighting style,
+ 
+
+00:02:27.920 --> 00:02:30.470 align:start position:0%
+satellite nodes for lighting style,
+color,<00:02:28.239><c> and</c><00:02:28.560><c> composition.</c><00:02:29.599><c> By</c><00:02:29.920><c> locking</c><00:02:30.239><c> the</c>
+
+00:02:30.470 --> 00:02:30.480 align:start position:0%
+color, and composition. By locking the
+ 
+
+00:02:30.480 --> 00:02:32.390 align:start position:0%
+color, and composition. By locking the
+background<00:02:30.800><c> and</c><00:02:31.040><c> camera</c><00:02:31.440><c> variables,</c><00:02:32.239><c> you</c>
+
+00:02:32.390 --> 00:02:32.400 align:start position:0%
+background and camera variables, you
+ 
+
+00:02:32.400 --> 00:02:34.710 align:start position:0%
+background and camera variables, you
+isolate<00:02:32.879><c> the</c><00:02:33.040><c> target</c><00:02:33.360><c> product,</c><00:02:34.160><c> allowing</c><00:02:34.480><c> the</c>
+
+00:02:34.710 --> 00:02:34.720 align:start position:0%
+isolate the target product, allowing the
+ 
+
+00:02:34.720 --> 00:02:36.470 align:start position:0%
+isolate the target product, allowing the
+system<00:02:34.959><c> to</c><00:02:35.120><c> change</c><00:02:35.360><c> only</c><00:02:35.599><c> the</c><00:02:35.840><c> color</c><00:02:36.080><c> to</c><00:02:36.319><c> your</c>
+
+00:02:36.470 --> 00:02:36.480 align:start position:0%
+system to change only the color to your
+ 
+
+00:02:36.480 --> 00:02:39.190 align:start position:0%
+system to change only the color to your
+specified<00:02:36.879><c> hex</c><00:02:37.280><c> code.</c><00:02:38.080><c> Explicit</c><00:02:38.560><c> indexing</c><00:02:39.040><c> in</c>
+
+00:02:39.190 --> 00:02:39.200 align:start position:0%
+specified hex code. Explicit indexing in
+ 
+
+00:02:39.200 --> 00:02:41.350 align:start position:0%
+specified hex code. Explicit indexing in
+the<00:02:39.280><c> prompt</c><00:02:39.519><c> payload</c><00:02:39.920><c> is</c><00:02:40.160><c> required.</c><00:02:40.959><c> You</c><00:02:41.200><c> must</c>
+
+00:02:41.350 --> 00:02:41.360 align:start position:0%
+the prompt payload is required. You must
+ 
+
+00:02:41.360 --> 00:02:43.190 align:start position:0%
+the prompt payload is required. You must
+tell<00:02:41.519><c> the</c><00:02:41.760><c> model</c><00:02:42.080><c> exactly</c><00:02:42.480><c> which</c><00:02:42.800><c> visual</c>
+
+00:02:43.190 --> 00:02:43.200 align:start position:0%
+tell the model exactly which visual
+ 
+
+00:02:43.200 --> 00:02:44.949 align:start position:0%
+tell the model exactly which visual
+trait<00:02:43.440><c> to</c><00:02:43.599><c> pull</c><00:02:43.920><c> from</c><00:02:44.080><c> which</c><00:02:44.319><c> reference</c><00:02:44.720><c> image</c>
+
+00:02:44.949 --> 00:02:44.959 align:start position:0%
+trait to pull from which reference image
+ 
+
+00:02:44.959 --> 00:02:47.670 align:start position:0%
+trait to pull from which reference image
+index<00:02:45.440><c> to</c><00:02:45.599><c> avoid</c><00:02:45.920><c> muddy</c><00:02:46.319><c> generation.</c><00:02:47.360><c> This</c>
+
+00:02:47.670 --> 00:02:47.680 align:start position:0%
+index to avoid muddy generation. This
+ 
+
+00:02:47.680 --> 00:02:50.390 align:start position:0%
+index to avoid muddy generation. This
+level<00:02:48.000><c> of</c><00:02:48.239><c> control</c><00:02:48.879><c> allows</c><00:02:49.200><c> you</c><00:02:49.360><c> to</c><00:02:49.599><c> apply</c><00:02:49.920><c> an</c>
+
+00:02:50.390 --> 00:02:50.400 align:start position:0%
+level of control allows you to apply an
+ 
+
+00:02:50.400 --> 00:02:52.229 align:start position:0%
+level of control allows you to apply an
+identical<00:02:50.879><c> lighting</c><00:02:51.200><c> setup</c><00:02:51.599><c> to</c><00:02:51.920><c> every</c>
+
+00:02:52.229 --> 00:02:52.239 align:start position:0%
+identical lighting setup to every
+ 
+
+00:02:52.239 --> 00:02:54.710 align:start position:0%
+identical lighting setup to every
+variant,<00:02:53.040><c> mimicking</c><00:02:53.519><c> a</c><00:02:53.840><c> controlled</c><00:02:54.319><c> physical</c>
+
+00:02:54.710 --> 00:02:54.720 align:start position:0%
+variant, mimicking a controlled physical
+ 
+
+00:02:54.720 --> 00:02:57.430 align:start position:0%
+variant, mimicking a controlled physical
+photo<00:02:55.040><c> studio.</c><00:02:56.000><c> You</c><00:02:56.239><c> apply</c><00:02:56.560><c> the</c><00:02:56.800><c> same</c><00:02:57.040><c> anchor</c>
+
+00:02:57.430 --> 00:02:57.440 align:start position:0%
+photo studio. You apply the same anchor
+ 
+
+00:02:57.440 --> 00:02:59.830 align:start position:0%
+photo studio. You apply the same anchor
+logic<00:02:57.760><c> to</c><00:02:58.000><c> humans,</c><00:02:58.720><c> ensuring</c><00:02:59.120><c> a</c><00:02:59.360><c> recurring</c>
+
+00:02:59.830 --> 00:02:59.840 align:start position:0%
+logic to humans, ensuring a recurring
+ 
+
+00:02:59.840 --> 00:03:01.990 align:start position:0%
+logic to humans, ensuring a recurring
+model<00:03:00.239><c> maintains</c><00:03:00.720><c> the</c><00:03:01.040><c> same</c><00:03:01.280><c> facial</c><00:03:01.680><c> features</c>
+
+00:03:01.990 --> 00:03:02.000 align:start position:0%
+model maintains the same facial features
+ 
+
+00:03:02.000 --> 00:03:03.430 align:start position:0%
+model maintains the same facial features
+and<00:03:02.239><c> wardrobe</c><00:03:02.800><c> across</c><00:03:03.120><c> different</c>
+
+00:03:03.430 --> 00:03:03.440 align:start position:0%
+and wardrobe across different
+ 
+
+00:03:03.440 --> 00:03:06.149 align:start position:0%
+and wardrobe across different
+environments.<00:03:04.720><c> This</c><00:03:05.040><c> systemic</c><00:03:05.599><c> control</c>
+
+00:03:06.149 --> 00:03:06.159 align:start position:0%
+environments. This systemic control
+ 
+
+00:03:06.159 --> 00:03:08.149 align:start position:0%
+environments. This systemic control
+eliminates<00:03:06.720><c> aesthetic</c><00:03:07.280><c> drift</c><00:03:07.599><c> across</c><00:03:07.920><c> the</c>
+
+00:03:08.149 --> 00:03:08.159 align:start position:0%
+eliminates aesthetic drift across the
+ 
+
+00:03:08.159 --> 00:03:10.790 align:start position:0%
+eliminates aesthetic drift across the
+entire<00:03:08.560><c> brand</c><00:03:08.879><c> catalog.</c><00:03:09.920><c> Beyond</c><00:03:10.480><c> product</c>
+
+00:03:10.790 --> 00:03:10.800 align:start position:0%
+entire brand catalog. Beyond product
+ 
+
+00:03:10.800 --> 00:03:13.030 align:start position:0%
+entire brand catalog. Beyond product
+shots,<00:03:11.360><c> the</c><00:03:11.599><c> system</c><00:03:12.000><c> scales</c><00:03:12.480><c> to</c><00:03:12.640><c> generate</c>
+
+00:03:13.030 --> 00:03:13.040 align:start position:0%
+shots, the system scales to generate
+ 
+
+00:03:13.040 --> 00:03:14.790 align:start position:0%
+shots, the system scales to generate
+marketing<00:03:13.440><c> collateral</c><00:03:13.920><c> that</c><00:03:14.159><c> relies</c><00:03:14.560><c> on</c>
+
+00:03:14.790 --> 00:03:14.800 align:start position:0%
+marketing collateral that relies on
+ 
+
+00:03:14.800 --> 00:03:17.350 align:start position:0%
+marketing collateral that relies on
+precise<00:03:15.360><c> data.</c><00:03:16.159><c> The</c><00:03:16.400><c> platform</c><00:03:16.879><c> natively</c>
+
+00:03:17.350 --> 00:03:17.360 align:start position:0%
+precise data. The platform natively
+ 
+
+00:03:17.360 --> 00:03:20.149 align:start position:0%
+precise data. The platform natively
+renders<00:03:17.760><c> text</c><00:03:18.080><c> inside</c><00:03:18.480><c> images</c><00:03:18.959><c> with</c><00:03:19.280><c> 99%</c>
+
+00:03:20.149 --> 00:03:20.159 align:start position:0%
+renders text inside images with 99%
+ 
+
+00:03:20.159 --> 00:03:23.030 align:start position:0%
+renders text inside images with 99%
+accuracy.<00:03:21.280><c> It</c><00:03:21.519><c> supports</c><00:03:22.000><c> complex</c><00:03:22.640><c> mixed</c>
+
+00:03:23.030 --> 00:03:23.040 align:start position:0%
+accuracy. It supports complex mixed
+ 
+
+00:03:23.040 --> 00:03:25.030 align:start position:0%
+accuracy. It supports complex mixed
+script<00:03:23.440><c> layouts,</c><00:03:24.080><c> allowing</c><00:03:24.480><c> for</c><00:03:24.720><c> English</c>
+
+00:03:25.030 --> 00:03:25.040 align:start position:0%
+script layouts, allowing for English
+ 
+
+00:03:25.040 --> 00:03:27.350 align:start position:0%
+script layouts, allowing for English
+titles<00:03:25.440><c> to</c><00:03:25.599><c> sit</c><00:03:25.840><c> cleanly</c><00:03:26.319><c> alongside</c><00:03:26.879><c> Japanese</c>
+
+00:03:27.350 --> 00:03:27.360 align:start position:0%
+titles to sit cleanly alongside Japanese
+ 
+
+00:03:27.360 --> 00:03:30.229 align:start position:0%
+titles to sit cleanly alongside Japanese
+subtitle<00:03:27.920><c> text.</c><00:03:28.720><c> To</c><00:03:28.959><c> achieve</c><00:03:29.360><c> this,</c><00:03:29.840><c> you</c><00:03:30.080><c> must</c>
+
+00:03:30.229 --> 00:03:30.239 align:start position:0%
+subtitle text. To achieve this, you must
+ 
+
+00:03:30.239 --> 00:03:32.309 align:start position:0%
+subtitle text. To achieve this, you must
+wrap<00:03:30.640><c> all</c><00:03:30.879><c> target</c><00:03:31.280><c> text</c><00:03:31.599><c> in</c><00:03:31.760><c> verbatim</c>
+
+00:03:32.309 --> 00:03:32.319 align:start position:0%
+wrap all target text in verbatim
+ 
+
+00:03:32.319 --> 00:03:34.550 align:start position:0%
+wrap all target text in verbatim
+quotation<00:03:32.799><c> marks</c><00:03:33.040><c> within</c><00:03:33.360><c> your</c><00:03:33.519><c> prompt.</c><00:03:34.319><c> You</c>
+
+00:03:34.550 --> 00:03:34.560 align:start position:0%
+quotation marks within your prompt. You
+ 
+
+00:03:34.560 --> 00:03:36.630 align:start position:0%
+quotation marks within your prompt. You
+must<00:03:34.720><c> also</c><00:03:34.959><c> include</c><00:03:35.440><c> negative</c><00:03:35.840><c> constraints,</c>
+
+00:03:36.630 --> 00:03:36.640 align:start position:0%
+must also include negative constraints,
+ 
+
+00:03:36.640 --> 00:03:38.550 align:start position:0%
+must also include negative constraints,
+commanding<00:03:37.040><c> the</c><00:03:37.280><c> model</c><00:03:37.519><c> to</c><00:03:37.760><c> omit</c><00:03:38.080><c> duplicate</c>
+
+00:03:38.550 --> 00:03:38.560 align:start position:0%
+commanding the model to omit duplicate
+ 
+
+00:03:38.560 --> 00:03:41.430 align:start position:0%
+commanding the model to omit duplicate
+text<00:03:38.879><c> and</c><00:03:39.200><c> watermark</c><00:03:39.680><c> style</c><00:03:40.000><c> artifacts.</c><00:03:41.200><c> This</c>
+
+00:03:41.430 --> 00:03:41.440 align:start position:0%
+text and watermark style artifacts. This
+ 
+
+00:03:41.440 --> 00:03:43.350 align:start position:0%
+text and watermark style artifacts. This
+chart<00:03:41.760><c> shows</c><00:03:42.000><c> a</c><00:03:42.159><c> sustainability</c><00:03:42.959><c> standards</c>
+
+00:03:43.350 --> 00:03:43.360 align:start position:0%
+chart shows a sustainability standards
+ 
+
+00:03:43.360 --> 00:03:46.070 align:start position:0%
+chart shows a sustainability standards
+infographic<00:03:44.080><c> generated</c><00:03:44.560><c> in</c><00:03:44.720><c> a</c><00:03:44.959><c> single</c><00:03:45.200><c> pass.</c>
+
+00:03:46.070 --> 00:03:46.080 align:start position:0%
+infographic generated in a single pass.
+ 
+
+00:03:46.080 --> 00:03:48.869 align:start position:0%
+infographic generated in a single pass.
+Text<00:03:46.480><c> blocks</c><00:03:46.959><c> outlining</c><00:03:47.599><c> organic</c><00:03:48.159><c> cotton</c><00:03:48.560><c> and</c>
+
+00:03:48.869 --> 00:03:48.879 align:start position:0%
+Text blocks outlining organic cotton and
+ 
+
+00:03:48.879 --> 00:03:51.110 align:start position:0%
+Text blocks outlining organic cotton and
+recycled<00:03:49.440><c> polyester</c><00:03:50.159><c> are</c><00:03:50.400><c> sharp</c><00:03:50.799><c> and</c>
+
+00:03:51.110 --> 00:03:51.120 align:start position:0%
+recycled polyester are sharp and
+ 
+
+00:03:51.120 --> 00:03:53.430 align:start position:0%
+recycled polyester are sharp and
+perfectly<00:03:51.599><c> legible.</c><00:03:52.720><c> Native</c><00:03:53.120><c> text</c>
+
+00:03:53.430 --> 00:03:53.440 align:start position:0%
+perfectly legible. Native text
+ 
+
+00:03:53.440 --> 00:03:55.670 align:start position:0%
+perfectly legible. Native text
+generation<00:03:54.159><c> internalizes</c><00:03:54.959><c> the</c><00:03:55.280><c> production</c>
+
+00:03:55.670 --> 00:03:55.680 align:start position:0%
+generation internalizes the production
+ 
+
+00:03:55.680 --> 00:03:57.990 align:start position:0%
+generation internalizes the production
+of<00:03:55.920><c> trustb</c><00:03:56.319><c> building</c><00:03:56.640><c> graphics,</c><00:03:57.519><c> removing</c>
+
+00:03:57.990 --> 00:03:58.000 align:start position:0%
+of trustb building graphics, removing
+ 
+
+00:03:58.000 --> 00:04:00.789 align:start position:0%
+of trustb building graphics, removing
+traditional<00:03:58.560><c> design</c><00:03:58.879><c> bottlenecks.</c><00:04:00.159><c> To</c><00:04:00.400><c> scale</c>
+
+00:04:00.789 --> 00:04:00.799 align:start position:0%
+traditional design bottlenecks. To scale
+ 
+
+00:04:00.799 --> 00:04:03.429 align:start position:0%
+traditional design bottlenecks. To scale
+across<00:04:01.200><c> an</c><00:04:01.439><c> entire</c><00:04:01.840><c> catalog,</c><00:04:02.720><c> the</c><00:04:02.959><c> workflow</c>
+
+00:04:03.429 --> 00:04:03.439 align:start position:0%
+across an entire catalog, the workflow
+ 
+
+00:04:03.439 --> 00:04:05.589 align:start position:0%
+across an entire catalog, the workflow
+must<00:04:03.760><c> move</c><00:04:04.000><c> to</c><00:04:04.159><c> the</c><00:04:04.400><c> programmatic</c><00:04:05.040><c> throughput</c>
+
+00:04:05.589 --> 00:04:05.599 align:start position:0%
+must move to the programmatic throughput
+ 
+
+00:04:05.599 --> 00:04:08.309 align:start position:0%
+must move to the programmatic throughput
+layer.<00:04:06.319><c> This</c><00:04:06.560><c> requires</c><00:04:07.040><c> building</c><00:04:07.360><c> a</c><00:04:07.599><c> GraphQL</c>
+
+00:04:08.309 --> 00:04:08.319 align:start position:0%
+layer. This requires building a GraphQL
+ 
+
+00:04:08.319 --> 00:04:10.309 align:start position:0%
+layer. This requires building a GraphQL
+pipeline<00:04:08.799><c> to</c><00:04:09.120><c> interface</c><00:04:09.599><c> directly</c><00:04:10.000><c> with</c><00:04:10.159><c> the</c>
+
+00:04:10.309 --> 00:04:10.319 align:start position:0%
+pipeline to interface directly with the
+ 
+
+00:04:10.319 --> 00:04:13.190 align:start position:0%
+pipeline to interface directly with the
+Shopify<00:04:10.879><c> backend.</c><00:04:11.920><c> Passing</c><00:04:12.400><c> binary</c><00:04:12.879><c> image</c>
+
+00:04:13.190 --> 00:04:13.200 align:start position:0%
+Shopify backend. Passing binary image
+ 
+
+00:04:13.200 --> 00:04:14.949 align:start position:0%
+Shopify backend. Passing binary image
+data<00:04:13.599><c> directly</c><00:04:14.000><c> through</c><00:04:14.239><c> an</c><00:04:14.480><c> application</c>
+
+00:04:14.949 --> 00:04:14.959 align:start position:0%
+data directly through an application
+ 
+
+00:04:14.959 --> 00:04:17.590 align:start position:0%
+data directly through an application
+server<00:04:15.599><c> creates</c><00:04:16.000><c> a</c><00:04:16.239><c> severe</c><00:04:16.639><c> bottleneck</c><00:04:17.280><c> and</c>
+
+00:04:17.590 --> 00:04:17.600 align:start position:0%
+server creates a severe bottleneck and
+ 
+
+00:04:17.600 --> 00:04:19.990 align:start position:0%
+server creates a severe bottleneck and
+often<00:04:17.919><c> leads</c><00:04:18.160><c> to</c><00:04:18.320><c> request</c><00:04:18.639><c> timeouts.</c><00:04:19.759><c> The</c>
+
+00:04:19.990 --> 00:04:20.000 align:start position:0%
+often leads to request timeouts. The
+ 
+
+00:04:20.000 --> 00:04:22.150 align:start position:0%
+often leads to request timeouts. The
+correct<00:04:20.320><c> architecture</c><00:04:21.040><c> uses</c><00:04:21.440><c> a</c><00:04:21.680><c> staged</c>
+
+00:04:22.150 --> 00:04:22.160 align:start position:0%
+correct architecture uses a staged
+ 
+
+00:04:22.160 --> 00:04:24.790 align:start position:0%
+correct architecture uses a staged
+upload<00:04:22.560><c> flow.</c><00:04:23.440><c> Step</c><00:04:23.680><c> one</c><00:04:24.080><c> executes</c><00:04:24.560><c> the</c>
+
+00:04:24.790 --> 00:04:24.800 align:start position:0%
+upload flow. Step one executes the
+ 
+
+00:04:24.800 --> 00:04:27.510 align:start position:0%
+upload flow. Step one executes the
+staged<00:04:25.280><c> uploads</c><00:04:25.840><c> create</c><00:04:26.160><c> mutation</c><00:04:27.040><c> receiving</c>
+
+00:04:27.510 --> 00:04:27.520 align:start position:0%
+staged uploads create mutation receiving
+ 
+
+00:04:27.520 --> 00:04:29.670 align:start position:0%
+staged uploads create mutation receiving
+a<00:04:27.680><c> temporary</c><00:04:28.240><c> URL</c><00:04:28.720><c> and</c><00:04:28.960><c> authentication</c>
+
+00:04:29.670 --> 00:04:29.680 align:start position:0%
+a temporary URL and authentication
+ 
+
+00:04:29.680 --> 00:04:31.909 align:start position:0%
+a temporary URL and authentication
+payload.<00:04:30.560><c> You</c><00:04:30.800><c> are</c><00:04:30.960><c> then</c><00:04:31.120><c> pushing</c><00:04:31.440><c> the</c><00:04:31.600><c> file</c>
+
+00:04:31.909 --> 00:04:31.919 align:start position:0%
+payload. You are then pushing the file
+ 
+
+00:04:31.919 --> 00:04:33.670 align:start position:0%
+payload. You are then pushing the file
+directly<00:04:32.320><c> to</c><00:04:32.560><c> a</c><00:04:32.720><c> Google</c><00:04:33.040><c> Cloud</c><00:04:33.360><c> Storage</c>
+
+00:04:33.670 --> 00:04:33.680 align:start position:0%
+directly to a Google Cloud Storage
+ 
+
+00:04:33.680 --> 00:04:35.350 align:start position:0%
+directly to a Google Cloud Storage
+bucket<00:04:34.240><c> rather</c><00:04:34.560><c> than</c><00:04:34.720><c> through</c><00:04:34.960><c> your</c><00:04:35.199><c> own</c>
+
+00:04:35.350 --> 00:04:35.360 align:start position:0%
+bucket rather than through your own
+ 
+
+00:04:35.360 --> 00:04:37.830 align:start position:0%
+bucket rather than through your own
+server.<00:04:36.240><c> You</c><00:04:36.479><c> must</c><00:04:36.639><c> append</c><00:04:37.040><c> the</c><00:04:37.199><c> form</c><00:04:37.600><c> data</c>
+
+00:04:37.830 --> 00:04:37.840 align:start position:0%
+server. You must append the form data
+ 
+
+00:04:37.840 --> 00:04:39.909 align:start position:0%
+server. You must append the form data
+parameters<00:04:38.400><c> in</c><00:04:38.639><c> the</c><00:04:38.800><c> exact</c><00:04:39.199><c> order</c><00:04:39.600><c> returned</c>
+
+00:04:39.909 --> 00:04:39.919 align:start position:0%
+parameters in the exact order returned
+ 
+
+00:04:39.919 --> 00:04:41.909 align:start position:0%
+parameters in the exact order returned
+by<00:04:40.160><c> the</c><00:04:40.320><c> server</c><00:04:40.800><c> or</c><00:04:41.040><c> the</c><00:04:41.199><c> upload</c><00:04:41.600><c> will</c><00:04:41.759><c> be</c>
+
+00:04:41.909 --> 00:04:41.919 align:start position:0%
+by the server or the upload will be
+ 
+
+00:04:41.919 --> 00:04:45.110 align:start position:0%
+by the server or the upload will be
+rejected.<00:04:42.880><c> Step</c><00:04:43.199><c> two</c><00:04:43.520><c> is</c><00:04:43.840><c> executing</c><00:04:44.400><c> the</c><00:04:44.639><c> file</c>
+
+00:04:45.110 --> 00:04:45.120 align:start position:0%
+rejected. Step two is executing the file
+ 
+
+00:04:45.120 --> 00:04:47.270 align:start position:0%
+rejected. Step two is executing the file
+create<00:04:45.440><c> mutation</c><00:04:46.080><c> to</c><00:04:46.320><c> register</c><00:04:46.720><c> the</c><00:04:46.880><c> asset</c>
+
+00:04:47.270 --> 00:04:47.280 align:start position:0%
+create mutation to register the asset
+ 
+
+00:04:47.280 --> 00:04:49.830 align:start position:0%
+create mutation to register the asset
+onto<00:04:47.520><c> the</c><00:04:47.680><c> Shopify</c><00:04:48.240><c> CDN.</c><00:04:49.199><c> Because</c><00:04:49.520><c> this</c>
+
+00:04:49.830 --> 00:04:49.840 align:start position:0%
+onto the Shopify CDN. Because this
+ 
+
+00:04:49.840 --> 00:04:51.749 align:start position:0%
+onto the Shopify CDN. Because this
+process<00:04:50.160><c> is</c><00:04:50.400><c> asynchronous,</c><00:04:51.440><c> your</c>
+
+00:04:51.749 --> 00:04:51.759 align:start position:0%
+process is asynchronous, your
+ 
+
+00:04:51.759 --> 00:04:53.830 align:start position:0%
+process is asynchronous, your
+application<00:04:52.320><c> must</c><00:04:52.560><c> pull</c><00:04:52.880><c> the</c><00:04:53.120><c> file</c><00:04:53.440><c> status</c>
+
+00:04:53.830 --> 00:04:53.840 align:start position:0%
+application must pull the file status
+ 
+
+00:04:53.840 --> 00:04:55.749 align:start position:0%
+application must pull the file status
+endpoint<00:04:54.400><c> until</c><00:04:54.720><c> the</c><00:04:54.960><c> image</c><00:04:55.199><c> is</c><00:04:55.360><c> ready</c><00:04:55.520><c> for</c>
+
+00:04:55.749 --> 00:04:55.759 align:start position:0%
+endpoint until the image is ready for
+ 
+
+00:04:55.759 --> 00:04:58.230 align:start position:0%
+endpoint until the image is ready for
+use.<00:04:56.639><c> Adopting</c><00:04:57.120><c> this</c><00:04:57.360><c> staged</c><00:04:57.840><c> upload</c>
+
+00:04:58.230 --> 00:04:58.240 align:start position:0%
+use. Adopting this staged upload
+ 
+
+00:04:58.240 --> 00:05:00.150 align:start position:0%
+use. Adopting this staged upload
+protocol<00:04:58.880><c> allows</c><00:04:59.280><c> for</c><00:04:59.440><c> the</c><00:04:59.600><c> reliable</c>
+
+00:05:00.150 --> 00:05:00.160 align:start position:0%
+protocol allows for the reliable
+ 
+
+00:05:00.160 --> 00:05:02.150 align:start position:0%
+protocol allows for the reliable
+injection<00:05:00.639><c> of</c><00:05:00.880><c> synthetic</c><00:05:01.360><c> assets</c><00:05:01.759><c> at</c><00:05:02.000><c> a</c>
+
+00:05:02.150 --> 00:05:02.160 align:start position:0%
+injection of synthetic assets at a
+ 
+
+00:05:02.160 --> 00:05:04.870 align:start position:0%
+injection of synthetic assets at a
+massive<00:05:02.560><c> production</c><00:05:03.040><c> scale.</c><00:05:04.160><c> Managing</c><00:05:04.639><c> the</c>
+
+00:05:04.870 --> 00:05:04.880 align:start position:0%
+massive production scale. Managing the
+ 
+
+00:05:04.880 --> 00:05:06.710 align:start position:0%
+massive production scale. Managing the
+financial<00:05:05.280><c> viability</c><00:05:05.840><c> of</c><00:05:06.000><c> this</c><00:05:06.160><c> pipeline</c>
+
+00:05:06.710 --> 00:05:06.720 align:start position:0%
+financial viability of this pipeline
+ 
+
+00:05:06.720 --> 00:05:08.870 align:start position:0%
+financial viability of this pipeline
+requires<00:05:07.120><c> an</c><00:05:07.440><c> understanding</c><00:05:07.919><c> of</c><00:05:08.160><c> token</c><00:05:08.560><c> unit</c>
+
+00:05:08.870 --> 00:05:08.880 align:start position:0%
+requires an understanding of token unit
+ 
+
+00:05:08.880 --> 00:05:11.430 align:start position:0%
+requires an understanding of token unit
+economics.<00:05:10.000><c> A</c><00:05:10.240><c> high</c><00:05:10.479><c> resolution</c><00:05:10.960><c> output</c>
+
+00:05:11.430 --> 00:05:11.440 align:start position:0%
+economics. A high resolution output
+ 
+
+00:05:11.440 --> 00:05:14.629 align:start position:0%
+economics. A high resolution output
+costs<00:05:11.840><c> roughly</c><00:05:12.320><c> 21.</c><00:05:13.600><c> Refreshing</c><00:05:14.080><c> a</c><00:05:14.240><c> catalog</c>
+
+00:05:14.629 --> 00:05:14.639 align:start position:0%
+costs roughly 21. Refreshing a catalog
+ 
+
+00:05:14.639 --> 00:05:17.029 align:start position:0%
+costs roughly 21. Refreshing a catalog
+of<00:05:14.880><c> 50</c><00:05:15.199><c> products</c><00:05:15.520><c> with</c><00:05:15.759><c> five</c><00:05:16.080><c> variants</c><00:05:16.479><c> each</c>
+
+00:05:17.029 --> 00:05:17.039 align:start position:0%
+of 50 products with five variants each
+ 
+
+00:05:17.039 --> 00:05:20.390 align:start position:0%
+of 50 products with five variants each
+costs<00:05:17.520><c> $52,</c><00:05:18.639><c> replacing</c><00:05:19.120><c> a</c><00:05:19.360><c> $15,000</c>
+
+00:05:20.390 --> 00:05:20.400 align:start position:0%
+costs $52, replacing a $15,000
+ 
+
+00:05:20.400 --> 00:05:22.550 align:start position:0%
+costs $52, replacing a $15,000
+photography<00:05:20.880><c> budget.</c><00:05:21.680><c> You</c><00:05:21.919><c> can</c><00:05:22.080><c> reduce</c><00:05:22.320><c> this</c>
+
+00:05:22.550 --> 00:05:22.560 align:start position:0%
+photography budget. You can reduce this
+ 
+
+00:05:22.560 --> 00:05:24.790 align:start position:0%
+photography budget. You can reduce this
+further.<00:05:23.440><c> Reusing</c><00:05:23.919><c> reference</c><00:05:24.320><c> inputs</c>
+
+00:05:24.790 --> 00:05:24.800 align:start position:0%
+further. Reusing reference inputs
+ 
+
+00:05:24.800 --> 00:05:27.990 align:start position:0%
+further. Reusing reference inputs
+triggers<00:05:25.120><c> a</c><00:05:25.360><c> 75%</c><00:05:26.240><c> discount</c><00:05:26.560><c> on</c><00:05:26.800><c> cash</c><00:05:27.120><c> tokens.</c>
+
+00:05:27.990 --> 00:05:28.000 align:start position:0%
+triggers a 75% discount on cash tokens.
+ 
+
+00:05:28.000 --> 00:05:30.070 align:start position:0%
+triggers a 75% discount on cash tokens.
+You<00:05:28.240><c> engineer</c><00:05:28.720><c> bulk</c><00:05:29.120><c> generation</c><00:05:29.520><c> loops</c><00:05:29.919><c> to</c>
+
+00:05:30.070 --> 00:05:30.080 align:start position:0%
+You engineer bulk generation loops to
+ 
+
+00:05:30.080 --> 00:05:32.070 align:start position:0%
+You engineer bulk generation loops to
+maximize<00:05:30.479><c> these</c><00:05:30.720><c> cash</c><00:05:31.039><c> hits</c><00:05:31.360><c> across</c><00:05:31.759><c> hundreds</c>
+
+00:05:32.070 --> 00:05:32.080 align:start position:0%
+maximize these cash hits across hundreds
+ 
+
+00:05:32.080 --> 00:05:34.550 align:start position:0%
+maximize these cash hits across hundreds
+of<00:05:32.240><c> consecutive</c><00:05:32.800><c> calls.</c><00:05:33.759><c> Optimizing</c><00:05:34.320><c> these</c>
+
+00:05:34.550 --> 00:05:34.560 align:start position:0%
+of consecutive calls. Optimizing these
+ 
+
+00:05:34.560 --> 00:05:36.710 align:start position:0%
+of consecutive calls. Optimizing these
+mechanics<00:05:35.120><c> results</c><00:05:35.440><c> in</c><00:05:35.600><c> near</c><00:05:36.000><c> zero</c><00:05:36.320><c> marginal</c>
+
+00:05:36.710 --> 00:05:36.720 align:start position:0%
+mechanics results in near zero marginal
+ 
+
+00:05:36.720 --> 00:05:39.350 align:start position:0%
+mechanics results in near zero marginal
+costs<00:05:37.120><c> for</c><00:05:37.360><c> infinite</c><00:05:37.840><c> visual</c><00:05:38.160><c> iterations.</c>
+
+00:05:39.350 --> 00:05:39.360 align:start position:0%
+costs for infinite visual iterations.
+ 
+
+00:05:39.360 --> 00:05:42.070 align:start position:0%
+costs for infinite visual iterations.
+From<00:05:39.759><c> brand</c><00:05:40.080><c> specification</c><00:05:40.960><c> to</c><00:05:41.280><c> GraphQL</c>
+
+00:05:42.070 --> 00:05:42.080 align:start position:0%
+From brand specification to GraphQL
+ 
+
+00:05:42.080 --> 00:05:44.469 align:start position:0%
+From brand specification to GraphQL
+ingestion,<00:05:42.960><c> the</c><00:05:43.199><c> entire</c><00:05:43.680><c> visual</c><00:05:44.080><c> supply</c>
+
+00:05:44.469 --> 00:05:44.479 align:start position:0%
+ingestion, the entire visual supply
+ 
+
+00:05:44.479 --> 00:05:46.950 align:start position:0%
+ingestion, the entire visual supply
+chain<00:05:44.800><c> is</c><00:05:44.960><c> digitized.</c><00:05:46.160><c> This</c><00:05:46.320><c> autonomous</c>
+
+00:05:46.950 --> 00:05:46.960 align:start position:0%
+chain is digitized. This autonomous
+ 
+
+00:05:46.960 --> 00:05:49.430 align:start position:0%
+chain is digitized. This autonomous
+system<00:05:47.440><c> generates</c><00:05:47.919><c> results</c><00:05:48.400><c> overnight</c><00:05:49.120><c> that</c>
+
+00:05:49.430 --> 00:05:49.440 align:start position:0%
+system generates results overnight that
+ 
+
+00:05:49.440 --> 00:05:51.590 align:start position:0%
+system generates results overnight that
+previously<00:05:50.080><c> required</c><00:05:50.560><c> weeks</c><00:05:50.880><c> of</c><00:05:51.120><c> agency</c>
+
+00:05:51.590 --> 00:05:51.600 align:start position:0%
+previously required weeks of agency
+ 
+
+00:05:51.600 --> 00:05:53.990 align:start position:0%
+previously required weeks of agency
+coordination.<00:05:52.800><c> Sustainable</c><00:05:53.520><c> competitive</c>
+
+00:05:53.990 --> 00:05:54.000 align:start position:0%
+coordination. Sustainable competitive
+ 
+
+00:05:54.000 --> 00:05:56.710 align:start position:0%
+coordination. Sustainable competitive
+advantage<00:05:54.639><c> relies</c><00:05:54.960><c> on</c><00:05:55.280><c> architectural</c><00:05:55.919><c> rigor.</c>
+
+00:05:56.710 --> 00:05:56.720 align:start position:0%
+advantage relies on architectural rigor.
+ 
+
+00:05:56.720 --> 00:05:58.790 align:start position:0%
+advantage relies on architectural rigor.
+The<00:05:56.960><c> brand's</c><00:05:57.360><c> competitive</c><00:05:57.840><c> moat</c><00:05:58.240><c> is</c><00:05:58.400><c> built</c><00:05:58.639><c> on</c>
+
+00:05:58.790 --> 00:05:58.800 align:start position:0%
+The brand's competitive moat is built on
+ 
+
+00:05:58.800 --> 00:06:01.189 align:start position:0%
+The brand's competitive moat is built on
+the<00:05:59.039><c> precision</c><00:05:59.360><c> of</c><00:05:59.520><c> its</c><00:05:59.759><c> AI</c><00:06:00.080><c> pipeline</c><00:06:00.720><c> and</c><00:06:01.039><c> the</c>
+
+00:06:01.189 --> 00:06:01.199 align:start position:0%
+the precision of its AI pipeline and the
+ 
+
+00:06:01.199 --> 00:06:03.430 align:start position:0%
+the precision of its AI pipeline and the
+integrity<00:06:01.680><c> of</c><00:06:01.759><c> its</c><00:06:02.000><c> systemic</c><00:06:02.479><c> data.</c>
+
+00:06:03.430 --> 00:06:03.440 align:start position:0%
+integrity of its systemic data.
+ 
+
+00:06:03.440 --> 00:06:05.590 align:start position:0%
+integrity of its systemic data.
+Mastering<00:06:03.919><c> this</c><00:06:04.160><c> bifurcated</c><00:06:04.880><c> structure</c>
+
+00:06:05.590 --> 00:06:05.600 align:start position:0%
+Mastering this bifurcated structure
+ 
+
+00:06:05.600 --> 00:06:07.830 align:start position:0%
+Mastering this bifurcated structure
+transforms<00:06:06.160><c> a</c><00:06:06.400><c> standard</c><00:06:06.800><c> storefront</c><00:06:07.360><c> into</c><00:06:07.600><c> an</c>
+
+00:06:07.830 --> 00:06:07.840 align:start position:0%
+transforms a standard storefront into an
+ 
+
+00:06:07.840 --> 00:06:09.670 align:start position:0%
+transforms a standard storefront into an
+autonomous,<00:06:08.560><c> highly</c><00:06:08.880><c> profitable</c><00:06:09.360><c> brand</c>
+
+00:06:09.670 --> 00:06:09.680 align:start position:0%
+autonomous, highly profitable brand
+ 
+
+00:06:09.680 --> 00:06:12.680 align:start position:0%
+autonomous, highly profitable brand
+entity.
+

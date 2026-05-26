@@ -1,0 +1,262 @@
+{
+  "sourceVendorUrl": "https://www.emag.ro/vendors/vendor/shanggvu?ref=seller-page-see-all-products",
+  "capturedVia": "Chrome verified session",
+  "productCards": 46,
+  "metaFiles": 46,
+  "descriptionHtmlFound": 45,
+  "descriptionMissing": 1,
+  "missingProducts": [
+    {
+      "productId": "D617222BM",
+      "title": "Rasnita de Cafea Manuala Valuxor, 30g, 0W",
+      "url": "https://www.emag.ro/rasnita-de-cafea-manuala-valuxor-30g-0w-162731260304/pd/D617222BM/",
+      "localMeta": "/Users/cc/Desktop/photo_show/references/user_cases/20260524_emag_shanggvu_detail_case_chrome/products/42_D617222BM_Rasnita-de-Cafea-Manuala-Valuxor-30g-0W/description_meta.json"
+    }
+  ],
+  "imageStats": {
+    "totalDescriptionImages": 347,
+    "productsWithDescriptionImages": 44,
+    "productsWithGif": 42,
+    "totalGifImages": 42,
+    "maxImagesPerRowDistribution": {
+      "1": 44,
+      "0": 1
+    },
+    "naturalSizeTop20": [
+      {
+        "width": 1200,
+        "height": 480,
+        "count": 42
+      },
+      {
+        "width": 4000,
+        "height": 2400,
+        "count": 30
+      },
+      {
+        "width": 4000,
+        "height": 1600,
+        "count": 27
+      },
+      {
+        "width": 3880,
+        "height": 2400,
+        "count": 25
+      },
+      {
+        "width": 1455,
+        "height": 750,
+        "count": 23
+      },
+      {
+        "width": 1455,
+        "height": 720,
+        "count": 20
+      },
+      {
+        "width": 4000,
+        "height": 1640,
+        "count": 18
+      },
+      {
+        "width": 3254,
+        "height": 2013,
+        "count": 14
+      },
+      {
+        "width": 3304,
+        "height": 1982,
+        "count": 13
+      },
+      {
+        "width": 4000,
+        "height": 2476,
+        "count": 13
+      },
+      {
+        "width": 5120,
+        "height": 2100,
+        "count": 13
+      },
+      {
+        "width": 3996,
+        "height": 1639,
+        "count": 10
+      },
+      {
+        "width": 4000,
+        "height": 2472,
+        "count": 7
+      },
+      {
+        "width": 4000,
+        "height": 4000,
+        "count": 6
+      },
+      {
+        "width": 4047,
+        "height": 1619,
+        "count": 6
+      },
+      {
+        "width": 0,
+        "height": 0,
+        "count": 6
+      },
+      {
+        "width": 4000,
+        "height": 1816,
+        "count": 4
+      },
+      {
+        "width": 4000,
+        "height": 1212,
+        "count": 4
+      },
+      {
+        "width": 4000,
+        "height": 2496,
+        "count": 4
+      },
+      {
+        "width": 3256,
+        "height": 2012,
+        "count": 3
+      }
+    ],
+    "renderedSizeTop20": [
+      {
+        "width": 1140,
+        "height": 456,
+        "count": 75
+      },
+      {
+        "width": 1140,
+        "height": 705,
+        "count": 46
+      },
+      {
+        "width": 1140,
+        "height": 684,
+        "count": 43
+      },
+      {
+        "width": 1140,
+        "height": 588,
+        "count": 23
+      },
+      {
+        "width": 1140,
+        "height": 468,
+        "count": 23
+      },
+      {
+        "width": 1140,
+        "height": 467,
+        "count": 22
+      },
+      {
+        "width": 1140,
+        "height": 564,
+        "count": 20
+      },
+      {
+        "width": 1140,
+        "height": 706,
+        "count": 15
+      },
+      {
+        "width": 1140,
+        "height": 1140,
+        "count": 9
+      },
+      {
+        "width": 52,
+        "height": 25,
+        "count": 6
+      },
+      {
+        "width": 1140,
+        "height": 561,
+        "count": 4
+      },
+      {
+        "width": 1140,
+        "height": 518,
+        "count": 4
+      },
+      {
+        "width": 1140,
+        "height": 345,
+        "count": 4
+      },
+      {
+        "width": 1140,
+        "height": 711,
+        "count": 4
+      },
+      {
+        "width": 1140,
+        "height": 353,
+        "count": 3
+      },
+      {
+        "width": 1140,
+        "height": 704,
+        "count": 3
+      },
+      {
+        "width": 1140,
+        "height": 446,
+        "count": 2
+      },
+      {
+        "width": 1140,
+        "height": 373,
+        "count": 2
+      },
+      {
+        "width": 1140,
+        "height": 380,
+        "count": 2
+      },
+      {
+        "width": 1140,
+        "height": 819,
+        "count": 2
+      }
+    ],
+    "hostTop10": [
+      [
+        "emag.v9kj.com",
+        341
+      ],
+      [
+        "marketplace-static-s3.emag.ro",
+        6
+      ]
+    ]
+  },
+  "htmlStats": {
+    "avgTextLength": 8108.11,
+    "medianTextLength": 7776,
+    "productsWithTable": 40,
+    "productsWithZeroDescriptionImages": 1,
+    "imageCountDistribution": {
+      "0": 1,
+      "3": 1,
+      "4": 2,
+      "6": 5,
+      "7": 10,
+      "8": 9,
+      "9": 10,
+      "10": 4,
+      "11": 2,
+      "12": 1
+    },
+    "tableCountDistribution": {
+      "0": 5,
+      "1": 40
+    }
+  }
+}

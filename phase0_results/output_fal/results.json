@@ -1,0 +1,242 @@
+[
+  {
+    "model": "flux2_pro",
+    "image": 1,
+    "type": "hero",
+    "path": "output_fal/img1_hero_flux2_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_pro",
+    "image": 1,
+    "type": "hero",
+    "path": "output_fal/img1_hero_flux_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "ideogram_v3",
+    "image": 1,
+    "type": "hero",
+    "path": "output_fal/img1_hero_ideogram_v3.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_schnell",
+    "image": 1,
+    "type": "hero",
+    "path": "output_fal/img1_hero_flux_schnell.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_ultra",
+    "image": 1,
+    "type": "hero",
+    "path": "output_fal/img1_hero_flux_ultra.jpg",
+    "success": true
+  },
+  {
+    "model": "flux2_pro",
+    "image": 2,
+    "type": "lifestyle",
+    "path": "output_fal/img2_lifestyle_flux2_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_pro",
+    "image": 2,
+    "type": "lifestyle",
+    "path": "output_fal/img2_lifestyle_flux_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "ideogram_v3",
+    "image": 2,
+    "type": "lifestyle",
+    "path": "output_fal/img2_lifestyle_ideogram_v3.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_schnell",
+    "image": 2,
+    "type": "lifestyle",
+    "path": "output_fal/img2_lifestyle_flux_schnell.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_ultra",
+    "image": 2,
+    "type": "lifestyle",
+    "path": "output_fal/img2_lifestyle_flux_ultra.jpg",
+    "success": true
+  },
+  {
+    "model": "flux2_pro",
+    "image": 3,
+    "type": "benefit",
+    "path": "output_fal/img3_benefit_flux2_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_pro",
+    "image": 3,
+    "type": "benefit",
+    "path": "output_fal/img3_benefit_flux_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "ideogram_v3",
+    "image": 3,
+    "type": "benefit",
+    "path": "output_fal/img3_benefit_ideogram_v3.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_schnell",
+    "image": 3,
+    "type": "benefit",
+    "path": "output_fal/img3_benefit_flux_schnell.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_ultra",
+    "image": 3,
+    "success": false,
+    "error": "skipped"
+  },
+  {
+    "model": "flux2_pro",
+    "image": 4,
+    "type": "detail",
+    "path": "output_fal/img4_detail_flux2_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_pro",
+    "image": 4,
+    "type": "detail",
+    "path": "output_fal/img4_detail_flux_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "ideogram_v3",
+    "image": 4,
+    "type": "detail",
+    "path": "output_fal/img4_detail_ideogram_v3.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_schnell",
+    "image": 4,
+    "type": "detail",
+    "path": "output_fal/img4_detail_flux_schnell.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_ultra",
+    "image": 4,
+    "success": false,
+    "error": "skipped"
+  },
+  {
+    "model": "flux2_pro",
+    "image": 5,
+    "type": "specs",
+    "path": "output_fal/img5_specs_flux2_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_pro",
+    "image": 5,
+    "type": "specs",
+    "path": "output_fal/img5_specs_flux_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "ideogram_v3",
+    "image": 5,
+    "type": "specs",
+    "path": "output_fal/img5_specs_ideogram_v3.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_schnell",
+    "image": 5,
+    "type": "specs",
+    "path": "output_fal/img5_specs_flux_schnell.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_ultra",
+    "image": 5,
+    "success": false,
+    "error": "skipped"
+  },
+  {
+    "model": "flux2_pro",
+    "image": 6,
+    "type": "differentiator",
+    "path": "output_fal/img6_differentiator_flux2_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_pro",
+    "image": 6,
+    "type": "differentiator",
+    "path": "output_fal/img6_differentiator_flux_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "ideogram_v3",
+    "image": 6,
+    "type": "differentiator",
+    "path": "output_fal/img6_differentiator_ideogram_v3.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_schnell",
+    "image": 6,
+    "type": "differentiator",
+    "path": "output_fal/img6_differentiator_flux_schnell.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_ultra",
+    "image": 6,
+    "success": false,
+    "error": "skipped"
+  },
+  {
+    "model": "flux2_pro",
+    "image": 7,
+    "type": "trust",
+    "path": "output_fal/img7_trust_flux2_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_pro",
+    "image": 7,
+    "type": "trust",
+    "path": "output_fal/img7_trust_flux_pro.jpg",
+    "success": true
+  },
+  {
+    "model": "ideogram_v3",
+    "image": 7,
+    "type": "trust",
+    "path": "output_fal/img7_trust_ideogram_v3.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_schnell",
+    "image": 7,
+    "type": "trust",
+    "path": "output_fal/img7_trust_flux_schnell.jpg",
+    "success": true
+  },
+  {
+    "model": "flux_ultra",
+    "image": 7,
+    "success": false,
+    "error": "skipped"
+  }
+]

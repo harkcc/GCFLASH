@@ -1,0 +1,2229 @@
+{
+  "root": "/Users/cc/Desktop/photo_show/output/emag_detail_html_live_batch",
+  "candidateCount": 30,
+  "rankingMethod": "mobile-first structure score from saved eMAG detail HTML captures",
+  "candidates": [
+    {
+      "productId": "D3JCBV3BM",
+      "score": 89.5,
+      "title": "Joc Sah Junior Educational pentru Copii, Excitat®, Interactiv, Blocuri de Constructie, Echipa cu 4 roluri, Ghid Color Interactiv Sah incluse",
+      "url": "https://www.emag.ro/joc-sah-junior-educational-pentru-copii-excitatr-interactiv-blocuri-de-constructie-echipa-cu-4-roluri-ghid-color-interactiv-sah-incluse-aant-2509-nn-yybq01-14ye16-e0z516/pd/D3JCBV3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/2S4pWfKy/detail-a5af2335-9d0e-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 282
+        },
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/057/606/326/57606326.gif",
+          "alt": "",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.postimg.cc/QdLGVMSW/detail-a5af2334-9d0e-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 245
+        },
+        {
+          "src": "https://i.postimg.cc/tJw03Rbb/detail-a5af2331-9d0e-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 352
+        },
+        {
+          "src": "https://i.postimg.cc/vTcFxgJd/detail-a5af2330-9d0e-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 626
+        },
+        {
+          "src": "https://i.postimg.cc/SQvpFd9h/detail-a5af2333-9d0e-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        }
+      ],
+      "metrics": {
+        "imageCount": 10,
+        "gifCount": 2,
+        "headingCount": 5,
+        "paragraphCount": 28,
+        "listCount": 5,
+        "tableCount": 0,
+        "textLength": 3067,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 9,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "10 images gives enough visual material without becoming extreme",
+        "5 headings suggest modular structure",
+        "3067 chars is substantial but still readable",
+        "5 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DDQ5ZS3BM",
+      "score": 85.7,
+      "title": "Set laminator A3/A4/A5/A6, Excitat®, Trimmer incorporat, 80-125 microni la rece si cald cu functie ABS anti blocare, zgomot scazut, incalzire rapida, control inteligent al temperaturii in functie de grosime, 115-145 °C, 355mm/min, 220-240V, Alb",
+      "url": "https://www.emag.ro/set-laminator-a3-a4-a5-a6-excitatr-trimmer-incorporat-80-125-microni-la-rece-si-cald-cu-functie-abs-anti-blocare-zgomot-scazut-incalzire-rapida-control-inteligent-al-temperaturii-in-functie-de-grosime/pd/DDQ5ZS3BM/",
+      "previewImages": [
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/057/606/326/57606326.gif",
+          "alt": "",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.postimg.cc/Gp8cVfMg/detail-3ec8f818-9673-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 300
+        },
+        {
+          "src": "https://i.postimg.cc/wvs4CCsJ/detail-3ec8f819-9673-11f0-a945-751e56ff4634.png",
+          "alt": "",
+          "width": 501,
+          "height": 334
+        },
+        {
+          "src": "https://i.postimg.cc/kXJ7qG1g/detail-83683e6a-96c4-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 334
+        },
+        {
+          "src": "https://i.postimg.cc/4xFf8G1z/detail-3cc0520d-9673-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 334
+        },
+        {
+          "src": "https://i.postimg.cc/qv7BXq2k/detail-3cc0520c-9673-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 334
+        }
+      ],
+      "metrics": {
+        "imageCount": 9,
+        "gifCount": 1,
+        "headingCount": 5,
+        "paragraphCount": 35,
+        "listCount": 4,
+        "tableCount": 0,
+        "textLength": 3430,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 8,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "9 images gives enough visual material without becoming extreme",
+        "5 headings suggest modular structure",
+        "3430 chars is substantial but still readable",
+        "4 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DR990W3BM",
+      "score": 85.2,
+      "title": "Antena WiFi magnetica universala, Excitat®, WiFi 6E Tri-Band 2.4GHz/5GHz/6GHz, 12dBi Gain Ridicat, cu Cablu de 1.2m si Baza Magnetica Puternica, Compatibila cu ASUS/GIGABYTE/MSI (PCI-E), Antena PC pentru Gaming, Acoperire Extinsa Casa si Birou",
+      "url": "https://www.emag.ro/antena-wifi-magnetica-universala-excitatr-wifi-6e-tri-band-2-4ghz-5ghz-6ghz-12dbi-gain-ridicat-cu-cablu-de-1-2m-si-baza-magnetica-puternica-compatibila-cu-asus-gigabyte-msi-pci-e-antena-pc-pentru-gami/pd/DR990W3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/Wb2HhkPc/detail-f082ca30-939d-11f0-a945-751e56ff4634.gif",
+          "alt": "",
+          "width": 501,
+          "height": 261
+        },
+        {
+          "src": "https://i.postimg.cc/zfvcjbzD/detail-a8659a70-9212-11f0-a945-751e56ff4634.gif",
+          "alt": "",
+          "width": 501,
+          "height": 208
+        },
+        {
+          "src": "https://s13emagst.akamaized.net/products/102235/102234205/images/res_985f54bd54c2f098b48e9d4a491db044.jpg?width=720&height=720&hash=692BF3C5F732FD4ADC570935C89480C4",
+          "alt": "",
+          "width": 496,
+          "height": 496
+        },
+        {
+          "src": "https://s13emagst.akamaized.net/products/102235/102234205/images/res_d5ec27c1c066f953b2888b0d7e70b2f1.jpg?width=720&height=720&hash=46F1ACC07BCD257E55779126291DDA05",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://s13emagst.akamaized.net/products/102235/102234205/images/res_a13974d39b204695537aac3f3c420eb0.jpg?width=720&height=720&hash=3865ABC392DA0DCE71CE16C30786979E",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://s13emagst.akamaized.net/products/102235/102234205/images/res_9f18161cf3f652c1fe191f77a60ace7f.jpg?width=720&height=720&hash=A696F204504183A70B1195A182740EA3",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        }
+      ],
+      "metrics": {
+        "imageCount": 9,
+        "gifCount": 3,
+        "headingCount": 9,
+        "paragraphCount": 63,
+        "listCount": 1,
+        "tableCount": 3,
+        "textLength": 5136,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "s13emagst.akamaized.net": 6,
+          "i.postimg.cc": 3
+        }
+      },
+      "reasons": [
+        "9 images gives enough visual material without becoming extreme",
+        "9 headings suggest modular structure",
+        "5136 chars is substantial but still readable",
+        "1 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "D5YN6S3BM",
+      "score": 84.6,
+      "title": "Aparat de gatit cu aburi si blender pentru bebelusi, Excitat®, multifunctional, Alarma LED anti-fierbere uscata, Usor de folosit si de curatat, Incalzire si sterilizare biberonelor, operare flexibila, Mixare puternica, 220V, 31x13x20.3 cm, Alb",
+      "url": "https://www.emag.ro/aparat-de-gatit-cu-aburi-si-blender-pentru-bebelusi-excitatr-multifunctional-alarma-led-anti-fierbere-uscata-usor-de-folosit-si-de-curatat-incalzire-si-sterilizare-biberonelor-operare-flexibila-mixare/pd/D5YN6S3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/7PMq692F/9-26-1.gif",
+          "alt": "",
+          "width": 501,
+          "height": 251
+        },
+        {
+          "src": "https://i.postimg.cc/brGHtpLD/detail-84dfd3d8-9ad3-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/Bn55Dh5y/detail-84dfd3dc-9ad3-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 461
+        },
+        {
+          "src": "https://i.postimg.cc/RC8TzJVk/detail-84dfd3da-9ad3-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 1077
+        },
+        {
+          "src": "https://i.postimg.cc/02TZ7MTs/detail-84dfd3d2-9ad3-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/K8hr1XTT/detail-84dfd3db-9ad3-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        }
+      ],
+      "metrics": {
+        "imageCount": 16,
+        "gifCount": 1,
+        "headingCount": 5,
+        "paragraphCount": 48,
+        "listCount": 6,
+        "tableCount": 0,
+        "textLength": 4575,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "tall",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 16
+        }
+      },
+      "reasons": [
+        "5 headings suggest modular structure",
+        "4575 chars is substantial but still readable",
+        "6 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, tall, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DZ9JSS3BM",
+      "score": 83.4,
+      "title": "Ventilator de evacuare 6 inch, Excitat®, cu 7 palete din otel inoxidabil, Carcasa din otel, Motor cu bobinaj din cupru, Ventilatie cu clapeta anti-insecte, model silentios 25dB, capacitate de aerisire 382 CFM, 40W, 220V/230V/240V, 190x190x135 mm, Negru",
+      "url": "https://www.emag.ro/ventilator-de-evacuare-6-inch-excitatr-cu-7-palete-din-otel-inoxidabil-carcasa-din-otel-motor-cu-bobinaj-din-cupru-ventilatie-cu-clapeta-anti-insecte-model-silentios-25db-capacitate-de-aerisire-382-cf/pd/DZ9JSS3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/qBKX46qv/9-17-5.gif",
+          "alt": "",
+          "width": 501,
+          "height": 214
+        },
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/057/790/091/57790091.gif",
+          "alt": "",
+          "width": 501,
+          "height": 140
+        },
+        {
+          "src": "https://i.postimg.cc/wjFH1prw/detail-f39d4d97-9270-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://s13emagst.akamaized.net/products/102110/102109589/images/res_07d0759aa11030e6d96fe9d9c3082c01.jpg?width=720&height=720&hash=E93B17277BCD8D88CDA60586EF1CBBB9",
+          "alt": "",
+          "width": 496,
+          "height": 496
+        },
+        {
+          "src": "https://i.postimg.cc/hGjnxYWd/detail-fb7e2454-92d8-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 496,
+          "height": 496
+        },
+        {
+          "src": "https://i.postimg.cc/XYn4NJs5/detail-f39d4d95-9270-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        }
+      ],
+      "metrics": {
+        "imageCount": 12,
+        "gifCount": 3,
+        "headingCount": 6,
+        "paragraphCount": 42,
+        "listCount": 0,
+        "tableCount": 3,
+        "textLength": 3938,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 9,
+          "marketplace-static.emag.ro": 2,
+          "s13emagst.akamaized.net": 1
+        }
+      },
+      "reasons": [
+        "12 images gives enough visual material without becoming extreme",
+        "6 headings suggest modular structure",
+        "3938 chars is substantial but still readable",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DMJHW83BM",
+      "score": 82.8,
+      "title": "Consola jocuri tip stick, Excitat®, PRO 4K, 2 jucatori, 2 controlere wireless 2.4G, 128GB, 31.999 jocuri integrate, HDMI HD, Plug & Play, Compatibil TV/Monitor/Proiector, Alb",
+      "url": "https://www.emag.ro/consola-jocuri-tip-stick-excitatr-pro-4k-2-jucatori-2-controlere-wireless-2-4g-128gb-31-999-jocuri-integrate-hdmi-hd-plug-play-compatibil-tv-monitor-proiector-alb-aawl-2508-nn-b91l01/pd/DMJHW83BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/KYWKBdPq/9-24.gif",
+          "alt": "",
+          "width": 501,
+          "height": 261
+        },
+        {
+          "src": "https://i.postimg.cc/KmY2CFm8/E.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 239
+        },
+        {
+          "src": "https://i.postimg.cc/y8HRm3xK/bu-chong4.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/LmspGRmg/E1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 626
+        },
+        {
+          "src": "https://i.postimg.cc/1R8DsZbR/bu-chong1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/6BQXFwBv/E2.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 626
+        }
+      ],
+      "metrics": {
+        "imageCount": 16,
+        "gifCount": 1,
+        "headingCount": 5,
+        "paragraphCount": 56,
+        "listCount": 7,
+        "tableCount": 0,
+        "textLength": 6109,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 16
+        }
+      },
+      "reasons": [
+        "5 headings suggest modular structure",
+        "7 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly",
+        "1 GIF asset(s) show motion/proof potential"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DWSHGS3BM",
+      "score": 82.8,
+      "title": "Set 18 accesorii de tir cu arcul, Excitat®, varfuri cu 3 lame, aluminiu anodizat, otel inoxidabil, cutie de depozitare",
+      "url": "https://www.emag.ro/set-18-accesorii-de-tir-cu-arcul-excitatr-varfuri-cu-3-lame-aluminiu-anodizat-otel-inoxidabil-cutie-de-depozitare-aant-2508-nn-h5t501/pd/DWSHGS3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/SRv4g7WD/detail-cbe99504-9bbe-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 214
+        },
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/064/841/481/64841481.gif",
+          "alt": "",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.postimg.cc/VkbfHTHc/detail-37d52ea9-9bbc-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/JhZhtgbs/detail-37d52ea2-9bbc-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 491,
+          "height": 491
+        },
+        {
+          "src": "https://i.postimg.cc/ZRm5Nccj/detail-37d52ea3-9bbc-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 496,
+          "height": 496
+        },
+        {
+          "src": "https://i.postimg.cc/ydTYyZpg/detail-37d52ea4-9bbc-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 496,
+          "height": 496
+        }
+      ],
+      "metrics": {
+        "imageCount": 13,
+        "gifCount": 1,
+        "headingCount": 5,
+        "paragraphCount": 31,
+        "listCount": 6,
+        "tableCount": 4,
+        "textLength": 3332,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 12,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "13 images gives enough visual material without becoming extreme",
+        "5 headings suggest modular structure",
+        "3332 chars is substantial but still readable",
+        "6 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DFVT4S3BM",
+      "score": 82.7,
+      "title": "Set laminator A4/A5/A6, Excitat®, Trimmer incorporat, 80-125 microni la rece si cald cu functie ABS anti blocare, zgomot scazut, incalzire rapida, control inteligent al temperaturii in functie de grosime, max. 160°C, 320mm/min, 220V, Negru",
+      "url": "https://www.emag.ro/set-laminator-a4-a5-a6-excitatr-trimmer-incorporat-80-125-microni-la-rece-si-cald-cu-functie-abs-anti-blocare-zgomot-scazut-incalzire-rapida-control-inteligent-al-temperaturii-in-functie-de-grosime-ma/pd/DFVT4S3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/Mp1WRmJT/9-21-1-1.gif",
+          "alt": "Unknown Image",
+          "width": 501,
+          "height": 251
+        },
+        {
+          "src": "https://i.postimg.cc/zvSDpRx4/detail-0fe2b157-9643-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/v8WmGpQd/detail-0fe2b159-9643-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/Zq2qqm9M/detail-0fe2b154-9643-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/ZnhKrLxP/detail-0fe2b156-9643-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/d1CVkfrh/detail-0fe2b155-9643-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        }
+      ],
+      "metrics": {
+        "imageCount": 9,
+        "gifCount": 2,
+        "headingCount": 6,
+        "paragraphCount": 46,
+        "listCount": 1,
+        "tableCount": 0,
+        "textLength": 2908,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 8,
+          "s13emagst.akamaized.net": 1
+        }
+      },
+      "reasons": [
+        "9 images gives enough visual material without becoming extreme",
+        "6 headings suggest modular structure",
+        "2908 chars is substantial but still readable",
+        "1 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "D8QH0S3BM",
+      "score": 81.7,
+      "title": "Perie Termica 3-in-1, Excitat®, 1.5 Inch, 3 Trepte de Temperatura pentru Toate Tipurile de Par, Incalzire Rapida 30s, Tehnologie cu Ioni si Invelis Ceramic, LCD, Cablu Rotativ 360°, 110-240V, Negru/Roz",
+      "url": "https://www.emag.ro/perie-termica-3-in-1-excitatr-1-5-inch-3-trepte-de-temperatura-pentru-toate-tipurile-de-par-incalzire-rapida-30s-tehnologie-cu-ioni-si-invelis-ceramic-lcd-cablu-rotativ-360-110-240v-negru-roz-aant-250/pd/D8QH0S3BM/",
+      "previewImages": [
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/057/598/710/57598710.gif",
+          "alt": "",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.postimg.cc/wM9pxTfk/image.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/9MVSZgdm/2ce24ac7-be0d-453b-9eb8-d7e2d429c544-CR0-0-1464-600-PT0-SX1464-V1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/503r35gw/5ce66cfb-efd4-41e9-8d33-85d79e30fd92-CR0-0-1464-600-PT0-SX1464-V1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/rFbPQw1Y/f3a528a9-162b-474f-a9df-9fc78ea15645-CR0-0-1464-600-PT0-SX1464-V1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/Z5dDgzjY/0cedacd9-d8e3-4429-94e1-1e60f6d00c31-CR0-0-1464-600-PT0-SX1464-V1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        }
+      ],
+      "metrics": {
+        "imageCount": 11,
+        "gifCount": 1,
+        "headingCount": 26,
+        "paragraphCount": 17,
+        "listCount": 5,
+        "tableCount": 1,
+        "textLength": 2798,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "tall",
+          "wide"
+        ],
+        "fullWidthImageRate": 0.91,
+        "topHosts": {
+          "i.postimg.cc": 10,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "11 images gives enough visual material without becoming extreme",
+        "26 headings suggest modular structure",
+        "2798 chars is substantial but still readable",
+        "5 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes tall, wide assets"
+      ],
+      "risks": [
+        "too many headings may indicate fragmented imported markup",
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DC2ZLS3BM",
+      "score": 81.2,
+      "title": "Stecher Priza Multiple de Perete 7-in-1 cu Incarcare Rapida USB 20W, Excitat®, 3 Prize Schuko, 3x USB A, 1x USB C (5V/3A), 250V/4000W/16A, Protectie Supratensiune si Siguranta Copii, Compact Extensie Priza cu USB Cube cu intrerupatoare, Marcaj CE, Alb",
+      "url": "https://www.emag.ro/stecher-priza-multiple-de-perete-7-in-1-cu-incarcare-rapida-usb-20w-excitatr-3-prize-schuko-3x-usb-a-1x-usb-c-5v-3a-250v-4000w-16a-protectie-supratensiune-si-siguranta-copii-compact-extensie-priza-cu-/pd/DC2ZLS3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/6pHJ9h2p/detail-e20c1864-9310-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 282
+        },
+        {
+          "src": "https://i.postimg.cc/xTp7X1WZ/9-16-5-2.gif",
+          "alt": "",
+          "width": 501,
+          "height": 209
+        },
+        {
+          "src": "https://i.postimg.cc/3wcTZZYZ/detail-e20c185e-9310-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/pd7wjXBN/detail-e20c1865-9310-11f0-a945-751e56ff4634.png",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/NjGvqn0X/detail-e20c1863-9310-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/SQ8hW85Y/detail-e20c1861-9310-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        }
+      ],
+      "metrics": {
+        "imageCount": 10,
+        "gifCount": 2,
+        "headingCount": 10,
+        "paragraphCount": 28,
+        "listCount": 0,
+        "tableCount": 0,
+        "textLength": 2740,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 9,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "10 images gives enough visual material without becoming extreme",
+        "10 headings suggest modular structure",
+        "2740 chars is substantial but still readable",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "D5ZHSW3BM",
+      "score": 80.4,
+      "title": "Set de Constructie Sistem Solar Motorizat, Excitat®, 1098 Piese, Rotativ, cu Mod Electric si Manual, cu Functii Mecanice, Cadou STEM, piesa de decor interactiva, cadou creativ pentru copii si adulti",
+      "url": "https://www.emag.ro/set-de-constructie-sistem-solar-motorizat-excitatr-1098-piese-rotativ-cu-mod-electric-si-manual-cu-functii-mecanice-cadou-stem-piesa-de-decor-interactiva-cadou-creativ-pentru-copii-si-adulti-aant-2601/pd/D5ZHSW3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/3wXhR797/pin-pai-tu.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 234
+        },
+        {
+          "src": "https://i.postimg.cc/8TC7yYn8/1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 826
+        },
+        {
+          "src": "https://i.postimg.cc/fZhJ4ygH/2.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 1121
+        },
+        {
+          "src": "https://i.postimg.cc/Ykfjt7Jx/3.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 1253
+        },
+        {
+          "src": "https://i.postimg.cc/9W7FKHdb/4.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 1566
+        },
+        {
+          "src": "https://i.postimg.cc/VzTkKkCW/5.jpg",
+          "alt": "",
+          "width": 496,
+          "height": 1240
+        }
+      ],
+      "metrics": {
+        "imageCount": 11,
+        "gifCount": 1,
+        "headingCount": 5,
+        "paragraphCount": 26,
+        "listCount": 0,
+        "tableCount": 1,
+        "textLength": 2445,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "tall",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 10,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "11 images gives enough visual material without becoming extreme",
+        "5 headings suggest modular structure",
+        "2445 chars is substantial but still readable",
+        "mobile capture stays single-column",
+        "image rhythm includes tall, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "D0HYFS3BM",
+      "score": 80.2,
+      "title": "Sistem de prindere pe gat, Excitat®, Design fix, Prindere magnetica, Silicon, Suport pentru camera de actiune pentru ciclism, Compatibil cu GoPro 12/11/10/9, Insta360 X3 Go3, DJI Action 4, Gri",
+      "url": "https://www.emag.ro/sistem-de-prindere-pe-gat-excitatr-design-fix-prindere-magnetica-silicon-suport-pentru-camera-de-actiune-pentru-ciclism-compatibil-cu-gopro-12-11-10-9-insta360-x3-go3-dji-action-4-gri-aant-2508-nn-dmm/pd/D0HYFS3BM/",
+      "previewImages": [
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/060/266/902/60266902.gif",
+          "alt": "",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.postimg.cc/BbNPhy6w/detail-4cf3e7c8-8f0a-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/wTTmt6fb/detail-6fda01e4-8f30-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/441cNK57/detail-4cf3e7c9-8f0a-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/Y0tmzkpz/detail-4cf3e7c7-8f0a-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/kG7tv9nG/detail-4cf3e7c6-8f0a-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        }
+      ],
+      "metrics": {
+        "imageCount": 9,
+        "gifCount": 1,
+        "headingCount": 5,
+        "paragraphCount": 24,
+        "listCount": 1,
+        "tableCount": 0,
+        "textLength": 2892,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 8,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "9 images gives enough visual material without becoming extreme",
+        "5 headings suggest modular structure",
+        "2892 chars is substantial but still readable",
+        "1 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DYKFJW3BM",
+      "score": 79.3,
+      "title": "Puzzle din Lemn 244 Piese, Excitat®, Model Artistic Cathedral Cat, Castelul Magic Colorful, Design American, Puzzle cu Pisici pentru Adulti, Copii si Adolescenti, Design Arhitectural Detaliat, Set Cadou Craciun Premium, Joc Educativ Antistres Enjoy",
+      "url": "https://www.emag.ro/puzzle-din-lemn-244-piese-excitatr-model-artistic-cathedral-cat-castelul-magic-colorful-design-american-puzzle-cu-pisici-pentru-adulti-copii-si-adolescenti-design-arhitectural-detaliat-set-cadou-craci/pd/DYKFJW3BM/",
+      "previewImages": [
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/057/606/326/57606326.gif",
+          "alt": "",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.postimg.cc/B6pvxnq4/dao-tu.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 301
+        },
+        {
+          "src": "https://i.postimg.cc/ZbtyzW20/1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/2kRBN1M1/2.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/54dFWXTy/3.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/y14SCDtR/4.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        }
+      ],
+      "metrics": {
+        "imageCount": 8,
+        "gifCount": 1,
+        "headingCount": 5,
+        "paragraphCount": 16,
+        "listCount": 5,
+        "tableCount": 0,
+        "textLength": 2086,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 7,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "8 images gives enough visual material without becoming extreme",
+        "5 headings suggest modular structure",
+        "2086 chars is substantial but still readable",
+        "5 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DMF1PY2BM",
+      "score": 79.0,
+      "title": "Set cosuri de fermentare pentru paine, Excitat®, 9\" rotund & 10\" oval, 33 piese complete de coacere (17 ustensile), bej",
+      "url": "https://www.emag.ro/set-cosuri-de-fermentare-pentru-paine-excitatr-9-rotund-10-oval-33-piese-complete-de-coacere-17-ustensile-bej-aant-2603-nn-a3d901/pd/DMF1PY2BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/L52k167J/dao-tu.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 214
+        },
+        {
+          "src": "https://i.postimg.cc/prRQFX7r/1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/tJpdxCfY/2.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/8cNd6P3s/3.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/GtdPyhNP/4.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/Vs6JZtwN/E-zhu-tu.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        }
+      ],
+      "metrics": {
+        "imageCount": 7,
+        "gifCount": 1,
+        "headingCount": 10,
+        "paragraphCount": 13,
+        "listCount": 5,
+        "tableCount": 0,
+        "textLength": 3584,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 6,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "7 images gives enough visual material without becoming extreme",
+        "10 headings suggest modular structure",
+        "3584 chars is substantial but still readable",
+        "5 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DD1RM22BM",
+      "score": 77.5,
+      "title": "Suport flexibil pentru monitor video bebelusi, Excitat®, compatibil universal cu ieGeek/TP-Link/Xiaomi, set de montaj cu 3 baze, instalare fara gauri, cap pivotant, 80 cm, Alb",
+      "url": "https://www.emag.ro/suport-flexibil-pentru-monitor-video-bebelusi-excitatr-compatibil-universal-cu-iegeek-tp-link-xiaomi-set-de-montaj-cu-3-baze-instalare-fara-gauri-cap-pivotant-80-cm-alb-aawl-2506-nn-270e01/pd/DD1RM22BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/j2nCyKyK/E-dao-tu.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/062/418/886/62418886.gif",
+          "alt": "",
+          "width": 501,
+          "height": 232
+        },
+        {
+          "src": "https://i.postimg.cc/gjLr3d3m/E1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/d3ZDGvGs/E2.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/8cfsLDMY/E3.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/0jKr7xDB/E4.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 496
+        }
+      ],
+      "metrics": {
+        "imageCount": 10,
+        "gifCount": 1,
+        "headingCount": 5,
+        "paragraphCount": 32,
+        "listCount": 0,
+        "tableCount": 0,
+        "textLength": 2250,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 9,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "10 images gives enough visual material without becoming extreme",
+        "5 headings suggest modular structure",
+        "2250 chars is substantial but still readable",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DBZFYC3BM",
+      "score": 76.5,
+      "title": "Antena Outdoor 5G LTE, Excitat®, 15 dBi, banda 600–6000 MHz, cablu RG58 3m, SMA + adaptor RP-SMA, Impermeabila, pentru IoT/WiFi, Negru",
+      "url": "https://www.emag.ro/antena-outdoor-5g-lte-excitatr-15-dbi-banda-600-6000-mhz-cablu-rg58-3m-sma-adaptor-rp-sma-impermeabila-pentru-iot-wifi-negru-aant-2509-nn-zp1t01/pd/DBZFYC3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/cCRj2Fjz/dao-tu.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 251
+        },
+        {
+          "src": "https://i.postimg.cc/SRd440Vn/image.gif",
+          "alt": "",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.postimg.cc/NMXZH0dP/5.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/rFMY3BWQ/2.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/ZK4D2G3Q/3.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/wTgbZCJF/6.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        }
+      ],
+      "metrics": {
+        "imageCount": 8,
+        "gifCount": 1,
+        "headingCount": 10,
+        "paragraphCount": 33,
+        "listCount": 0,
+        "tableCount": 0,
+        "textLength": 2903,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 8
+        }
+      },
+      "reasons": [
+        "8 images gives enough visual material without becoming extreme",
+        "10 headings suggest modular structure",
+        "2903 chars is substantial but still readable",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DV2XYC3BM",
+      "score": 76.2,
+      "title": "Set Complet Incepatori Arduino MEGA2560, Excitat®, peste 180 componente, senzori si motor servo",
+      "url": "https://www.emag.ro/set-complet-incepatori-arduino-mega2560-excitatr-peste-180-componente-senzori-si-motor-servo-aant-2509-nn-br8v01/pd/DV2XYC3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/J0HM5C77/E-dao-tu.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 287
+        },
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/062/418/886/62418886.gif",
+          "alt": "",
+          "width": 501,
+          "height": 232
+        },
+        {
+          "src": "https://i.postimg.cc/ZR75LLrH/5.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/Qt4dqqpP/zhu-tu.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/SsTxGGWV/3.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        }
+      ],
+      "metrics": {
+        "imageCount": 5,
+        "gifCount": 1,
+        "headingCount": 8,
+        "paragraphCount": 43,
+        "listCount": 6,
+        "tableCount": 0,
+        "textLength": 2119,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 4,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "8 headings suggest modular structure",
+        "2119 chars is substantial but still readable",
+        "6 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DHS2SS3BM",
+      "score": 75.8,
+      "title": "Set 8 Butoni Camasa, Excitat®, Cutie cadou, 6 Stud Buttons, 1 Pereche Butoni Manseta, Stilat, Aspect Elegant, Aliaj Metalic, Rotunzi, Argintiu/Negru",
+      "url": "https://www.emag.ro/set-8-butoni-camasa-excitatr-cutie-cadou-6-stud-buttons-1-pereche-butoni-manseta-stilat-aspect-elegant-aliaj-metalic-rotunzi-argintiu-negru-aant-2508-nn-1f7v01/pd/DHS2SS3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/W17p0rDR/detail-675496a0-9223-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 496,
+          "height": 278
+        },
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/057/646/759/57646759.gif",
+          "alt": "",
+          "width": 496,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/4x14ptYp/detail-6754969f-9223-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 496,
+          "height": 307
+        },
+        {
+          "src": "https://i.postimg.cc/rFxwF7c7/detail-6754969c-9223-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 491,
+          "height": 491
+        },
+        {
+          "src": "https://i.postimg.cc/8zGPFwzk/detail-6754969e-9223-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 496,
+          "height": 496
+        },
+        {
+          "src": "https://i.postimg.cc/sD7gDbsf/detail-6754969d-9223-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 496,
+          "height": 496
+        }
+      ],
+      "metrics": {
+        "imageCount": 11,
+        "gifCount": 2,
+        "headingCount": 4,
+        "paragraphCount": 29,
+        "listCount": 1,
+        "tableCount": 10,
+        "textLength": 2537,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 9,
+          "marketplace-static.emag.ro": 2
+        }
+      },
+      "reasons": [
+        "11 images gives enough visual material without becoming extreme",
+        "4 headings suggest modular structure",
+        "2537 chars is substantial but still readable",
+        "1 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets"
+      ],
+      "risks": [
+        "10 tables may be too heavy on mobile",
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "D393L43BM",
+      "score": 75.4,
+      "title": "Set de 4 balamale pliabile cu 40 suruburi, Excitat®, otel, unghi reglabil 0°/90°/180°, pentru masa, birou, dulap, mobilier pliabil, Argintiu",
+      "url": "https://www.emag.ro/set-de-4-balamale-pliabile-cu-40-suruburi-excitatr-otel-unghi-reglabil-0-90-180-pentru-masa-birou-dulap-mobilier-pliabil-argintiu-aant-2509-nn-9db604/pd/D393L43BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/25SDNK0y/detail-a919ef5a-9d6d-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 282
+        },
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/057/640/167/57640167.gif",
+          "alt": "",
+          "width": 501,
+          "height": 232
+        },
+        {
+          "src": "https://i.postimg.cc/h4zKGNcd/detail-a7f084f1-9d6d-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 351
+        },
+        {
+          "src": "https://i.postimg.cc/GmrRq2Y1/detail-a7f084f4-9d6d-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/ZK6Z83W7/detail-a7f084f3-9d6d-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/Z0t7YWZV/detail-a7f084ef-9d6d-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 491,
+          "height": 491
+        }
+      ],
+      "metrics": {
+        "imageCount": 14,
+        "gifCount": 1,
+        "headingCount": 4,
+        "paragraphCount": 28,
+        "listCount": 4,
+        "tableCount": 9,
+        "textLength": 5457,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 13,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "14 images gives enough visual material without becoming extreme",
+        "4 headings suggest modular structure",
+        "4 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "9 tables may be too heavy on mobile",
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DGFGJW3BM",
+      "score": 74.9,
+      "title": "Telefon fix cu fir Excitat®, Telefon de Birou Clasic dotat cu Alarma, Volum Reglabil si Lumina LCD Reglabila, pentru Hotel, Birou, Receptie, Negru",
+      "url": "https://www.emag.ro/telefon-fix-cu-fir-excitatr-telefon-de-birou-clasic-dotat-cu-alarma-volum-reglabil-si-lumina-lcd-reglabila-pentru-hotel-birou-receptie-negru-aant-2601-nn-fssj01/pd/DGFGJW3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/CMrmWYhz/dao-tu.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 374
+        },
+        {
+          "src": "https://i.postimg.cc/RCSDkXwp/1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/YkMZLqTv/2.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 668
+        },
+        {
+          "src": "https://i.postimg.cc/PhT9vr0f/3.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/Fz6pcbWD/4.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/3r8csn2S/5.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        }
+      ],
+      "metrics": {
+        "imageCount": 7,
+        "gifCount": 1,
+        "headingCount": 8,
+        "paragraphCount": 9,
+        "listCount": 5,
+        "tableCount": 0,
+        "textLength": 1697,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "tall",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 6,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "7 images gives enough visual material without becoming extreme",
+        "8 headings suggest modular structure",
+        "5 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, tall, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DWLFYC3BM",
+      "score": 74.9,
+      "title": "Masina Dezizolat Cabluri Decojit, Excitat®, Portabil, Aliaj de Aluminiu, Electrica sau Manuala, 1-25 mm, Poate fi Operat cu Un Burghiu, Reglabil pe Inaltime, 12x4x22.2 cm, Argintiu",
+      "url": "https://www.emag.ro/masina-dezizolat-cabluri-decojit-excitatr-portabil-aliaj-de-aluminiu-electrica-sau-manuala-1-25-mm-poate-fi-operat-cu-un-burghiu-reglabil-pe-inaltime-12x4x22-2-cm-argintiu-aant-2509-nn-qmdy01/pd/DWLFYC3BM/",
+      "previewImages": [
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/057/640/167/57640167.gif",
+          "alt": "",
+          "width": 501,
+          "height": 232
+        },
+        {
+          "src": "https://i.postimg.cc/QxR5ZHqH/6.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/yYw9CkT0/8.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/8PqWgjbZ/55a33ed7292146d58ee42abf46a8d1a8-goods.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/vH19KW5Z/1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/RV3fYcwM/2.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        }
+      ],
+      "metrics": {
+        "imageCount": 13,
+        "gifCount": 2,
+        "headingCount": 14,
+        "paragraphCount": 33,
+        "listCount": 0,
+        "tableCount": 0,
+        "textLength": 3534,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 11,
+          "marketplace-static.emag.ro": 2
+        }
+      },
+      "reasons": [
+        "13 images gives enough visual material without becoming extreme",
+        "14 headings suggest modular structure",
+        "3534 chars is substantial but still readable",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DQ3BGS3BM",
+      "score": 74.8,
+      "title": "Cleste Perforator Magnetic pentru Capse, Excitat®, maner ergonomic, set cu 1000 capse (500 auriu + 500 argintiu) Ø10.5 mm, cu husa de depozitare, Gri/Portocaliu",
+      "url": "https://www.emag.ro/cleste-perforator-magnetic-pentru-capse-excitatr-maner-ergonomic-set-cu-1000-capse-500-auriu-500-argintiu-o10-5-mm-cu-husa-de-depozitare-gri-portocaliu-aant-2509-nn-nj3u01/pd/DQ3BGS3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/L6GRfD4N/detail-d78953e5-9c43-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/T3mxcbpT/detail-d78953e7-9c43-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/BZYJZsdC/detail-d78953e2-9c43-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 251
+        },
+        {
+          "src": "https://i.postimg.cc/ZKXZ3HYd/detail-d78953e4-9c43-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 251
+        },
+        {
+          "src": "https://i.postimg.cc/4NYsmqGg/detail-d78953e3-9c43-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 251
+        },
+        {
+          "src": "https://i.postimg.cc/x1HQPmq4/detail-d78953e6-9c43-11f0-aad8-23a3b6d8f861.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 251
+        }
+      ],
+      "metrics": {
+        "imageCount": 11,
+        "gifCount": 1,
+        "headingCount": 1,
+        "paragraphCount": 52,
+        "listCount": 6,
+        "tableCount": 0,
+        "textLength": 5446,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 10,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "11 images gives enough visual material without becoming extreme",
+        "6 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly",
+        "1 GIF asset(s) show motion/proof potential"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "D9S4DV3BM",
+      "score": 74.3,
+      "title": "Consola Retro Portabila X7M, Excitat®, 500 jocuri, ecran 3.5 inch, baterie 1200mAh, conectare la TV, suporta 2 jucatori cu controller inclus, ideala acasa sau in aer liber, Rosu-Albastru",
+      "url": "https://www.emag.ro/consola-retro-portabila-x7m-excitatr-500-jocuri-ecran-3-5-inch-baterie-1200mah-conectare-la-tv-suporta-2-jucatori-cu-controller-inclus-ideala-acasa-sau-in-aer-liber-rosu-albastru-aant-2508-nn-z8mv01/pd/D9S4DV3BM/",
+      "previewImages": [
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/057/648/772/57648772.gif",
+          "alt": "",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.postimg.cc/2SLMDfD0/detail-94e0860f-97b4-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/26k03sPP/detail-d5d42c08-97c9-11f0-a945-751e56ff4634.gif",
+          "alt": "",
+          "width": 496,
+          "height": 496
+        },
+        {
+          "src": "https://i.postimg.cc/Kjsq60pw/detail-94e0860d-97b4-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/zB8cKbRV/detail-94e0860c-97b4-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/43z0Ybyj/detail-94e0860e-97b4-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        }
+      ],
+      "metrics": {
+        "imageCount": 10,
+        "gifCount": 2,
+        "headingCount": 7,
+        "paragraphCount": 39,
+        "listCount": 0,
+        "tableCount": 10,
+        "textLength": 4634,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 9,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "10 images gives enough visual material without becoming extreme",
+        "7 headings suggest modular structure",
+        "4634 chars is substantial but still readable",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "10 tables may be too heavy on mobile",
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DZ63HS3BM",
+      "score": 73.3,
+      "title": "Set Filtre 3M, Excitat®, 2 Filtre A1 6001 cu Particule Anti-gaz, Vapori de Vopsea si Noxe, 10 Filtre de Bumbac, 2 Capace Plastic, Pentru Masca 3M 6200, Pentru Protectie Respiratorie",
+      "url": "https://www.emag.ro/set-filtre-3m-excitatr-2-filtre-a1-6001-cu-particule-anti-gaz-vapori-de-vopsea-si-noxe-10-filtre-de-bumbac-2-capace-plastic-pentru-masca-3m-6200-pentru-protectie-respiratorie-aant-2508-nn-hzk001/pd/DZ63HS3BM/",
+      "previewImages": [
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/057/639/978/57639978.gif",
+          "alt": "",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.postimg.cc/28f0gB51/detail-e1f2b747-8e2d-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/PrkS08qK/detail-bacf5e4a-8e2e-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/HxcS1w5b/detail-e1f2b740-8e2d-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 496,
+          "height": 496
+        },
+        {
+          "src": "https://i.postimg.cc/852Zp7mP/detail-e1f2b743-8e2d-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/Ss2Zb68v/detail-e1f2b741-8e2d-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        }
+      ],
+      "metrics": {
+        "imageCount": 12,
+        "gifCount": 1,
+        "headingCount": 2,
+        "paragraphCount": 10,
+        "listCount": 5,
+        "tableCount": 2,
+        "textLength": 2504,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 11,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "12 images gives enough visual material without becoming extreme",
+        "2504 chars is substantial but still readable",
+        "5 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "D6MHW43BM",
+      "score": 73.2,
+      "title": "Cablu de incarcare pentru vehicul electric, Excitat®, Tip 2 la Tip 2, 32A, 22kW, 5m, trei faze, impermeabil IP65, rezistent la ploaie si praf, pentru interior si exterior, compatibil cu majoritatea vehiculelor, cu geanta de transport",
+      "url": "https://www.emag.ro/cablu-de-incarcare-pentru-vehicul-electric-excitatr-tip-2-la-tip-2-32a-22kw-5m-trei-faze-impermeabil-ip65-rezistent-la-ploaie-si-praf-pentru-interior-si-exterior-compatibil-cu-majoritatea-vehiculelor-/pd/D6MHW43BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/qBgWnW8L/E-dao-tu.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 239
+        },
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/057/646/759/57646759.gif",
+          "alt": "",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.postimg.cc/8ksxWxhR/E1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/F15PXWCY/E2.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/kD3jP1Yx/E2-1.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        },
+        {
+          "src": "https://i.postimg.cc/mhfdWXpN/E3.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 205
+        }
+      ],
+      "metrics": {
+        "imageCount": 14,
+        "gifCount": 1,
+        "headingCount": 8,
+        "paragraphCount": 23,
+        "listCount": 0,
+        "tableCount": 0,
+        "textLength": 2607,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 13,
+          "marketplace-static.emag.ro": 1
+        }
+      },
+      "reasons": [
+        "14 images gives enough visual material without becoming extreme",
+        "8 headings suggest modular structure",
+        "2607 chars is substantial but still readable",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DBG0VS3BM",
+      "score": 71.4,
+      "title": "Uscator de par Excitat®, montare pe perete fara gaururi, Turbo, Thermo Control, 3 trepte de temperatura, 2 trepte de viteza, 2200W, 220-240V, durabil si fiabil, pentru hotel, vestiare sau baie, Alb",
+      "url": "https://www.emag.ro/uscator-de-par-excitatr-montare-pe-perete-fara-gaururi-turbo-thermo-control-3-trepte-de-temperatura-2-trepte-de-viteza-2200w-220-240v-durabil-si-fiabil-pentru-hotel-vestiare-sau-baie-alb-aant-2508-nn-/pd/DBG0VS3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/13KQ8KRR/image.gif",
+          "alt": "",
+          "width": 501,
+          "height": 256
+        },
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/057/598/710/57598710.gif",
+          "alt": "",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.postimg.cc/rFPNM0Vv/detail-9a0a2f94-93cb-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/9011GLj5/detail-792187de-93c9-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://i.postimg.cc/kX4v0FmC/detail-792187e9-93c9-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 849
+        },
+        {
+          "src": "https://i.postimg.cc/xC3P2683/detail-792187e6-93c9-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 766
+        }
+      ],
+      "metrics": {
+        "imageCount": 16,
+        "gifCount": 3,
+        "headingCount": 1,
+        "paragraphCount": 44,
+        "listCount": 0,
+        "tableCount": 0,
+        "textLength": 3945,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "tall",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 13,
+          "marketplace-static.emag.ro": 2,
+          "s13emagst.akamaized.net": 1
+        }
+      },
+      "reasons": [
+        "3945 chars is substantial but still readable",
+        "mobile capture stays single-column",
+        "image rhythm includes square, tall, wide assets",
+        "most images occupy the mobile column cleanly",
+        "3 GIF asset(s) show motion/proof potential"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "D31FLS3BM",
+      "score": 70.8,
+      "title": "Avertizor Semnalizator Luminos Inteligent pentru Lanseta Feeder, Excitat®, cu Clopotei, Set 20 buc, Ideal pentru pescuitul de noapte, Avertizare sonora + optica, Alarma dubla cu LED si clopotel, Baterie LR41 Inclusa",
+      "url": "https://www.emag.ro/avertizor-semnalizator-luminos-inteligent-pentru-lanseta-feeder-excitatr-cu-clopotei-set-20-buc-ideal-pentru-pescuitul-de-noapte-avertizare-sonora-optica-alarma-dubla-cu-led-si-clopotel-baterie-lr41-i/pd/D31FLS3BM/",
+      "previewImages": [
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/063/107/229/63107229.gif",
+          "alt": "",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.postimg.cc/qRs17kbc/detail-212801b8-93a4-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/Pxs6hLMV/detail-f9656827-93a1-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/mgnXXp11/detail-f9656822-93a1-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 491,
+          "height": 491
+        },
+        {
+          "src": "https://i.postimg.cc/3wDLPj2G/detail-f9656821-93a1-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 496,
+          "height": 496
+        },
+        {
+          "src": "https://i.postimg.cc/YC0DxB9P/detail-f9656820-93a1-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 496,
+          "height": 496
+        }
+      ],
+      "metrics": {
+        "imageCount": 13,
+        "gifCount": 2,
+        "headingCount": 10,
+        "paragraphCount": 38,
+        "listCount": 1,
+        "tableCount": 8,
+        "textLength": 5048,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 10,
+          "marketplace-static.emag.ro": 2,
+          "s13emagst.akamaized.net": 1
+        }
+      },
+      "reasons": [
+        "13 images gives enough visual material without becoming extreme",
+        "10 headings suggest modular structure",
+        "5048 chars is substantial but still readable",
+        "1 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets"
+      ],
+      "risks": [
+        "8 tables may be too heavy on mobile",
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DB96MV3BM",
+      "score": 69.5,
+      "title": "Traducator Vocal, Excitat®, Inteligent Bidirectional, 100 Limbi Online/ 8 Limbi Offline, Traducere Voce Instant, Foto, Text si Vocala, Portabil, Bluetooth, Baterie 800 mAh, Microfon-Difuzor Dual, cu aplicatie Google Play/iOS, Utilizare Interior-Exterior",
+      "url": "https://www.emag.ro/traducator-vocal-excitatr-inteligent-bidirectional-100-limbi-online-8-limbi-offline-traducere-voce-instant-foto-text-si-vocala-portabil-bluetooth-baterie-800-mah-microfon-difuzor-dual-cu-aplicatie-goo/pd/DB96MV3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/cCf7K59S/57598168.gif",
+          "alt": "",
+          "width": 501,
+          "height": 99
+        },
+        {
+          "src": "https://i.postimg.cc/tTMzrYMR/detail-8e39ac04-8ccd-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/0NZnwtGn/detail-8e39ac01-8ccd-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/PqdKNGDd/detail-8e39abff-8ccd-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/Sx6DyQnm/detail-8e39abfe-8ccd-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        },
+        {
+          "src": "https://i.postimg.cc/k44cFxfC/detail-8e39ac03-8ccd-11f0-a945-751e56ff4634.png",
+          "alt": "",
+          "width": 501,
+          "height": 310
+        }
+      ],
+      "metrics": {
+        "imageCount": 8,
+        "gifCount": 1,
+        "headingCount": 3,
+        "paragraphCount": 22,
+        "listCount": 1,
+        "tableCount": 0,
+        "textLength": 2412,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 8
+        }
+      },
+      "reasons": [
+        "8 images gives enough visual material without becoming extreme",
+        "2412 chars is substantial but still readable",
+        "1 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DVXCBB2BM",
+      "score": 69.0,
+      "title": "Puzzle din Lemn 372 Piese, Excitat®, Model Artistic Cathedral Cat, 30x30 cm, Puzzle cu Pisici pentru Adulti si Adolescenti, Design Arhitectural Detaliat, Set Cadou Premium, Joc Educativ Antistres",
+      "url": "https://www.emag.ro/puzzle-din-lemn-372-piese-excitatr-model-artistic-cathedral-cat-30x30-cm-puzzle-cu-pisici-pentru-adulti-si-adolescenti-design-arhitectural-detaliat-set-cadou-premium-joc-educativ-antistres-aant-2406-n/pd/DVXCBB2BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/3wGLDkDC/real.gif",
+          "alt": "",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://marketplace-static.emag.ro/resources/000/062/778/891/62778891.gif",
+          "alt": "Picioare din lemn masiv pentru mobilier",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.ebayimg.com/images/g/CjsAAOSwWANneGg~/s-l960.webp",
+          "alt": "Unknown Image",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://s13emagst.akamaized.net/products/82563/82562043/images/res_af576a501d20651a54eea65f41513ac9.jpg?width=720&height=720&hash=949E41B276BBEB9272533879AC355A45",
+          "alt": "Unknown Image",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://s13emagst.akamaized.net/products/82563/82562043/images/res_e766d13e14b99e5a2b4d01301ca5a4fd.jpg?width=720&height=720&hash=B4358C0832D4718E5B51FA50797DDA5B",
+          "alt": "Unknown Image",
+          "width": 501,
+          "height": 501
+        },
+        {
+          "src": "https://s13emagst.akamaized.net/products/85303/85302503/images/res_cff69f050be46e1626d750b7fee74466.jpg?width=720&height=720&hash=AB0F1C927A40D767208AFFCBFBA20BB3",
+          "alt": "Unknown Image",
+          "width": 501,
+          "height": 501
+        }
+      ],
+      "metrics": {
+        "imageCount": 12,
+        "gifCount": 2,
+        "headingCount": 33,
+        "paragraphCount": 8,
+        "listCount": 4,
+        "tableCount": 5,
+        "textLength": 2295,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "s13emagst.akamaized.net": 7,
+          "i.postimg.cc": 2,
+          "marketplace-static.emag.ro": 1,
+          "i.ebayimg.com": 1,
+          "img14.360buyimg.com": 1
+        }
+      },
+      "reasons": [
+        "12 images gives enough visual material without becoming extreme",
+        "33 headings suggest modular structure",
+        "2295 chars is substantial but still readable",
+        "4 list block(s) can support specs or package modules",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets"
+      ],
+      "risks": [
+        "too many headings may indicate fragmented imported markup",
+        "contains editor/platform residue tags"
+      ]
+    },
+    {
+      "productId": "DNBX0S3BM",
+      "score": 54.6,
+      "title": "Set 12 Bandana multifunctionala, Excitat®, Geometric, Cu functii de respirabilitate si absorbtie a apei, Usor de curatat, Unisex, Ideal pentru ciclism, alergare, camping, Poliester",
+      "url": "https://www.emag.ro/set-12-bandana-multifunctionala-excitatr-geometric-cu-functii-de-respirabilitate-si-absorbtie-a-apei-usor-de-curatat-unisex-ideal-pentru-ciclism-alergare-camping-poliester-aant-2508-nn-c6x901/pd/DNBX0S3BM/",
+      "previewImages": [
+        {
+          "src": "https://i.postimg.cc/525CwCS2/61302369.gif",
+          "alt": "",
+          "width": 501,
+          "height": 207
+        },
+        {
+          "src": "https://i.postimg.cc/CLy2YQcY/detail-258748fa-8d8f-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 257
+        },
+        {
+          "src": "https://i.postimg.cc/Vs0hx8B7/detail-258748f8-8d8f-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 236
+        },
+        {
+          "src": "https://i.postimg.cc/nrmwB4hz/detail-258748f7-8d8f-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 222
+        },
+        {
+          "src": "https://i.postimg.cc/9Xwk6hY2/detail-258748f9-8d8f-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 445
+        },
+        {
+          "src": "https://i.postimg.cc/tJ6mW3CL/detail-258748f6-8d8f-11f0-a945-751e56ff4634.jpg",
+          "alt": "",
+          "width": 501,
+          "height": 68
+        }
+      ],
+      "metrics": {
+        "imageCount": 6,
+        "gifCount": 1,
+        "headingCount": 3,
+        "paragraphCount": 15,
+        "listCount": 0,
+        "tableCount": 0,
+        "textLength": 1355,
+        "maxImagesPerRow": 1,
+        "imageShapes": [
+          "square",
+          "wide"
+        ],
+        "fullWidthImageRate": 1.0,
+        "topHosts": {
+          "i.postimg.cc": 6
+        }
+      },
+      "reasons": [
+        "6 images gives enough visual material without becoming extreme",
+        "mobile capture stays single-column",
+        "image rhythm includes square, wide assets",
+        "most images occupy the mobile column cleanly",
+        "1 GIF asset(s) show motion/proof potential"
+      ],
+      "risks": [
+        "contains editor/platform residue tags"
+      ]
+    }
+  ]
+}

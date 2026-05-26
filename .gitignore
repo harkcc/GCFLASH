@@ -1,0 +1,11 @@
+.venv-fal/
+.venv-image2psd/
+output/
+experiments/
+.DS_Store
+.playwright-cli/
+.playwright-mcp/
+.claude/
+node_modules/
+*.pyc
+__pycache__/

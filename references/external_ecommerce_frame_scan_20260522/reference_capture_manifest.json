@@ -1,0 +1,1328 @@
+[
+  {
+    "id": "rendery3d",
+    "type": "ai_listing_tool",
+    "url": "https://rendery3d.com/",
+    "notes": [
+      "3D-rendered listing aesthetic",
+      "logo-safe details",
+      "brand styles",
+      "custom preset from competitor listings"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/rendery3d.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/rendery3d_top.png",
+    "ok": true,
+    "signals": {
+      "title": "Rendery3D - AI-Powered Product Listing Images for E-commerce",
+      "headings": [
+        "Leave Competitors Behind WithStunning Product Listing Images",
+        "Everything You Need for Stunning Listing Images",
+        "Scene Generation",
+        "Smart Shot Planning",
+        "Custom Preset (Pro+)",
+        "Listing Copy Generator",
+        "A+ Content Generator",
+        "Custom Prompts",
+        "Brand Styles",
+        "Project Management",
+        "4K Upscaling",
+        "From Photo to Listing-Ready Images in Minutes",
+        "Upload Product Photos",
+        "We Build Your Shot Plan",
+        "Customize & Refine",
+        "Download & Sell",
+        "Built for Listings, Not Generic Images",
+        "Stunning 3D Renders for Every Category",
+        "Outperform Competitors with 3D-Rendered Listing Images",
+        "Match Niche Aesthetics Without Losing Product Truth"
+      ],
+      "images": [
+        {
+          "alt": "Input photo",
+          "src": "https://rendery3d.com/_next/image?url=https%3A%2F%2Fassets.rendery3d.com%2Fhero%2Fraw%2Fgoli-source.webp&w=750&q=75",
+          "x": 803,
+          "y": 230,
+          "w": 255,
+          "h": 255,
+          "visible": true
+        },
+        {
+          "alt": "AI hero image",
+          "src": "https://rendery3d.com/_next/image?url=https%3A%2F%2Fassets.rendery3d.com%2Fhero%2Fgoli%2F01-Hero.webp&w=750&q=75",
+          "x": 1115,
+          "y": 230,
+          "w": 255,
+          "h": 255,
+          "visible": true
+        },
+        {
+          "alt": "Lifestyle",
+          "src": "https://rendery3d.com/_next/image?url=https%3A%2F%2Fassets.rendery3d.com%2Fhero%2Fgoli%2F06-Professional_Workspace_Lifestyle.webp&w=256&q=75",
+          "x": 803,
+          "y": 539,
+          "w": 180,
+          "h": 180,
+          "visible": true
+        },
+        {
+          "alt": "Detail",
+          "src": "https://rendery3d.com/_next/image?url=https%3A%2F%2Fassets.rendery3d.com%2Fhero%2Fgoli%2F02-Ingredient_Spotlight_Infographic.webp&w=256&q=75",
+          "x": 996,
+          "y": 539,
+          "w": 180,
+          "h": 180,
+          "visible": true
+        },
+        {
+          "alt": "Infographic",
+          "src": "https://rendery3d.com/_next/image?url=https%3A%2F%2Fassets.rendery3d.com%2Fhero%2Fgoli%2F04-Benefits_Icon_Grid.webp&w=256&q=75",
+          "x": 1190,
+          "y": 539,
+          "w": 180,
+          "h": 180,
+          "visible": true
+        },
+        {
+          "alt": "Packaging",
+          "src": "https://rendery3d.com/_next/image?url=https%3A%2F%2Fassets.rendery3d.com%2Fhero%2Fgoli%2F04-Probiotic_Science_Infographic.webp&w=256&q=75",
+          "x": 803,
+          "y": 733,
+          "w": 180,
+          "h": 180,
+          "visible": true
+        },
+        {
+          "alt": "Size comparison",
+          "src": "https://rendery3d.com/_next/image?url=https%3A%2F%2Fassets.rendery3d.com%2Fhero%2Fgoli%2F05-Daily_Routine_Steps.webp&w=256&q=75",
+          "x": 996,
+          "y": 733,
+          "w": 180,
+          "h": 180,
+          "visible": true
+        },
+        {
+          "alt": "In-use",
+          "src": "https://rendery3d.com/_next/image?url=https%3A%2F%2Fassets.rendery3d.com%2Fhero%2Fgoli%2F05-Value___Usage_Infographic.webp&w=256&q=75",
+          "x": 1190,
+          "y": 733,
+          "w": 180,
+          "h": 180,
+          "visible": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "picaz",
+    "type": "ai_marketplace_tool",
+    "url": "https://picazai.com/",
+    "notes": [
+      "marketplace-ready listings",
+      "brand colors and design guidelines",
+      "template-based bulk production",
+      "A/B test winners"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/picaz.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/picaz_top.png",
+    "ok": true,
+    "signals": {
+      "title": "Picaz — AI-Powered Product Listings for Marketplaces",
+      "headings": [
+        "Product Listings That Sell — Powered by AI",
+        "Listings Built to Convert",
+        "Built for Speed, Scale, and Sales",
+        "Listings Designed to Convert",
+        "Minutes, Not Days",
+        "Cut Costs, Multiply Output",
+        "Pixel-Perfect at Any Scale",
+        "Your Complete Listing Toolkit",
+        "Competitor Analytics",
+        "Smart Image Editor",
+        "Infographics",
+        "Video Covers",
+        "Three Steps to a Listing That Sells",
+        "Pick Your Tool",
+        "Upload Your Content",
+        "Download & Publish",
+        "From One SKU to Your Entire Catalog",
+        "Trusted by Sellers, Teams, and Agencies",
+        "Start with a Single Product",
+        "Simple, Transparent Pricing"
+      ],
+      "images": [
+        {
+          "alt": "Original product photo",
+          "src": "https://picazai.com/media/image/hero/original.jpeg",
+          "x": 773,
+          "y": 140,
+          "w": 503,
+          "h": 503,
+          "visible": true
+        },
+        {
+          "alt": "Enhanced image",
+          "src": "https://picazai.com/media/image/hero/enhanced.jpg",
+          "x": 770,
+          "y": 137,
+          "w": 510,
+          "h": 510,
+          "visible": true
+        },
+        {
+          "alt": "Infographic",
+          "src": "https://picazai.com/media/image/hero/infographics.jpg",
+          "x": 773,
+          "y": 140,
+          "w": 503,
+          "h": 503,
+          "visible": true
+        },
+        {
+          "alt": "Product image 1",
+          "src": "https://picazai.com/media/image/ig_smaples/1.jpg",
+          "x": 161,
+          "y": 818,
+          "w": 170,
+          "h": 227,
+          "visible": true
+        },
+        {
+          "alt": "Product image 2",
+          "src": "https://picazai.com/media/image/ig_smaples/2.jpg",
+          "x": 347,
+          "y": 818,
+          "w": 170,
+          "h": 227,
+          "visible": true
+        },
+        {
+          "alt": "Product image 3",
+          "src": "https://picazai.com/media/image/ig_smaples/3.jpg",
+          "x": 533,
+          "y": 818,
+          "w": 170,
+          "h": 227,
+          "visible": true
+        },
+        {
+          "alt": "Product image 4",
+          "src": "https://picazai.com/media/image/ig_smaples/4.jpg",
+          "x": 719,
+          "y": 818,
+          "w": 170,
+          "h": 227,
+          "visible": true
+        },
+        {
+          "alt": "Product image 5",
+          "src": "https://picazai.com/media/image/ig_smaples/5.jpg",
+          "x": 905,
+          "y": 818,
+          "w": 170,
+          "h": 227,
+          "visible": true
+        },
+        {
+          "alt": "Product image 6",
+          "src": "https://picazai.com/media/image/ig_smaples/6.jpg",
+          "x": 1091,
+          "y": 818,
+          "w": 170,
+          "h": 227,
+          "visible": true
+        },
+        {
+          "alt": "Product image 7",
+          "src": "https://picazai.com/media/image/ig_smaples/7.jpg",
+          "x": 1277,
+          "y": 818,
+          "w": 170,
+          "h": 227,
+          "visible": true
+        },
+        {
+          "alt": "Picaz workflow demo",
+          "src": "https://picazai.com/media/wf_demo.jpg",
+          "x": 571,
+          "y": 2717,
+          "w": 709,
+          "h": 516,
+          "visible": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "marketplace_hero",
+    "type": "ai_marketplace_tool",
+    "url": "https://marketplacehero.ru/",
+    "notes": [
+      "Wildberries/Ozon/Yandex card generator",
+      "editable logo/text/blocks/icons",
+      "upload photo then choose scene"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/marketplace_hero.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/marketplace_hero_top.png",
+    "ok": true,
+    "signals": {
+      "title": "Войти в Битрикс24",
+      "headings": [
+        "Войти в Битрикс24"
+      ],
+      "images": [
+        {
+          "alt": "Scan me!",
+          "src": "data:image/png;base64,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",
+          "x": 1086,
+          "y": 609,
+          "w": 169,
+          "h": 169,
+          "visible": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "kartochka_wb",
+    "type": "ai_marketplace_tool",
+    "url": "https://www.kartochka-wb.ru/",
+    "notes": [
+      "WB/Ozon/Yandex templates",
+      "background AI",
+      "large design element library",
+      "ready marketplace templates"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/kartochka_wb.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/kartochka_wb_top.png",
+    "ok": false,
+    "error": "goto: net::ERR_SSL_PROTOCOL_ERROR at https://www.kartochka-wb.ru/\nCall log:\n\u001b[2m  - navigating to \"https://www.kartochka-wb.ru/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  },
+  {
+    "id": "orshot_ecommerce",
+    "type": "template_automation",
+    "url": "https://orshot.com/use-cases/t/auto-generate-e-commerce-images",
+    "notes": [
+      "parameterized text/images/colors",
+      "visual editor",
+      "API/no-code/spreadsheet generation"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/orshot_ecommerce.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/orshot_ecommerce_top.png",
+    "ok": true,
+    "signals": {
+      "title": "Auto-Generate E-commerce Images from Templates",
+      "headings": [
+        "Automate E-commerce Images",
+        "186 templates",
+        "Parameterize everything",
+        "Any workflow",
+        "Generate at scale",
+        "Start from a e-commerce template.",
+        "Customize in a visual editor.",
+        "Connect to your workflow.",
+        "Learn more about e-commerce automation.",
+        "Orshot's Library just crossed 1,000 Templates",
+        "How Brendi Automates Marketing for 5,000+ Restaurants",
+        "10 Best AI Tools for Graphic Design with MCP(2026)",
+        "Introducing Orshot's AI Design Agent",
+        "The usual stuff.",
+        "What is Orshot?",
+        "Is Orshot free to use?",
+        "How do I automate e-commerce images generation?",
+        "Which output formats are supported?",
+        "Can I use my own branding?",
+        "Can I generate in bulk?"
+      ],
+      "images": [
+        {
+          "alt": "Bold Amber Sneaker Product Ad with Split Photo-Card Layout",
+          "src": "https://storage.orshot.com/cloud/w-131/renders/thumbnails/mnLrBqdkeED.png",
+          "x": 209,
+          "y": 1131,
+          "w": 307,
+          "h": 307,
+          "visible": true
+        },
+        {
+          "alt": "Teal & Coral Skincare Bundle Deal Card with 3 Products",
+          "src": "https://storage.orshot.com/cloud/w-131/renders/thumbnails/imKgNZYUyfn.png",
+          "x": 209,
+          "y": 1543,
+          "w": 307,
+          "h": 384,
+          "visible": true
+        },
+        {
+          "alt": "Bold Red Customer Favorite Headphones Product Card",
+          "src": "https://storage.orshot.com/cloud/w-131/renders/thumbnails/RbqCE6RrqYt.png",
+          "x": 566,
+          "y": 1131,
+          "w": 307,
+          "h": 307,
+          "visible": true
+        },
+        {
+          "alt": "Bold Navy & Gold Coffee Product Comparison Card",
+          "src": "https://storage.orshot.com/cloud/w-131/renders/thumbnails/omSBHBunDwN.png",
+          "x": 566,
+          "y": 1543,
+          "w": 307,
+          "h": 384,
+          "visible": true
+        },
+        {
+          "alt": "Green Order Confirmation Email Banner with Check Badge",
+          "src": "https://storage.orshot.com/cloud/w-131/renders/thumbnails/3mjmTPmSeQY.png",
+          "x": 936,
+          "y": 1131,
+          "w": 283,
+          "h": 142,
+          "visible": true
+        },
+        {
+          "alt": "Raspberry Abandoned Cart Email Banner with Product Photo",
+          "src": "https://storage.orshot.com/cloud/w-131/renders/thumbnails/J6auwg1vvBy.png",
+          "x": 936,
+          "y": 1374,
+          "w": 283,
+          "h": 142,
+          "visible": true
+        },
+        {
+          "alt": "E-commerce template in Orshot Studio",
+          "src": "https://orshot.com/_next/image?url=https%3A%2F%2Fapi.orshot.com%2Fv1%2Fstudio%2Fdynamic-url%2Fexample.jpg%3FtemplateId%3D960%26sign%3Db67064904040dc4f%26image%3Dhttps%3A%2F%2Fstorage.orshot.com%2Fcloud%2Fw-131%2Frenders%2Fthumbnails%2FmnLrBqdkeED.png&w=1200&q=75",
+          "x": 762,
+          "y": 2253,
+          "w": 468,
+          "h": 414,
+          "visible": true
+        },
+        {
+          "alt": "Automation workflow",
+          "src": "https://orshot.com/_next/image?url=%2Fhome%2Fspeed.png&w=1200&q=75&dpl=dpl_61MSwvay7RUo1CVyw4VfZkzBzxko",
+          "x": 210,
+          "y": 2921,
+          "w": 468,
+          "h": 273,
+          "visible": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "bannerbear_template",
+    "type": "template_automation",
+    "url": "https://www.bannerbear.com/help/articles/15-what-is-a-template/",
+    "notes": [
+      "reusable templates",
+      "dynamic text/image placeholders",
+      "custom SVGs with gradients and shadows"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/bannerbear_template.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/bannerbear_template_top.png",
+    "ok": true,
+    "signals": {
+      "title": "What is a Template? - Bannerbear",
+      "headings": [
+        "What is a template?",
+        "Have a question?"
+      ],
+      "images": [
+        {
+          "alt": "",
+          "src": "https://s3.amazonaws.com/helpscout.net/docs/assets/6141a4aeb28e5462c534b0b8/images/6197eff6d3efbe495c3b1084/file-TATVtXqFAX.jpg",
+          "x": 495,
+          "y": 663,
+          "w": 572,
+          "h": 233,
+          "visible": true
+        },
+        {
+          "alt": "",
+          "src": "https://s3.amazonaws.com/helpscout.net/docs/assets/6141a4aeb28e5462c534b0b8/images/6197f29764e42a671b638cd9/file-L140J8wJwG.jpg",
+          "x": 495,
+          "y": 982,
+          "w": 572,
+          "h": 280,
+          "visible": true
+        },
+        {
+          "alt": "",
+          "src": "https://s3.amazonaws.com/helpscout.net/docs/assets/6141a4aeb28e5462c534b0b8/images/6197f3b6efc78d0553e5c0a1/file-IRVh60mRwv.jpg",
+          "x": 495,
+          "y": 1378,
+          "w": 572,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "",
+          "src": "https://s3.amazonaws.com/helpscout.net/docs/assets/6141a4aeb28e5462c534b0b8/images/6197ef32efc78d0553e5c082/file-o0Y71nuzvF.jpg",
+          "x": 495,
+          "y": 1778,
+          "w": 572,
+          "h": 439,
+          "visible": true
+        },
+        {
+          "alt": "",
+          "src": "https://www.bannerbear.com/images/kb/Have_a_question.png",
+          "x": 778,
+          "y": 2436,
+          "w": 414,
+          "h": 300,
+          "visible": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "figma_buzz_assets",
+    "type": "template_automation",
+    "url": "https://help.figma.com/hc/en-us/articles/31271589645079-Create-marketing-assets-in-Figma-Buzz",
+    "notes": [
+      "locked brand templates",
+      "edit content without touching design",
+      "bulk create from XLSX"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/figma_buzz_assets.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/figma_buzz_assets_top.png",
+    "ok": true,
+    "signals": {
+      "title": "The page you were looking for doesn't exist – Figma Learn - Help Center",
+      "headings": [
+        "The page you are looking for can’t be found. Try searching for something else!",
+        "Getting started",
+        "Figma Organization",
+        "Community",
+        "Administration",
+        "Video Tutorials",
+        "Components",
+        "Downloads",
+        "Blog"
+      ],
+      "images": []
+    }
+  },
+  {
+    "id": "behance_product_card_search",
+    "type": "design_community",
+    "url": "https://www.behance.net/search/projects/product%20card%20ecommerce",
+    "notes": [
+      "product card concepts",
+      "Ozon marketplace systems",
+      "infographic product cards"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/behance_product_card_search.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/behance_product_card_search_top.png",
+    "ok": true,
+    "signals": {
+      "title": "Product Card Ecommerce Projects :: Photos, videos, logos, illustrations and branding :: Behance",
+      "headings": [
+        "Popular Tools",
+        "Boost your best work where it matters most.",
+        "Built For Creatives",
+        "Find Talent",
+        "Behance",
+        "Social"
+      ],
+      "images": [
+        {
+          "alt": "Product Cards (Concept) / Карточки товара Wildberries",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/a0c2c4248010387.Y3JvcCwxMjEyLDk0OCwwLDA.png",
+          "x": 24,
+          "y": 192,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Jonny Czar Portfolio 2024",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/230b37159150041.Y3JvcCwyOTk2LDIzNDQsNDQsMA.jpg",
+          "x": 378,
+          "y": 192,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Bookify - Bringing acclimated books right to your phone",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/1e2f0582716913.5d30b50bbe407.jpg",
+          "x": 1086,
+          "y": 192,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Worldpackers Experiences Brand and App Design – UX & UI",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/d7ad5f60173777.5d30b52a0e4b3.jpg",
+          "x": 24,
+          "y": 533,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Amazon listing images | Product images | Supplements",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/d15790249346075.Y3JvcCwyNDI0LDE4OTYsMCww.jpg",
+          "x": 378,
+          "y": 533,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Crypto4Card — Buy Gift Cards with Cryptocurrency",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/3a6a44249478553.Y3JvcCw4MDgsNjMyLDAsMA.png",
+          "x": 732,
+          "y": 533,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Pikachu LED Night Light – Product Infographic Design",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/d8924c245486233.Y3JvcCwxNjE2LDEyNjQsMCww.png",
+          "x": 1086,
+          "y": 533,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "N26 – Transactions & Home Page",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/543d1d159305455.Y3JvcCwyOTgwLDIzMzEsMjM2LDgx.jpg",
+          "x": 24,
+          "y": 1311,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Pet eCommerce Website UI Design",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/e3a6b5248499843.Y3JvcCwyNDMwLDE5MDAsMjg4LDE3NA.jpg",
+          "x": 378,
+          "y": 1311,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Eden System - 2026 Greeting Card",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/4d525b243387955.Y3JvcCwxNTAwLDExNzMsMCwz.jpg",
+          "x": 732,
+          "y": 1311,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Инфографика для карточки товара | Ароматическая свеча",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/2ea299247649775.Y3JvcCw1NjAwLDQzODAsMCwxMjA0NQ.jpg",
+          "x": 1086,
+          "y": 1311,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Whiteboard Challenge Explained",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/b7c3a0160126303.Y3JvcCwxNzI4LDEzNTEsMCww.jpg",
+          "x": 24,
+          "y": 1651,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Marketplace | Sports Store Web Design + Shopping App UI",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/449c0d248180095.Y3JvcCw5NjAsNzUxLDU5LDA.png",
+          "x": 378,
+          "y": 1651,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Modern Ecommerce Product Card",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/d04d33249075157.Y3JvcCw2MzEsNDk0LDg5LDExOA.png",
+          "x": 732,
+          "y": 1651,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Coverr Redesign | UX/UI Design, Product Web Design",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/e757ee247967973.Y3JvcCwyOTg1LDIzMzUsMjI0NiwxMDM0.png",
+          "x": 1086,
+          "y": 1651,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Robot Vacuum — E-commerce Design",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/811ac8248642801.Y3JvcCw5MDAsNzAzLDAsMjQ3.png",
+          "x": 24,
+          "y": 1995,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "E-commerce Product Card Design | Clean Layout",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/10a8e0243577803.Y3JvcCwyNjIwLDIwNDksMCwzNzY.jpg",
+          "x": 378,
+          "y": 1995,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Sports Store Product Showcase",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/2cc332249218411.Y3JvcCwzMDY4LDI0MDAsNjY4LDA.png",
+          "x": 732,
+          "y": 1995,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Premium Fan Product Design",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/fbabb5248329975.Y3JvcCwxMDI0LDgwMCwwLDM2Nw.png",
+          "x": 1086,
+          "y": 1995,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "E-Commerce Product Card",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/a9bac7249275443.Y3JvcCwxMjE3LDk1Miw3MiwxMzg.png",
+          "x": 24,
+          "y": 2336,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "AI Product Visualization: Aroma Diffuser",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/50acd6247588231.Y3JvcCwxMzgwLDEwODAsMTcsMA.png",
+          "x": 378,
+          "y": 2336,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Soundix – Product Card Design for US E‑commerce",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/996d02248528913.Y3JvcCwxMDgwLDg0NCwwLDExNw.png",
+          "x": 732,
+          "y": 2336,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Minimal Nike shoe-card design",
+          "src": "https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/b95cbf238169237.Y3JvcCwxNDAwLDEwOTUsMCwzODE.png",
+          "x": 1086,
+          "y": 2336,
+          "w": 330,
+          "h": 258,
+          "visible": true
+        },
+        {
+          "alt": "Shopping online with credit card concept. Modern e-commerce web page with woman clothes on laptop display",
+          "src": "https://t3.ftcdn.net/jpg/05/20/57/98/240_F_520579886_p15OGOy9S5cw3LPmHOHIG5uA3G0X5z91.jpg",
+          "x": 434,
+          "y": 955,
+          "w": 312,
+          "h": 182,
+          "visible": true
+        },
+        {
+          "alt": "online shopping concept, businessman use smartphones and credit cards to purchase products from online stores and shop on the internet, ecommerce store, online business, convenience, competitive price",
+          "src": "https://t4.ftcdn.net/jpg/06/04/76/33/240_F_604763387_iHshS2pHBV3JA0L909nFnSIEazs2GUfV.jpg",
+          "x": 761,
+          "y": 955,
+          "w": 312,
+          "h": 182,
+          "visible": true
+        },
+        {
+          "alt": "Ecommerce, credit card and woman on a couch, tablet or payment with an order, home or online shopping. Female person, girl or customer on a sofa, technology or buying products with retail or banking",
+          "src": "https://t3.ftcdn.net/jpg/06/05/97/30/240_F_605973050_oPqC5BJ58aB92TV7awf5rdqGr8btNAXE.jpg",
+          "x": 1088,
+          "y": 955,
+          "w": 312,
+          "h": 182,
+          "visible": true
+        },
+        {
+          "alt": "Online shopping concept with miniature shopping cart standing in front of laptop, Generative AI Illustration",
+          "src": "https://t4.ftcdn.net/jpg/06/22/37/87/240_F_622378708_1afAMIn3DTl5YeQWT5fTVwrhSHhjTgXJ.jpg",
+          "x": 1415,
+          "y": 955,
+          "w": 312,
+          "h": 182,
+          "visible": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "behance_wb_amazon_vol3",
+    "type": "design_community",
+    "url": "https://www.behance.net/gallery/126158809/Wildberries-Amazon-product-cards-design-Vol3?locale=en_US",
+    "notes": [
+      "Wildberries/Amazon/Ozon product-card portfolio",
+      "high-density marketplace card examples"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/behance_wb_amazon_vol3.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/behance_wb_amazon_vol3_top.png",
+    "ok": true,
+    "signals": {
+      "title": "Wildberries & Amazon product cards design Vol.3 :: Behance",
+      "headings": [
+        "Wildberries & Amazon product cards design Vol.3",
+        "Owner",
+        "Services",
+        "Logotype | base visual Identity design",
+        "Amazon product listing design.",
+        "Packaging design",
+        "Amazon A+ content Design",
+        "Merch & fashion design",
+        "Landing page design",
+        "Amazon product 3D modeling",
+        "Brochure design",
+        "Wildberries & Amazon product cards design Vol.3",
+        "Tools",
+        "Creative Fields",
+        "Try Behance Pro",
+        "Built For Creatives",
+        "Find Talent",
+        "Behance",
+        "Social"
+      ],
+      "images": [
+        {
+          "alt": "Amazon EBC infographic listing ozon product card wildberries wildberries инфографика Карточка товара маркетплейс",
+          "src": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/e3fc1a126158809.61279922b57e8.jpg",
+          "x": 227,
+          "y": 333,
+          "w": 987,
+          "h": 668,
+          "visible": true
+        },
+        {
+          "alt": "Amazon EBC infographic listing ozon product card wildberries wildberries инфографика Карточка товара маркетплейс",
+          "src": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/980858126158809.61279922b63d1.jpg",
+          "x": 227,
+          "y": 1061,
+          "w": 987,
+          "h": 668,
+          "visible": true
+        },
+        {
+          "alt": "Amazon EBC infographic listing ozon product card wildberries wildberries инфографика Карточка товара маркетплейс",
+          "src": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/d1923f126158809.61279922b9a59.jpg",
+          "x": 145,
+          "y": 1788,
+          "w": 1150,
+          "h": 988,
+          "visible": true
+        },
+        {
+          "alt": "Amazon EBC infographic listing ozon product card wildberries wildberries инфографика Карточка товара маркетплейс",
+          "src": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b29a0e126158809.61279922b5d77.jpg",
+          "x": 145,
+          "y": 2837,
+          "w": 1150,
+          "h": 988,
+          "visible": true
+        },
+        {
+          "alt": "Amazon EBC infographic listing ozon product card wildberries wildberries инфографика Карточка товара маркетплейс",
+          "src": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/55db48126158809.61279922ba03a.jpg",
+          "x": 145,
+          "y": 3885,
+          "w": 1150,
+          "h": 988,
+          "visible": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "pinterest_wb_ozon_card",
+    "type": "moodboard",
+    "url": "https://www.pinterest.com/pin/wildberries-infographic-marketplace-card-wildberries-ozon-design-idea-logo-card-wildberries-product-card-design--282249101638978820/",
+    "notes": [
+      "Pinterest WB/Ozon product-card pin",
+      "thumbnail-first marketplace inspiration"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/pinterest_wb_ozon_card.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/pinterest_wb_ozon_card_top.png",
+    "ok": true,
+    "signals": {
+      "title": "wildberries инфографика маркетплейс карточка вайлдберриз озон дизайн идея логотип карточкивайлдберриз карточкатовара дизайн",
+      "headings": [],
+      "images": []
+    }
+  },
+  {
+    "id": "freepik_3d_ecommerce_banner",
+    "type": "asset_marketplace",
+    "url": "https://www.freepik.com/psd/3d-e-commerce-banner",
+    "notes": [
+      "3D ecommerce banner PSD patterns",
+      "podiums",
+      "badges",
+      "promotion materials"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/freepik_3d_ecommerce_banner.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/freepik_3d_ecommerce_banner_top.png",
+    "ok": true,
+    "signals": {
+      "title": "That request didn't go through. Our security filter flagged something. You don't have permission to access this page.",
+      "headings": [
+        "That request didn't go through. Our security filter flagged something. You don't have permission to access this page."
+      ],
+      "images": [
+        {
+          "alt": "",
+          "src": "https://media.magnific.com/common/magnific-bg-error-extended.webp?w=1920&h=1071",
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 1300,
+          "visible": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "envato_best_seller_badge",
+    "type": "asset_marketplace",
+    "url": "https://elements.envato.com/best-seller-badge-6WWFEPC",
+    "notes": [
+      "3D ecommerce badge",
+      "premium sticker/seal material language"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/envato_best_seller_badge.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/envato_best_seller_badge_top.png",
+    "ok": true,
+    "signals": {
+      "title": "Best Seller Badge 3D, Incl. best seller badge & badge - Envato",
+      "headings": [
+        "Compatible Tools",
+        "Top Video Searches",
+        "Top Video Searches",
+        "Top Music Searches",
+        "New music from PremiumBeat",
+        "Compatible Tools",
+        "Top Graphics Searches",
+        "Exclusive asset drop: Envato X Chris Piascik",
+        "Compatible Tools",
+        "Top Template Searches",
+        "Best Seller Badge",
+        "One great value subscription from $16.50/month",
+        "Similar 3D",
+        "More from adimaskur48",
+        "Want to save this item?"
+      ],
+      "images": [
+        {
+          "alt": "PremiumBeat Content Feature",
+          "src": "https://assets.elements.envato.com/apps/storefront/audio.compressed-11d9cee9c59e9605c2cf.avif",
+          "x": 849,
+          "y": 85,
+          "w": 208,
+          "h": 156,
+          "visible": true
+        },
+        {
+          "alt": "Envato X Chris Piascik",
+          "src": "https://assets.elements.envato.com/apps/storefront/graphics-ChrisPiascik-Promo-cc0e7a16d85c2a2327d4.avif",
+          "x": 1105,
+          "y": 85,
+          "w": 208,
+          "h": 156,
+          "visible": true
+        },
+        {
+          "alt": "Best Seller Badge",
+          "src": "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/d9/f2/10/93/87/v1_E10/E10HKHZC.png?w=2038&cf_fit=scale-down&q=85&format=auto&s=f702bc92c4a955de86f118c1c7e2242e5d0fe2ae9bfc5b2317a37a89e73a5352",
+          "x": 34,
+          "y": 189,
+          "w": 932,
+          "h": 621,
+          "visible": true
+        },
+        {
+          "alt": "Preview: Best seller badge with ribbon",
+          "src": "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/10/7e/65/ee/6b/v1_E11/E118PA1H.png?w=710&cf_fit=scale-down&q=85&format=auto&s=7c097af88d987782f6b540fd68425bf4de50ee3a49dbe233ca3479e58f27e5fd",
+          "x": 32,
+          "y": 1384,
+          "w": 338,
+          "h": 225,
+          "visible": true
+        },
+        {
+          "alt": "Preview: Red ribbon with gold seal",
+          "src": "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/ba/c3/55/40/47/v1_E11/E11WFHP.png?w=710&cf_fit=scale-down&q=85&format=auto&s=b1f0795ce1d46851e2ce220c467b596c86557b64850d5f91eb023f241d90eb2a",
+          "x": 378,
+          "y": 1384,
+          "w": 338,
+          "h": 225,
+          "visible": true
+        },
+        {
+          "alt": "Preview: Best Offer 3D Badge",
+          "src": "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/45/1c/a6/5f/1b/v1_E10/E10GVVUC.png?w=710&cf_fit=scale-down&q=85&format=auto&s=67c13f9b07cf6361b4ea5317ed758109adb8b97798b128013f347ab62c228729",
+          "x": 724,
+          "y": 1384,
+          "w": 338,
+          "h": 225,
+          "visible": true
+        },
+        {
+          "alt": "Preview: Best seller promotion tag",
+          "src": "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/0d/5c/be/bd/67/v1_E11/E118REWI.png?w=710&cf_fit=scale-down&q=85&format=auto&s=6223aa8d4a8efcd83094b103a323791150149a1cdb37637e976f5e7718468a58",
+          "x": 1070,
+          "y": 1384,
+          "w": 338,
+          "h": 225,
+          "visible": true
+        },
+        {
+          "alt": "Preview: Toolbox with Tools",
+          "src": "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/a3/97/32/00/b2/v1_E10/E10H1QIN.png?w=710&cf_fit=scale-down&q=85&format=auto&s=ae3dc92cc6f8198f3a7e6713e59d2637cb9d93dd404ed429ecd068c87a76f4bf",
+          "x": 32,
+          "y": 1714,
+          "w": 338,
+          "h": 225,
+          "visible": true
+        },
+        {
+          "alt": "Preview: Shopping Day Sale",
+          "src": "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/84/1c/cc/8b/de/v1_E10/E10HX7N0.png?w=710&cf_fit=scale-down&q=85&format=auto&s=ee7d5d22924158649899c781eca5507a3c5b4f8cce76253b872eda3383a3366e",
+          "x": 378,
+          "y": 1714,
+          "w": 338,
+          "h": 225,
+          "visible": true
+        },
+        {
+          "alt": "Preview: Shopping Bag",
+          "src": "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/4f/8b/18/f1/ad/v1_E10/E10HWEMV.png?w=710&cf_fit=scale-down&q=85&format=auto&s=e97d00f33710eb97244bce5e8f7d462f7d6841884876f8bc79ee4bb87b9af15a",
+          "x": 724,
+          "y": 1714,
+          "w": 338,
+          "h": 225,
+          "visible": true
+        },
+        {
+          "alt": "Preview: Beer Mug Drink Party",
+          "src": "https://elements-resized.envatousercontent.com/elements-content-platform-public-assets/a0f41be4-7000-4919-9175-db6cbb317649/three-d-models/de7d2daf-e6cd-4484-8d02-7d133a2e825a/assets/a4250270-668c-4f83-8cc4-5c9e8dedb634/9.png?w=710&cf_fit=scale-down&q=85&format=auto&s=4229f95395338322acd834c49d82d0fd417cdd27b6c3775e76e1d9754ebdaea7",
+          "x": 1070,
+          "y": 1714,
+          "w": 338,
+          "h": 225,
+          "visible": true
+        },
+        {
+          "alt": "Best Seller Badge",
+          "src": "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/d9/f2/10/93/87/v1_E10/E10HKHZC.png?w=433&cf_fit=scale-down&q=85&format=auto&s=f2c564a1f3a05b82d78a40b1a5600f5015c1650f0231505168a958572d662d78",
+          "x": 411,
+          "y": 457,
+          "w": 618,
+          "h": 280,
+          "visible": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "graphicsfamily_3d_metallic_frame",
+    "type": "asset_marketplace",
+    "url": "https://graphicsfamily.com/downloads/3d-metallic-frame-modern-logo-mockup",
+    "notes": [
+      "3D metallic frame/logo mockup",
+      "layered PSD/smart object pattern"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/graphicsfamily_3d_metallic_frame.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/graphicsfamily_3d_metallic_frame_top.png",
+    "ok": true,
+    "signals": {
+      "title": "3D Metallic Frame Modern Logo Mockup – GraphicsFamily",
+      "headings": [
+        "3D Metallic Frame Modern Logo Mockup",
+        "You May Also Like",
+        "GraphicsFamily",
+        "GraphicsFamily"
+      ],
+      "images": [
+        {
+          "alt": "3D Metallic Frame Modern Logo Mockup",
+          "src": "https://graphicsfamily.com/wp-content/uploads/edd/2021/10/3D-Metallic-Frame-Modern-Logo-Mockup-1180x787.jpg",
+          "x": 135,
+          "y": 248,
+          "w": 870,
+          "h": 580,
+          "visible": true
+        },
+        {
+          "alt": "3D Metallic Frame Modern Logo Mockup",
+          "src": "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=",
+          "x": 165,
+          "y": 1051,
+          "w": 810,
+          "h": 810,
+          "visible": true
+        },
+        {
+          "alt": "3D Metallic Frame Modern Logo Mockup",
+          "src": "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=",
+          "x": 165,
+          "y": 1866,
+          "w": 810,
+          "h": 810,
+          "visible": true
+        },
+        {
+          "alt": "3D Metallic Frame Modern Logo Mockup",
+          "src": "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=",
+          "x": 165,
+          "y": 2681,
+          "w": 810,
+          "h": 810,
+          "visible": true
+        },
+        {
+          "alt": "3D Metallic Frame Modern Logo Mockup",
+          "src": "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=",
+          "x": 165,
+          "y": 3496,
+          "w": 810,
+          "h": 810,
+          "visible": true
+        },
+        {
+          "alt": "GraphicsFamily",
+          "src": "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=",
+          "x": 1140,
+          "y": 30,
+          "w": 88,
+          "h": 88,
+          "visible": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "designries_listing_templates",
+    "type": "listing_template",
+    "url": "https://www.designries.com/product-page/designries-essential-oils-product-listing-templates-editable-canva-images",
+    "notes": [
+      "square listing templates",
+      "editable branding/colors/product photos",
+      "Amazon/Etsy/eBay/Walmart/Shopify"
+    ],
+    "screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/designries_listing_templates.png",
+    "top_screenshot": "/Users/cc/Desktop/photo_show/references/external_ecommerce_frame_scan_20260522/designries_listing_templates_top.png",
+    "ok": true,
+    "signals": {
+      "title": "Designries Essential Oils Product Listing Templates | Editable Canva Images | Designries",
+      "headings": [
+        "Upto 65% off! DOWNLOAD YOUR TEMPLATES INSTANTLY🔥",
+        "Designries Essential Oils Product Listing Templates | Editable Canva Images",
+        "What You Receive",
+        "Key Features",
+        "Ideal For",
+        "Digital Product Notice",
+        "How it works",
+        "You Might Also Like",
+        "A+ Content Canva Template Amazon for Science Fiction Book KDP Designries",
+        "Real Estate Agent Notion Template CRM, Lead Tracker Commission Designries",
+        "Reading Tracker Notion Template | Book Tracker & Reading Journal – Designries",
+        "Household & Family Binder Notion Template | Home Management Planner – Designries",
+        "ADHD Student Planner Notion Template | Assignment Tracker Focus Timer Designries",
+        "PhD Research Notion Template | Thesis Planner & Academic Dashboard – Designries",
+        "Debt Snowball Calculator Notion Template | Payoff Planner & Finance Designries",
+        "Food Product Listing Canva Templates by Designries Bread Breakfast Kitchen",
+        "Amazon KDP A+ Content Canva Template for Scriptwriting Notebook by Designries",
+        "Dementia Coloring Book Printable for Seniors | 50 Coloring Pages by Designries",
+        "Designries Open House Flyer Canva Template for Real Estate Marketing Editable Re",
+        "Kids Products Amazon A+ Content Canva Template by Designries | Editable Kids Toy"
+      ],
+      "images": [
+        {
+          "alt": "essential oils product listing template editable in canva",
+          "src": "https://static.wixstatic.com/media/dcf7ce_472ac3f4ecd9450f835d9fd2036ace2e~mv2.webp/v1/fill/w_498,h_498,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/dcf7ce_472ac3f4ecd9450f835d9fd2036ace2e~mv2.webp",
+          "x": 279,
+          "y": 284,
+          "w": 498,
+          "h": 498,
+          "visible": true
+        },
+        {
+          "alt": "",
+          "src": "https://static.wixstatic.com/media/dcf7ce_d32b752cc94745d48063bd50807a4348f002.jpg/v1/fill/w_500,h_500,al_c,q_50,usm_0.66_1.00_0.01/dcf7ce_d32b752cc94745d48063bd50807a4348f002.jpg",
+          "x": 778,
+          "y": 283,
+          "w": 500,
+          "h": 500,
+          "visible": true
+        },
+        {
+          "alt": "Amazon A+ Content Canva template for science fiction books",
+          "src": "https://static.wixstatic.com/media/dcf7ce_8984b5d1257f494b9e3cc28f2615df88~mv2.webp/v1/fill/w_285,h_285,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/dcf7ce_8984b5d1257f494b9e3cc28f2615df88~mv2.webp",
+          "x": 121,
+          "y": 2062,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "Real Estate Agent Notion Template by Designries shown on laptop desktop and tablet with full dashboard",
+          "src": "https://static.wixstatic.com/media/dcf7ce_8a212e4ad49444c99d14a62f34fc143a~mv2.webp/v1/fill/w_285,h_285,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/dcf7ce_8a212e4ad49444c99d14a62f34fc143a~mv2.webp",
+          "x": 426,
+          "y": 2062,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "Reading Tracker Notion Template by Designries shown on laptop desktop and tablet with Literary Hub dashboard",
+          "src": "https://static.wixstatic.com/media/dcf7ce_05d4707e15d54fc981d2a7a0aa7e462b~mv2.webp/v1/fill/w_285,h_285,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/dcf7ce_05d4707e15d54fc981d2a7a0aa7e462b~mv2.webp",
+          "x": 730,
+          "y": 2062,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "",
+          "src": "https://static.wixstatic.com/media/dcf7ce_b1e3f39652a84a50bfa61f0ff757e921~mv2.webp/v1/fill/w_285,h_285,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/dcf7ce_b1e3f39652a84a50bfa61f0ff757e921~mv2.webp",
+          "x": 1035,
+          "y": 2062,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "ADHD Student Planner Notion Template by Designries shown on desktop laptop and tablet devices",
+          "src": "https://static.wixstatic.com/media/dcf7ce_071fa03bc80042a39daba2367651bdcf~mv2.webp/v1/fill/w_147,h_147,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/dcf7ce_071fa03bc80042a39daba2367651bdcf~mv2.webp",
+          "x": 121,
+          "y": 2631,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "PhD Research Notion Template by Designries shown on desktop laptop and tablet devices",
+          "src": "https://static.wixstatic.com/media/dcf7ce_16960cf6b6a14d0d9b4bf1111c9725f4~mv2.webp/v1/fill/w_147,h_147,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/dcf7ce_16960cf6b6a14d0d9b4bf1111c9725f4~mv2.webp",
+          "x": 426,
+          "y": 2631,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "Debt Snowball Calculator Notion Template by Designries shown on laptop desktop and tablet",
+          "src": "https://static.wixstatic.com/media/dcf7ce_0cd900a575f746639a55bd2406eabbc6~mv2.webp/v1/fill/w_147,h_147,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/dcf7ce_0cd900a575f746639a55bd2406eabbc6~mv2.webp",
+          "x": 730,
+          "y": 2631,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "food product listing canva template for bread and bakery",
+          "src": "https://static.wixstatic.com/media/dcf7ce_d1e9ca10fcdd4fe3811e92d513096e15~mv2.webp/v1/fill/w_147,h_147,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/dcf7ce_d1e9ca10fcdd4fe3811e92d513096e15~mv2.webp",
+          "x": 1035,
+          "y": 2631,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "kdp a+ content template canva",
+          "src": "https://static.wixstatic.com/media/dcf7ce_45f4bfc525984d79864a3e0be4f044f5~mv2.webp/v1/fill/w_147,h_147,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/dcf7ce_45f4bfc525984d79864a3e0be4f044f5~mv2.webp",
+          "x": 121,
+          "y": 2631,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "Dementia coloring book printable for seniors by Designries",
+          "src": "https://static.wixstatic.com/media/dcf7ce_0b1cdf232fc3491084a92711c1ba0557~mv2.webp/v1/fill/w_147,h_147,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/dcf7ce_0b1cdf232fc3491084a92711c1ba0557~mv2.webp",
+          "x": 426,
+          "y": 2631,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "Open house flyer Canva template for real estate marketing",
+          "src": "https://static.wixstatic.com/media/dcf7ce_fb4b9c980555484b8aba265446810a66~mv2.webp/v1/fill/w_147,h_147,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/dcf7ce_fb4b9c980555484b8aba265446810a66~mv2.webp",
+          "x": 730,
+          "y": 2631,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "Kids products Amazon A+ Content Canva template by Designries",
+          "src": "https://static.wixstatic.com/media/dcf7ce_af9ef4b36215445b89de555b30d00d07~mv2.webp/v1/fill/w_147,h_147,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/dcf7ce_af9ef4b36215445b89de555b30d00d07~mv2.webp",
+          "x": 1035,
+          "y": 2631,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "Tray and chopping board Amazon A+ Content Canva template by Designries",
+          "src": "https://static.wixstatic.com/media/dcf7ce_ffc8f1073420412ea2b12dc5dab196a9~mv2.webp/v1/fill/w_147,h_147,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/dcf7ce_ffc8f1073420412ea2b12dc5dab196a9~mv2.webp",
+          "x": 121,
+          "y": 2631,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "Seed organizer Amazon A+ Content Canva template by Designries",
+          "src": "https://static.wixstatic.com/media/dcf7ce_113a66e6a13b4798bb6ab3c07f97587f~mv2.webp/v1/fill/w_147,h_147,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/dcf7ce_113a66e6a13b4798bb6ab3c07f97587f~mv2.webp",
+          "x": 426,
+          "y": 2631,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "Recipe book product listing templates Canva by Designries",
+          "src": "https://static.wixstatic.com/media/dcf7ce_6becc16beb3a40fba8f3fb6d19b4e72b~mv2.webp/v1/fill/w_147,h_147,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/dcf7ce_6becc16beb3a40fba8f3fb6d19b4e72b~mv2.webp",
+          "x": 730,
+          "y": 2631,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        },
+        {
+          "alt": "Recipe card listing templates Canva by Designries",
+          "src": "https://static.wixstatic.com/media/dcf7ce_f474f2fd65f74b4cb9d9207cf5d9b8be~mv2.webp/v1/fill/w_147,h_147,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/dcf7ce_f474f2fd65f74b4cb9d9207cf5d9b8be~mv2.webp",
+          "x": 1035,
+          "y": 2631,
+          "w": 285,
+          "h": 285,
+          "visible": true
+        }
+      ]
+    }
+  }
+]

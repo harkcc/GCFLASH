@@ -1,0 +1,319 @@
+{
+  "catalog_version": "2026-05-24.stable.v1",
+  "target": "eMAG mobile-first detail HTML generation",
+  "brand_default": "EXCITAT",
+  "stability_principle": "Use deterministic component recipes, evidence-gated copy, local text overlay, and mobile validation before allowing AI freedom.",
+  "input_contract": {
+    "required": [
+      "ProductTruthPack",
+      "BrandKit",
+      "AssetInventory",
+      "EvidencePack",
+      "ChannelConstraints"
+    ],
+    "blockers": [
+      "missing_source_specs_for_strong_claims",
+      "fake_review_or_rating",
+      "unsupported_delivery_return_warranty_claim",
+      "direct_commercial_use_of_unlicensed_official_assets",
+      "old_brand_baked_into_final_product_image_without_cleanup_note"
+    ]
+  },
+  "component_code_contract": {
+    "renderer_signature": "component_id + ProductTruthPack + BrandKit + AssetInventory + EvidencePack + props -> html_snippet + asset_paths + media_asset_records + validation_notes",
+    "normalization_rules": [
+      "normalize colors before rendering",
+      "measure text and wrap before drawing",
+      "load icons by icon_id from IconLibrary",
+      "write one media_asset_index record per visual component",
+      "never let AI generate final small text"
+    ],
+    "required_output_per_component": [
+      "component_id",
+      "component_version",
+      "buyer_question",
+      "asset_path_or_html_snippet",
+      "dimensions",
+      "evidence_refs",
+      "risk_level",
+      "production_notes"
+    ]
+  },
+  "icon_library_contract": {
+    "library_id": "emag_param_icons_v1",
+    "usage": "spec_icon_board",
+    "rule": "Parameter components reference icon_id; icon assets are versioned separately from product renderers.",
+    "required_icon_fields": ["icon_id", "source_path", "style", "allowed_components", "color_tint_rule"],
+    "initial_icons": ["bolt", "cup", "steam", "shield", "ruler", "touch", "plug", "cable", "phases"]
+  },
+  "processing_boundaries": {
+    "ai_image_generation": {
+      "allowed_for": ["background", "lifestyle_scene", "people_reference_variant"],
+      "not_allowed_for": ["final_small_text", "unsupported_badges", "exact_product_shape_without_reference"],
+      "rule": "Generate no-text visual material first, then add all text locally."
+    },
+    "html": {
+      "safe_tags": ["p", "h2", "h3", "strong", "br", "ul", "li", "img"],
+      "gray_zone_tags": ["table", "tr", "td", "div", "blockquote"],
+      "forbidden_tags": ["script", "iframe", "form", "link", "style"],
+      "image_embed": "p text-align:center + img width=1140"
+    },
+    "motion": {
+      "stable": ["shine_sweep_gif", "step_highlight_gif"],
+      "experimental": ["product_edge_glow", "border_breathing", "people_micro_motion", "product_motion"],
+      "rule": "Stable motion must be subtle, repeatable, and readable on mobile."
+    }
+  },
+  "stable_components": [
+    {
+      "component_id": "manner_scenario_banner",
+      "status": "candidate",
+      "role": "top result hook",
+      "buyer_question": "What result do I get and why should I keep reading?",
+      "required_inputs": ["product_type", "core_result", "product_image", "scene_image", "brand_palette", "three_fact_chips"],
+      "output_type": "gif_or_png",
+      "source_size": "1140x456",
+      "invariants": [
+        "one dominant brand title",
+        "one result headline",
+        "three fact chips maximum",
+        "real product or scene asset visible",
+        "text overlay is deterministic"
+      ],
+      "allowed_variations": ["accent_color", "scene_background", "chip_labels", "shine_sweep_on_or_off"],
+      "failure_modes": ["template_looking_product_paste", "too_many_chips", "old_brand_watermark", "small_text_unreadable"],
+      "validator_checks": ["asset_dimensions", "mobile_readability", "claim_evidence"]
+    },
+    {
+      "component_id": "excitat_hero_banner",
+      "status": "candidate",
+      "role": "high-impact top banner",
+      "buyer_question": "What result do I get and why should I keep reading?",
+      "required_inputs": ["product_type", "core_result", "product_image", "scene_image", "brand_palette", "three_fact_chips"],
+      "output_type": "gif_or_png",
+      "source_size": "1140x456",
+      "invariants": [
+        "brand text is EXCITAT",
+        "one result headline",
+        "three fact chips maximum",
+        "deterministic local text overlay",
+        "shine_sweep only if motion is enabled"
+      ],
+      "allowed_variations": ["baby_warm", "tech_dark", "clean_white_variant"],
+      "failure_modes": ["oversized_brand_vs_product", "two_headlines_same_weight", "old_brand_watermark", "product_paste_feeling"],
+      "validator_checks": ["asset_dimensions", "mobile_readability", "claim_evidence"]
+    },
+    {
+      "component_id": "first_screen_anchor_triplet",
+      "status": "stable",
+      "role": "mobile reading anchors",
+      "buyer_question": "What are the three most important roles in the first screen?",
+      "required_inputs": ["module_plan", "ProductTruthPack"],
+      "output_type": "html",
+      "invariants": [
+        "exactly three blocks",
+        "each block maps to one buyer role",
+        "wide single-column mobile layout",
+        "one colored left rail per block"
+      ],
+      "allowed_variations": ["rail_colors", "block_order_by_product_type", "short_support_copy"],
+      "failure_modes": ["internal_sop_copy", "generic_claim", "too_much_text"],
+      "validator_checks": ["module_chain_policy", "buyer_question_policy", "text_density_policy"]
+    },
+    {
+      "component_id": "mixed_image_text_block",
+      "status": "stable",
+      "role": "avoid reading fatigue",
+      "buyer_question": "How does this feature solve one practical scene?",
+      "required_inputs": ["feature", "benefit", "evidence_ref", "product_or_detail_image"],
+      "output_type": "html_plus_image",
+      "invariants": [
+        "image first or text first alternates by module",
+        "one feature per block",
+        "one short explanation",
+        "one light color band"
+      ],
+      "allowed_variations": ["image_slot", "accent_color", "text_before_or_after"],
+      "failure_modes": ["all_text_page", "all_image_page", "unrelated_image", "long_paragraph"],
+      "validator_checks": ["text_density_policy", "asset_relevance"]
+    },
+    {
+      "component_id": "spec_icon_board",
+      "status": "stable",
+      "role": "parameter culture and rational confirmation",
+      "buyer_question": "Which specs decide whether this product fits my needs?",
+      "required_inputs": ["source_specs", "product_type", "brand_palette"],
+      "output_type": "png_plus_source_table",
+      "source_size": "1140x680",
+      "invariants": [
+        "six spec cards maximum",
+        "each card has icon, label, value, short note",
+        "source table follows the board",
+        "icons are loaded from IconLibrary"
+      ],
+      "allowed_variations": ["icon_set_by_category", "accent_color", "card_order"],
+      "failure_modes": ["unsupported_spec", "icon_mismatch", "text_overflow", "board_without_source_table"],
+      "validator_checks": ["spec_source_policy", "mobile_readability", "image_width_policy"]
+    },
+    {
+      "component_id": "step_highlight_gif",
+      "status": "stable",
+      "role": "usage sequence cue",
+      "buyer_question": "How do I use it without guessing?",
+      "required_inputs": ["step_image_or_scene", "step_count", "usage_steps"],
+      "output_type": "gif",
+      "invariants": [
+        "only one active step at a time",
+        "highlight loop is slow enough to read",
+        "no fake product motion"
+      ],
+      "allowed_variations": ["step_color", "step_box_positions", "loop_duration"],
+      "failure_modes": ["effect_too_subtle", "highlight_wrong_area", "gif_too_large"],
+      "validator_checks": ["gif_policy", "asset_dimensions"]
+    },
+    {
+      "component_id": "qa_buyer_question_board",
+      "status": "stable",
+      "role": "objection handling",
+      "buyer_question": "What would the buyer otherwise go back to check?",
+      "required_inputs": ["source_qa_or_category_questions", "ProductTruthPack"],
+      "output_type": "png_plus_text_qa",
+      "source_size": "1140x520",
+      "invariants": [
+        "question first",
+        "one answer per card",
+        "answers trace to product facts",
+        "text QA follows the board for accessibility"
+      ],
+      "allowed_variations": ["dark_or_light_board", "card_count_3_or_4", "accent_color"],
+      "failure_modes": ["review_content_misused_as_qa", "unsupported_answer", "too_small_text"],
+      "validator_checks": ["faq_truth_policy", "claim_evidence_policy"]
+    },
+    {
+      "component_id": "manner_review_preview_board",
+      "status": "candidate",
+      "role": "review visual placeholder or real review board",
+      "buyer_question": "Did real buyers care about the same points?",
+      "required_inputs": ["actual_reviews_or_explicit_preview_mode"],
+      "output_type": "png",
+      "source_size": "1140x520",
+      "invariants": [
+        "preview mode must be labeled",
+        "real review mode must include source/date/rating",
+        "no fake names or fake stars"
+      ],
+      "allowed_variations": ["three_card_layout", "four_card_layout", "dark_manner_style"],
+      "failure_modes": ["fake_review", "fake_rating", "confused_with_qa"],
+      "validator_checks": ["faq_truth_policy", "claim_evidence_policy", "asset_rights_policy"]
+    },
+    {
+      "component_id": "testimonial_feedback_board",
+      "status": "candidate",
+      "role": "testimonial-style review presentation",
+      "buyer_question": "How should real review evidence be presented?",
+      "required_inputs": ["actual_reviews_or_explicit_preview_mode", "brand_palette"],
+      "output_type": "png",
+      "source_size": "1140x520",
+      "invariants": [
+        "left-side feedback title",
+        "review card layout inspired by testimonial banner",
+        "preview mode must be labeled",
+        "no fake names, fake dates, or fake star ratings"
+      ],
+      "allowed_variations": ["one_highlight_card", "three_card_layout", "four_card_layout"],
+      "failure_modes": ["fake_testimonial", "confused_with_qa", "too_much_text", "low_contrast"],
+      "validator_checks": ["faq_truth_policy", "claim_evidence_policy", "mobile_readability"]
+    },
+    {
+      "component_id": "manner_brand_closer",
+      "status": "stable",
+      "role": "brand confidence close",
+      "buyer_question": "Can I trust this brand style and support process?",
+      "required_inputs": ["BrandKit", "allowed_service_facts_or_neutral_brand_values"],
+      "output_type": "gif_or_png",
+      "source_size": "1140x420",
+      "invariants": [
+        "large brand text",
+        "three small proof/value cues maximum",
+        "subtle shine sweep only",
+        "no unsupported delivery/return/warranty promise"
+      ],
+      "allowed_variations": ["black_gold", "black_teal_orange", "black_blue_green"],
+      "failure_modes": ["rough_black_cta_box", "unsupported_service_claim", "too_many_icons"],
+      "validator_checks": ["claim_evidence_policy", "mobile_readability", "gif_policy"]
+    },
+    {
+      "component_id": "excitat_trust_banner",
+      "status": "candidate",
+      "role": "brand trust banner based on early dark parcel template",
+      "buyer_question": "Can I trust this brand style and support process?",
+      "required_inputs": ["BrandKit", "people_or_parcel_background", "allowed_service_facts_or_neutral_brand_values"],
+      "output_type": "gif_or_png",
+      "source_size": "1140x456",
+      "invariants": [
+        "brand text is EXCITAT",
+        "people/parcel scene on one side",
+        "three neutral trust cues maximum",
+        "service claims require evidence"
+      ],
+      "allowed_variations": ["black_gold", "clean_white", "category_accent"],
+      "failure_modes": ["unsupported_delivery_claim", "trademark_misuse", "rough_black_cta_box", "overfilled_background"],
+      "validator_checks": ["claim_evidence_policy", "asset_rights_policy", "mobile_readability", "gif_policy"]
+    }
+  ],
+  "selector_rules": {
+    "baby": [
+      "manner_scenario_banner",
+      "first_screen_anchor_triplet",
+      "mixed_image_text_block",
+      "step_highlight_gif",
+      "spec_icon_board",
+      "qa_buyer_question_board",
+      "manner_review_preview_board",
+      "manner_brand_closer"
+    ],
+    "ev": [
+      "manner_scenario_banner",
+      "first_screen_anchor_triplet",
+      "mixed_image_text_block",
+      "spec_icon_board",
+      "qa_buyer_question_board",
+      "manner_review_preview_board",
+      "manner_brand_closer"
+    ],
+    "brand_trust": [
+      "manner_scenario_banner",
+      "qa_buyer_question_board",
+      "manner_brand_closer"
+    ]
+  },
+  "output_contract": {
+    "required_files": [
+      "detail.html",
+      "preview_mobile.html",
+      "DESIGN_SPEC.json",
+      "validation_report.json",
+      "media_asset_index.json"
+    ],
+    "component_record_fields": [
+      "component_id",
+      "component_version",
+      "buyer_question",
+      "input_refs",
+      "asset_path",
+      "html_snippet",
+      "dimensions",
+      "evidence_refs",
+      "risk_level",
+      "mobile_preview_status",
+      "production_notes"
+    ],
+    "acceptance": [
+      "validator_status_pass",
+      "mobile_390_preview_readable",
+      "no_unverified_strong_claims",
+      "no_fake_reviews",
+      "no_old_brand_final_without_cleanup_note"
+    ]
+  }
+}
