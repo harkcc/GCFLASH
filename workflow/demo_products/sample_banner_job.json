@@ -1,0 +1,21 @@
+{
+  "product_image": "output/emag_exit_two_product_stable_components_v4/assets/D6MHW43BM/12.jpg",
+  "product_title": "EXCITAT Fast EV Cable",
+  "attributes": [
+    "Type 2 Male-to-Female connection",
+    "22kW Three Phase power supply",
+    "IP65 waterproof protection",
+    "Includes durable storage bag"
+  ],
+  "style": "glassmorphism",
+  "colors": {
+    "color_1": "deep violet",
+    "color_2": "electric indigo",
+    "accent_color": "bright magenta"
+  },
+  "dimensions": {
+    "width": 1140,
+    "height": 456
+  },
+  "layout": "product-right"
+}
