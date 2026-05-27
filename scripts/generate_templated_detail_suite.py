@@ -167,6 +167,15 @@ def draw_brand_tag(
 def generate_bg(name: str, prompt: str, width: int, height: int, run_ai: bool) -> Path:
     bg_file = OUT / f"bg_{name}_{width}x{height}.png"
     if bg_file.exists():
+        # Verify size
+        try:
+            img = Image.open(bg_file)
+            if img.size != (width, height):
+                print(f"-> Resizing cached background {bg_file.name} to {width}x{height}...")
+                img = img.resize((width, height), Image.Resampling.LANCZOS)
+                img.save(bg_file)
+        except Exception as e:
+            print(f"Warning: error loading cache {bg_file.name}: {e}")
         return bg_file
         
     if not run_ai:
@@ -198,7 +207,18 @@ def generate_bg(name: str, prompt: str, width: int, height: int, run_ai: bool) -
     if not images:
         raise RuntimeError("fal.ai returned no images")
     url = images[0]["url"]
-    urlretrieve(url, bg_file)
+    
+    # Download to temporary file, resize to exact dimensions, and save
+    temp_download = OUT / f"temp_{name}_gen.png"
+    urlretrieve(url, temp_download)
+    img = Image.open(temp_download)
+    if img.size != (width, height):
+        print(f"-> Resizing downloaded background to {width}x{height}...")
+        img = img.resize((width, height), Image.Resampling.LANCZOS)
+    img.save(bg_file)
+    if temp_download.exists():
+        temp_download.unlink()
+        
     return bg_file
 
 
