@@ -1,0 +1,8 @@
+interface:
+  display_name: "OZON Image Production Agent"
+  short_description: "Analyze, prompt, generate, overlay, and QA ecommerce hero images."
+  brand_color: "#00E5FF"
+  default_prompt: "Use $ozon-image-production-agent to generate a marketplace main image from my product photo and specs."
+policy:
+  allow_implicit_invocation: true
+
