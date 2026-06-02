@@ -1,17 +1,17 @@
 
 Gemini
 
-AIzaSyBNAAGlS6etxXgcijR-aTzbOU56QaCPZLI
+Use `GEMINI_KEY` from local `.env`; do not store API keys in this file.
 
   
 fai.ai
 
-b66420fa-3d16-47f9-8f60-c4369eebcc7a:cf11ed54977c84f01dc2364eeba10806
+Use the local provider key from `.env`; do not store API keys in this file.
 
   
 Qwen:
 
-sk-a4924ee576b84496baa1330c8c0414dc
+Use the local provider key from `.env`; do not store API keys in this file.
 
 
 
@@ -89,5 +89,4 @@ https://s13emagst.akamaized.net/products/104431/104430094/images/res_4aeddeddb7a
 2. 创意构思：结合用户需求和运营策略，制定设计方案。
 3. 设计执行：使用专业工具（如 Photoshop、Illustrator 生成图）制作高质量图片。
 4. 测试优化：通过 A/B 测试和数据分析持续优化设计。
-
 

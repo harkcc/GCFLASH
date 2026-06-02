@@ -5,8 +5,12 @@ import { fal } from "@fal-ai/client";
 import fs from "fs";
 import https from "https";
 
+const falKey = process.env.FAL_KEY;
+if (!falKey) {
+  throw new Error("Missing FAL_KEY environment variable.");
+}
 fal.config({
-  credentials: "b66420fa-3d16-47f9-8f60-c4369eebcc7a:cf11ed54977c84f01dc2364eeba10806"
+  credentials: falKey
 });
 
 const OUTPUT_DIR = "./output_test";

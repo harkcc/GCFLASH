@@ -49,7 +49,9 @@ This skill provides a standardized, high-conversion visual production workflow f
 ```
   +-------------------------------------------------------------+
   |              1. ANALYSIS & EXTRACTION (分析与提取)           |
+  |  - Inspect Source Product Image Before Choosing Background   |
   |  - Identify Core Product Category & Silhouette Shape        |
+  |  - Lock Product Physics, Accessory Relations & Support Logic|
   |  - Extract Primary Numeric Value & 2-3 High-Impact Selling  |
   |  - Select Visual Color Archetype based on Ozon Rules        |
   +------------------------------+------------------------------+
@@ -57,6 +59,8 @@ This skill provides a standardized, high-conversion visual production workflow f
                                  v
   +------------------------------+------------------------------+
   |              2. PROMPT GENERATION (提示词生成)               |
+  |  - Route Background from Product Usage & Object Logic        |
+  |  - Choose Product Hero Pose Inside The Fixed Main Layout     |
   |  - Formulate Stable background prompt recipe                 |
   |  - Enforce "Product Giantification" (60%+ canvas area)       |
   |  - Carve out safe zones for overlays & numeric badges        |
@@ -78,17 +82,43 @@ This skill provides a standardized, high-conversion visual production workflow f
 Before generating any visual assets, analyze the product metadata to extract the exact selling hooks that fit OZON's user behaviors.
 
 ### 2.1 Product Analysis Checklist
-1. **Silhouette Definition**: What is the physical object? (e.g., handheld vertical vacuum cleaner, pruning shears). It must be easily recognizable within **0.5 seconds**.
-2. **Numeric Sell Point**: Identify the highest-impact number + unit.
+1. **Source Image Truth**: What exact object, accessories, colors, ports, support points, and material details are visible in the uploaded product image? These are immutable unless the user explicitly asks for a redesign.
+2. **Object Logic**: How does the product physically work or sit in the scene? Identify mounts, handles, charging slots, plugs, cables, hinges, pumps, nozzles, display screens, or support feet that must remain logical.
+3. **Silhouette Definition**: What is the physical object? (e.g., handheld vertical vacuum cleaner, pruning shears). It must be easily recognizable within **0.5 seconds**.
+4. **Numeric Sell Point**: Identify the highest-impact number + unit.
    - *Good*: `960 mAh`, `30 дней` (30 days), `6 шт` (6 pieces), `30 мм` (30mm cut capacity), `95000 PA`.
    - *Avoid*: Vague descriptions like "super large capacity", "very long battery life".
-3. **Trust Elements**: Select 1-2 trust claims to be visualized as badges/shields:
+5. **Trust Elements**: Select 1-2 trust claims to be visualized as badges/shields:
    - `гарантия` (warranty/guarantee)
    - `комплект` (complete kit/accessories included)
    - `оригинал` (original brand guarantee)
-4. **Contextual Scenario**: Identify where the product is used (e.g., outdoors for tools, kitchen for pots, wrist for watch). This will be shown in a minor scenario inset/badge.
+6. **Contextual Scenario**: Identify where the product is used (e.g., outdoors for tools, kitchen for pots, wrist for watch). This determines the background before any decorative styling is chosen.
 
-### 2.2 Marketplace Color Archetype Matching
+### 2.2 Background Scene Depth Decision
+The background must explain the product's real usage context without competing with it. Do not reduce the scene to a decorative wall, table, texture, or gradient.
+
+1. **Support Surface**: Identify the physical surface that carries the product: gaming wall, electronics bench, SUV trunk, study desk, kitchen counter, garden ground, or workshop table.
+2. **Category Depth Cue**: Add one or two low-detail background cues that prove the product category: blurred monitor/shelf for gaming gear, PCB/soldering tools for measurement devices, folded seats for car accessories, window/telescope/books for STEM kits.
+3. **Product-Derived Lighting Plan**: Before writing scene prose, infer the light from the product and usage context. This is an internal reasoning step, not a rigid label to paste into the final prompt.
+   - **Physical light source**: Name where the light comes from: probe tips touching PCB pads, RGB charger dock, glowing STEM sun core, car side windows, room lamps, workbench task light, outdoor sky, or a neutral studio source.
+   - **Commercial role**: Decide what the light proves: active function, material texture, product scale, safe installation, cozy usage context, or clean catalog readability.
+   - **Visible effect**: Describe the result in natural image language: small controlled sparks, soft RGB wash under controllers, warm highlights on gears, daylight across fabric texture, realistic contact shadows, or a subtle rim separating the silhouette.
+   - **Overuse risk**: Remove neon, beams, dramatic rim glow, sparks, or strong color cast unless the product or scene gives them a believable physical source.
+4. **No Unjustified Glow**: Glow effects are allowed only when they explain the product or scene. A mattress, soft good, storage item, or simple accessory usually needs clean daylight or soft indoor light, not tech lighting.
+5. **Shallow Depth Control**: Category cues must stay blurred, cropped, or pushed to the side/background. They should create depth, not visual noise.
+6. **No Empty Wall Default**: A clean wall can be the support surface, but it should still include a subtle scene cue or depth line when the product category benefits from context.
+
+### 2.3 Product Hero Pose Decision
+The universal Ozon card layout controls the page skeleton, but it does not decide how the product enters the center product zone. Before writing the final image prompt, choose the product's strongest hero pose and staging logic.
+
+1. **Center Dominance Is Fixed**: The product should remain near the visual center and occupy roughly 60-75% of the canvas.
+2. **Pose Is Dynamic**: Choose front view, slight side angle, 3/4 angle, hanging, mounted, expanded, plugged-in, or in-use staging based on the product's shape and function.
+3. **Function Must Become Visible**: If a product's value is only clear through action, add physically believable active elements. Examples: oscilloscope probes connected to ports and touching a PCB, a charger holding controllers, a mattress fitted inside a car trunk, or a STEM model glowing from its sun core.
+4. **Action Needs Contact And Outcome**: Do not describe accessories as merely "near", "toward", or "around" the product. Name the contact point and visible result: probe tips touch PCB pads and create a small controlled spark, a charging dock emits RGB light under the controllers, a pump nozzle connects to the mattress valve, or a support bracket visibly carries the mounted object.
+5. **Accessories Must Explain The Product**: Cables, nozzles, pumps, brackets, docks, handles, planets, screws, and support feet should be placed where they make the product easier to understand, not scattered as decoration.
+6. **No Default Front-View Bias**: Do not default to a flat catalog front view when a slight side or 3/4 pose better shows depth, function, scale, or usage logic.
+
+### 2.4 Marketplace Color Archetype Matching
 Choose one of the three high-conversion Ozon color palettes:
 - **Black + Green** (科技/户外 - Tech/Outdoor): For electronic gadgets, power tools, smart devices.
 - **Grey + Orange** (工具/汽配 - Hardware/Automotive): For hand tools, car accessories, rugged gear.
@@ -101,15 +131,19 @@ Choose one of the three high-conversion Ozon color palettes:
 Generate a prompt recipe for the AI image generation model (e.g., Midjourney, Stable Diffusion, SDXL, FLUX) to render the premium background, lighting, and product staging environment.
 
 ### 3.1 Prompt Synthesis Rules
-1. **Background Contrast**: Background must be simple, low-key, and high-contrast relative to the product. Use terms like "studio background, subtle gradient, minimalist staging, soft vignette". Avoid busy, chaotic backdrops.
-2. **Product Dominance**: The main product shape must occupy **60%+** of the canvas. Use prompt terms like "centered, massive product focus, heroic scale, close-up details".
-3. **Safe Text Zones**: Carve out empty, clean zones for overlays (top-left for core numeric badge, right side for feature badges, bottom for kit accessories). Use prompt terms like "clean copy space, clean composition, minimalist background".
-4. **Depth & Shadows**: Avoid floatation unless it fits a tech product. Use "realistic contact shadow, grounded staging, studio lighting, volumetric shadows" to establish trust and physical quality.
+1. **Product-First Background Routing**: Choose the scene from the source product and its physical use case. Measurement devices belong in lab/workbench contexts, auto comfort products in vehicle interiors, gaming accessories near gaming walls/setups, STEM kits in study/science contexts.
+2. **Scene Depth Structure**: State the support surface, one low-detail category depth cue, and the product-derived light source. Avoid flat texture-only backgrounds.
+3. **Background Contrast**: Background must be simple, low-key, and high-contrast relative to the product. Use terms like "shallow depth-of-field usage scene, subtle vignette, clean copy space". Avoid busy, chaotic backdrops.
+4. **Product Dominance**: The main product shape must occupy **60%+** of the canvas. Use prompt terms like "centered, massive product focus, heroic scale, close-up details".
+5. **Object Logic Preservation**: The prompt must explicitly preserve accessory placement, cable/port logic, mounts, charging bases, support points, handles, and other physical relationships.
+6. **Hero Pose Expression**: State the chosen product pose and active physical interaction in the prompt. The product should enter the fixed Ozon layout through a product-specific pose, not a generic centered front view.
+7. **Safe Text Zones**: Carve out empty, clean zones for overlays (top-left for core numeric badge, right side for feature badges, bottom for kit accessories). Use prompt terms like "clean copy space, clean composition, minimalist background".
+8. **Depth & Shadows**: Avoid floatation unless it fits a tech product. Use product-matched contact shadows, ambient depth, rim separation, reflection, or glow only when the scene has a physical reason for it.
 
 ### 3.2 Prompt Template
 Use the following structured format to generate prompts:
 ```text
-[Main Product Subject with description] placed at [angle/isometric view], occupying 60% of the canvas. Grounded on [surface description] with realistic contact shadows. Background is a [background description with 2-color gradient/subtle textures], creating a strong contrast with the product. High-end studio lighting, volumetric light rays, highlighting details of [key product parts]. Clean empty zones in top-left and right sides for e-commerce text overlays. Photorealistic, ultra-detailed, commercial advertising style.
+[Main Product Subject with description] placed at [angle/isometric view], occupying 60% of the canvas. Grounded on [surface description] with realistic contact shadows. Background is a [product-specific usage scene] with [low-detail depth cue]. Light comes from [physical source] and creates [visible effect on product/material/action]. Clean empty zones in top-left and right sides for e-commerce text overlays. Photorealistic, ultra-detailed, commercial advertising style.
 ```
 
 ---
@@ -161,4 +195,3 @@ node scripts/compile_ecommerce_prompt.mjs \
   --marketplace Ozon \
   --text-policy deterministic_overlay
 ```
-

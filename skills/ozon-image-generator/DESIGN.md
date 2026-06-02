@@ -9,10 +9,14 @@
 OZON is a fast-paced, high-competition marketplace. Visual designs must be **direct, punchy, and structured**.
 - **Product-First Atmosphere**: The product is the absolute focal point. Do not hide it behind smoke, overly complex glowing grids, or massive overlay banners.
 - **Low-Key Backgrounds**: Backgrounds must use subtle, muted gradients or shallow depth-of-field scenes. The background's only job is to push the product forward.
+- **Contextual Depth**: A background should have three quiet layers: the physical support surface, one low-detail category cue, and a product-derived light source. Avoid empty texture-only walls when a blurred usage cue can explain the product.
+- **Lighting Must Have A Source**: Infer light from the product and scene before choosing style. Product-emissive light, environmental light, and studio separation light can coexist, but each visible glow, spark, beam, or color wash must have a believable physical source and a commercial job.
 - **Atmosphere Guidelines**:
-  - *Tech/Electronics*: Matte graphite slate, dark anodized metal, subtle neon glows.
-  - *Garden/Tools*: Light wooden chopping blocks, concrete tables, blurred forest green.
-  - *Home Appliances*: Neutral warm plaster, beige tiles, soft studio window shadow.
+  - *Tech/Electronics*: Matte graphite slate, lab or workbench depth, display/probe/task light only where it proves function.
+  - *Gaming Accessories*: Dark gaming wall support, subtle cyan/RGB edge light from dock, monitor, or room strips; keep the wall clean.
+  - *Auto Comfort*: Real vehicle interior, soft car-window daylight, warm practical shadows, no unnecessary neon.
+  - *Garden/Tools*: Real outdoor/workbench surface, daylight or task light that clarifies material, scale, and cutting/contact points.
+  - *Home Appliances*: Neutral home surface, window/room/studio light that clarifies shape and cleanliness without theatrical glow.
 
 ---
 
@@ -90,6 +94,7 @@ OZON main images must strictly follow the **Universal Main Image Structure**:
 ```
 
 - **Product Weight**: The product must occupy **60% to 75%** of the canvas. It must be placed centrally or diagonally, commanding the visual space.
+- **Dynamic Product Pose**: The center product zone is fixed, but the product pose is chosen per SKU. Use front view only when it is the clearest view; otherwise choose a slight side angle, 3/4 angle, mounted state, expanded state, plugged-in state, or accessory-connected state that better explains the product's function.
 - **Safe Margins**: Maintain a minimum **15px safe margin** around all text overlays, badges, and the canvas edge. No text or badges should touch the product contour.
 - **Reading Order**: Eye should travel: Product Main Body (0.5s) -> Large Numeric Accent (1s) -> Detail/Trust Badges (3s).
 

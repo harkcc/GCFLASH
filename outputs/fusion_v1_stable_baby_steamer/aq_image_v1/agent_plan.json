@@ -1,0 +1,73 @@
+{
+  "image_name": "excitat_baby_food_steamer_blender",
+  "product_analysis": {
+    "category": "baby_appliance",
+    "core_object": "baby food steamer blender",
+    "immutable_features": [
+      "white plastic body",
+      "transparent blending jar with inner blade",
+      "black oval LED control panel",
+      "grey handles and lids"
+    ],
+    "accessories_or_parts": [
+      "steamer lid",
+      "blender lid",
+      "blender jar assembly"
+    ],
+    "primary_value": "5-in-1 multi-functional steam, blend, heat, and sterilize meal preparation with LED protection",
+    "scene_logic": "Bright, clean kitchen environment emphasizing healthy, organic, and safe baby meal prep",
+    "background_support_surface": "clean white wooden kitchen counter",
+    "background_depth_cues": "blurred warm kitchen background with baby bottle and fresh vegetables",
+    "functional_lighting_source": "natural morning window daylight",
+    "lighting_role": "creates a bright, clean, organic feel and highlights the product's white glossy texture",
+    "physical_light_source": "soft diffused side-window sunlight",
+    "lighting_effect_on_scene": "soft warm highlights and gentle ambient glow across the workspace",
+    "shadow_and_depth_behavior": "realistic contact shadows directly beneath the blender base and carrot props",
+    "lighting_overuse_risk": "avoid dark cinematic tones, heavy neon glows, or high-contrast tech backlights",
+    "hero_pose": "centered 3/4 angle view showcasing both the steaming tower and the blender jar",
+    "active_physical_interaction": "active pouring of fresh orange carrot puree into a small baby bowl in the foreground",
+    "object_logic_risks": [
+      "misalignment of the blending jar to the motor base",
+      "distortion of the LED display panel icons"
+    ],
+    "lighting_constraints": "Use natural daylight only; avoid neon or cool tech lighting schemes",
+    "lighting_strategy": "Warm high-key kitchen environment lighting with gentle contact shadows"
+  },
+  "generation_directives": {
+    "mode": "image-to-image",
+    "aspect_ratio": "1:1",
+    "product_fidelity": "Keep the steamer blender body, jar silhouette, and control panel design completely identical to the source",
+    "allowed_edits": [
+      "integrate product onto a warm kitchen countertop",
+      "add natural soft daylight and shadows"
+    ],
+    "forbidden_edits": [
+      "modifying the brand logo shape",
+      "altering the blender control screen",
+      "changing the product color scheme"
+    ],
+    "layout": "centered product layout with top-left title, top-right brand shelf, and right-side vertical badges",
+    "repair_priority": [
+      "LED panel text clarity",
+      "transparent jar realism",
+      "smooth white body texture"
+    ]
+  },
+  "overlay_copy": {
+    "brand": "EXCITAT",
+    "title": "BABY FOOD STEAMER",
+    "subtitle": "Multi-Functional Maker",
+    "numeric_badge": "5-in-1",
+    "feature_badges": [
+      "Steam & Blend",
+      "LED Control",
+      "Easy to Clean"
+    ],
+    "trust_badge": "EXCITAT Safe Guarantee",
+    "support_area": "Carrot puree pouring into a bowl"
+  },
+  "prompt": "Generate a 1:1 square Ozon main image card, not a wide banner or landscape poster. Keep the product centered and occupying 60-75% of the square canvas. Extract the original baby food steamer blender from the source image. Keep the steamer blender body, jar silhouette, and control panel design completely identical to the source. Preserve white plastic body, transparent blending jar with inner blade, black oval LED control panel, and grey handles and lids 100% exact and undeformed. Visual prototype: Clean Kitchen / Baby Care Appliance Card. Staging: centered 3/4 angle view showcasing both the steaming tower and the blender jar; grounded on clean white wooden kitchen counter; active pouring of fresh orange carrot puree into a small baby bowl in the foreground. Background is shallow-depth category context with blurred warm kitchen background with baby bottle and fresh vegetables. Lighting comes from soft diffused side-window sunlight, creating soft warm highlights and gentle ambient glow across the workspace. realistic contact shadows directly beneath the blender base and carrot props. Overlay English layout: 1) Top-right: slanted teal/white EXCITAT brand shelf with a soft orange baby-care accent and bold white logo. 2) Top-left: bold white 'BABY FOOD STEAMER', subtitle 'Multi-Functional Maker', accent badge '5-in-1'. 3) Right side: rounded/icon feature badges 'Steam & Blend', 'LED Control', and 'Easy to Clean'. 4) Right side circular badge: 'Bottle Sterilizer'. Clean layout, professional advertising style.",
+  "planner_prompt": "Extract the original white baby food steamer blender from the source image. Retain its exact white body, transparent blending jar, and black LED panel without deformation. Stage the product at a 3/4 angle on a clean white kitchen counter next to fresh carrots, under soft natural morning window light that casts realistic contact shadows onto a blurred domestic kitchen background. Integrate e-commerce card overlays: 1) top-right white EXCITAT brand shelf, 2) top-left title 'BABY FOOD STEAMER' with '5-in-1' numeric badge, 3) vertical feature badges on the right side. Clean layout, professional advertising style.",
+  "source_facts_text": "Excitat baby food steamer blender\nExcitat® 婴儿奶粉蒸煮搅拌机，多功能，LED防干烧报警，易于使用和清洁，可加热和消毒奶瓶，操作灵活，搅拌强劲，220V，尺寸：31x13x20.3厘米，白色。核心卖点：蒸煮、搅拌、加热、消毒奶瓶、LED防干烧报警、强劲搅拌、易清洁。\nUse the uploaded source image as product truth: white baby food steamer blender, transparent mixing jar, black LED control panel, carrot puree usage cue, EXCITAT brand.",
+  "prompt_compiler": "fusion_v1"
+}

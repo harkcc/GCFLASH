@@ -4,7 +4,11 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import fs from "fs";
 
-const genAI = new GoogleGenerativeAI("AIzaSyBNAAGlS6etxXgcijR-aTzbOU56QaCPZLI");
+const geminiKey = process.env.GEMINI_KEY;
+if (!geminiKey) {
+  throw new Error("Missing GEMINI_KEY environment variable.");
+}
+const genAI = new GoogleGenerativeAI(geminiKey);
 
 const productInfo = {
   brand: "Excitat",

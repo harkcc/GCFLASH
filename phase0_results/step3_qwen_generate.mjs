@@ -5,7 +5,10 @@ import fs from "fs";
 import path from "path";
 import https from "https";
 
-const API_KEY = "sk-a4924ee576b84496baa1330c8c0414dc";
+const API_KEY = process.env.QWEN_API_KEY;
+if (!API_KEY) {
+  throw new Error("Missing QWEN_API_KEY environment variable.");
+}
 const BASE_URL = "https://dashscope.aliyuncs.com";
 const OUTPUT_DIR = "./output_qwen";
 
