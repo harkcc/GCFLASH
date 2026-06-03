@@ -22,10 +22,29 @@ The local comparison had three meaningful versions:
 3. `fusion`: the selected version after square-size control and product-lighting
    routing were compared.
 
+Current release line:
+
+- `ozon-fusion-v1.0`: locked fusion workflow. Product-first scene routing,
+  background depth, lighting reasoning, brand shelf, and square main-card scale.
+- `ozon-fusion-v2.0`: parameter story layout. The planning model decides which
+  verified facts become the first-read hero value, secondary slabs,
+  part-anchored callouts, and trust/support content.
+- `ozon-fusion-v3.0`: guard workflow. Guard checks run after planning and after
+  prompt compilation. They do not add a late prompt suffix; they sanitize the
+  plan before the final prompt is assembled and emit a report so strictness can
+  be tuned.
+
 `fusion_v1` means the planning model may analyze the product, but the final
 image prompt is compiled by the fusion skeleton. Do not use the planner's raw
 final paragraph as the production prompt, because that path can drop selected
 badges or invent extra modules such as bottom STEM/SKILL panels.
+
+`guard-level=balanced` is the default for v3.0. It removes clear mistakes such
+as unverified numeric combinations, repeated parameter values across regions,
+unverified warranty/safety/compliance claims, and value blocks connected by long
+leader-line logic. Borderline choices become report warnings instead of hard
+failures. `guard-level=strict` may block prompt compilation and should be used
+for regression tests, not normal creative exploration.
 
 ## Context Sources That Influence The Prompt
 
@@ -105,6 +124,23 @@ The final image prompt must be compiled from these layers, in this order:
      dimensions. Capacity is useful, but should not automatically outrank modes
      or motor performance.
    - Use product-specific hooks, not generic "premium quality" filler.
+
+4a. **Guard checkpoint**
+   - Run a plan guard before compiling the final image prompt. It checks the
+     planner's visible claims against the submitted title/details/source facts,
+     removes unsupported numbers or trust claims, and prevents the same value
+     from appearing in multiple regions.
+   - Guard logic validates source, role separation, and duplication. It must not
+     choose the most important parameter by regex, unit scoring, or hard-coded
+     category rules; that remains model reasoning in the parameter story.
+   - Use a second compiled-prompt guard to inspect quoted visible text after the
+     prompt is assembled. The output should include `guard_report.json` so the
+     team can judge whether the guard is too loose or too strict.
+   - Main numeric value islands and secondary slabs must remain freestanding
+     adjacent information blocks. Only part-level callouts may use short dots or
+     compact elbow connectors.
+   - Bottom/corner support is for trust, bundle, or accessory information only.
+     It must not repeat the hero value or secondary parameter rail.
 
 5. **Category router and background depth**
    - Map each product to a frame family, accent palette, and ambient staging

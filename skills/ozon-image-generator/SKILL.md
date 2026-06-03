@@ -69,6 +69,8 @@ This skill provides a standardized, high-conversion visual production workflow f
                                  v
   +------------------------------+------------------------------+
   |               3. CHECK & OPTIMIZE (检查与优化)               |
+  |  - Run v3 Guard after Plan and before final image prompt     |
+  |  - Remove unsupported numbers, duplicate claims & fake trust |
   |  - Run Mobile Thumbnail Scaling legibility check             |
   |  - Audit typography & text density (max 3-4 words/line)     |
   |  - Verify 3-color palette limit & high-contrast validation   |
@@ -114,7 +116,31 @@ Before generating any visual assets, analyze the product metadata to extract the
    - `гарантия` (warranty/guarantee)
    - `комплект` (complete kit/accessories included)
    - `оригинал` (original brand guarantee)
+   These claims must be verified in the submitted product title, detail text,
+   source image notes, or explicit product facts. Do not invent warranty,
+   official/original, certification, BPA-free, safety, or compliance language.
 6. **Contextual Scenario**: Identify where the product is used (e.g., outdoors for tools, kitchen for pots, wrist for watch). This determines the background before any decorative styling is chosen.
+
+### 2.1a v3 Guard Checkpoint
+Before compiling the final image prompt, run a guard pass on the plan.
+
+1. **Fact Guard**: Visible numeric/spec claims must come from submitted facts.
+   `5-in-1` or similar combined numbers require explicit source wording; do not
+   infer them from a list of features.
+2. **Role Guard**: Classify each claim into one role only: hero value,
+   secondary slab, part callout, bundle/accessory, or trust badge.
+3. **Duplicate Guard**: The same value or selling point must not appear in two
+   regions. If `220V` is a value slab, it cannot also appear in the bottom trust
+   area.
+4. **Connector Guard**: Hero and secondary parameter blocks are freestanding
+   value islands/slabs. Only small part callouts may use short connector dots or
+   compact elbow lines.
+5. **Trust Guard**: Bottom/corner support is for verified trust, kit, brand, or
+   accessory information. It cannot repeat functional parameters and cannot
+   invent warranty or safety claims.
+6. **Report Guard**: Emit a guard report with removals and warnings so the
+   strictness can be tuned. Guard should sanitize obvious errors in balanced
+   mode, but only strict mode should block generation.
 
 ### 2.2 Background Scene Depth Decision
 The background must explain the product's real usage context without competing with it. Do not reduce the scene to a decorative wall, table, texture, or gradient.
@@ -174,6 +200,18 @@ Use the following structured format to generate prompts:
 ## 4. Step 3: Check & Optimize (检查与优化)
 
 Review the generated candidate layout against the Ozon QA Scorecard before final output.
+
+### 4.0 Plan/Prompt Guard Verification
+- [ ] **Guard Report Exists**: The run writes `guard_report.json` and the
+  report status is reviewed.
+- [ ] **No Unsupported Combined Numbers**: Claims like `5-in-1`, `3-in-1`, or
+  `100% fit` are present only when explicitly supplied.
+- [ ] **No Cross-Region Repetition**: Hero value, secondary slabs, feature
+  badges, trust badge, and support area do not repeat the same value or claim.
+- [ ] **No Fake Trust Claims**: Warranty, official/original, BPA-free, safety,
+  CE/FDA, food-grade, or medical claims are verified before display.
+- [ ] **Value Blocks Stay Freestanding**: Numeric value islands/slabs do not use
+  long connector lines. Only part callouts use short connectors.
 
 ### 4.1 Mobile Verification Checklist
 - [ ] **Legibility at 160px**: Shrink the image to mobile preview size. Is the product outline clearly identifiable? Are the key numbers legible?

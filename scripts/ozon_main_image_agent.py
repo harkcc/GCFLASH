@@ -23,6 +23,7 @@ DEFAULT_CONTRACT_FILES = [
     REPO / "skills" / "ozon-image-generator" / "RUNTIME_CONTEXT.md",
 ]
 DEFAULT_PROMPT_COMPILER = "fusion_v1"
+DEFAULT_GUARD_LEVEL = "balanced"
 
 PLANNER_SYSTEM = """You are the planning model for an e-commerce main-image generation agent.
 
@@ -497,6 +498,297 @@ def visible_text_is_verified(text: str, source_facts: str) -> bool:
     return bool(numbers) and all(number in compact_source for number in numbers)
 
 
+def source_fact_is_verified(source_fact: str, source_facts: str) -> bool:
+    fact = compact_fact_text(source_fact)
+    if not fact:
+        return False
+    source = compact_fact_text(source_facts)
+    if fact in source:
+        return True
+    numbers = re.findall(r"\d+(?:\.\d+)?", source_fact)
+    return bool(numbers) and all(number in source for number in numbers)
+
+
+def needs_verified_text(text: str) -> bool:
+    lowered = clean_phrase(text).lower()
+    return has_digits(lowered) or any(term in lowered for term in GUARD_VALIDATION_TERMS)
+
+
+def guarded_visible_text_is_verified(text: str, source_facts: str, source_fact: str = "") -> bool:
+    text = clean_phrase(text)
+    if not text:
+        return False
+    if not needs_verified_text(text):
+        return True
+    if has_digits(text) and visible_text_is_verified(text, source_facts):
+        return True
+    combined_source = compact_fact_text(f"{source_facts} {source_fact}")
+    compact_text = compact_fact_text(text)
+    if compact_text and compact_text in combined_source:
+        return True
+    validation_hits = [
+        compact_fact_text(term)
+        for term in GUARD_VALIDATION_TERMS
+        if compact_fact_text(term) and compact_fact_text(term) in compact_text
+    ]
+    if validation_hits:
+        return all(term in combined_source for term in validation_hits)
+    if source_fact and source_fact_is_verified(source_fact, source_facts):
+        return True
+    return False
+
+
+def numeric_claim_keys(text: str) -> set[str]:
+    text = clean_phrase(text).lower()
+    keys: set[str] = set()
+    combo_re = re.compile(r"\d+(?:\.\d+)?\s*[- ]?\s*in\s*[- ]?\s*\d+", re.I)
+    for match in combo_re.finditer(text):
+        keys.add(compact_fact_text(match.group(0)))
+    unit_re = re.compile(
+        r"\d+(?:\.\d+)?\s*(?:"
+        r"mah|ms/s|m/s|mhz|ghz|hz|rpm|r/min|lm|k|kw|w|v|a|gb|tb|"
+        r"ml|l|cm|mm|m|kg|g|pcs|pieces|presets?|modes?|speeds?|"
+        r"мл|л|см|мм|кг|гб|вт|в|об/мин"
+        r")\b",
+        re.I,
+    )
+    covered: list[tuple[int, int]] = []
+    for match in unit_re.finditer(text):
+        keys.add(compact_fact_text(match.group(0)))
+        covered.append(match.span())
+    for match in re.finditer(r"\d+(?:\.\d+)?\+?", text):
+        if any(start <= match.start() and match.end() <= end for start, end in covered):
+            continue
+        keys.add(compact_fact_text(match.group(0)))
+    return {key for key in keys if key}
+
+
+def claim_keys_for_text(text: str) -> set[str]:
+    keys = set(numeric_claim_keys(text))
+    lowered = clean_phrase(text).lower()
+    compact_lowered = compact_fact_text(lowered)
+    for term in DUPLICATE_CLAIM_TERMS:
+        compact_term = compact_fact_text(term)
+        if compact_term and compact_term in compact_lowered:
+            keys.add(compact_term)
+    return keys
+
+
+def claim_keys_for_parameter(item: dict) -> set[str]:
+    value = clean_phrase(item.get("value"))
+    unit = clean_phrase(item.get("unit"))
+    label = clean_phrase(item.get("label"))
+    keys = claim_keys_for_text(" ".join(part for part in [value, unit] if part))
+    if not keys and label:
+        keys = claim_keys_for_text(label)
+    return keys
+
+
+def make_guard_report(level: str) -> dict:
+    return {
+        "version": "3.0",
+        "level": level,
+        "status": "pass",
+        "adjustments": [],
+        "warnings": [],
+        "blocked": [],
+    }
+
+
+def guard_record(report: dict, kind: str, path: str, reason: str, value: object = "") -> None:
+    entry = {"path": path, "reason": reason}
+    if value:
+        entry["value"] = value
+    report.setdefault(kind, []).append(entry)
+    if kind == "blocked":
+        report["status"] = "blocked"
+    elif report.get("status") == "pass":
+        report["status"] = "adjusted"
+
+
+def guard_parameter_item(
+    item: object,
+    source_facts: str,
+    used_keys: set[str],
+    path: str,
+    report: dict,
+) -> dict | None:
+    if not isinstance(item, dict):
+        guard_record(report, "adjustments", path, "dropped non-object parameter item", item)
+        return None
+    if item.get("should_display") is False:
+        return item
+    if not parameter_value_is_verified(item, source_facts):
+        guard_record(report, "adjustments", path, "dropped unverified numeric/spec parameter", item)
+        return None
+    keys = claim_keys_for_parameter(item)
+    if keys & used_keys:
+        guard_record(report, "adjustments", path, "dropped duplicate parameter already assigned to an earlier region", item)
+        return None
+    used_keys.update(keys)
+    return item
+
+
+def guard_callout_item(
+    item: object,
+    source_facts: str,
+    used_keys: set[str],
+    path: str,
+    report: dict,
+    role: str,
+) -> dict | None:
+    if not isinstance(item, dict):
+        guard_record(report, "adjustments", path, f"dropped non-object {role} item", item)
+        return None
+    label = clean_phrase(item.get("label"))
+    source_fact = clean_phrase(item.get("source_fact"))
+    if not label:
+        guard_record(report, "adjustments", path, f"dropped empty {role} item", item)
+        return None
+    if not guarded_visible_text_is_verified(label, source_facts, source_fact):
+        guard_record(report, "adjustments", path, f"dropped unverified numeric/trust {role}", item)
+        return None
+    keys = claim_keys_for_text(label)
+    if keys & used_keys:
+        guard_record(report, "adjustments", path, f"dropped duplicate {role} already used in parameter layout", item)
+        return None
+    used_keys.update(keys)
+    return item
+
+
+def guard_overlay_copy(plan: dict, source_facts: str, used_keys: set[str], report: dict) -> None:
+    copy = plan.get("overlay_copy")
+    if not isinstance(copy, dict):
+        return
+    trust_badge = clean_phrase(copy.get("trust_badge"))
+    if trust_badge:
+        if not guarded_visible_text_is_verified(trust_badge, source_facts):
+            guard_record(report, "adjustments", "overlay_copy.trust_badge", "cleared unverified trust badge; compiler will choose a verified fallback", trust_badge)
+            copy["trust_badge"] = ""
+        else:
+            keys = claim_keys_for_text(trust_badge)
+            if keys and keys & used_keys:
+                guard_record(report, "adjustments", "overlay_copy.trust_badge", "cleared duplicate trust badge already used in parameter layout", trust_badge)
+                copy["trust_badge"] = ""
+    for field in ("subtitle", "numeric_badge", "support_area"):
+        value = clean_phrase(copy.get(field))
+        if not value:
+            continue
+        if not guarded_visible_text_is_verified(value, source_facts):
+            guard_record(report, "adjustments", f"overlay_copy.{field}", "cleared unverified numeric/trust overlay text", value)
+            copy[field] = ""
+            continue
+        keys = claim_keys_for_text(value)
+        if keys and keys & used_keys:
+            guard_record(report, "adjustments", f"overlay_copy.{field}", "cleared duplicate overlay text already used in parameter layout", value)
+            copy[field] = ""
+            continue
+        if field == "subtitle":
+            used_keys.update(keys)
+    feature_badges = []
+    for index, value in enumerate(copy.get("feature_badges", []) or []):
+        text = clean_phrase(value)
+        if not text:
+            continue
+        if not guarded_visible_text_is_verified(text, source_facts):
+            guard_record(report, "adjustments", f"overlay_copy.feature_badges[{index}]", "dropped unverified numeric/trust feature badge", text)
+            continue
+        keys = claim_keys_for_text(text)
+        if keys and keys & used_keys:
+            guard_record(report, "adjustments", f"overlay_copy.feature_badges[{index}]", "dropped duplicate feature badge already used in parameter layout", text)
+            continue
+        feature_badges.append(text)
+    copy["feature_badges"] = feature_badges
+
+
+def guard_plan(plan: dict, level: str = DEFAULT_GUARD_LEVEL) -> dict:
+    report = make_guard_report(level)
+    if level == "off":
+        return report
+    source_facts = clean_phrase(plan.get("source_facts_text"))
+    used_keys: set[str] = set()
+    parameter_story = plan.get("parameter_story")
+    if isinstance(parameter_story, dict):
+        hero = guard_parameter_item(
+            parameter_story.get("hero_parameter"),
+            source_facts,
+            used_keys,
+            "parameter_story.hero_parameter",
+            report,
+        )
+        if hero is None:
+            parameter_story["hero_parameter"] = {
+                "should_display": False,
+                "value": "",
+                "unit": "",
+                "label": "",
+                "source_fact": "",
+                "role_reason": "Guard removed the original hero parameter because it was unverified or duplicated.",
+                "visual_treatment": "",
+            }
+        else:
+            parameter_story["hero_parameter"] = hero
+        secondary = []
+        for index, item in enumerate(parameter_story.get("secondary_parameters", []) or []):
+            guarded = guard_parameter_item(
+                item,
+                source_facts,
+                used_keys,
+                f"parameter_story.secondary_parameters[{index}]",
+                report,
+            )
+            if guarded is not None:
+                secondary.append(guarded)
+        parameter_story["secondary_parameters"] = secondary
+        part_callouts = []
+        for index, item in enumerate(parameter_story.get("part_callouts", []) or []):
+            guarded = guard_callout_item(
+                item,
+                source_facts,
+                used_keys,
+                f"parameter_story.part_callouts[{index}]",
+                report,
+                "part callout",
+            )
+            if guarded is not None:
+                part_callouts.append(guarded)
+        parameter_story["part_callouts"] = part_callouts
+        bundle_or_trust = []
+        for index, item in enumerate(parameter_story.get("bundle_or_trust", []) or []):
+            guarded = guard_callout_item(
+                item,
+                source_facts,
+                used_keys,
+                f"parameter_story.bundle_or_trust[{index}]",
+                report,
+                "bundle/trust",
+            )
+            if guarded is not None:
+                bundle_or_trust.append(guarded)
+        parameter_story["bundle_or_trust"] = bundle_or_trust
+    guard_overlay_copy(plan, source_facts, used_keys, report)
+    plan["_guard_used_claim_keys"] = sorted(used_keys)
+    return report
+
+
+def guard_compiled_prompt(prompt: str, plan: dict, report: dict, level: str = DEFAULT_GUARD_LEVEL) -> dict:
+    if level == "off":
+        return report
+    source_facts = clean_phrase(plan.get("source_facts_text"))
+    quoted = re.findall(r"'([^']+)'", prompt)
+    seen_keys: set[str] = set()
+    for text in quoted:
+        keys = claim_keys_for_text(text)
+        if keys and keys & seen_keys:
+            guard_record(report, "warnings", "compiled_prompt", "duplicate quoted visible text may still appear after compilation", text)
+        seen_keys.update(keys)
+        if not guarded_visible_text_is_verified(text, source_facts):
+            guard_record(report, "blocked" if level == "strict" else "warnings", "compiled_prompt", "compiled prompt contains unverified numeric/trust visible text", text)
+    if "no connector line" not in prompt.lower() and numeric_claim_keys(prompt):
+        guard_record(report, "warnings", "compiled_prompt", "compiled prompt does not explicitly prohibit connector lines on value blocks")
+    return report
+
+
 def choose_value_island(
     hero_parameter: str,
     secondary_parameters: list[str],
@@ -635,6 +927,23 @@ FORBIDDEN_UNVERIFIED_TRUST_TERMS = (
     "medical",
     "hospital",
     "safe",
+    "warranty",
+    "guarantee",
+    "official",
+    "original",
+    "гарантия",
+)
+
+GUARD_VALIDATION_TERMS = FORBIDDEN_UNVERIFIED_TRUST_TERMS + (
+    "steriliz",
+    "sterilis",
+    "alarm",
+    "low water",
+)
+
+DUPLICATE_CLAIM_TERMS = GUARD_VALIDATION_TERMS + (
+    "clean",
+    "quality",
 )
 
 
@@ -642,22 +951,31 @@ def facts_text(plan: dict) -> str:
     return clean_phrase(plan.get("source_facts_text")).lower()
 
 
-def verified_trust_badge(plan: dict, trust_badge: str) -> str:
+def verified_trust_badge(plan: dict, trust_badge: str, reserved_claim_keys: set[str] | None = None) -> str:
+    reserved_claim_keys = reserved_claim_keys or set()
     trust = clean_phrase(trust_badge)
     facts = facts_text(plan)
     lowered = trust.lower()
+    if trust and claim_keys_for_text(trust) & reserved_claim_keys:
+        trust = ""
+        lowered = ""
     if trust and not any(term in lowered for term in FORBIDDEN_UNVERIFIED_TRUST_TERMS):
         return trust
     if trust and lowered in facts:
         return trust
+    candidates = []
     if any(term in facts for term in ["消毒", "steriliz", "sterilis"]):
-        return "Bottle Sterilizer"
+        candidates.append("Bottle Sterilizer")
     if "220v" in facts or "220 v" in facts:
-        return "220V Power"
+        candidates.append("220V Power")
     if any(term in facts for term in ["led", "报警", "alarm"]):
-        return "LED Alarm"
+        candidates.append("LED Alarm")
     if any(term in facts for term in ["清洁", "clean"]):
-        return "Easy Clean"
+        candidates.append("Easy Clean")
+    candidates.append("EXCITAT Quality")
+    for candidate in candidates:
+        if not (claim_keys_for_text(candidate) & reserved_claim_keys):
+            return candidate
     return "EXCITAT Quality"
 
 
@@ -685,7 +1003,6 @@ def compile_fusion_v1_prompt(plan: dict, language: str) -> str:
     subtitle = clean_phrase(copy.get("subtitle"))
     numeric_badge = clean_phrase(copy.get("numeric_badge"))
     feature_badges = [clean_phrase(item) for item in copy.get("feature_badges", []) if clean_phrase(item)]
-    trust_badge = verified_trust_badge(plan, clean_phrase(copy.get("trust_badge")))
     source_facts = clean_phrase(plan.get("source_facts_text"))
     hero_parameter = ""
     secondary_parameters: list[str] = []
@@ -749,7 +1066,6 @@ def compile_fusion_v1_prompt(plan: dict, language: str) -> str:
     top_left = ", ".join(top_left_bits) if top_left_bits else "short title and one numeric accent badge"
     feature_items = part_callouts or [f"'{item}'" for item in feature_badges]
     feature_text = join_items(feature_items, 3) or "2-3 product-specific feature badges"
-    trust_text = f"'{trust_badge}'" if trust_badge else "one circular trust badge"
     value_island_text, secondary_parameters, part_callouts = choose_value_island(
         hero_parameter,
         secondary_parameters,
@@ -759,6 +1075,9 @@ def compile_fusion_v1_prompt(plan: dict, language: str) -> str:
     feature_items = part_callouts or [f"'{item}'" for item in feature_badges]
     feature_text = join_items(feature_items, 3) or "2-3 product-specific feature badges"
     bundle_text = join_items(bundle_or_trust, 2)
+    reserved_claim_keys = set(plan.get("_guard_used_claim_keys") or [])
+    trust_badge = verified_trust_badge(plan, clean_phrase(copy.get("trust_badge")), reserved_claim_keys)
+    trust_text = f"'{trust_badge}'" if trust_badge else "one circular trust badge"
 
     sentences = [
         "Generate a 1:1 square Ozon main image card, not a wide banner or landscape poster.",
@@ -873,6 +1192,12 @@ def main() -> None:
         default=DEFAULT_PROMPT_COMPILER,
         help="Final prompt assembly mode. fusion_v1 is the locked selected workflow; planner_raw is for diagnostics.",
     )
+    parser.add_argument(
+        "--guard-level",
+        choices=["off", "balanced", "strict"],
+        default=DEFAULT_GUARD_LEVEL,
+        help="3.0 plan/prompt guard level. balanced sanitizes obvious mistakes and reports borderline issues.",
+    )
     parser.add_argument("--contract-file", action="append", default=[])
     parser.add_argument("--blueprint", action="append", default=[], help="Optional product blueprint markdown file.")
     parser.add_argument("--prompt-only", action="store_true")
@@ -916,8 +1241,17 @@ def main() -> None:
         source_image=source,
     )
     plan["prompt_compiler"] = args.prompt_compiler
+    plan["guard_level"] = args.guard_level
+    guard_report = guard_plan(plan, args.guard_level)
     plan["prompt"] = compile_image_prompt(plan, args.language, args.prompt_compiler)
+    guard_report = guard_compiled_prompt(plan["prompt"], plan, guard_report, args.guard_level)
+    plan["guard_report"] = guard_report
+    if args.guard_level == "strict" and guard_report.get("status") == "blocked":
+        (out_dir / "agent_plan.json").write_text(json.dumps(plan, ensure_ascii=False, indent=2), encoding="utf-8")
+        (out_dir / "guard_report.json").write_text(json.dumps(guard_report, ensure_ascii=False, indent=2), encoding="utf-8")
+        raise SystemExit("Guard blocked prompt compilation in strict mode. See guard_report.json.")
     (out_dir / "agent_plan.json").write_text(json.dumps(plan, ensure_ascii=False, indent=2), encoding="utf-8")
+    (out_dir / "guard_report.json").write_text(json.dumps(guard_report, ensure_ascii=False, indent=2), encoding="utf-8")
     (out_dir / "image_model_prompt.txt").write_text(plan["prompt"], encoding="utf-8")
 
     report = [
@@ -926,6 +1260,10 @@ def main() -> None:
         f"- prompt_model: `{args.prompt_model}`",
         f"- image_model: `{args.image_model}`",
         f"- prompt_compiler: `{args.prompt_compiler}`",
+        f"- guard_level: `{args.guard_level}`",
+        f"- guard_status: `{guard_report.get('status', '')}`",
+        f"- guard_adjustments: `{len(guard_report.get('adjustments', []))}`",
+        f"- guard_warnings: `{len(guard_report.get('warnings', []))}`",
         f"- source_image: `{source}`",
         f"- category: `{plan['product_analysis']['category']}`",
         f"- core_object: `{plan['product_analysis']['core_object']}`",

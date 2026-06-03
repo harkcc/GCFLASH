@@ -56,11 +56,18 @@ Do not jump directly to image generation. Execute in this order:
    - Treat `parameter_story` as planner output. Scripts may expose verified
      facts and role taxonomy, but the model planner decides the final hero
      parameter, secondary rail, part callouts, bundle blocks, and trust seals.
+   - For v3 guard runs, validate the planner output before prompt compilation:
+     unsupported combined numbers, unverified trust/safety/compliance language,
+     duplicate values across regions, and value blocks that require long
+     connector lines must be removed or reported.
 
 3. **Compile generation assets**
    - Generate a base-image prompt with no model-rendered text.
    - Generate an overlay plan for title, numeric badge, feature badges, icons,
      trust seal, brand shelf, connector lines, and safe zones.
+   - Generate a guard report before final prompt/image generation. Balanced mode
+     sanitizes obvious mistakes and reports warnings; strict mode may block the
+     run for regression tests.
    - Generate a QA checklist for 160px legibility, overlap, palette, and text.
    - Prefer running:
      ```bash
@@ -105,6 +112,15 @@ Do not jump directly to image generation. Execute in this order:
   rule ranked a number, or a category branch hard-coded a favorite value. Those
   mechanisms are only allowed as post-plan guards for traceability, formatting,
   or verified-fact checks.
+- Post-plan guards may remove unsupported or repeated claims, but they must not
+  replace the planner's judgment with their own importance ranking. Guard output
+  should explain what was removed and why.
+- Main numeric value islands and secondary spec slabs must be freestanding
+  adjacent information blocks. Connector lines are only for small part-level
+  callouts tied to visible product details.
+- The bottom/corner support area is for verified trust, bundle, brand, or
+  accessory information only. It must not repeat a functional parameter already
+  used as hero value or secondary rail.
 - Large Ozon-style parameter containers should be reserved in the composition
   plan when a product has multiple verified numeric specs. Use big numeric slabs,
   circular seals, left-side rails, or component-adjacent tags instead of many
@@ -122,6 +138,7 @@ Each run should produce:
 - `analysis.md`
 - `base_prompt.txt`
 - `overlay_plan.json`
+- `guard_report.json`
 - `qa_checklist.md`
 - generated base image
 - final composite image

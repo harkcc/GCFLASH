@@ -113,6 +113,21 @@ def build_parameter_story_contract(
             "only publishes source facts and role taxonomy; it must not classify parameter "
             "importance with regex, unit scoring, or category hard-coding."
         ),
+        "guard_contract": {
+            "planner_first": True,
+            "guard_may_remove": [
+                "unsupported numeric/spec claims",
+                "unverified trust, safety, warranty, official/original, or compliance claims",
+                "duplicate values across hero, side rail, feature badges, trust badge, and bottom support",
+                "value-island connector-line instructions",
+            ],
+            "guard_must_not": [
+                "choose the hero parameter with regex or unit scoring",
+                "promote a lower-priority fact only because it has a unit",
+                "append late repair text to the final prompt instead of sanitizing the plan",
+            ],
+            "expected_output": "guard_report.json",
+        },
     }
 
 
