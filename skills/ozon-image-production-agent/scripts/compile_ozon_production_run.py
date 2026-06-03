@@ -26,6 +26,7 @@ class ProductAnalysis:
     subtitle: str
     feature_badges: list[dict[str, str]]
     trust_badge: dict[str, str]
+    parameter_story: dict[str, object]
     bottom_info_bar: str
     verified_facts: list[str]
     inferred_facts: list[str]
@@ -61,6 +62,58 @@ def find_matching_blueprint(product_name: str, explicit: str | None) -> Path | N
 def has_any(text: str, terms: list[str]) -> bool:
     low = text.lower()
     return any(term.lower() in low for term in terms)
+
+
+def build_parameter_story_contract(
+    feature_badges: list[dict[str, str]],
+    trust_badge: dict[str, str],
+    verified_facts: list[str],
+) -> dict[str, object]:
+    part_callouts = [
+        {
+            "label": badge["label"],
+            "icon": badge["icon"],
+            "source": badge.get("claim_source", "product specs"),
+            "visual_role": "part_anchored_callout",
+            "anchor_rule": "point to a visible product part or accessory when possible",
+        }
+        for badge in feature_badges[:3]
+    ]
+
+    return {
+        "planner_required": True,
+        "candidate_verified_facts": verified_facts,
+        "role_taxonomy": [
+            "hero_parameter",
+            "side_spec_rail",
+            "part_anchored_callout",
+            "bundle_accessory_count",
+            "trust_seal",
+        ],
+        "hero_parameter": {
+            "value": "",
+            "unit": "",
+            "label": "planner must select from verified facts only when commercially decisive",
+            "source": "planner_placeholder",
+            "visual_role": "planner_selected_hero_parameter",
+        },
+        "spec_rail": [],
+        "part_callouts": part_callouts,
+        "bundle_trust": [
+            {
+                "label": trust_badge["label"],
+                "icon": trust_badge["icon"],
+                "source": trust_badge.get("claim_source", "brand trust overlay"),
+                "visual_role": "trust_seal_candidate",
+            }
+        ],
+        "planning_rule": (
+            "A model planner must choose which verified facts become the hero parameter, "
+            "side spec rail, part callouts, bundle blocks, and trust seals. The compiler "
+            "only publishes source facts and role taxonomy; it must not classify parameter "
+            "importance with regex, unit scoring, or category hard-coding."
+        ),
+    }
 
 
 def build_analysis(product_name: str, specs: str, blueprint_text: str) -> ProductAnalysis:
@@ -105,16 +158,7 @@ def build_analysis(product_name: str, specs: str, blueprint_text: str) -> Produc
         staging = "matte graphite product scene with subtle relevant context"
         accents = ["#00e5ff cyan", "#12151a deep charcoal", "#ffffff white"]
 
-    if is_ventilation and has_any(product_only, ["382 cfm"]):
-        click = "382 CFM"
-    elif is_ventilation and has_any(product_only, ["25db", "25 dB"]):
-        click = "25dB"
-    elif "5-in-1" in combined or is_gaming:
-        click = "5-in-1"
-    elif match := re.search(r"\b(\d+\s?(?:mAh|W|MHz|MS/s|CFM|dB|шт|дней|mm|мм))\b", product_only, re.I):
-        click = match.group(1)
-    else:
-        click = "Complete Kit"
+    click = "planner_selected_parameter"
 
     features: list[dict[str, str]] = []
     if has_any(product_only, ["dual", "controller", "charger"]):
@@ -168,6 +212,9 @@ def build_analysis(product_name: str, specs: str, blueprint_text: str) -> Produc
     if not blueprint_text:
         inferred.append("no product-specific blueprint found; used source contract heuristics")
 
+    trust_badge = {"label": "EXCITAT 1-Year Warranty", "icon": "shield", "claim_source": "brand trust overlay"}
+    parameter_story = build_parameter_story_contract(features, trust_badge, verified)
+
     return ProductAnalysis(
         product_name=product_name,
         category=category,
@@ -180,7 +227,8 @@ def build_analysis(product_name: str, specs: str, blueprint_text: str) -> Produc
         title=title,
         subtitle=subtitle,
         feature_badges=features[:3],
-        trust_badge={"label": "EXCITAT 1-Year Warranty", "icon": "shield", "claim_source": "brand trust overlay"},
+        trust_badge=trust_badge,
+        parameter_story=parameter_story,
         bottom_info_bar=(
             "Clapeta anti-insecte + motor cupru"
             if is_ventilation
@@ -195,6 +243,13 @@ def build_analysis(product_name: str, specs: str, blueprint_text: str) -> Produc
 
 def build_base_prompt(analysis: ProductAnalysis) -> str:
     badge_labels = ", ".join(b["label"] for b in analysis.feature_badges)
+    parameter_story = analysis.parameter_story
+    hero_parameter = parameter_story["hero_parameter"]
+    spec_rail = parameter_story["spec_rail"]
+    spec_rail_labels = ", ".join(
+        f"{item.get('value', '')} {item.get('unit', '')}".strip()
+        for item in spec_rail  # type: ignore[union-attr]
+    ) or "model planner required"
     return f"""Use case: ads-marketing / product-mockup
 Asset type: square 1:1 e-commerce hero base image for deterministic overlay.
 
@@ -202,10 +257,11 @@ Product analysis:
 - Product: {analysis.product_name}
 - Category: {analysis.category}
 - Silhouette: {analysis.silhouette}
-- Primary click-catch for later overlay: {analysis.primary_click_catch}
+- Parameter display: planner must select the hero parameter, optional secondary rail, part callouts, and trust/accessory blocks from verified facts before overlay rendering.
 - Feature badges for later overlay: {badge_labels}
 - Frame family: {analysis.frame_family}
 - Accent palette: {", ".join(analysis.accent_palette)}
+- Parameter story contract for later overlay: hero parameter {hero_parameter['label']}; secondary spec rail: {spec_rail_labels}.
 
 Primary request:
 Create a premium marketplace base image for {analysis.product_name}. The product should be the unmistakable focal point and occupy 60-70% of the canvas.
@@ -214,7 +270,7 @@ Scene and background:
 Use {analysis.staging_context}. Keep the background low-noise, high contrast, and directly related to the product use case. Use shallow depth of field, soft vignette, realistic contact or wall shadows, and controlled commercial rim lighting.
 
 Composition:
-Place the product centrally or slightly right in a heroic three-quarter view. Preserve the visible product parts and category silhouette. Leave clean safe zones in the top-left for title and numeric badge, top-right for slanted EXCITAT brand shelf, right side for feature badges, and bottom for accessory/info bar.
+Place the product centrally or slightly right in a heroic three-quarter view. Preserve the visible product parts and category silhouette. Leave clean safe zones in the top-left for title and an optional planner-selected hero parameter block, left or lower-left for an optional stacked spec rail, top-right for slanted EXCITAT brand shelf, right side for part-anchored feature callouts, and bottom for accessory/info bar.
 
 Text policy:
 No generated text. No readable logos. No watermark. All title, brand, icons, badges, and claims will be added later as deterministic overlay layers.
@@ -228,6 +284,7 @@ def build_overlay_plan(analysis: ProductAnalysis) -> dict:
     return {
         "canvas": "1:1 square",
         "text_policy": "deterministic_overlay_only",
+        "parameter_story": analysis.parameter_story,
         "brand_shelf": {
             "position": "top-right",
             "variant": "EXCITAT Speed Lightning Shelf",
@@ -237,7 +294,28 @@ def build_overlay_plan(analysis: ProductAnalysis) -> dict:
             "position": "top-left",
             "title": analysis.title,
             "subtitle": analysis.subtitle,
-            "primary_badge": analysis.primary_click_catch,
+            "primary_badge": None,
+            "primary_badge_source": "parameter_story.hero_parameter when planner selects should_display=true",
+        },
+        "hero_parameter_block": {
+            "position": "top-left or left-center",
+            "display": analysis.parameter_story["hero_parameter"],
+            "style": "largest numeric slab or circle; value 2.5-3x larger than unit/label",
+        },
+        "spec_rail": {
+            "position": "left vertical rail or lower-left stacked slabs",
+            "items": analysis.parameter_story["spec_rail"],
+            "style": "large high-contrast parameter containers, not small equal-weight pills",
+        },
+        "part_callouts": {
+            "position": "right side or product-adjacent detail tags",
+            "items": analysis.parameter_story["part_callouts"],
+            "style": "short labels connected to visible product features with thin connector lines",
+        },
+        "bundle_trust_blocks": {
+            "position": "bottom strip, lower corner seals, or accessory inset area",
+            "items": analysis.parameter_story["bundle_trust"],
+            "style": "accessory counts use compact slabs; warranty/trust uses circular seal or shield",
         },
         "feature_badges": [
             {"position": f"right-column-{i+1}", **badge}
@@ -273,7 +351,8 @@ def write_outputs(out: Path, analysis: ProductAnalysis, prompt: str, overlay: di
         """# QA Checklist
 
 - [ ] Product silhouette recognizable at 160px.
-- [ ] Primary click-catch remains readable at 160px.
+- [ ] Hero parameter remains readable at 160px and is the largest numeric overlay.
+- [ ] Secondary numeric specs use large containers when verified specs exist.
 - [ ] Product occupies roughly 60-75% of canvas.
 - [ ] No model-generated text/logos are present in base image.
 - [ ] Title, badges, icons, and brand shelf are deterministic overlay layers.
@@ -294,7 +373,7 @@ def main() -> None:
     parser.add_argument("--blueprint")
     args = parser.parse_args()
 
-    source_files = ["README.md", "SKILL.md", "DESIGN.md"]
+    source_files = ["README.md", "SKILL.md", "DESIGN.md", "RUNTIME_CONTEXT.md"]
     missing = [name for name in source_files if not (SOURCE_DIR / name).exists()]
     if missing:
         raise SystemExit(f"Missing source contract files: {', '.join(missing)}")
@@ -307,6 +386,7 @@ def main() -> None:
     overlay["source_contract"] = {
         "read_as_one_system": [str(SOURCE_DIR / name) for name in source_files],
         "product_blueprint": str(blueprint_path) if blueprint_path else None,
+        "brand_frame_blueprint": str(REPO / "workflow" / "design_systems" / "exite_41_reference_replication.BLUEPRINT.md"),
     }
     write_outputs(Path(args.out), analysis, prompt, overlay)
     print(Path(args.out).resolve())

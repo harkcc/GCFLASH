@@ -62,7 +62,48 @@ Workflow:
    touch PCB pads and create a controlled spark, a dock emits RGB light under
    controllers, a pump nozzle connects to a valve, or a bracket visibly supports
    the mounted object.
-4. Choose short overlay copy: title, one click-catch badge, 2-3 feature badges,
+4. Build a parameter story from verified product facts and the source image.
+   Do this as product reasoning, not regex extraction or unit scoring. Decide
+   what the buyer needs to notice in the first second:
+   - One hero parameter only when a verified number/unit or compatibility claim
+     is commercially decisive for this product. If no parameter is decisive,
+     leave it empty and let the product/function carry the hook.
+   - 0-4 secondary parameters for a side rail or stacked slabs when the product
+     has multiple important specs.
+   - 1-3 part callouts anchored to visible product parts, ports, lights, handles,
+     batteries, blades, screens, nozzles, brackets, or accessories.
+   - Bundle, warranty, compatibility, or trust claims must stay separate from
+     functional parameters.
+   - Design the visible parameter hierarchy like an Ozon scan poster, not a
+     normal badge stack: the first-read value must become a large integrated
+     value island or slab with the value text dominating the block; secondary
+     facts become smaller slabs; only detail explanations become small callouts.
+     Avoid generic header words on these blocks.
+   - Parameter blocks must use the category palette from DESIGN.md. Do not use
+     a black/white slab by default. Home/baby appliances should feel clean,
+     soft, and trustworthy with light appliance base plus blue, teal, warm gold,
+     or soft orange accents; tools and automotive can use harder black/orange or
+     dark cyan blocks; gaming/electronics can use dark/cyan neon.
+   - Parameter blocks should look like they grow out from the product area or
+     sit beside the product edge. Do not pull long leader lines across the main
+     product. Use adjacent tabs, short offset slabs, small connector dots, or
+     compact callout chips close to the relevant part.
+   - Do not repeat the same value or claim in multiple regions. Once a value is
+     used as the hero island or a secondary slab, it must not appear again in the
+     trust badge, bottom support block, or feature callout.
+   Examples only, not hard-coded rules: a gaming console may highlight game
+   count or memory, car lamps may highlight model/brightness/power/color
+   temperature, a drill may highlight RPM/voltage/batteries/case, and a saw may
+   highlight power/voltage/bar length/gift battery. For blenders, mixers,
+   grinders, fans, drills, saws, and other rotating products, verified blade or
+   motor speed/RPM is often a first-read hero value because it proves power and
+   performance. The deciding factor is the product's buying logic and verified
+   facts, not the unit text itself.
+   For baby food processors and kitchen appliances, prioritize operating value:
+   preset modes, power, speed settings, safety alarm, and self-cleaning usually
+   matter more than voltage or dimensions. Capacity is important only when it is
+   the clearest buyer hook; otherwise make it secondary.
+5. Choose short overlay copy: title, one click-catch badge, 2-3 feature badges,
    one circular trust badge, and an EXCITAT brand shelf when the brand applies.
    The brand shelf structure is stable, but its border glow, badge colors, and
    lighting temperature are product-routed, not fixed. Cyan/charcoal is only
@@ -73,7 +114,7 @@ Workflow:
    compliance claims that are not present in the product facts or source image.
    For baby products, claims such as "BPA Free", "food grade", "CE", or
    "hospital safe" are forbidden unless explicitly supplied by the user.
-5. Write the final image prompt in the original Antigravity style:
+6. Write the final image prompt in the original Antigravity style:
    - Start with "Extract the original [product] from the source image."
    - Add one product fidelity sentence.
    - Add one staging/background sentence that states the support surface,
@@ -141,6 +182,79 @@ PLAN_SCHEMA = {
                 "object_logic_risks",
             ],
         },
+        "parameter_story": {
+            "type": "object",
+            "properties": {
+                "hero_parameter": {
+                    "type": "object",
+                    "properties": {
+                        "should_display": {"type": "boolean"},
+                        "value": {"type": "string"},
+                        "unit": {"type": "string"},
+                        "label": {"type": "string"},
+                        "source_fact": {"type": "string"},
+                        "role_reason": {"type": "string"},
+                        "visual_treatment": {"type": "string"},
+                    },
+                    "required": [
+                        "should_display",
+                        "value",
+                        "unit",
+                        "label",
+                        "source_fact",
+                        "role_reason",
+                        "visual_treatment",
+                    ],
+                },
+                "secondary_parameters": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "value": {"type": "string"},
+                            "unit": {"type": "string"},
+                            "label": {"type": "string"},
+                            "source_fact": {"type": "string"},
+                            "visual_treatment": {"type": "string"},
+                        },
+                        "required": ["value", "unit", "label", "source_fact", "visual_treatment"],
+                    },
+                },
+                "part_callouts": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "label": {"type": "string"},
+                            "anchor_part": {"type": "string"},
+                            "source_fact": {"type": "string"},
+                            "visual_treatment": {"type": "string"},
+                        },
+                        "required": ["label", "anchor_part", "source_fact", "visual_treatment"],
+                    },
+                },
+                "bundle_or_trust": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "label": {"type": "string"},
+                            "source_fact": {"type": "string"},
+                            "visual_treatment": {"type": "string"},
+                        },
+                        "required": ["label", "source_fact", "visual_treatment"],
+                    },
+                },
+                "omitted_parameter_reason": {"type": "string"},
+            },
+            "required": [
+                "hero_parameter",
+                "secondary_parameters",
+                "part_callouts",
+                "bundle_or_trust",
+                "omitted_parameter_reason",
+            ],
+        },
         "generation_directives": {
             "type": "object",
             "properties": {
@@ -177,7 +291,7 @@ PLAN_SCHEMA = {
         },
         "prompt": {"type": "string"},
     },
-    "required": ["image_name", "product_analysis", "generation_directives", "overlay_copy", "prompt"],
+    "required": ["image_name", "product_analysis", "parameter_story", "generation_directives", "overlay_copy", "prompt"],
 }
 
 
@@ -331,6 +445,114 @@ def join_items(items: list[str], limit: int | None = None) -> str:
     return ", ".join(values[:-1]) + ", and " + values[-1]
 
 
+def compact_fact_text(value: object) -> str:
+    return re.sub(r"[^a-z0-9]+", "", clean_phrase(value).lower())
+
+
+def singularize_compact(value: str) -> str:
+    return value[:-1] if value.endswith("s") else value
+
+
+def has_digits(value: str) -> bool:
+    return any(ch.isdigit() for ch in value)
+
+
+def parameter_value_is_verified(item: dict, source_facts: str) -> bool:
+    value = clean_phrase(item.get("value"))
+    unit = clean_phrase(item.get("unit"))
+    label = clean_phrase(item.get("label"))
+    source_fact = clean_phrase(item.get("source_fact"))
+    combined = compact_fact_text(f"{source_facts} {source_fact}")
+    value_unit = " ".join(part for part in [value, unit] if part).strip()
+    compact_value_unit = compact_fact_text(value_unit)
+    compact_value = compact_fact_text(value)
+    compact_unit = compact_fact_text(unit)
+    compact_label = compact_fact_text(label)
+    if not value_unit and not label:
+        return False
+    if has_digits(value_unit):
+        candidates = [
+            compact_value_unit,
+            compact_value + singularize_compact(compact_unit),
+            compact_value + compact_label,
+            compact_value + singularize_compact(compact_label),
+        ]
+        return any(candidate and candidate in combined for candidate in candidates)
+    if compact_value and compact_value in combined:
+        return True
+    return bool(compact_label and compact_label in combined)
+
+
+def visible_text_is_verified(text: str, source_facts: str) -> bool:
+    text = clean_phrase(text)
+    if not has_digits(text):
+        return True
+    compact_text = compact_fact_text(text)
+    compact_source = compact_fact_text(source_facts)
+    if compact_text and compact_text in compact_source:
+        return True
+    if re.search(r"\d+\s*[- ]?\s*in\s*[- ]?\s*\d+", text, re.I):
+        return False
+    numbers = re.findall(r"\d+(?:\.\d+)?", text)
+    return bool(numbers) and all(number in compact_source for number in numbers)
+
+
+def choose_value_island(
+    hero_parameter: str,
+    secondary_parameters: list[str],
+    part_callouts: list[str],
+) -> tuple[str, list[str], list[str]]:
+    """Pick one first-read value island without inventing unsupported claims."""
+    if hero_parameter:
+        return hero_parameter, secondary_parameters, part_callouts
+    if secondary_parameters:
+        return secondary_parameters[0], secondary_parameters[1:], part_callouts
+    if part_callouts:
+        return part_callouts[0], secondary_parameters, part_callouts[1:]
+    return "", secondary_parameters, part_callouts
+
+
+def format_parameter_item(item: object, source_facts: str = "") -> str:
+    if not isinstance(item, dict):
+        return ""
+    if item.get("should_display") is False:
+        return ""
+    if source_facts and not parameter_value_is_verified(item, source_facts):
+        return ""
+    value = clean_phrase(item.get("value"))
+    unit = clean_phrase(item.get("unit"))
+    label = clean_phrase(item.get("label"))
+    treatment = clean_phrase(item.get("visual_treatment"))
+    value_unit = " ".join(part for part in [value, unit] if part).strip()
+    if value_unit and label:
+        base = f"'{value_unit}' for {label}"
+    elif value_unit:
+        base = f"'{value_unit}'"
+    elif label:
+        base = f"'{label}'"
+    else:
+        return ""
+    if treatment:
+        return f"{base} as {treatment}"
+    return base
+
+
+def format_callout_item(item: object) -> str:
+    if not isinstance(item, dict):
+        return ""
+    label = clean_phrase(item.get("label"))
+    anchor = clean_phrase(item.get("anchor_part"))
+    treatment = clean_phrase(item.get("visual_treatment"))
+    if not label:
+        return ""
+    parts = [f"'{label}'"]
+    if anchor:
+        parts.append(f"anchored to {anchor}")
+    if treatment:
+        parts.append(f"as {treatment}")
+    return ", ".join(parts)
+
+
 def plan_route_text(plan: dict) -> tuple[str, set[str]]:
     analysis = plan.get("product_analysis", {})
     text = " ".join(
@@ -374,6 +596,21 @@ def infer_brand_shelf(plan: dict) -> str:
     if tokens & {"ps5", "gaming", "charger", "oscilloscope", "meter", "lab", "electronics", "pcb"}:
         return f"{brand} Speed Lightning Shelf, slanted cyan/charcoal brushed-metal shelf with bold white logo"
     return f"slanted category-matched {brand} brand shelf with bold white logo"
+
+
+def infer_parameter_palette(plan: dict) -> str:
+    haystack, tokens = plan_route_text(plan)
+    if tokens & {"baby", "kitchen", "appliance", "processor", "blender", "steamer"}:
+        return "light appliance palette: white/soft grey base, teal or OZON blue value islands, warm orange/gold food accent, dark ink text; avoid black slabs"
+    if tokens & {"mattress", "suv", "auto", "vehicle", "travel"} or " car " in f" {haystack} ":
+        return "auto comfort palette: teal/charcoal structure with warm daylight accents; value blocks should be teal or warm gold, not pure black"
+    if tokens & {"solar", "stem", "science", "educational", "planet"}:
+        return "cosmic science palette: dark study base with warm solar-gold value islands and small orange highlights"
+    if tokens & {"tool", "drill", "saw", "hardware", "garden", "automotive"}:
+        return "tool palette: dark graphite structure with cyan or safety-orange value islands and strong white numeric text"
+    if tokens & {"ps5", "gaming", "charger", "oscilloscope", "meter", "lab", "electronics", "pcb"}:
+        return "tech palette: charcoal/cyan value islands with controlled neon edges and white numeric text"
+    return "category-matched Ozon 3-color palette from DESIGN.md; one accent for value islands, dark ink for text, no generic black/white default"
 
 
 def accessory_support_sentence(plan: dict) -> str:
@@ -433,6 +670,7 @@ def compile_fusion_v1_prompt(plan: dict, language: str) -> str:
     analysis = plan.get("product_analysis", {})
     directives = plan.get("generation_directives", {})
     copy = plan.get("overlay_copy", {})
+    parameter_story = plan.get("parameter_story", {})
     core = clean_phrase(analysis.get("core_object")) or "product"
     immutable = [clean_phrase(item) for item in analysis.get("immutable_features", []) if clean_phrase(item)]
     product_fidelity = clean_phrase(directives.get("product_fidelity"))
@@ -448,6 +686,28 @@ def compile_fusion_v1_prompt(plan: dict, language: str) -> str:
     numeric_badge = clean_phrase(copy.get("numeric_badge"))
     feature_badges = [clean_phrase(item) for item in copy.get("feature_badges", []) if clean_phrase(item)]
     trust_badge = verified_trust_badge(plan, clean_phrase(copy.get("trust_badge")))
+    source_facts = clean_phrase(plan.get("source_facts_text"))
+    hero_parameter = ""
+    secondary_parameters: list[str] = []
+    part_callouts: list[str] = []
+    bundle_or_trust: list[str] = []
+    if isinstance(parameter_story, dict):
+        hero_parameter = format_parameter_item(parameter_story.get("hero_parameter"), source_facts)
+        secondary_parameters = [
+            format_parameter_item(item, source_facts)
+            for item in parameter_story.get("secondary_parameters", [])
+            if format_parameter_item(item, source_facts)
+        ]
+        part_callouts = [
+            format_callout_item(item)
+            for item in parameter_story.get("part_callouts", [])
+            if format_callout_item(item)
+        ]
+        bundle_or_trust = [
+            format_callout_item(item)
+            for item in parameter_story.get("bundle_or_trust", [])
+            if format_callout_item(item)
+        ]
     language_label = "English" if "english" in language.lower() else language
 
     preserve_bits = []
@@ -484,13 +744,21 @@ def compile_fusion_v1_prompt(plan: dict, language: str) -> str:
     top_left_bits = []
     if title:
         top_left_bits.append(f"bold white '{title}'")
-    if subtitle:
+    if subtitle and visible_text_is_verified(subtitle, source_facts):
         top_left_bits.append(f"subtitle '{subtitle}'")
-    if numeric_badge:
-        top_left_bits.append(f"accent badge '{numeric_badge}'")
     top_left = ", ".join(top_left_bits) if top_left_bits else "short title and one numeric accent badge"
-    feature_text = join_items([f"'{item}'" for item in feature_badges], 3) or "2-3 product-specific feature badges"
+    feature_items = part_callouts or [f"'{item}'" for item in feature_badges]
+    feature_text = join_items(feature_items, 3) or "2-3 product-specific feature badges"
     trust_text = f"'{trust_badge}'" if trust_badge else "one circular trust badge"
+    value_island_text, secondary_parameters, part_callouts = choose_value_island(
+        hero_parameter,
+        secondary_parameters,
+        part_callouts,
+    )
+    parameter_rail_text = join_items(secondary_parameters, 4)
+    feature_items = part_callouts or [f"'{item}'" for item in feature_badges]
+    feature_text = join_items(feature_items, 3) or "2-3 product-specific feature badges"
+    bundle_text = join_items(bundle_or_trust, 2)
 
     sentences = [
         "Generate a 1:1 square Ozon main image card, not a wide banner or landscape poster.",
@@ -509,8 +777,13 @@ def compile_fusion_v1_prompt(plan: dict, language: str) -> str:
             (
                 f"Overlay {language_label} layout: 1) Top-right: {infer_brand_shelf(plan)}. "
                 f"2) Top-left: {top_left}. "
-                f"3) Right side: rounded/icon feature badges {feature_text}. "
-                f"4) Right side circular badge: {trust_text}."
+                + f"Use {infer_parameter_palette(plan)} for all value islands and badges. "
+                + (f"3) Beside the product edge, place one oversized commerce value island with {value_island_text}; it should occupy about one-fifth of the card width, use a category-colored slab/circle, make the value text dominate the block, and look like a freestanding adjacent label with no connector line. " if value_island_text else "")
+                + (f"{'4' if value_island_text else '3'}) Near the lower-left product/support area, place secondary value slabs with {parameter_rail_text}; smaller than the main value island but larger than icons, freestanding with no connector line, integrated with the scene and using the same category accent. " if parameter_rail_text else "")
+                + f"{'5' if value_island_text and parameter_rail_text else '4' if value_island_text or parameter_rail_text else '3'}) Product-adjacent feature callouts {feature_text}; use compact chips close to the relevant part, short connector dots or very short elbow lines only, never long leader lines crossing the product. "
+                + f"{'6' if value_island_text and parameter_rail_text else '5' if value_island_text or parameter_rail_text else '4'}) Circular trust badge: {trust_text}. "
+                + (f"{'7' if value_island_text and parameter_rail_text else '6' if value_island_text or parameter_rail_text else '5'}) Bottom/corner support block: {bundle_text}; trust/accessory only, do not repeat any value already shown in the value island or secondary slabs." if bundle_text else "")
+                + " No duplicate numbers or duplicate claims across regions. Value islands and value slabs must not use connector lines."
             ),
             "Clean layout, professional advertising style.",
         ]

@@ -11,13 +11,21 @@ description: |
 # OZON Image Production Agent
 
 This skill wraps the existing Gemini-created `skills/ozon-image-generator/`
-documents into a production workflow. Treat these three files as one contract:
+documents into a production workflow. Treat these files as one contract:
 
 1. `skills/ozon-image-generator/README.md` - execution order and universal layout.
 2. `skills/ozon-image-generator/SKILL.md` - SOP, product analysis, prompt rules,
    product-fidelity rules, and brand integration.
 3. `skills/ozon-image-generator/DESIGN.md` - visual system, typography, badges,
    icon usage, margins, and mobile QA.
+4. `skills/ozon-image-generator/RUNTIME_CONTEXT.md` - extracted stable runtime
+   context from the original Antigravity Ozon conversation, including product
+   reasoning, object logic, category-routed scenes, EXCITAT shelf behavior, and
+   rejected middle-stage modes to ignore.
+5. `outputs/universal_branding_composite_flow.md` and
+   `workflow/design_systems/exite_41_reference_replication.BLUEPRINT.md` - the
+   EXCITAT brand shelf, information-slot, frame-family, and locked-product
+   compositing mechanics.
 
 If product-specific blueprints exist under `outputs/*_blueprint.md`, read the
 matching blueprint too. The blueprint can override generic routing for category,
@@ -28,16 +36,26 @@ scene, copy slots, brand shelf, and feature badges.
 Do not jump directly to image generation. Execute in this order:
 
 1. **Read source contract**
-   - Read the three source files above.
+   - Read the source files above.
    - Read any product blueprint that matches the product or user request.
    - If the user supplied an image, inspect it visually before writing claims.
+   - Use the runtime context to preserve the stable reasoning pattern. Do not use
+     old stable cases as fixed references.
 
 2. **Analyze the product**
    - Identify product category and silhouette.
-   - Extract one primary numeric/click-catch value.
+   - Extract a parameter story, not only one feature list:
+     - 1 hero parameter with the strongest number/unit for the 1-second hook.
+     - 2-4 secondary parameters for a large side rail or stacked slabs.
+     - 1-3 part-anchored callouts tied to visible product details.
+     - bundle/trust claims separated from functional parameters.
+   - Select one primary numeric/click-catch value from that parameter story.
    - Select 2-3 feature badges and 1 trust badge.
    - Choose marketplace archetype and relevant staging background.
    - Separate verified product facts from inferred copy.
+   - Treat `parameter_story` as planner output. Scripts may expose verified
+     facts and role taxonomy, but the model planner decides the final hero
+     parameter, secondary rail, part callouts, bundle blocks, and trust seals.
 
 3. **Compile generation assets**
    - Generate a base-image prompt with no model-rendered text.
@@ -77,6 +95,20 @@ Do not jump directly to image generation. Execute in this order:
   work, use a source-product cutout and generate only the background and lighting.
 - Background must be category-relevant. Avoid generic dark studio backgrounds
   when the source contract or blueprint provides a real usage scene.
+- The prompt/compiler must run a physical object-logic pass before background
+  selection: support points, plugs, ports, cables, mounts, hinges, handles,
+  charging bases, accessory scale, and product stance must be plausible.
+- Parameter display is a plan-stage decision. Do not treat specs as flat badge
+  text. Decide the visual role of each safe claim before prompt compilation:
+  hero number, side spec rail, part callout, bundle accessory, or trust seal.
+- The compiler may not promote a spec because a regex found a unit, a scoring
+  rule ranked a number, or a category branch hard-coded a favorite value. Those
+  mechanisms are only allowed as post-plan guards for traceability, formatting,
+  or verified-fact checks.
+- Large Ozon-style parameter containers should be reserved in the composition
+  plan when a product has multiple verified numeric specs. Use big numeric slabs,
+  circular seals, left-side rails, or component-adjacent tags instead of many
+  equal-weight small pills.
 - Keep text short. Main title max 3-4 words per line. Feature badges should be
   icon plus short label.
 - Use deterministic overlays for typography, brand marks, icons, badges, and
@@ -94,4 +126,3 @@ Each run should produce:
 - generated base image
 - final composite image
 - 160px thumbnail
-

@@ -62,9 +62,48 @@ The final image prompt must be compiled from these layers, in this order:
      wording such as "toward the PCB" or "near the dock"; say what touches what
      and what visual outcome proves the function.
 
-4. **Product facts and commercial hooks**
-   - Extract the primary numeric click hook, 2-3 feature badges, trust badge,
-     compatibility, kit/accessory contents, and the main usage scenario.
+4. **Product facts and parameter story**
+   - Extract a parameter story before deciding visible copy. Do not use regex,
+     unit scoring, or category hard-coding to decide parameter importance.
+   - The planning model must ask: which verified facts does the buyer need to
+     see in the first second for this specific product?
+   - Classify verified claims into visual roles:
+     `hero_parameter`, `secondary_parameter_rail`, `part_anchored_callout`,
+     `bundle_or_accessory`, and `trust_or_compliance`.
+   - Use one hero parameter only when a verified number, compatibility claim, or
+     model/spec claim is the strongest click reason. If no parameter is decisive,
+     omit the hero parameter and let the product/function/scene carry the hook.
+   - Secondary specs should become large slabs or a side rail only when they are
+     commercially meaningful. Do not turn every number into equal small pills.
+   - Part callouts must anchor to visible product details such as screens, LEDs,
+     batteries, handles, nozzles, blades, ports, brackets, or accessories.
+   - Bundle, warranty, compatibility, and trust claims stay separate from
+     functional parameters.
+   - Parameter design must have visual salience, not only correctness. Use one
+     dominant value island/slab that can be read at mobile thumbnail size, then
+     1-2 medium secondary slabs, then small connector callouts. The main value
+     text should dominate its container; avoid tiny icon pills for important
+     numbers or functional hooks.
+   - Parameter blocks must follow the category palette from `DESIGN.md`, not a
+     generic black/white default. Home and baby appliances need clean light base
+     colors with blue/teal/warm-orange accents; tools and automotive can use
+     harder dark/orange or cyan; tech/gaming can use dark/cyan neon.
+   - Main value islands should sit beside or extend from the product area. Do
+     not connect them with long lines pulled out from the product. Use adjacent
+     slabs, short tabs, connector dots, or very short elbow lines only for small
+     detail callouts.
+   - Do not duplicate the same parameter across regions. Once a value is used as
+     the main island or a secondary slab, the bottom support block and trust seal
+     must not repeat it.
+   - For rotating products such as blenders, mixers, grinders, fans, drills,
+     saws, and similar motorized products, verified RPM/blade speed is often a
+     stronger hero value than generic multifunction copy. Use it when supplied
+     in verified product facts; never invent it.
+   - For baby food processors and kitchen appliances, operating value should
+     usually beat passive technical specs: verified preset modes, power, speed
+     settings, safety alarm, and self-cleaning are stronger than voltage or
+     dimensions. Capacity is useful, but should not automatically outrank modes
+     or motor performance.
    - Use product-specific hooks, not generic "premium quality" filler.
 
 5. **Category router and background depth**
@@ -158,6 +197,10 @@ rules, not as visual references:
      numeric reason to click, then trust/accessory reassurance.
    - Structure the card in three information layers: dominant product body,
      2-3 side selling points, and bottom/corner trust or accessory information.
+   - For products with decisive verified parameters, add a parameter salience pass
+     before layout selection: decide the first-read hero value, optional side rail,
+     component callouts, and trust/accessory blocks from the product's buying
+     logic. This is a planning decision, not a compiler heuristic.
    - Keep copy short, icon-like, and mobile readable. Avoid paragraph claims.
 
 2. **Dynamic layout routing**
@@ -205,9 +248,12 @@ Use this sequence when compiling the model prompt:
 5. Specify the 1:1 Ozon main-card composition and product scale.
 6. Specify lighting, shadows, backlight, material contrast, and depth.
 7. Specify the EXCITAT brand shelf style.
-8. Specify title, numeric badge, feature badges, trust/accessory area, and any
+8. Specify the parameter story only when useful: hero value, secondary rail,
+   part-anchored callouts, and bundle/trust blocks, all sourced from verified
+   facts or clearly omitted when not important.
+9. Specify title, numeric badge, feature badges, trust/accessory area, and any
    scenario/detail inset only when useful for that product.
-9. Specify the exact language/script for all visible text.
+10. Specify the exact language/script for all visible text.
 
 ## Information Not Strongly Enforced In The Original Skill
 
@@ -224,6 +270,9 @@ inside the initial Skill file:
 - EXCITAT needs a reusable wordmark/shelf system, not only a trust-seal mention.
 - The prompt compiler must choose product-specific text and badge content from
   product facts before writing any visual prose.
+- Parameter emphasis belongs in the planning layer. The prompt compiler may
+  reserve slots and render the planner's chosen roles, but it must not decide
+  importance by regex, unit scoring, or category-specific hard-coding.
 - The bottom/corner support area should be product-specific. In the original
   stable cases it could be an accessory strip, a fit badge, a warranty badge, or
   a detail/scenario inset; it should not be forced into one fixed component.

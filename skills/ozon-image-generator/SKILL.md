@@ -85,9 +85,31 @@ Before generating any visual assets, analyze the product metadata to extract the
 1. **Source Image Truth**: What exact object, accessories, colors, ports, support points, and material details are visible in the uploaded product image? These are immutable unless the user explicitly asks for a redesign.
 2. **Object Logic**: How does the product physically work or sit in the scene? Identify mounts, handles, charging slots, plugs, cables, hinges, pumps, nozzles, display screens, or support feet that must remain logical.
 3. **Silhouette Definition**: What is the physical object? (e.g., handheld vertical vacuum cleaner, pruning shears). It must be easily recognizable within **0.5 seconds**.
-4. **Numeric Sell Point**: Identify the highest-impact number + unit.
-   - *Good*: `960 mAh`, `30 дней` (30 days), `6 шт` (6 pieces), `30 мм` (30mm cut capacity), `95000 PA`.
-   - *Avoid*: Vague descriptions like "super large capacity", "very long battery life".
+4. **Parameter Story**: Decide which verified facts deserve visual emphasis.
+   - First ask what the buyer must notice in the first second for this product.
+   - Use one hero parameter only when a verified number/unit, compatibility claim,
+     model/spec, or kit claim is commercially decisive.
+   - Route other facts into secondary parameter rail, part-anchored callouts,
+     bundle/accessory area, or trust badge.
+   - Omit a hero parameter when no parameter is truly decisive; do not force a
+     number just because one exists.
+   - Make the selected parameter visually dominant. The first-read hook should be
+     a large value island/slab or circle where the value occupies most of the
+     container; secondary facts should be medium slabs; only detail notes should
+     become small icon callouts.
+   - Match parameter block colors to the product category palette in
+     `DESIGN.md`. Do not default to black/white value blocks for soft home,
+     kitchen, or baby products.
+   - Main value islands should sit beside or visually extend from the product
+     area. Long leader lines crossing the product are reserved for no case; use
+     only adjacent tabs, short connector dots, or compact elbow callouts.
+   - For rotating products, use verified RPM/blade speed as a potential hero
+     value when supplied; never invent a speed number.
+   - *Good role decisions*: memory/game count for a game console, lamp model and
+     brightness for auto bulbs, RPM/voltage/battery count for a drill, capacity
+     or sterilizing/heating mode for a baby appliance.
+   - *Avoid*: regex/unit scoring, category hard-coding, or vague descriptions like
+     "super large capacity" and "very long battery life".
 5. **Trust Elements**: Select 1-2 trust claims to be visualized as badges/shields:
    - `гарантия` (warranty/guarantee)
    - `комплект` (complete kit/accessories included)
@@ -137,8 +159,9 @@ Generate a prompt recipe for the AI image generation model (e.g., Midjourney, St
 4. **Product Dominance**: The main product shape must occupy **60%+** of the canvas. Use prompt terms like "centered, massive product focus, heroic scale, close-up details".
 5. **Object Logic Preservation**: The prompt must explicitly preserve accessory placement, cable/port logic, mounts, charging bases, support points, handles, and other physical relationships.
 6. **Hero Pose Expression**: State the chosen product pose and active physical interaction in the prompt. The product should enter the fixed Ozon layout through a product-specific pose, not a generic centered front view.
-7. **Safe Text Zones**: Carve out empty, clean zones for overlays (top-left for core numeric badge, right side for feature badges, bottom for kit accessories). Use prompt terms like "clean copy space, clean composition, minimalist background".
-8. **Depth & Shadows**: Avoid floatation unless it fits a tech product. Use product-matched contact shadows, ambient depth, rim separation, reflection, or glow only when the scene has a physical reason for it.
+7. **Parameter Layout Role**: If the planner selected a hero parameter, reserve a first-read slab/circle in the top-left or left-center. If it selected secondary parameters, reserve a side/lower-left rail. If it selected part callouts, anchor them to visible product parts.
+8. **Safe Text Zones**: Carve out empty, clean zones for overlays (top-left for title/hero parameter, right side for part callouts or feature badges, bottom for kit accessories/trust). Use prompt terms like "clean copy space, clean composition, minimalist background".
+9. **Depth & Shadows**: Avoid floatation unless it fits a tech product. Use product-matched contact shadows, ambient depth, rim separation, reflection, or glow only when the scene has a physical reason for it.
 
 ### 3.2 Prompt Template
 Use the following structured format to generate prompts:
