@@ -287,8 +287,8 @@ def build_overlay_plan(analysis: ProductAnalysis) -> dict:
         "parameter_story": analysis.parameter_story,
         "brand_shelf": {
             "position": "top-right",
-            "variant": "EXCITAT Speed Lightning Shelf",
-            "style": "slanted -6deg dark graphite/glass shelf, cyan stroke, subtle magenta offset",
+            "variant": "EXCITAT slanted brand shard",
+            "style": "slanted dark graphite/glass shelf with category-colored edge light and layered shadow",
         },
         "title_block": {
             "position": "top-left",

@@ -79,6 +79,14 @@ Workflow:
    - 0-1 part callouts by default, and up to 2 only when a visible part is more
      persuasive than another numeric spec. Part callouts are for true buyer
      proof, not for labeling obvious parts.
+   - Before choosing any overlay role, define a protected product zone around
+     the visible product body and a separate information zone around it.
+     Value islands, badges, text chips, and callout labels must live in the
+     information zone, outside the product body. The information zone may be a
+     clean pocket directly beside the product edge. A callout may use only a
+     tiny anchor dot or very short elbow pointer to touch the product. If the
+     card has no clean outside space for the readable label, omit that callout
+     and keep the fact for a detail image.
    - Bundle, warranty, compatibility, or trust claims must stay separate from
      functional parameters.
    - Design the visible parameter hierarchy like an Ozon scan poster, not a
@@ -113,7 +121,9 @@ Workflow:
    life, cable/installation convenience, and voltage only if it affects buyer
    compatibility. Omit blade count, motor winding, shutter, bearing, and generic
    material details from the main image unless they are explicitly the top
-   differentiator for this listing.
+   differentiator for this listing. Internal construction details should remain
+   visible product fidelity or move to a detail image when they would require a
+   label inside the protected product zone.
    For baby food processors and kitchen appliances, prioritize operating value:
    preset modes, power, speed settings, safety alarm, and self-cleaning usually
    matter more than voltage or dimensions. Capacity is important only when it is
@@ -125,6 +135,16 @@ Workflow:
    appropriate for tech, gaming, electronics, or products whose own light source
    supports it. Warm amber/gold, orange, green, white/blue, or other accents can
    be used when they fit the product.
+   The brand shelf/shard is not pollution: keep it visually premium with a
+   category-colored rim glow, layered plate/shard shape, subtle cast shadow, and
+   bold EXCITAT wordmark. For tech products, keep the energetic angled metal
+   look inside the brand shelf as a visual treatment only; do not write style
+   names as visible text and do not let this treatment become the background
+   style.
+   Remove inherited visual pollution from earlier manual prompts: do not reuse
+   unrelated tech-energy shelf language, side-light line defaults, fixed corner
+   badge defaults, or generic graphic-effect styling unless the product's
+   visible function physically justifies that exact energy/light source.
    Do not invent certification, material, medical, baby-safety, warranty, or
    compliance claims that are not present in the product facts or source image.
    For baby products, claims such as "BPA Free", "food grade", "CE", or
@@ -135,6 +155,9 @@ Workflow:
    - Add one staging/background sentence that states the support surface,
      background depth cue, chosen hero pose, accessory interaction, and
      product-relevant key light, rim light, glow, reflection, or ambient lighting.
+   - Add impact through heroic product scale, crisp silhouette separation,
+     shallow depth, clean copy space, and readable value hierarchy. Keep every
+     effect physically relevant to the product and usage scene.
    - Add one overlay layout sentence with numbered layout components.
    - End with "Clean layout, professional advertising style."
 
@@ -449,6 +472,30 @@ def clean_phrase(value: object) -> str:
     return re.sub(r"\s+", " ", str(value or "").strip())
 
 
+PROMPT_TEXT_LEAK_REPLACEMENTS = (
+    (
+        re.compile(r"\bSpeed\s+Lightning\s+(?:Shelf|brand shelf|style)\b", re.I),
+        "slanted brushed-metal brand shard with controlled edge light",
+    ),
+    (
+        re.compile(r"\bSpeed\s+Lighting\s+(?:Shelf|brand shelf|style)?\b", re.I),
+        "slanted brushed-metal brand shard with controlled edge light",
+    ),
+    (
+        re.compile(r"\bLightning\s+Shelf\b", re.I),
+        "slanted brushed-metal brand shard",
+    ),
+)
+
+
+def sanitize_prompt_text(prompt: str) -> str:
+    """Remove style-label phrases that image models may render as visible copy."""
+    cleaned = clean_phrase(prompt)
+    for pattern, replacement in PROMPT_TEXT_LEAK_REPLACEMENTS:
+        cleaned = pattern.sub(replacement, cleaned)
+    return cleaned
+
+
 def join_items(items: list[str], limit: int | None = None) -> str:
     values = [clean_phrase(item) for item in items if clean_phrase(item)]
     if limit is not None:
@@ -512,6 +559,12 @@ def visible_text_is_verified(text: str, source_facts: str) -> bool:
     return bool(numbers) and all(number in compact_source for number in numbers)
 
 
+def share_numeric_fact(left: str, right: str) -> bool:
+    left_numbers = set(re.findall(r"\d+(?:\.\d+)?", clean_phrase(left)))
+    right_numbers = set(re.findall(r"\d+(?:\.\d+)?", clean_phrase(right)))
+    return bool(left_numbers and right_numbers and left_numbers & right_numbers)
+
+
 def choose_value_island(
     hero_parameter: str,
     secondary_parameters: list[str],
@@ -557,15 +610,18 @@ def format_callout_item(item: object) -> str:
         return ""
     label = clean_phrase(item.get("label"))
     anchor = clean_phrase(item.get("anchor_part"))
-    treatment = clean_phrase(item.get("visual_treatment"))
     if not label:
         return ""
     parts = [f"'{label}'"]
     if anchor:
         parts.append(f"anchored to {anchor}")
-    if treatment:
-        parts.append(f"as {treatment}")
     return ", ".join(parts)
+
+
+def format_support_item(item: object) -> str:
+    if not isinstance(item, dict):
+        return ""
+    return clean_phrase(item.get("label"))
 
 
 def plan_route_text(plan: dict) -> tuple[str, set[str]]:
@@ -586,7 +642,9 @@ def plan_route_text(plan: dict) -> tuple[str, set[str]]:
 def infer_visual_prototype(plan: dict) -> str:
     haystack, tokens = plan_route_text(plan)
     if tokens & {"ps5", "gaming", "charger", "game"}:
-        return "Dark Neon / Tech Poster for a gaming accessory"
+        return "Dark Tech / Gaming Accessory Card"
+    if tokens & {"exhaust", "ventilation", "ventilator", "fan", "airflow", "duct"}:
+        return "Industrial Ventilation / Home Utility Appliance Card"
     if tokens & {"baby", "kitchen", "appliance", "processor", "blender", "steamer"}:
         return "Clean Kitchen / Baby Care Appliance Card"
     if tokens & {"mattress", "suv", "auto", "vehicle", "travel"} or " car " in f" {haystack} ":
@@ -594,7 +652,7 @@ def infer_visual_prototype(plan: dict) -> str:
     if tokens & {"solar", "stem", "science", "educational", "planet"}:
         return "Cosmic Science / Study Ambient for a STEM educational assembly kit"
     if tokens & {"oscilloscope", "meter", "lab", "electronics", "pcb"}:
-        return "Tech Lab / Measurement Poster for an electronics instrument"
+        return "Tech Lab / Measurement Card for an electronics instrument"
     return "Product-first Ozon commercial main-card frame"
 
 
@@ -603,18 +661,22 @@ def infer_brand_shelf(plan: dict) -> str:
     brand = clean_phrase(copy.get("brand")) or "EXCITAT"
     haystack, tokens = plan_route_text(plan)
     if tokens & {"solar", "stem", "science", "educational", "planet"}:
-        return f"slanted carbon-fiber {brand} brand shelf with warm orange-gold border glow and bold white logo"
+        return f"slanted carbon-fiber {brand} brand shard with warm orange-gold border glow, layered plate shadow, and bold white logo"
+    if tokens & {"exhaust", "ventilation", "ventilator", "fan", "airflow", "duct"}:
+        return f"slanted graphite/teal {brand} brand shard with utility-orange rim glow, layered metal-plate shadow, and bold white logo"
     if tokens & {"baby", "kitchen", "appliance", "processor", "blender", "steamer"}:
-        return f"slanted teal/white {brand} brand shelf with a soft orange baby-care accent and bold white logo"
+        return f"slanted teal/white {brand} brand shard with soft orange rim glow, layered plate shadow, and bold white logo"
     if tokens & {"mattress", "suv", "auto", "vehicle", "travel"} or " car " in f" {haystack} ":
-        return f"slanted teal/charcoal {brand} brand shelf with bold white logo"
+        return f"slanted teal/charcoal {brand} brand shelf with layered paper-sleeve depth, subtle rim glow, and bold white logo"
     if tokens & {"ps5", "gaming", "charger", "oscilloscope", "meter", "lab", "electronics", "pcb"}:
-        return f"{brand} Speed Lightning Shelf, slanted cyan/charcoal brushed-metal shelf with bold white logo"
-    return f"slanted category-matched {brand} brand shelf with bold white logo"
+        return f"slanted cyan/charcoal brushed-metal {brand} brand shard with controlled edge light, dynamic angled accent lines, layered shadow, and bold white logo"
+    return f"slanted category-matched {brand} brand shard with category-colored rim glow, layered plate shadow, and bold white logo"
 
 
 def infer_parameter_palette(plan: dict) -> str:
     haystack, tokens = plan_route_text(plan)
+    if tokens & {"exhaust", "ventilation", "ventilator", "fan", "airflow", "duct"}:
+        return "industrial ventilation palette: graphite and matte grey base, utility-orange hero value island, teal/blue secondary accents, white numeric text"
     if tokens & {"baby", "kitchen", "appliance", "processor", "blender", "steamer"}:
         return "light appliance palette: white/soft grey base, teal or OZON blue value islands, warm orange/gold food accent, dark ink text; avoid black slabs"
     if tokens & {"mattress", "suv", "auto", "vehicle", "travel"} or " car " in f" {haystack} ":
@@ -719,9 +781,9 @@ def compile_fusion_v1_prompt(plan: dict, language: str) -> str:
             if format_callout_item(item)
         ]
         bundle_or_trust = [
-            format_callout_item(item)
+            format_support_item(item)
             for item in parameter_story.get("bundle_or_trust", [])
-            if format_callout_item(item)
+            if format_support_item(item)
         ]
     language_label = "English" if "english" in language.lower() else language
 
@@ -754,6 +816,12 @@ def compile_fusion_v1_prompt(plan: dict, language: str) -> str:
             background_parts.append(f"Lighting creates {lighting_effect}")
     if shadow_depth:
         background_parts.append(shadow_depth)
+    light_guard_bits = [
+        "keep the original product colors unchanged",
+        "use accent light only to separate the silhouette and background depth",
+        "keep lighting restrained, physically sourced, and category-appropriate",
+    ]
+    background_parts.append("Lighting guard: " + "; ".join(light_guard_bits))
     background_sentence = ". ".join(part.rstrip(".") for part in background_parts) + "." if background_parts else ""
 
     top_left_bits = []
@@ -774,14 +842,17 @@ def compile_fusion_v1_prompt(plan: dict, language: str) -> str:
     feature_items = part_callouts or [f"'{item}'" for item in feature_badges]
     feature_text = join_items(feature_items, 3) or "2-3 product-specific feature badges"
     bundle_text = join_items(bundle_or_trust, 2)
+    if compact_fact_text(bundle_text) == compact_fact_text(trust_badge) or share_numeric_fact(bundle_text, trust_badge):
+        bundle_text = ""
 
     sentences = [
-        "Generate a 1:1 square Ozon main image card, not a wide banner or landscape poster.",
+        "Generate a single 1:1 square Ozon marketplace main image card, no banner format.",
         "Keep the product centered and occupying 60-75% of the square canvas.",
         f"Extract the original {core} from the source image.",
         preserve_sentence,
         f"Visual prototype: {infer_visual_prototype(plan)}.",
         staging_sentence,
+        "Create visual impact through heroic scale, crisp product silhouette contrast, shallow depth, controlled contact shadows, readable value hierarchy, and clean negative space; keep all effects physically relevant to the product and usage scene.",
     ]
     if accessory_sentence:
         sentences.append(accessory_sentence)
@@ -795,7 +866,7 @@ def compile_fusion_v1_prompt(plan: dict, language: str) -> str:
                 + f"Use {infer_parameter_palette(plan)} for all value islands and badges. "
                 + (f"3) Beside the product edge, place one oversized commerce value island with {value_island_text}; it should occupy about one-fifth of the card width, use a category-colored slab/circle, make the value text dominate the block, and look like a freestanding adjacent label with no connector line. " if value_island_text else "")
                 + (f"{'4' if value_island_text else '3'}) Near the lower-left product/support area, place secondary value slabs with {parameter_rail_text}; smaller than the main value island but larger than icons, freestanding with no connector line, integrated with the scene and using the same category accent. " if parameter_rail_text else "")
-                + f"{'5' if value_island_text and parameter_rail_text else '4' if value_island_text or parameter_rail_text else '3'}) Product-adjacent feature callouts {feature_text}; use compact chips close to the relevant part, short connector dots or very short elbow lines only, never long leader lines crossing the product. "
+                + f"{'5' if value_island_text and parameter_rail_text else '4' if value_island_text or parameter_rail_text else '3'}) Product-adjacent feature callouts {feature_text}; render each callout exactly once; place every text chip in clean outside information space directly beside the product edge when possible, never inside the protected product zone; use only tiny anchor dots or very short elbow pointers to touch the relevant part, and omit the callout if there is no clean outside space for the readable label. "
                 + f"{'6' if value_island_text and parameter_rail_text else '5' if value_island_text or parameter_rail_text else '4'}) Circular trust badge: {trust_text}. "
                 + (f"{'7' if value_island_text and parameter_rail_text else '6' if value_island_text or parameter_rail_text else '5'}) Bottom/corner support block: {bundle_text}; trust/accessory only, do not repeat any value already shown in the value island or secondary slabs." if bundle_text else "")
                 + " No duplicate numbers or duplicate claims across regions. Value islands and value slabs must not use connector lines."
@@ -808,9 +879,9 @@ def compile_fusion_v1_prompt(plan: dict, language: str) -> str:
 
 def compile_image_prompt(plan: dict, language: str, compiler: str) -> str:
     if compiler == "planner_raw":
-        return ensure_full_card_prompt(plan, language)
+        return sanitize_prompt_text(ensure_full_card_prompt(plan, language))
     if compiler == "fusion_v1":
-        return compile_fusion_v1_prompt(plan, language)
+        return sanitize_prompt_text(compile_fusion_v1_prompt(plan, language))
     raise ValueError(f"Unknown prompt compiler: {compiler}")
 
 

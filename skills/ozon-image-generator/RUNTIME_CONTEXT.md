@@ -75,8 +75,20 @@ The final image prompt must be compiled from these layers, in this order:
      omit the hero parameter and let the product/function/scene carry the hook.
    - Secondary specs should become large slabs or a side rail only when they are
      commercially meaningful. Do not turn every number into equal small pills.
-   - Part callouts must anchor to visible product details such as screens, LEDs,
-     batteries, handles, nozzles, blades, ports, brackets, or accessories.
+   - Part callouts must explain a visible product detail only when that detail
+     is a true buyer proof point.
+   - Product visibility has priority over callout density. Treat the product
+     body as a protected layer, the same way product color is protected from
+     lighting.
+   - Before selecting any overlay role, define a protected product zone around
+     the full product body and a separate outside information zone. Text chips,
+     badges, value islands, and callout labels must live in the information
+     zone, not inside the protected product zone. The information zone may be a
+     clean pocket directly beside the product edge.
+   - A callout may touch the product only with a tiny anchor dot or very short
+     elbow pointer. If there is no clean outside space for the readable label,
+     omit the callout from the main image and keep that fact for a secondary
+     detail image.
    - Bundle, warranty, compatibility, and trust claims stay separate from
      functional parameters.
    - Parameter design must have visual salience, not only correctness. Use one
@@ -133,6 +145,10 @@ The final image prompt must be compiled from these layers, in this order:
      Say "warm sunlight streams through the SUV side windows" rather than
      "practical_natural"; say "the central Sun sphere glows warmly" rather than
      "product_emissive".
+   - Lighting must preserve the source product's color atmosphere. The light can
+     separate the silhouette, show material texture, or add background depth,
+     but it must not tint a white appliance blue, make warm fabric look neon, or
+     recolor the product into a different SKU.
    - Do not add glow just to make the image look premium. Glow, sparks, beams,
      RGB washes, and strong rim light must come from a believable object or
      scene source.
@@ -148,6 +164,8 @@ The final image prompt must be compiled from these layers, in this order:
 
 7. **Ozon main-card layout**
    - The product occupies 60-75% of the canvas and remains the first focal point.
+   - The full product body and its visual breathing room are protected from
+     overlay obstruction.
    - Top-left: short title and primary numeric badge.
    - Top-right: EXCITAT brand shelf.
    - Right side: vertical feature badge stack.
@@ -156,15 +174,28 @@ The final image prompt must be compiled from these layers, in this order:
      improves object comprehension.
    - Trust badge: branded or product-specific, placed without touching product
      contour.
+   - Part callouts use outside text chips only. The chip may sit close to the
+     product edge when there is a clean pocket, and the product may receive a
+     tiny anchor dot or very short elbow pointer, but the readable text must sit
+     outside the protected product zone.
    - Maintain clear safe margins around every overlay.
 
 8. **EXCITAT brand lockup**
-   - For tech, gaming, and audio products, prefer the Speed Lightning Shelf:
-     slanted dark brushed-metal or glass backplate, cyan neon boundary glow,
-     bold white EXCITAT wordmark, energetic speed/lightning details.
+   - The EXCITAT shelf/shard is protected brand identity, not pollution. Keep
+     the top-right brand plate visually premium: category-colored rim glow,
+     layered shard/plate shape, subtle cast shadow, and bold white EXCITAT
+     wordmark.
+   - For tech, gaming, and audio products, the brand shelf may use energetic
+     slanted dark/cyan brushed-metal styling inside the shelf itself: controlled
+     edge light, sharp angled accents, layered shard depth, and bold logo
+     contrast. This must not spread into the background or force other
+     categories into a tech look.
    - For tools/hardware, adapt the shelf toward darker metal and safety orange.
    - For STEM/gift/science products, adapt the shelf accent to warm solar-gold
      or category-compatible energy colors.
+   - For home, kitchen, baby, soft goods, and auto comfort products, keep the
+     shelf/shard effect but route the glow color and material softness to the
+     product category instead of flattening the brand area.
    - The brand lockup must look like part of the e-commerce card, not a pasted
      sticker.
 
@@ -209,6 +240,8 @@ rules, not as visual references:
      or installation convenience; weak internal-construction details should not
      become main-image labels unless they are the top differentiator.
    - Keep copy short, icon-like, and mobile readable. Avoid paragraph claims.
+   - Keep the product unobstructed. Do not trade product clarity for one more
+     label; if a callout would cover the product, omit it.
 
 2. **Dynamic layout routing**
    - Do not let one successful card become a fixed template.
@@ -240,6 +273,12 @@ rules, not as visual references:
    - Exclude failed or middle-stage modes: generic odd/fixed template cards,
      over-heavy borders, inherited batch-image styling, language mixing, and
      coordinate/style instructions that can leak as visible text.
+   - Exclude polluted manual prompt leftovers from unrelated tests: graphic
+     poster framing, unrelated side-light line defaults, fixed corner badge
+     defaults, and ungrounded background effects.
+   - Do not exclude the EXCITAT brand shelf/shard itself. Clean pollution around
+     it, but preserve its layered plate, rim glow, and category-specific brand
+     presence.
    - Exclude later PS5 v6 iterations from other conversations.
 
 ## Stable Prompt Shape
@@ -254,10 +293,14 @@ Use this sequence when compiling the model prompt:
 4. State the category-specific scene and why it fits the product.
 5. Specify the 1:1 Ozon main-card composition and product scale.
 6. Specify lighting, shadows, backlight, material contrast, and depth.
+   Lighting should increase product separation and depth while preserving the
+   product's original color atmosphere.
 7. Specify the EXCITAT brand shelf style.
 8. Specify the parameter story only when useful: hero value, secondary rail,
    part-anchored callouts, and bundle/trust blocks, all sourced from verified
    facts or clearly omitted when not important.
+   Callouts must be selected with an occlusion check: outside label first,
+   short pointer second, product visibility always first.
 9. Specify title, numeric badge, feature badges, trust/accessory area, and any
    scenario/detail inset only when useful for that product.
 10. Specify the exact language/script for all visible text.
@@ -297,3 +340,9 @@ inside the initial Skill file:
 - Exact production repeatability may require a separate layer split, but that is
   not the default route for reproducing the original one-shot Antigravity
   exploration quality.
+- Visual impact should come from scale, silhouette contrast, shallow depth,
+  clean negative space, strong value hierarchy, and realistic contact shadows,
+  while keeping added effects physically relevant to the product and usage
+  scene.
+- Do not flatten the brand layer while cleaning prompt pollution. The brand
+  shelf/shard is one of the main sources of premium e-commerce impact.
