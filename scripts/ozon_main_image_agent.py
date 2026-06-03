@@ -22,7 +22,29 @@ DEFAULT_CONTRACT_FILES = [
     REPO / "skills" / "ozon-image-generator" / "README.md",
     REPO / "skills" / "ozon-image-generator" / "RUNTIME_CONTEXT.md",
 ]
+CODEX_DEEP_CONTRACT_FILES = [
+    REPO / "skills" / "ozon-image-generator" / "CODEX_DEEP_WORKFLOW.md",
+]
 DEFAULT_PROMPT_COMPILER = "fusion_v1"
+CODEX_DEEP_CALL_OUT_TERMS = (
+    "material",
+    "safe",
+    "safety",
+    "anti",
+    "protect",
+    "waterproof",
+    "compatible",
+    "compatibility",
+    "fit",
+    "adjustable",
+    "certified",
+    "grade",
+)
+UNIT_ALIASES = {
+    "pcs": ("piece", "pieces", "piese", "buc", "bucati"),
+    "piece": ("pcs", "pieces", "piese", "buc", "bucati"),
+    "pieces": ("pcs", "piece", "piese", "buc", "bucati"),
+}
 
 PLANNER_SYSTEM = """You are the planning model for an e-commerce main-image generation agent.
 
@@ -491,6 +513,12 @@ PROMPT_TEXT_LEAK_REPLACEMENTS = (
 def sanitize_prompt_text(prompt: str) -> str:
     """Remove style-label phrases that image models may render as visible copy."""
     cleaned = clean_phrase(prompt)
+    cleaned = replace_prompt_text_leaks(cleaned)
+    return cleaned
+
+
+def replace_prompt_text_leaks(text: str) -> str:
+    cleaned = str(text or "")
     for pattern, replacement in PROMPT_TEXT_LEAK_REPLACEMENTS:
         cleaned = pattern.sub(replacement, cleaned)
     return cleaned
@@ -519,11 +547,20 @@ def has_digits(value: str) -> bool:
     return any(ch.isdigit() for ch in value)
 
 
+def unit_is_verified(compact_unit: str, compact_source: str) -> bool:
+    if not compact_unit:
+        return True
+    if compact_unit in compact_source:
+        return True
+    return any(alias in compact_source for alias in UNIT_ALIASES.get(compact_unit, ()))
+
+
 def parameter_value_is_verified(item: dict, source_facts: str) -> bool:
     value = clean_phrase(item.get("value"))
     unit = clean_phrase(item.get("unit"))
     label = clean_phrase(item.get("label"))
     source_fact = clean_phrase(item.get("source_fact"))
+    compact_source = compact_fact_text(source_facts)
     combined = compact_fact_text(f"{source_facts} {source_fact}")
     value_unit = " ".join(part for part in [value, unit] if part).strip()
     compact_value_unit = compact_fact_text(value_unit)
@@ -533,6 +570,8 @@ def parameter_value_is_verified(item: dict, source_facts: str) -> bool:
     if not value_unit and not label:
         return False
     if has_digits(value_unit):
+        if compact_value and compact_value in compact_source and unit_is_verified(compact_unit, compact_source):
+            return True
         candidates = [
             compact_value_unit,
             compact_value + singularize_compact(compact_unit),
@@ -557,6 +596,12 @@ def visible_text_is_verified(text: str, source_facts: str) -> bool:
         return False
     numbers = re.findall(r"\d+(?:\.\d+)?", text)
     return bool(numbers) and all(number in compact_source for number in numbers)
+
+
+def label_text_is_source_backed(text: str, source_facts: str) -> bool:
+    compact_text = compact_fact_text(text)
+    compact_source = compact_fact_text(source_facts)
+    return bool(compact_text and compact_text in compact_source)
 
 
 def share_numeric_fact(left: str, right: str) -> bool:
@@ -616,6 +661,17 @@ def format_callout_item(item: object) -> str:
     if anchor:
         parts.append(f"anchored to {anchor}")
     return ", ".join(parts)
+
+
+def callout_is_codex_deep_worthy(item: object) -> bool:
+    """Keep callouts for non-obvious buyer proof, not obvious visual labels."""
+    if not isinstance(item, dict):
+        return False
+    text = " ".join(
+        clean_phrase(item.get(key)).lower()
+        for key in ("label", "source_fact", "anchor_part")
+    )
+    return any(term in text for term in CODEX_DEEP_CALL_OUT_TERMS)
 
 
 def format_support_item(item: object) -> str:
@@ -877,11 +933,145 @@ def compile_fusion_v1_prompt(plan: dict, language: str) -> str:
     return re.sub(r"\s+", " ", " ".join(sentences)).strip()
 
 
+def compile_codex_deep_prompt(plan: dict, language: str) -> str:
+    """Compile a high-impact prompt for Codex/OpenAI-style image models.
+
+    This profile keeps the planner's product logic but uses stronger layout,
+    contrast, and typography instructions than the Gemini image route.
+    """
+    analysis = plan.get("product_analysis", {})
+    directives = plan.get("generation_directives", {})
+    copy = plan.get("overlay_copy", {})
+    parameter_story = plan.get("parameter_story", {})
+    core = clean_phrase(analysis.get("core_object")) or "product"
+    immutable = [clean_phrase(item) for item in analysis.get("immutable_features", []) if clean_phrase(item)]
+    product_fidelity = clean_phrase(directives.get("product_fidelity"))
+    hero_pose = clean_phrase(analysis.get("hero_pose"))
+    support_surface = clean_phrase(analysis.get("background_support_surface"))
+    depth_cues = clean_phrase(analysis.get("background_depth_cues"))
+    active_interaction = clean_phrase(analysis.get("active_physical_interaction"))
+    physical_light = clean_phrase(analysis.get("physical_light_source") or analysis.get("functional_lighting_source"))
+    lighting_effect = clean_phrase(analysis.get("lighting_effect_on_scene"))
+    shadow_depth = clean_phrase(analysis.get("shadow_and_depth_behavior"))
+    title = clean_phrase(copy.get("title"))
+    subtitle = clean_phrase(copy.get("subtitle"))
+    feature_badges = [clean_phrase(item) for item in copy.get("feature_badges", []) if clean_phrase(item)]
+    trust_badge = verified_trust_badge(plan, clean_phrase(copy.get("trust_badge")))
+    source_facts = clean_phrase(plan.get("source_facts_text"))
+
+    hero_parameter = ""
+    secondary_parameters: list[str] = []
+    part_callouts: list[str] = []
+    bundle_or_trust: list[str] = []
+    if isinstance(parameter_story, dict):
+        hero_parameter = format_parameter_item(parameter_story.get("hero_parameter"), source_facts)
+        secondary_parameters = [
+            format_parameter_item(item, source_facts)
+            for item in parameter_story.get("secondary_parameters", [])
+            if format_parameter_item(item, source_facts)
+        ]
+        part_callouts = [
+            format_callout_item(item)
+            for item in parameter_story.get("part_callouts", [])
+            if callout_is_codex_deep_worthy(item) and format_callout_item(item)
+        ]
+        bundle_or_trust = [
+            format_support_item(item)
+            for item in parameter_story.get("bundle_or_trust", [])
+            if format_support_item(item)
+        ]
+
+    value_island_text, secondary_parameters, part_callouts = choose_value_island(
+        hero_parameter,
+        secondary_parameters,
+        part_callouts,
+    )
+    secondary_units = [f"'{item}'" for item in feature_badges[:2]] or secondary_parameters[:2]
+    callout_text = join_items(part_callouts, 1)
+    support_text = join_items(
+        [item for item in bundle_or_trust if label_text_is_source_backed(item, source_facts)],
+        1,
+    )
+    if compact_fact_text(support_text) == compact_fact_text(trust_badge) or share_numeric_fact(support_text, trust_badge):
+        support_text = ""
+    if not support_text:
+        support_text = next(
+            (item for item in reversed(feature_badges) if label_text_is_source_backed(item, source_facts)),
+            "",
+        )
+
+    language_label = "English" if "english" in language.lower() else language
+    preserve_bits = []
+    if product_fidelity:
+        preserve_bits.append(product_fidelity.rstrip("."))
+    if immutable:
+        preserve_bits.append(f"Preserve {join_items(immutable, 6)} exactly")
+    preserve_sentence = ". ".join(preserve_bits) + "." if preserve_bits else "Preserve the product shape, colors, materials, proportions, and physical logic from the source image."
+
+    staging_bits = [item for item in [hero_pose, f"grounded on {support_surface}" if support_surface else "", active_interaction] if item]
+    staging_sentence = "; ".join(staging_bits).rstrip(".") + "." if staging_bits else "Use the product's strongest functional hero pose."
+    background_bits = []
+    if depth_cues:
+        background_bits.append(f"shallow-depth category background with {depth_cues}")
+    if physical_light and lighting_effect:
+        background_bits.append(f"{physical_light} creates {lighting_effect}")
+    elif physical_light:
+        background_bits.append(f"lighting comes from {physical_light}")
+    if shadow_depth:
+        background_bits.append(shadow_depth)
+
+    top_left = f"large two-line title '{title}'" if title else "large two-line product title"
+    if subtitle and visible_text_is_verified(subtitle, source_facts):
+        top_left += f" with subtitle '{subtitle}'"
+
+    layout_parts = [
+        f"top-right: {infer_brand_shelf(plan)}",
+        f"top-left: {top_left}",
+    ]
+    if value_island_text:
+        layout_parts.append(f"left side: one dominant high-contrast value block with {value_island_text}")
+    if secondary_units:
+        layout_parts.append(f"left/lower side: two compact stacked feature slabs with {join_items(secondary_units, 2)}")
+    if callout_text:
+        layout_parts.append(f"one small side callout in a clean pocket beside the product with {callout_text}")
+    if support_text:
+        layout_parts.append(f"bottom/corner category badge with {support_text}")
+    elif trust_badge:
+        layout_parts.append(f"bottom/corner category or trust badge with '{trust_badge}'")
+
+    sentences = [
+        "Create a single 1:1 square high-impact marketplace main image card using the source image as product truth.",
+        f"Extract the original {core} from the source image.",
+        preserve_sentence,
+        staging_sentence,
+        "Use a premium commercial poster-card composition: heroic product scale, dense but organized information hierarchy, crisp typography, sharp icon-like panels, strong silhouette separation, and clean negative space.",
+        "Use high local contrast and high perceived clarity: deep low-noise background, bright controlled highlights, crisp edges, defined shadows, rich blacks, clean whites, saturated category accents, no grey haze, no muddy fog, no flat low-contrast wash, and no over-soft bloom.",
+        "Lighting may increase depth and product separation, but it must preserve the source product color atmosphere and must not recolor the product into a different SKU.",
+    ]
+    if background_bits:
+        sentences.append("Scene depth and lighting: " + "; ".join(background_bits) + ".")
+    sentences.append(
+        f"Overlay {language_label} layout: "
+        + "; ".join(f"{index}) {part}" for index, part in enumerate(layout_parts, start=1))
+        + "."
+    )
+    sentences.append(
+        "Only show commercially important information units; do not migrate weak details into small labels. "
+        "Readable labels and badges must sit outside the protected product zone, directly beside the product edge when possible. "
+        "A callout may touch the product only with a tiny anchor dot or very short elbow pointer. "
+        "Render each claim once, with no duplicate numbers, no long leader lines, no visible prompt/style labels, no watermark, and no old source-image frame."
+    )
+    sentences.append("Clean layout, professional advertising style.")
+    return re.sub(r"\s+", " ", " ".join(sentences)).strip()
+
+
 def compile_image_prompt(plan: dict, language: str, compiler: str) -> str:
     if compiler == "planner_raw":
         return sanitize_prompt_text(ensure_full_card_prompt(plan, language))
     if compiler == "fusion_v1":
         return sanitize_prompt_text(compile_fusion_v1_prompt(plan, language))
+    if compiler == "codex_deep":
+        return sanitize_prompt_text(compile_codex_deep_prompt(plan, language))
     raise ValueError(f"Unknown prompt compiler: {compiler}")
 
 
@@ -955,9 +1145,12 @@ def main() -> None:
     parser.add_argument("--image-model", default="gemini-3.1-flash-image")
     parser.add_argument(
         "--prompt-compiler",
-        choices=["fusion_v1", "planner_raw"],
+        choices=["fusion_v1", "planner_raw", "codex_deep"],
         default=DEFAULT_PROMPT_COMPILER,
-        help="Final prompt assembly mode. fusion_v1 is the locked selected workflow; planner_raw is for diagnostics.",
+        help=(
+            "Final prompt assembly mode. fusion_v1 is the locked selected workflow; "
+            "planner_raw is for diagnostics; codex_deep targets Codex/OpenAI-style high-impact generation."
+        ),
     )
     parser.add_argument("--contract-file", action="append", default=[])
     parser.add_argument("--blueprint", action="append", default=[], help="Optional product blueprint markdown file.")
@@ -986,9 +1179,11 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     contract_paths = list(DEFAULT_CONTRACT_FILES)
+    if args.prompt_compiler == "codex_deep":
+        contract_paths.extend(CODEX_DEEP_CONTRACT_FILES)
     contract_paths.extend(Path(p).resolve() for p in args.contract_file)
     contract_paths.extend(find_matching_blueprint(args.product_name, args.blueprint))
-    source_contract = read_source_contract(contract_paths)
+    source_contract = replace_prompt_text_leaks(read_source_contract(contract_paths))
     (out_dir / "source_contract_snapshot.md").write_text(source_contract, encoding="utf-8")
 
     plan = compile_plan(
