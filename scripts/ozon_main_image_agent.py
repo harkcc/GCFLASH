@@ -65,13 +65,20 @@ Workflow:
 4. Build a parameter story from verified product facts and the source image.
    Do this as product reasoning, not regex extraction or unit scoring. Decide
    what the buyer needs to notice in the first second:
+   - First run a buyer-salience selection pass when many facts are provided.
+     Rank facts by purchase relevance for the specific audience: performance,
+     compatibility/fit, safety/noise, durability/life, capacity/runtime, and
+     installation/convenience. Put weak internal-construction details, generic
+     material notes, and low-intent accessory facts into the omit reason unless
+     they are the product's decisive differentiator.
    - One hero parameter only when a verified number/unit or compatibility claim
      is commercially decisive for this product. If no parameter is decisive,
      leave it empty and let the product/function carry the hook.
-   - 0-4 secondary parameters for a side rail or stacked slabs when the product
-     has multiple important specs.
-   - 1-3 part callouts anchored to visible product parts, ports, lights, handles,
-     batteries, blades, screens, nozzles, brackets, or accessories.
+   - 2-4 secondary parameters for a side rail or stacked slabs only when they
+     are high-intent buying facts. Do not display every supplied number.
+   - 0-1 part callouts by default, and up to 2 only when a visible part is more
+     persuasive than another numeric spec. Part callouts are for true buyer
+     proof, not for labeling obvious parts.
    - Bundle, warranty, compatibility, or trust claims must stay separate from
      functional parameters.
    - Design the visible parameter hierarchy like an Ozon scan poster, not a
@@ -91,6 +98,9 @@ Workflow:
    - Do not repeat the same value or claim in multiple regions. Once a value is
      used as the hero island or a secondary slab, it must not appear again in the
      trust badge, bottom support block, or feature callout.
+   - A main image should usually show only 4-6 total information units including
+     title, hero value, secondary slabs, and one support/trust item. If more
+     than six facts are available, omit the rest for detail images.
    Examples only, not hard-coded rules: a gaming console may highlight game
    count or memory, car lamps may highlight model/brightness/power/color
    temperature, a drill may highlight RPM/voltage/batteries/case, and a saw may
@@ -99,6 +109,11 @@ Workflow:
    motor speed/RPM is often a first-read hero value because it proves power and
    performance. The deciding factor is the product's buying logic and verified
    facts, not the unit text itself.
+   For ventilation fans, prioritize airflow, RPM, wattage, noise level, service
+   life, cable/installation convenience, and voltage only if it affects buyer
+   compatibility. Omit blade count, motor winding, shutter, bearing, and generic
+   material details from the main image unless they are explicitly the top
+   differentiator for this listing.
    For baby food processors and kitchen appliances, prioritize operating value:
    preset modes, power, speed settings, safety alarm, and self-cleaning usually
    matter more than voltage or dimensions. Capacity is important only when it is

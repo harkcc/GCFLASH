@@ -201,6 +201,13 @@ rules, not as visual references:
      before layout selection: decide the first-read hero value, optional side rail,
      component callouts, and trust/accessory blocks from the product's buying
      logic. This is a planning decision, not a compiler heuristic.
+   - When many parameters are supplied, select rather than list. Rank facts by
+     buyer purchase intent for the specific category, keep only the strongest
+     4-6 visible information units for the main image, and move the rest to
+     detail images or omit them from the one-shot prompt. Strong facts usually
+     prove performance, compatibility, safety/noise, durability, capacity/runtime,
+     or installation convenience; weak internal-construction details should not
+     become main-image labels unless they are the top differentiator.
    - Keep copy short, icon-like, and mobile readable. Avoid paragraph claims.
 
 2. **Dynamic layout routing**

@@ -87,12 +87,23 @@ Before generating any visual assets, analyze the product metadata to extract the
 3. **Silhouette Definition**: What is the physical object? (e.g., handheld vertical vacuum cleaner, pruning shears). It must be easily recognizable within **0.5 seconds**.
 4. **Parameter Story**: Decide which verified facts deserve visual emphasis.
    - First ask what the buyer must notice in the first second for this product.
+   - When the title/detail text provides many parameters, run a buyer-salience
+     selection pass before layout: rank facts by the target buyer's purchase
+     intent, then choose only the few facts that should appear on the main
+     image. Prioritize performance, fit/compatibility, safety/noise, durability,
+     capacity/runtime, and installation/convenience according to the product.
+     Omit weak internal-construction details, generic materials, and low-intent
+     accessories unless they are the listing's decisive differentiator.
    - Use one hero parameter only when a verified number/unit, compatibility claim,
      model/spec, or kit claim is commercially decisive.
-   - Route other facts into secondary parameter rail, part-anchored callouts,
-     bundle/accessory area, or trust badge.
+   - Route only high-intent supporting facts into the secondary parameter rail,
+     part-anchored callouts, bundle/accessory area, or trust badge. Do not put
+     every supplied parameter on the main image.
    - Omit a hero parameter when no parameter is truly decisive; do not force a
      number just because one exists.
+   - The main image should usually show 4-6 total information units including
+     title, hero value, secondary slabs, and one support/trust item. Move the
+     remaining facts to detail images or omit them from the one-shot prompt.
    - Make the selected parameter visually dominant. The first-read hook should be
      a large value island/slab or circle where the value occupies most of the
      container; secondary facts should be medium slabs; only detail notes should
@@ -105,6 +116,11 @@ Before generating any visual assets, analyze the product metadata to extract the
      only adjacent tabs, short connector dots, or compact elbow callouts.
    - For rotating products, use verified RPM/blade speed as a potential hero
      value when supplied; never invent a speed number.
+   - For ventilation fans, prioritize airflow, RPM, wattage, noise level, service
+     life, cable/installation convenience, and voltage only if it affects buyer
+     compatibility. Usually omit blade count, motor winding, shutter, bearing,
+     and generic material details from the main image unless they are the
+     strongest differentiator.
    - *Good role decisions*: memory/game count for a game console, lamp model and
      brightness for auto bulbs, RPM/voltage/battery count for a drill, capacity
      or sterilizing/heating mode for a baby appliance.
