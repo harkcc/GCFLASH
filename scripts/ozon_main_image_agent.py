@@ -472,6 +472,8 @@ def parameter_value_is_verified(item: dict, source_facts: str) -> bool:
     if not value_unit and not label:
         return False
     if has_digits(value_unit):
+        if compact_value and compact_value in combined:
+            return True
         candidates = [
             compact_value_unit,
             compact_value + singularize_compact(compact_unit),
