@@ -3,21 +3,22 @@
 
 Where the target-language copy comes from
 ----------------------------------------
-The upstream ``truth_pack.json`` (produced by ``run_product_truth_intake.py``)
-holds ``operator_confirmed.title`` and ``operator_confirmed.facts`` -- free text,
-in whatever language the operator typed, deliberately NOT structured into
-marketing slots. It has no brand/headline/spec fields to map from.
+The upstream ``truth_pack.json`` holds ``operator_confirmed.title`` and
+``operator_confirmed.facts`` -- free text, usually the marketplace listing title,
+deliberately NOT structured into marketing slots.
 
-SPEC §3 allows exactly three LLM nodes, none of which is a copy writer, and
-§10.2 says to build the acceptance request using "附录 A 的罗语事实清单" -- the
-Romanian copy comes from the request. So:
+Turning that into the handful of lines an image actually carries is real work:
+choosing what to leave off, deciding which line earns the largest type, and
+phrasing it in the target language. In the validated 2026-07-11 run the model
+did exactly that unprompted -- the operator supplied only the listing title plus
+"don't put everything on, it's a main image" and "output in Romanian". So it is
+a fourth LLM node (``describers.compile_copy_slots``), not a human chore.
 
-- the request may carry ``copy_slots`` directly (authored/approved by a human);
-- otherwise this module drafts slots from the truth pack and marks the result
-  ``needs_human_revision``, which is the "编译后允许用户在开始前修订一次" step
-  in §5.1;
-- either way the truth pack is what GATES the job (§4.1) and what every drafted
-  slot is traced back to.
+This module stays deterministic and does two jobs around that node:
+
+- GATE the job on the truth pack (§4.1);
+- VERIFY every figure in the resulting copy against the operator's product
+  information (``verify_numbers_traceable``) before anything is frozen.
 
 No LLM is involved here. Nothing in this module invents a claim.
 """
@@ -38,6 +39,55 @@ CORE_SPEC_SLOTS = ("spec_primary", "spec_secondary")
 SPEC_PATTERN = re.compile(
     r"\b\d+(?:[.,]\d+)?\s*(?:kpa|pa|bar|w|kw|v|mah|ah|ml|l|kg|g|mm|cm|m|db|rpm|"
     r"°c|hz|inch|\")\b", re.IGNORECASE)
+
+
+NUMBER_PATTERN = re.compile(r"\d+(?:[.,]\d+)?")
+
+
+def _normalise_for_lookup(text: str) -> str:
+    """Lowercase and strip separators so '75 kPa' matches '75kpa'."""
+    return re.sub(r"[\s ._\-–—/×x]+", "", (text or "").lower())
+
+
+def truth_blob(truth: dict) -> str:
+    """Everything the operator actually stated about the product, concatenated."""
+    oc = truth.get("operator_confirmed") or {}
+    parts = [truth_title(truth), str(oc.get("raw_product_info") or "")]
+    parts += truth_facts(truth)
+    obs = truth.get("source_visible_observations") or {}
+    for key in ("visible_identity_text", "primary_product_accessories"):
+        vals = obs.get(key)
+        if isinstance(vals, list):
+            parts += [str(v) for v in vals]
+    return " ".join(parts)
+
+
+def verify_numbers_traceable(slots: list[dict], truth: dict) -> list[dict]:
+    """Every figure in the copy must appear in the operator's product info.
+
+    This is the mechanical guard against the single most damaging error in the
+    pipeline. The 2026-07-11 run put a wrong "70 kPa" on the image (the product
+    is 75 kPa) because a human typed it into a follow-up instruction, and it took
+    an explicit fact-defence line to undo. Once the fact list is frozen it is
+    repeated verbatim on every subsequent round (R3), so a wrong number does not
+    spoil one image, it spoils all of them.
+
+    Returns a list of untraceable findings; empty means every number checks out.
+    """
+    blob = _normalise_for_lookup(truth_blob(truth))
+    findings: list[dict] = []
+    for slot in slots or []:
+        text = (slot.get("text") or "").strip()
+        for match in NUMBER_PATTERN.finditer(text):
+            number = match.group(0)
+            if _normalise_for_lookup(number) not in blob:
+                findings.append({
+                    "slot": slot.get("slot"),
+                    "text": text,
+                    "number": number,
+                    "why": "this figure does not appear in the product information",
+                })
+    return findings
 
 
 class IncompleteTruth(ValueError):
@@ -150,6 +200,10 @@ class NeedsUserInput(RuntimeError):
     """The job cannot proceed without another input from the operator."""
 
 
+class UntraceableNumber(ValueError):
+    """Copy carries a figure that is not in the operator's product information."""
+
+
 # --------------------------------------------------------------------------- #
 # §5.1 locked_fact_list
 # --------------------------------------------------------------------------- #
@@ -196,12 +250,19 @@ def compile_locked_fact_list(*, truth: dict, intent: dict,
                 if str(txt).strip():
                     must_replace.append(str(txt).strip())
 
+    unverified = verify_numbers_traceable(slots, truth)
+    if unverified:
+        # Never auto-freeze copy carrying a figure we cannot trace (see
+        # verify_numbers_traceable). A human must fix or explicitly accept it.
+        needs_revision = True
+
     return {
         "language": language,
         "copy_slots": slots,
         "native_product_text": native,
         "must_replace_from_reference": must_replace,
         "needs_human_revision": needs_revision,
+        "unverified_numbers": unverified,
         "frozen": False,
         "provenance": {
             "source": "request.copy_slots" if request_slots else "drafted_from_truth_pack",
@@ -211,11 +272,23 @@ def compile_locked_fact_list(*, truth: dict, intent: dict,
     }
 
 
-def freeze_fact_list(facts: dict) -> dict:
-    """Mark the fact list frozen. After this, R3 forbids edits for the whole job."""
+def freeze_fact_list(facts: dict, *, accept_unverified: bool = False) -> dict:
+    """Mark the fact list frozen. After this, R3 forbids edits for the whole job.
+
+    Refuses to freeze copy containing an untraceable figure unless a human
+    explicitly accepts it, because freezing propagates the error to every round.
+    """
     out = dict(facts)
     if not out.get("copy_slots"):
         raise ValueError("cannot freeze an empty copy_slots list")
+    unverified = out.get("unverified_numbers") or []
+    if unverified and not accept_unverified:
+        detail = "; ".join(
+            f"{u.get('slot')}={u.get('text')!r} (figure {u.get('number')})"
+            for u in unverified)
+        raise UntraceableNumber(
+            f"refusing to freeze copy with untraceable figure(s): {detail}. "
+            f"Fix the copy, or pass accept_unverified=True to override.")
     out["needs_human_revision"] = False
     out["frozen"] = True
     return out

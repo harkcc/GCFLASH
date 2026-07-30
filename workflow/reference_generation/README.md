@@ -27,16 +27,25 @@ Agent**——大模型只出现在三个固定节点,其余全是确定性代码
 
 两道人工闸都是强制的。`review_mode=auto` 会被代码直接拒绝(R10)。
 
-## 三个大模型节点
+## 四个大模型节点
 
-| 节点 | 何时跑 | 产出 | schema |
+| 节点 | 何时跑 | 看图吗 | 产出 |
 |---|---|---|---|
-| 产品外观描述器 | 编译期一次 | `immutable_traits.json` | `schemas/immutable_traits.schema.json` |
-| 设计简报器 | 编译期一次 | `reference_design_brief.json` | `schemas/reference_design_brief.schema.json` |
-| 修补判官 | 每轮一次 | `judge_decision.json` | `schemas/judge_decision.schema.json` |
+| 文案编译器 | 编译期一次 | **不看任何图** | `locked_fact_list` 草稿 |
+| 产品外观描述器 | 编译期一次 | 产品图 | `immutable_traits.json` |
+| 设计简报器 | 编译期一次 | 参考图 | `reference_design_brief.json` |
+| 修补判官 | 每轮一次 | 候选图 | `judge_decision.json` |
 
 每个都是单次调用、JSON Schema 钉死输出、不循环、不调工具。判官**只做预填**,
 人不确认不执行。
+
+**文案编译器不看任何图是刻意的**——它唯一的信息源是操作者给的产品信息,
+从物理上杜绝把参考图上 donor 的声明抄进我方文案。
+
+它写出来的每个数字都会被确定性代码 `verify_numbers_traceable()` 回查产品信息,
+查不到就**拒绝冻结**。依据是 2026-07-11 的真实事故:操作者自己打错成 "70 kPa"
+(产品实为 75 kPa),错误进了图。文案一旦冻结每轮照发,错一个数字毁的是整批图,
+所以这道闸是机械的,不靠人细心。
 
 ## 四个 Prompt 模板
 
@@ -67,13 +76,18 @@ python scripts/run_reference_generation.py style-transfer --job <job_dir> \
 2. Python 3.12 + Pillow。
 3. 单次生成实测 176–407 秒,`--timeout` 默认 900。
 
+## 文案怎么来
+
+不给 `copy_slots` 时,文案编译器自动起草并继续跑。请求里给了 `copy_slots`
+就用你给的,跳过这个节点。
+
+停下来只有两种情况:
+
+- 某个数字在产品信息里查不到(见上);
+- 你自己加了 `--confirm-copy`,想先过目再生图。
+
 ## 已知缺口
 
-- **目标语言文案要手填**。`truth_pack` 存的是自由文本产品信息(`75 kPa`、
-  `100 bags included`…),信息是全的,但转成目标语言成品槽位
-  (`100 DE PUNGI INCLUSE`)这一步没自动化——SPEC §3 只允许三个大模型节点,
-  里面没有文案撰写器。不给 `copy_slots` 时 runner 会起草一版然后停在
-  `needs_user_input` 等你改(§5.1 的「人工改一次再冻结」)。
 - **以下代码路径只有单元测试覆盖,没真跑过**:RECOMPOSE 轮(首轮比例正好命中
   就不会触发)、产品完整性强制修复轮、预算耗尽、配件证据缺失门禁、
   模块级灵感图挂载、`backend_error` 终态、`incomplete_truth` 终态、

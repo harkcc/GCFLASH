@@ -290,3 +290,143 @@ class TestStateMachine:
         rec = st.allocate_round(ROUND_KIND_INITIAL)
         with pytest.raises(StateError, match="unknown round fields"):
             st.update_round(rec.index, quality_score=9)
+
+
+# --------------------------------------------------------------------------- #
+# copy compiler (LLM node 4) + the number-traceability guard
+#
+# The guard exists because of a real incident: the validated 2026-07-11 run put
+# "70 kPa" on the image when the product is 75 kPa, because the operator typed
+# it into a follow-up instruction. Frozen copy is repeated verbatim on every
+# round (R3), so a wrong figure spoils the whole job, not one image.
+# --------------------------------------------------------------------------- #
+
+REAL_LISTING = ("Aparat de Vidat si Sigilat Alimente, Excitat®, 120W, 75kpa, "
+                "6-In-1, Functii Uscat/Umed/Vid Moale, cu 100 Pungi 17x20cm, "
+                "30 cm bara de lipire, Cutter Incorporat, Sterilizare UV, "
+                "Panou Control Tactil, Gri")
+
+
+def listing_truth() -> dict:
+    """The operator's real 2026-07-11 input: a marketplace listing title."""
+    return {
+        "operator_confirmed": {
+            "title": REAL_LISTING, "raw_product_info": REAL_LISTING,
+            "facts": [], "expected_offer": "host_with_accessories",
+        },
+        "source_visible_observations": {"visible_identity_text": []},
+    }
+
+
+class TestNumberTraceability:
+    def test_the_2026_07_11_typo_is_caught(self):
+        # The exact historical error.
+        found = G1C.verify_numbers_traceable(
+            [{"slot": "spec_primary", "text": "70 kPa"}], listing_truth())
+        assert len(found) == 1
+        assert found[0]["number"] == "70"
+
+    def test_every_real_slot_traces_to_the_listing_title(self):
+        # The nine slots the model actually produced, against the title it saw.
+        slots = [
+            {"slot": "brand", "text": "EXCITAT"},
+            {"slot": "headline", "text": "APARAT DE VIDAT"},
+            {"slot": "badge", "text": "6 ÎN 1"},
+            {"slot": "supporting_line", "text": "PENTRU PRODUSE USCATE ȘI UMEDE"},
+            {"slot": "spec_primary", "text": "75 kPa"},
+            {"slot": "spec_secondary", "text": "120 W"},
+            {"slot": "offer", "text": "100 DE PUNGI INCLUSE"},
+            {"slot": "feature", "text": "BARĂ DE SIGILARE DE 30 cm"},
+            {"slot": "feature_optional", "text": "CUTTER ÎNCORPORAT • STERILIZARE UV"},
+        ]
+        assert G1C.verify_numbers_traceable(slots, listing_truth()) == []
+
+    def test_spacing_and_case_do_not_defeat_the_match(self):
+        # The title says "75kpa" and "120W"; the copy says "75 kPa" / "120 W".
+        assert G1C.verify_numbers_traceable(
+            [{"slot": "spec_primary", "text": "75 kPa"},
+             {"slot": "spec_secondary", "text": "120 W"}], listing_truth()) == []
+
+    def test_inflated_spec_is_caught(self):
+        found = G1C.verify_numbers_traceable(
+            [{"slot": "offer", "text": "200 DE PUNGI INCLUSE"}], listing_truth())
+        assert found and found[0]["number"] == "200"
+
+    def test_invented_warranty_period_is_caught(self):
+        found = G1C.verify_numbers_traceable(
+            [{"slot": "feature", "text": "24 LUNI GARANTIE"}], listing_truth())
+        assert found and found[0]["number"] == "24"
+
+    def test_multiple_findings_are_all_reported(self):
+        found = G1C.verify_numbers_traceable(
+            [{"slot": "spec_primary", "text": "70 kPa"},
+             {"slot": "spec_secondary", "text": "150 W"}], listing_truth())
+        assert {f["number"] for f in found} == {"70", "150"}
+
+    def test_non_numeric_copy_is_never_flagged(self):
+        assert G1C.verify_numbers_traceable(
+            [{"slot": "headline", "text": "APARAT DE VIDAT"}], listing_truth()) == []
+
+
+class TestFreezeRefusesUntraceableCopy:
+    def test_freeze_blocked_when_a_figure_is_untraceable(self):
+        facts = G1C.compile_locked_fact_list(
+            truth=listing_truth(), intent={"language": "ro"},
+            request_slots=[{"slot": "brand", "text": "EXCITAT"},
+                           {"slot": "headline", "text": "APARAT DE VIDAT"},
+                           {"slot": "spec_primary", "text": "70 kPa"}])
+        assert facts["unverified_numbers"]
+        assert facts["needs_human_revision"] is True
+        with pytest.raises(G1C.UntraceableNumber, match="70"):
+            G1C.freeze_fact_list(facts)
+
+    def test_human_can_explicitly_override(self):
+        facts = G1C.compile_locked_fact_list(
+            truth=listing_truth(), intent={"language": "ro"},
+            request_slots=[{"slot": "brand", "text": "EXCITAT"},
+                           {"slot": "headline", "text": "APARAT DE VIDAT"},
+                           {"slot": "spec_primary", "text": "70 kPa"}])
+        frozen = G1C.freeze_fact_list(facts, accept_unverified=True)
+        assert frozen["frozen"] is True
+
+    def test_clean_copy_freezes_without_ceremony(self):
+        facts = G1C.compile_locked_fact_list(
+            truth=listing_truth(), intent={"language": "ro"},
+            request_slots=[{"slot": "brand", "text": "EXCITAT"},
+                           {"slot": "headline", "text": "APARAT DE VIDAT"},
+                           {"slot": "spec_primary", "text": "75 kPa"}])
+        assert facts["unverified_numbers"] == []
+        assert G1C.freeze_fact_list(facts)["frozen"] is True
+
+
+class TestCopyCompilerNode:
+    def test_dedupes_repeated_slots_and_drops_empties(self, monkeypatch):
+        from workflow.reference_generation import describers
+
+        def fake_call(prompt, images, schema, **kw):
+            assert images == []  # the copy compiler must never see an image
+            return {"copy_slots": [
+                {"slot": "headline", "text": "APARAT DE VIDAT", "source": "title"},
+                {"slot": "headline", "text": "ALTCEVA", "source": "title"},
+                {"slot": "badge", "text": "   ", "source": ""},
+                {"slot": "spec_primary", "text": "75 kPa", "source": "75kpa"},
+            ], "dropped": ["Panou Control Tactil"], "notes": "led with the category"}
+
+        monkeypatch.setattr(describers, "_call", fake_call)
+        out = describers.compile_copy_slots(
+            product_info=REAL_LISTING, facts=[], language="ro")
+        slots = [s["slot"] for s in out["copy_slots"]]
+        assert slots == ["headline", "spec_primary"]  # dedup + empty dropped
+        assert out["dropped"] == ["Panou Control Tactil"]
+
+    def test_requires_a_target_language(self):
+        from workflow.reference_generation import describers
+        with pytest.raises(ValueError, match="language"):
+            describers.compile_copy_slots(product_info="x", facts=[], language="  ")
+
+    def test_prompt_forbids_inventing_numbers(self):
+        from workflow.reference_generation import describers
+        # The strongest instruction in that prompt must not be softened away.
+        assert "NEVER invent or adjust a number" in describers.COPY_PROMPT
+        assert "do not put everything" in describers.COPY_PROMPT.lower() or \
+               "must NOT carry every fact" in describers.COPY_PROMPT

@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CopySlotDraft",
+  "type": "object",
+  "additionalProperties": false,
+  "_note": "Strict structured outputs require EVERY property to appear in 'required', at every nesting level. Conceptually optional fields are required-but-emptyable.",
+  "required": ["copy_slots", "dropped", "notes"],
+  "properties": {
+    "copy_slots": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["slot", "text", "source"],
+        "properties": {
+          "slot": {
+            "type": "string",
+            "enum": ["brand", "headline", "badge", "supporting_line",
+                     "spec_primary", "spec_secondary", "offer", "feature",
+                     "feature_optional"],
+            "description": "Which visual slot this line occupies. The slot IS the visual weight: 'headline' is the largest type on the image, 'badge' is the small highlighted chip, 'spec_primary'/'spec_secondary' are the two numeric callouts, 'offer' is the included-items block, 'feature'/'feature_optional' are the small bottom lines. Use each slot at most once. Omit any slot you have nothing truthful to put in."
+          },
+          "text": {
+            "type": "string",
+            "description": "The exact words to print, in the target language, with correct diacritics. Marketplace-headline style: short, uppercase-friendly, no sentence punctuation. This string is printed verbatim onto the image."
+          },
+          "source": {
+            "type": "string",
+            "description": "Which part of the supplied product information this line came from, quoted. Every line must trace to the product information. If you cannot trace it, do not emit the line."
+          }
+        }
+      },
+      "description": "The marketing copy for one e-commerce main image, distributed across visual slots."
+    },
+    "dropped": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {"type": "string"},
+      "description": "Product facts you deliberately left OFF the image, because a main image must not carry everything. List them so a human can see what was sacrificed and overrule you."
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 600,
+      "description": "One or two sentences on the editorial call you made: what you led with and why, what you cut and why."
+    }
+  }
+}

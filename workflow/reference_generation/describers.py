@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
-"""The three -- and only three -- LLM nodes of the G1 workflow (SPEC §3).
+"""The four LLM nodes of the G1 workflow (SPEC §3).
 
-| node                 | produces                        |
-|----------------------|---------------------------------|
-| design briefer       | reference_design_brief.json     |
-| appearance describer | immutable_traits.json           |
-| repair judge         | judge_decision.json             |
+| node                 | produces                        | sees images |
+|----------------------|---------------------------------|-------------|
+| design briefer       | reference_design_brief.json     | reference   |
+| appearance describer | immutable_traits.json           | product     |
+| copy compiler        | locked_fact_list draft          | none        |
+| repair judge         | judge_decision.json             | candidate   |
+
+The copy compiler is deliberately BLIND: it never sees the reference image, so
+it cannot copy the donor's claims. Its only source is the operator's product
+information.
 
 Every node is a single call with a JSON Schema pinned via ``--output-schema``.
 No node may loop, call tools, or emit prose. Everything else in the workflow is
@@ -27,6 +32,7 @@ SCHEMA_DIR = pathlib.Path(__file__).resolve().parent / "schemas"
 SCHEMA_TRAITS = SCHEMA_DIR / "immutable_traits.schema.json"
 SCHEMA_BRIEF = SCHEMA_DIR / "reference_design_brief.schema.json"
 SCHEMA_JUDGE = SCHEMA_DIR / "judge_decision.schema.json"
+SCHEMA_COPY = SCHEMA_DIR / "copy_slots.schema.json"
 
 # SPEC §11 stop condition 3.
 MAX_SCHEMA_FAILURES = 3
@@ -198,6 +204,108 @@ def describe_reference_design(reference_image: str, *, context: str = "",
         out.setdefault(key, "")
     out.setdefault("visible_claims_on_reference", [])
     out.setdefault("modules", [])
+    return out
+
+
+# --------------------------------------------------------------------------- #
+# node 4: copy compiler
+# --------------------------------------------------------------------------- #
+
+COPY_PROMPT = """You are writing the marketing copy for ONE e-commerce main product image.
+
+Product information supplied by the operator (this is the only source of truth
+about the product; it is usually the marketplace listing title plus notes):
+
+{product_info}
+
+Additional confirmed facts:
+{facts}
+
+Target language: {language}
+
+Your job, in order:
+
+1. DECIDE WHAT GOES ON. A main image must NOT carry every fact. Pick the few
+   lines that make someone stop scrolling and understand the product. Everything
+   you leave off, list in "dropped" so a human can overrule you.
+2. THE HEADLINE NAMES THE PRODUCT. A shopper scanning a results grid must
+   recognise WHAT THIS IS before anything else, so the headline is the product's
+   category name in the target language. Do not spend the headline on a
+   specification, and never repeat there a figure that already has its own slot.
+3. ASSIGN VISUAL WEIGHT. The slot you choose IS the type size and position:
+   headline is the biggest words on the image, badge is the small highlighted
+   chip, spec_primary/spec_secondary are the two numeric callouts, offer is the
+   included-items block, feature/feature_optional are small bottom lines. Put the
+   single most compelling thing in headline.
+4. WRITE IT IN {language}. Correct spelling, correct diacritics. Marketplace
+   headline style: short, punchy, works in uppercase, no sentence punctuation.
+
+Hard rules:
+
+- Every line must trace to the product information above. Quote the source for
+  each one. If you cannot trace it, do not write it.
+- NEVER invent or adjust a number. Every figure you print must appear in the
+  product information exactly as given. Do not round, convert, or "improve" a
+  specification. A wrong number is the single most damaging error you can make
+  here, because this list is then frozen and repeated on every subsequent round.
+- DO normalise how a figure is typeset, without changing its value. Listing
+  titles are written carelessly; printed copy must not be. Restore the
+  conventional spacing and capitalisation of the unit: "75kpa" is printed as
+  "75 kPa", "120W" as "120 W", "17x20cm" as "17x20 cm". The digits stay
+  identical -- you are fixing typography, not the specification.
+- Lead with the specification that actually differentiates this product in its
+  category, not merely the first one listed. For a vacuum sealer that is the
+  suction pressure; for a battery device, capacity; for a lamp, brightness. Put
+  the weaker figure in spec_secondary.
+- Do not write warranty periods, certifications, testimonials, prices, ratings,
+  delivery promises, or any superlative claim that is not stated above.
+- Use each slot at most once, and omit any slot you have nothing truthful for.
+
+Output JSON matching the schema exactly, with no extra commentary."""
+
+
+def compile_copy_slots(*, product_info: str, facts: list[str], language: str,
+                       provider: str = "codex", timeout_s: int = 300,
+                       model: str | None = None,
+                       reasoning_effort: str | None = None) -> dict:
+    """§5.1 locked_fact_list drafting -- the copy the image will carry.
+
+    Evidence for this node existing at all: in the validated 2026-07-11 run the
+    operator supplied only the raw listing title plus "don't put everything on,
+    it's a main image" and "output in Romanian". The model itself produced the
+    nine-slot Romanian copy list that ended up on the accepted image. Making a
+    human author those nine lines by hand was re-doing work the model already
+    did well.
+
+    The output is still a DRAFT: a human confirms before it is frozen (R3), and
+    ``compile.verify_numbers_traceable`` mechanically checks every figure
+    against the truth pack first -- the 2026-07-11 run shipped a wrong "70 kPa"
+    into the image because a human typed it, so human authorship is not itself a
+    correctness guarantee.
+    """
+    lang = language.strip()
+    if not lang:
+        raise ValueError("compile_copy_slots needs a target language")
+    fact_lines = "\n".join(f"- {f}" for f in facts if str(f).strip()) or "(none)"
+    prompt = COPY_PROMPT.format(
+        product_info=(product_info or "").strip() or "(none supplied)",
+        facts=fact_lines, language=lang)
+    out = _call(prompt, [], SCHEMA_COPY, provider=provider, timeout_s=timeout_s,
+                model=model, reasoning_effort=reasoning_effort,
+                node="copy_compiler")
+    out.setdefault("copy_slots", [])
+    out.setdefault("dropped", [])
+    out.setdefault("notes", "")
+
+    seen = set()
+    deduped = []
+    for s in out["copy_slots"]:
+        slot = (s.get("slot") or "").strip()
+        if slot and slot not in seen and (s.get("text") or "").strip():
+            seen.add(slot)
+            deduped.append({"slot": slot, "text": s["text"].strip(),
+                            "source": (s.get("source") or "").strip()})
+    out["copy_slots"] = deduped
     return out
 
 

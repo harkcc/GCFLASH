@@ -205,9 +205,26 @@ def cmd_run(args: argparse.Namespace) -> int:
 
     # ---- compile ---------------------------------------------------------- #
     st.transition(C.S_COMPILING, "compiling frozen inputs")
+
+    # Copy compiler (LLM node). Skipped when the request already carries copy the
+    # operator authored or approved.
+    request_slots = req.get("copy_slots")
+    copy_draft = None
+    if not request_slots:
+        print("  compiling target-language copy (LLM node 1/3)...", flush=True)
+        copy_draft = describers.compile_copy_slots(
+            product_info=G1C.truth_title(truth) + "\n" +
+            str((truth.get("operator_confirmed") or {}).get("raw_product_info") or ""),
+            facts=G1C.truth_facts(truth),
+            language=intent.get("language") or "",
+            provider=args.provider, timeout_s=args.describe_timeout,
+            model=args.describe_model)
+        request_slots = copy_draft["copy_slots"]
+        _write_json(root / "compiled" / "copy_draft.json", copy_draft)
+
     try:
         facts = G1C.compile_locked_fact_list(
-            truth=truth, intent=intent, request_slots=req.get("copy_slots"),
+            truth=truth, intent=intent, request_slots=request_slots,
             reference_metadata=ref_meta)
     except G1C.IncompleteTruth as exc:
         _write_json(root / "compiled" / "incomplete_truth.json",
@@ -216,26 +233,48 @@ def cmd_run(args: argparse.Namespace) -> int:
         print(f"STOP: {exc}", file=sys.stderr)
         return 2
 
-    if facts.get("needs_human_revision") and not args.accept_draft_copy:
+    if copy_draft is not None:
+        print("\n  --- drafted copy ---")
+        for slot in facts["copy_slots"]:
+            print(f"    {slot['slot']:<18} {slot['text']}")
+        if copy_draft.get("dropped"):
+            print(f"    (left off: {', '.join(copy_draft['dropped'])})")
+        if copy_draft.get("notes"):
+            print(f"    note: {copy_draft['notes']}")
+        print()
+
+    # An untraceable figure is the one failure mode that must never pass
+    # silently: once frozen, the copy is repeated verbatim on every round (R3),
+    # so a wrong number spoils the whole job rather than one image.
+    unverified = facts.get("unverified_numbers") or []
+    if unverified:
         _write_json(root / "compiled" / "locked_fact_list.draft.json", facts)
-        st.transition(C.S_NEEDS_USER_INPUT, "drafted copy needs human revision")
-        print("STOP: the request supplied no copy_slots, so the fact list was "
-              "drafted from the truth pack and needs human revision (§5.1).\n"
-              f"  edit {root / 'compiled' / 'locked_fact_list.draft.json'}, then "
-              f"pass it back via the request's copy_slots.\n"
-              "  (--accept-draft-copy overrides, for smoke tests only.)",
-              file=sys.stderr)
+        st.transition(C.S_NEEDS_USER_INPUT, "copy carries untraceable figure(s)")
+        print("STOP: the copy carries figure(s) that do not appear in the product "
+              "information:", file=sys.stderr)
+        for u in unverified:
+            print(f"  - {u['slot']}: {u['text']!r} -> {u['number']}", file=sys.stderr)
+        print(f"  draft written to {root / 'compiled' / 'locked_fact_list.draft.json'}\n"
+              f"  fix the product information or supply copy_slots in the request, "
+              f"then start a new run.", file=sys.stderr)
+        return 3
+
+    if args.confirm_copy:
+        _write_json(root / "compiled" / "locked_fact_list.draft.json", facts)
+        st.transition(C.S_NEEDS_USER_INPUT, "--confirm-copy requested")
+        print("STOP (--confirm-copy): review the copy above, then put it in the "
+              "request's copy_slots and start a new run.", file=sys.stderr)
         return 3
 
     anchor_img = next(im for im in product_images
                       if im["role"] == C.ROLE_APPEARANCE_ANCHOR)
     describe_paths = [im["path"] for im in product_images
                       if im["role"] != C.ROLE_NATIVE_TEXT_EVIDENCE]
-    print("  compiling immutable traits (LLM node 1/2)...", flush=True)
+    print("  compiling immutable traits (LLM node 2/3)...", flush=True)
     traits = describers.describe_immutable_traits(
         describe_paths, context=G1C.truth_title(truth), provider=args.provider,
         timeout_s=args.describe_timeout, model=args.describe_model)
-    print("  compiling reference design brief (LLM node 2/2)...", flush=True)
+    print("  compiling reference design brief (LLM node 3/3)...", flush=True)
     brief = describers.describe_reference_design(
         ref_image, context=G1C.truth_title(truth), provider=args.provider,
         timeout_s=args.describe_timeout, model=args.describe_model)
@@ -668,9 +707,9 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--request", required=True, type=pathlib.Path)
     p.add_argument("--out-root", default="generation_runs")
     p.add_argument("--job-id", default=None)
-    p.add_argument("--accept-draft-copy", action="store_true",
-                   help="proceed with drafted copy without human revision "
-                        "(smoke tests only)")
+    p.add_argument("--confirm-copy", action="store_true",
+                   help="stop after drafting the copy so a human can review it "
+                        "before anything is generated")
     add_backend_args(p)
     p.set_defaults(func=cmd_run)
 
