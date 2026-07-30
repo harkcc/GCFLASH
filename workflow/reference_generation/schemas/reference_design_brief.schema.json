@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReferenceDesignBrief",
+  "type": "object",
+  "additionalProperties": false,
+  "_note": "Strict structured outputs require EVERY property to appear in 'required', at every nesting level. Conceptually optional fields are required-but-emptyable: return \"\" or [] rather than omitting them.",
+  "required": ["aspect_ratio", "layout_skeleton", "modules", "color_mood",
+               "composition_notes", "donor_brand", "donor_language",
+               "visible_claims_on_reference"],
+  "properties": {
+    "aspect_ratio": {
+      "type": "string",
+      "description": "The reference image's own aspect ratio as a ratio string, e.g. '3:4'. This is an observation about the reference, NOT the target canvas."
+    },
+    "layout_skeleton": {
+      "type": "string",
+      "description": "One sentence naming the structural skeleton and where the major zones sit, e.g. 'vertical hero layout with the headline block upper-left, the product across the lower half on a wooden counter, and a person upper-right'. Describe positions and hierarchy only. Do not mention the donor brand, the donor product model, or any donor-language text."
+    },
+    "modules": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["module", "position", "keep", "replace_content", "carries_text"],
+        "properties": {
+          "module": {
+            "type": "string",
+            "description": "Generic module name, snake_case, e.g. 'headline_block', 'spec_badges', 'person', 'product_stage', 'offer_block'. Name the FUNCTION of the block, never its donor content."
+          },
+          "position": {
+            "type": "string",
+            "description": "Where it sits, e.g. 'upper-left', 'mid-left', 'lower half'."
+          },
+          "keep": {
+            "type": "boolean",
+            "description": "true if this module's structural slot should be reproduced in our image."
+          },
+          "replace_content": {
+            "type": "boolean",
+            "description": "true ONLY for the module that holds the donor's own product or its imagery, which must be swapped for ours. Set false for layout blocks, text blocks, people, and props -- marking everything true produces nonsense instructions like 'person (replace its content with our product)'."
+          },
+          "carries_text": {
+            "type": "boolean",
+            "description": "true if this module's content is words rather than imagery (headline, tagline, badge, spec block, offer block, identity/logo block). The pipeline treats text modules specially: their copy may only come from our own approved claim list, so a text module must never be described in a way that invites new wording."
+          }
+        }
+      },
+      "description": "The reference's layout decomposed into functional modules."
+    },
+    "color_mood": {
+      "type": "string",
+      "description": "Palette and atmosphere in a short phrase, e.g. 'warm premium kitchen, brown and orange, softly blurred background'."
+    },
+    "composition_notes": {
+      "type": "string",
+      "description": "Photographic/compositional mechanics worth copying: product angle, perspective, depth of field, how the product meets the surface, any product-in-action detail. No donor branding or text."
+    },
+    "donor_brand": {
+      "type": "string",
+      "description": "The brand name visible on the reference image, so it can be explicitly banned from our output. Empty string if none is legible."
+    },
+    "donor_language": {
+      "type": "string",
+      "description": "The language/script of the text on the reference, e.g. 'Russian/Cyrillic', so it can be explicitly banned. Empty string if no text."
+    },
+    "visible_claims_on_reference": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {"type": "string"},
+      "description": "Every marketing claim legible on the reference (warranty terms, gift offers, percentages, certifications, spec numbers), transcribed as seen. These are UNVERIFIED for our product and must all be replaced or dropped -- listing them is how the pipeline knows what to strip."
+    }
+  }
+}

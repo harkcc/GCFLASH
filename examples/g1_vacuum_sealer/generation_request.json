@@ -1,0 +1,62 @@
+{
+  "product_id": "excitat_vacuum_sealer_ro",
+  "brand": "EXCITAT",
+  "product_short_name": "vacuum sealer",
+  "selected_reference": {
+    "image": "/ABS/PATH/TO/references/r2-warm-chef.jpg",
+    "metadata": "/ABS/PATH/TO/examples/g1_vacuum_sealer/r2-warm-chef.metadata.json"
+  },
+  "product_truth": "/ABS/PATH/TO/examples/g1_vacuum_sealer/truth_pack.json",
+  "product_images": [
+    {
+      "path": "/ABS/PATH/TO/references/vacuum-sealer-product-source.jpg",
+      "role": "product_appearance_anchor"
+    }
+  ],
+  "copy_slots": [
+    {
+      "slot": "brand",
+      "text": "EXCITAT"
+    },
+    {
+      "slot": "headline",
+      "text": "APARAT DE VIDAT"
+    },
+    {
+      "slot": "badge",
+      "text": "6 ÎN 1"
+    },
+    {
+      "slot": "supporting_line",
+      "text": "PENTRU PRODUSE USCATE ȘI UMEDE"
+    },
+    {
+      "slot": "spec_primary",
+      "text": "75 kPa"
+    },
+    {
+      "slot": "spec_secondary",
+      "text": "120 W"
+    },
+    {
+      "slot": "offer",
+      "text": "100 DE PUNGI INCLUSE"
+    },
+    {
+      "slot": "feature",
+      "text": "BARĂ DE SIGILARE DE 30 cm"
+    },
+    {
+      "slot": "feature_optional",
+      "text": "CUTTER ÎNCORPORAT • STERILIZARE UV"
+    }
+  ],
+  "intent": {
+    "canvas": "1:1",
+    "output_px": 1600,
+    "language": "ro",
+    "marketplace_profile": "ozon_wb"
+  },
+  "round_budget": 8,
+  "review_mode": "required"
+}

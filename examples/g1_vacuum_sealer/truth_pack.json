@@ -1,0 +1,49 @@
+{
+  "product_id": "excitat_vacuum_sealer_ro",
+  "reader": "fixture_from_appendix_a",
+  "source_image": {
+    "path": "/ABS/PATH/TO/references/vacuum-sealer-product-source.jpg"
+  },
+  "operator_confirmed": {
+    "evidence_class": "operator_claim_not_visual_proof",
+    "title": "Excitat aparat de vidat 6 in 1, 75 kPa, 120 W",
+    "raw_product_info": "Excitat vacuum sealer; 75 kPa; 120 W; 100 bags included; 30 cm sealing bar; built-in cutter; UV sterilization; external vacuum hose",
+    "facts": [
+      "75 kPa",
+      "120 W",
+      "100 bags included",
+      "30 cm sealing bar",
+      "built-in cutter",
+      "UV sterilization",
+      "external vacuum hose"
+    ],
+    "preservation_constraints": [
+      "keep the exact machine design",
+      "do not redesign the appliance"
+    ],
+    "expected_offer": "host_with_accessories"
+  },
+  "source_visible_observations": {
+    "evidence_class": "model_observed_from_source_image_reviewable_not_self_verifying",
+    "visible_identity_text": [
+      "VACUUM SEALER",
+      "PULSE",
+      "SEAL",
+      "VAC",
+      "MOIST",
+      "AUTO",
+      "STOP"
+    ],
+    "visible_marketing_claims": [
+      "100 PCS",
+      "75kPa VACUUM PRESSURE",
+      "1 HOSE FOR EXTERNAL CONTAINER VACUUMING"
+    ],
+    "primary_product_accessories": [
+      "vacuum sealer bags",
+      "external vacuum hose"
+    ]
+  },
+  "unknowns": [],
+  "conflicts": []
+}

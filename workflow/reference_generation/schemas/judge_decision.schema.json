@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JudgeDecision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["repair", "prompt_delta", "fact_violations", "product_integrity_ok",
+               "stop_recommended", "reason"],
+  "properties": {
+    "repair": {
+      "type": "string",
+      "enum": ["recompose_aspect", "complete_accessories",
+               "increase_product_dominance", "amplify_spec_impact",
+               "redesign_accessory_module", "redesign_spec_module",
+               "add_breathing_room", "fix_text_error", "replace_claim_text",
+               "reduce_clutter"],
+      "description": "Exactly one repair direction from the menu. Pick the single biggest problem; one variable per round."
+    },
+    "prompt_delta": {
+      "type": "string",
+      "minLength": 200,
+      "maxLength": 1400,
+      "description": "60-180 words of English editing instruction describing ONLY how to fix the one problem named in 'repair'. Imperative voice, addressed to an image editor. Do not restate the copy whitelist, do not restate the negative constraints, do not describe the product's appearance, and do not introduce any new visual reference -- the pipeline appends all of that itself. Never output a complete prompt."
+    },
+    "fact_violations": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["wrong_value", "correct_value"],
+        "properties": {
+          "wrong_value": {
+            "type": "string",
+            "description": "The incorrect value as it currently appears in the candidate image, e.g. '70 kPa'."
+          },
+          "correct_value": {
+            "type": "string",
+            "description": "The authoritative value from the locked fact list, e.g. '75 kPa'."
+          }
+        }
+      },
+      "description": "Numbers or copy in the candidate that contradict the locked fact list. Empty array if the text matches. Compare against the locked fact list only; text printed on the product body is exempt."
+    },
+    "product_integrity_ok": {
+      "type": "boolean",
+      "description": "false only if the product's own shape, colour, panel, or hardware has been altered from the immutable traits, or if it has been cropped. Scene, layout, and typography problems are NOT integrity failures."
+    },
+    "stop_recommended": {
+      "type": "boolean",
+      "description": "true if the candidate is good enough to ship and further rounds risk making it worse."
+    },
+    "reason": {
+      "type": "string",
+      "maxLength": 400,
+      "description": "One sentence explaining why this repair is the single highest-value fix right now."
+    }
+  }
+}

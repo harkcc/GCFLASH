@@ -1,0 +1,10 @@
+{
+  "reference_id": "r2-warm-chef",
+  "image": "/ABS/PATH/TO/references/r2-warm-chef.jpg",
+  "source": "p0x_template_transfer fixture",
+  "claim_warnings": [
+    "12 месяцев гарантия",
+    "Пакеты в подарок",
+    "6в1"
+  ]
+}
