@@ -55,6 +55,7 @@ sys.path.insert(0, str(REPO / "scripts"))
 import imagegen_codex_adapter as backend  # noqa: E402
 
 ASPECT_TOLERANCE = 0.03
+COPY_DRAFT_ATTEMPTS = 3  # redraft on an untraceable figure instead of stopping
 
 
 # --------------------------------------------------------------------------- #
@@ -211,16 +212,58 @@ def cmd_run(args: argparse.Namespace) -> int:
     request_slots = req.get("copy_slots")
     copy_draft = None
     if not request_slots:
-        print("  compiling target-language copy (LLM node 1/3)...", flush=True)
-        copy_draft = describers.compile_copy_slots(
-            product_info=G1C.truth_title(truth) + "\n" +
-            str((truth.get("operator_confirmed") or {}).get("raw_product_info") or ""),
-            facts=G1C.truth_facts(truth),
-            language=intent.get("language") or "",
-            provider=args.provider, timeout_s=args.describe_timeout,
-            model=args.describe_model)
+        product_info = (G1C.truth_title(truth) + "\n" + str(
+            (truth.get("operator_confirmed") or {}).get("raw_product_info") or ""))
+        feedback, attempts = "", []
+        # No human gate here: an untraceable figure is a defect the model can fix
+        # when told exactly what is wrong, so re-draft instead of stopping.
+        for attempt in range(COPY_DRAFT_ATTEMPTS):
+            print(f"  compiling target-language copy (LLM node 1/3"
+                  f"{f', retry {attempt}' if attempt else ''})...", flush=True)
+            copy_draft = describers.compile_copy_slots(
+                product_info=product_info, facts=G1C.truth_facts(truth),
+                language=intent.get("language") or "", feedback=feedback,
+                provider=args.provider, timeout_s=args.describe_timeout,
+                model=args.describe_model)
+            bad = G1C.verify_numbers_traceable(copy_draft["copy_slots"], truth)
+            attempts.append({"attempt": attempt + 1,
+                             "slots": copy_draft["copy_slots"],
+                             "untraceable": bad})
+            if not bad:
+                break
+            feedback = ("These figures do not appear anywhere in the product "
+                        "information, so they cannot be printed. Remove or "
+                        "correct the lines carrying them:\n" + "\n".join(
+                            f"- {b['slot']}: {b['text']!r} contains {b['number']}"
+                            for b in bad))
+            print(f"    rejected: untraceable figure(s) "
+                  f"{[b['number'] for b in bad]}; redrafting", flush=True)
+        else:
+            # Still bad after every retry: drop the offending lines rather than
+            # blocking the run or printing an unverifiable number.
+            bad_slots = {b["slot"] for b in
+                         G1C.verify_numbers_traceable(copy_draft["copy_slots"], truth)}
+            copy_draft["copy_slots"] = [s for s in copy_draft["copy_slots"]
+                                        if s["slot"] not in bad_slots]
+            copy_draft.setdefault("dropped", []).extend(
+                f"{s} (untraceable figure)" for s in sorted(bad_slots))
+            print(f"    dropped unverifiable slot(s): {sorted(bad_slots)}",
+                  file=sys.stderr)
+        copy_draft["attempts"] = attempts
         request_slots = copy_draft["copy_slots"]
         _write_json(root / "compiled" / "copy_draft.json", copy_draft)
+        if not request_slots:
+            # Falling through with an empty list would hand compile_locked_fact_list
+            # a falsy value, which it reads as "nothing supplied" and answers with
+            # the deterministic regex draft -- the raw truth title as headline, in
+            # the SOURCE language. Silently freezing a Chinese headline onto a
+            # Romanian image is worse than stopping.
+            st.transition(C.S_NEEDS_USER_INPUT, "copy compiler produced no usable copy")
+            print("STOP: the copy compiler produced no usable copy after "
+                  f"{COPY_DRAFT_ATTEMPTS} attempts (see "
+                  f"{root / 'compiled' / 'copy_draft.json'}). Supply copy_slots in "
+                  f"the request, or fix the product information.", file=sys.stderr)
+            return 3
 
     try:
         facts = G1C.compile_locked_fact_list(
@@ -246,17 +289,19 @@ def cmd_run(args: argparse.Namespace) -> int:
     # An untraceable figure is the one failure mode that must never pass
     # silently: once frozen, the copy is repeated verbatim on every round (R3),
     # so a wrong number spoils the whole job rather than one image.
+    # Operator-supplied copy is the operator's business; we only refuse to freeze
+    # a figure we cannot trace when WE drafted it (handled above). If the request
+    # itself carries one, say so loudly and stop -- that is a data error upstream.
     unverified = facts.get("unverified_numbers") or []
     if unverified:
         _write_json(root / "compiled" / "locked_fact_list.draft.json", facts)
-        st.transition(C.S_NEEDS_USER_INPUT, "copy carries untraceable figure(s)")
-        print("STOP: the copy carries figure(s) that do not appear in the product "
-              "information:", file=sys.stderr)
+        st.transition(C.S_NEEDS_USER_INPUT, "request copy carries untraceable figure(s)")
+        print("STOP: copy_slots supplied in the request carry figure(s) absent "
+              "from the product information:", file=sys.stderr)
         for u in unverified:
             print(f"  - {u['slot']}: {u['text']!r} -> {u['number']}", file=sys.stderr)
-        print(f"  draft written to {root / 'compiled' / 'locked_fact_list.draft.json'}\n"
-              f"  fix the product information or supply copy_slots in the request, "
-              f"then start a new run.", file=sys.stderr)
+        print("  fix the request or the product information, then rerun.",
+              file=sys.stderr)
         return 3
 
     if args.confirm_copy:
@@ -278,6 +323,9 @@ def cmd_run(args: argparse.Namespace) -> int:
     brief = describers.describe_reference_design(
         ref_image, context=G1C.truth_title(truth), provider=args.provider,
         timeout_s=args.describe_timeout, model=args.describe_model)
+    # Measured, not described: the briefer once reported "32:41" for a 736x982
+    # reference. This ratio drives the layout-adaptation instruction.
+    brief["aspect_ratio"] = G1C.measure_aspect_ratio(ref_image)
 
     if traits.get("native_product_text") and not facts.get("native_product_text"):
         facts["native_product_text"] = traits["native_product_text"]  # R7
@@ -356,6 +404,7 @@ def cmd_review(args: argparse.Namespace) -> int:
     try:
         decision = describers.judge_candidate(
             str(candidate), ref_image, facts=facts, traits=traits,
+            donor_claims=facts.get("must_replace_from_reference") or [],
             repairs_used=st.repairs_used, round_budget=st.round_budget,
             provider=args.provider, timeout_s=args.describe_timeout,
             model=args.describe_model)
@@ -596,6 +645,7 @@ def cmd_style_transfer(args: argparse.Namespace) -> int:
         new_ref, context=G1C.truth_title(G1C.load_json(req["product_truth"])),
         provider=args.provider, timeout_s=args.describe_timeout,
         model=args.describe_model)
+    new_brief["aspect_ratio"] = G1C.measure_aspect_ratio(new_ref)
 
     brand, short_name = _brand_and_name(facts, req)
     images = [templates.InputImage(C.ROLE_DESIGN_MASTER, new_ref),

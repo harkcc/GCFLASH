@@ -243,6 +243,41 @@ def _accessories_clause(images: list[InputImage], traits: dict) -> str | None:
             f"like included items, not random props.")
 
 
+def _aspect_adaptation_clause(brief: dict, canvas: str) -> str | None:
+    """Say out loud when the reference's shape differs from our target canvas.
+
+    In production this is the normal case, not the exception: the upstream
+    exporter emits ~750x1000 (3:4 portrait) references and the marketplace main
+    image is 1:1. A square is a third wider relative to its height, so a vertical
+    hero layout has to be genuinely re-distributed. Left unsaid, the model is
+    free to letterbox, crop, or squeeze the borrowed layout into the square --
+    and cropping is exactly what R5 forbids.
+    """
+    ref = (brief.get("aspect_ratio") or "").strip()
+    if not ref or not canvas:
+        return None
+    ref_r, canvas_r = _ratio_value(ref), _ratio_value(canvas)
+    if ref_r is None or canvas_r is None or abs(ref_r - canvas_r) <= 0.02:
+        return None
+    direction = ("wider and shorter" if canvas_r > ref_r else
+                 "taller and narrower")
+    return (
+        f"Note that the design reference is {ref} while our canvas is {canvas}, "
+        f"which is {direction}. Re-distribute the reference's layout to fill our "
+        f"canvas naturally: spread the modules into the space the new proportions "
+        f"give you, and resize the product to suit. Do not crop the reference's "
+        f"composition, do not letterbox it, and do not squeeze it to fit.")
+
+
+def _ratio_value(ratio: str) -> float | None:
+    """'3:4' -> 0.75. None when unparseable."""
+    try:
+        w, h = str(ratio).split(":")
+        return float(w) / float(h)
+    except (ValueError, ZeroDivisionError, AttributeError):
+        return None
+
+
 def _scene_section(brief: dict, facts: dict | None = None) -> str:
     """Section 3, compiled from the design brief.
 
@@ -364,6 +399,7 @@ def compile_init(*, images: list[InputImage], facts: dict, traits: dict,
     ])
     text = _assemble([
         s1, s2, _scene_section(brief),
+        _aspect_adaptation_clause(brief, canvas),
         render_locked_facts_section(facts, donor_lang),
         render_negative_section(), _quality_section(canvas),
     ])
@@ -458,6 +494,7 @@ def compile_style_transfer(*, images: list[InputImage], facts: dict, traits: dic
     ])
     text = _assemble([
         s1, s2, _scene_section(brief),
+        _aspect_adaptation_clause(brief, canvas),
         render_locked_facts_section(facts, donor_lang),
         render_negative_section(), _quality_section(canvas),
     ])

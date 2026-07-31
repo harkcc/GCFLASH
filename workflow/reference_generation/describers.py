@@ -265,8 +265,8 @@ Output JSON matching the schema exactly, with no extra commentary."""
 
 
 def compile_copy_slots(*, product_info: str, facts: list[str], language: str,
-                       provider: str = "codex", timeout_s: int = 300,
-                       model: str | None = None,
+                       feedback: str = "", provider: str = "codex",
+                       timeout_s: int = 300, model: str | None = None,
                        reasoning_effort: str | None = None) -> dict:
     """§5.1 locked_fact_list drafting -- the copy the image will carry.
 
@@ -290,6 +290,11 @@ def compile_copy_slots(*, product_info: str, facts: list[str], language: str,
     prompt = COPY_PROMPT.format(
         product_info=(product_info or "").strip() or "(none supplied)",
         facts=fact_lines, language=lang)
+    if feedback.strip():
+        # Re-draft with the specific defect named, rather than stopping and
+        # asking a human to fix what the model can fix itself.
+        prompt += ("\n\nYOUR PREVIOUS ATTEMPT WAS REJECTED. Fix exactly this and "
+                   "keep everything else:\n" + feedback.strip())
     out = _call(prompt, [], SCHEMA_COPY, provider=provider, timeout_s=timeout_s,
                 model=model, reasoning_effort=reasoning_effort,
                 node="copy_compiler")
@@ -326,6 +331,11 @@ reported as an error: {native_text}
 The product's immutable appearance traits:
 {traits}
 
+These claims are visible on the DESIGN REFERENCE and are unverified for our
+product. None may appear on our image in any language. If you see any of them
+reproduced, that is a replace_claim_text repair and it outranks cosmetic issues:
+{donor_claims}
+
 Rounds used: {used} of {budget}.
 
 Repair menu -- choose EXACTLY ONE:
@@ -352,6 +362,7 @@ Output JSON matching the schema exactly, with no extra commentary."""
 
 def judge_candidate(candidate_png: str, reference_image: str, *, facts: dict,
                     traits: dict, repairs_used: int, round_budget: int,
+                    donor_claims: list[str] | None = None,
                     provider: str = "codex", timeout_s: int = 300,
                     model: str | None = None,
                     reasoning_effort: str | None = None) -> dict:
@@ -364,9 +375,11 @@ def judge_candidate(candidate_png: str, reference_image: str, *, facts: dict,
     traits_lines = ", ".join(traits.get("product_visual_traits") or [])
     menu_lines = "\n".join(f"- {k}" for k in C.REPAIR_MENU)
 
+    donor = "\n".join(f"- {c}" for c in (donor_claims or [])) or "(none recorded)"
     prompt = JUDGE_PROMPT.format(
         facts=facts_lines, native_text=native, traits=traits_lines,
-        used=repairs_used, budget=round_budget, menu=menu_lines)
+        used=repairs_used, budget=round_budget, menu=menu_lines,
+        donor_claims=donor)
     out = _call(prompt, [candidate_png, reference_image], SCHEMA_JUDGE,
                 provider=provider, timeout_s=timeout_s, model=model,
                 reasoning_effort=reasoning_effort, node="repair_judge")

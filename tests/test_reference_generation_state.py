@@ -17,6 +17,7 @@ if str(REPO) not in sys.path:
 
 from workflow.reference_generation import compile as G1C  # noqa: E402
 from workflow.reference_generation import contracts as C  # noqa: E402
+from workflow.reference_generation import templates as T  # noqa: E402
 from workflow.reference_generation.state import (  # noqa: E402
     ROUND_KIND_INITIAL, ROUND_KIND_REPAIR, JobState, StateError,
 )
@@ -324,7 +325,8 @@ class TestNumberTraceability:
         found = G1C.verify_numbers_traceable(
             [{"slot": "spec_primary", "text": "70 kPa"}], listing_truth())
         assert len(found) == 1
-        assert found[0]["number"] == "70"
+        # Reported with its unit, so the message names the actual defect.
+        assert found[0]["number"] == "70 kPa"
 
     def test_every_real_slot_traces_to_the_listing_title(self):
         # The nine slots the model actually produced, against the title it saw.
@@ -350,18 +352,18 @@ class TestNumberTraceability:
     def test_inflated_spec_is_caught(self):
         found = G1C.verify_numbers_traceable(
             [{"slot": "offer", "text": "200 DE PUNGI INCLUSE"}], listing_truth())
-        assert found and found[0]["number"] == "200"
+        assert found and found[0]["number"] == "200"  # bare count, no unit
 
     def test_invented_warranty_period_is_caught(self):
         found = G1C.verify_numbers_traceable(
             [{"slot": "feature", "text": "24 LUNI GARANTIE"}], listing_truth())
-        assert found and found[0]["number"] == "24"
+        assert found and found[0]["number"] == "24"  # LUNI is prose, not a unit
 
     def test_multiple_findings_are_all_reported(self):
         found = G1C.verify_numbers_traceable(
             [{"slot": "spec_primary", "text": "70 kPa"},
              {"slot": "spec_secondary", "text": "150 W"}], listing_truth())
-        assert {f["number"] for f in found} == {"70", "150"}
+        assert {f["number"] for f in found} == {"70 kPa", "150 W"}
 
     def test_non_numeric_copy_is_never_flagged(self):
         assert G1C.verify_numbers_traceable(
@@ -430,3 +432,154 @@ class TestCopyCompilerNode:
         assert "NEVER invent or adjust a number" in describers.COPY_PROMPT
         assert "do not put everything" in describers.COPY_PROMPT.lower() or \
                "must NOT carry every fact" in describers.COPY_PROMPT
+
+
+class TestMeasuredAspectRatio:
+    """The briefer once reported '32:41' for a 736x982 reference. Measure it."""
+
+    def test_real_reference_shape_snaps_to_3_4(self, tmp_path):
+        from PIL import Image
+        p = tmp_path / "ref.jpg"
+        Image.new("RGB", (736, 982)).save(p)          # the real export size
+        assert G1C.measure_aspect_ratio(p) == "3:4"
+
+    def test_square_is_reported_as_square(self, tmp_path):
+        from PIL import Image
+        p = tmp_path / "sq.png"
+        Image.new("RGB", (1600, 1600)).save(p)
+        assert G1C.measure_aspect_ratio(p) == "1:1"
+
+    def test_four_five_is_not_confused_with_three_four(self, tmp_path):
+        from PIL import Image
+        p = tmp_path / "p.png"
+        Image.new("RGB", (1080, 1350)).save(p)
+        assert G1C.measure_aspect_ratio(p) == "4:5"
+
+    def test_odd_shape_does_not_snap_to_a_designed_ratio(self, tmp_path):
+        from PIL import Image
+        p = tmp_path / "odd.png"
+        Image.new("RGB", (1000, 300)).save(p)
+        assert G1C.measure_aspect_ratio(p) not in {"1:1", "3:4", "4:3", "4:5"}
+
+
+class TestAspectAdaptationClause:
+    """3:4 reference -> 1:1 canvas is the PRODUCTION NORM, not an edge case:
+    upstream exports ~750x1000 and the marketplace main image is square."""
+
+    def test_the_production_case_gets_an_explicit_instruction(self):
+        clause = T._aspect_adaptation_clause({"aspect_ratio": "3:4"}, "1:1")
+        assert clause is not None
+        assert "3:4" in clause and "1:1" in clause
+        assert "wider and shorter" in clause
+        # R5: adapting must never become cropping.
+        assert "Do not crop" in clause
+        assert "squeeze" in clause
+
+    def test_no_clause_when_shapes_already_agree(self):
+        assert T._aspect_adaptation_clause({"aspect_ratio": "1:1"}, "1:1") is None
+
+    def test_taller_target_is_described_the_other_way(self):
+        clause = T._aspect_adaptation_clause({"aspect_ratio": "1:1"}, "3:4")
+        assert "taller and narrower" in clause
+
+    def test_unparseable_ratio_is_skipped_not_crashed(self):
+        assert T._aspect_adaptation_clause({"aspect_ratio": "wide-ish"}, "1:1") is None
+        assert T._aspect_adaptation_clause({}, "1:1") is None
+
+    def test_clause_reaches_the_init_prompt(self):
+        facts = {"language": "ro", "copy_slots": [
+            {"slot": "headline", "text": "APARAT DE VIDAT"}]}
+        traits = {"product_visual_traits": ["black-and-silver body"]}
+        brief = {"aspect_ratio": "3:4", "layout_skeleton": "vertical hero",
+                 "color_mood": "warm kitchen", "composition_notes": "",
+                 "modules": [], "donor_brand": "", "donor_language": ""}
+        prompt = T.compile_init(
+            images=[T.InputImage(C.ROLE_DESIGN_MASTER, "/tmp/a.jpg"),
+                    T.InputImage(C.ROLE_APPEARANCE_ANCHOR, "/tmp/b.png")],
+            facts=facts, traits=traits, brief=brief, canvas="1:1",
+            brand="EXCITAT", product_short_name="vacuum sealer")
+        assert "the design reference is 3:4 while our canvas is 1:1" in prompt.text
+
+
+class TestNumberVerifierRegressions:
+    """Every case an independent review found the substring version passing."""
+
+    def _flag(self, copy: str, truth_text: str) -> bool:
+        truth = {"operator_confirmed": {"title": truth_text,
+                                        "raw_product_info": "", "facts": []}}
+        return bool(G1C.verify_numbers_traceable([{"slot": "s", "text": copy}], truth))
+
+    def test_decimal_is_not_flattened_into_a_different_number(self):
+        # "7.5" once normalised to "75" and matched a truth pack with only 75 kPa.
+        assert self._flag("7.5 W", "75 kPa")
+
+    def test_thousands_separator_is_not_a_false_positive(self):
+        assert not self._flag("1000 W", "1,000 W")
+        assert not self._flag("1000 W", "1.000 W")   # ro/de grouping
+
+    def test_a_figure_inside_a_longer_number_does_not_count(self):
+        # "75" is a substring of SKU "X7500" but is not that value.
+        assert self._flag("75 W", "model X7500")
+
+    def test_right_value_wrong_unit_is_caught(self):
+        assert self._flag("75 W", "75 kPa and 120 W is wrong pairing")
+
+    def test_bare_count_matches_on_value_alone(self):
+        # "100 DE PUNGI" -- the noun carries the meaning, not a unit.
+        assert not self._flag("100 DE PUNGI INCLUSE", "cu 100 Pungi 17x20cm")
+
+    def test_dimension_pair_survives(self):
+        assert not self._flag("100 PUNGI 17x20 cm INCLUSE", "cu 100 Pungi 17x20cm")
+
+    def test_the_whole_real_copy_set_passes(self):
+        real = ("Aparat de Vidat si Sigilat Alimente, Excitat®, 120W, 75kpa, "
+                "6-In-1, cu 100 Pungi 17x20cm, 30 cm bara de lipire")
+        for line in ("75 kPa", "120 W", "6-ÎN-1", "BARĂ DE LIPIRE 30 cm",
+                     "100 PUNGI 17x20 cm INCLUSE"):
+            assert not self._flag(line, real), line
+
+
+class TestNumberVerifierSecondReviewRegressions:
+    """Cases a second independent review found after the first round of fixes."""
+
+    REAL = ("Aparat de Vidat, Excitat®, 120W, 75kpa, 6-In-1, "
+            "cu 100 Pungi 17x20cm, 30 cm bara de lipire")
+
+    def _flag(self, copy: str) -> bool:
+        truth = {"operator_confirmed": {"title": self.REAL,
+                                        "raw_product_info": "", "facts": []}}
+        return bool(G1C.verify_numbers_traceable([{"slot": "s", "text": copy}], truth))
+
+    def test_dimension_after_x_is_extracted_from_the_truth(self):
+        # With a \w boundary the "20cm" in "17x20cm" was swallowed, so the
+        # product's own bag width could not be quoted.
+        assert (20.0, "cm") in {(v, u) for v, u, _ in G1C._quantities(self.REAL)}
+        assert not self._flag("PUNGI DE 20 cm")
+
+    def test_a_bare_value_does_not_license_an_arbitrary_unit(self):
+        # "6-In-1" puts a bare 6 in the truth pack. That must not make "6 W" --
+        # a tenfold understatement of the real 120 W -- traceable.
+        assert self._flag("DOAR 6 W CONSUM")
+        assert self._flag("17 cm LATIME")
+        assert self._flag("1 AN GARANTIE")
+
+    def test_unit_spelled_out_is_the_same_unit(self):
+        # The listing writes "120W"; printed copy may reasonably say "120 Watt".
+        assert not self._flag("PUTERE 120 Watt")
+        assert not self._flag("PUTERE 120 W")
+
+    def test_a_different_unit_is_still_a_different_claim(self):
+        # Alias folding must not become unit conversion.
+        assert self._flag("75 W")
+        assert self._flag("120 kPa")
+
+    def test_unit_conversion_is_rejected_by_design(self):
+        # 0.12 kW is arithmetically 120 W, but the copy compiler is told never to
+        # convert: a converted figure is a different printed claim, and the
+        # operator's own wording is what we can defend.
+        assert self._flag("0.12 kW")
+
+    def test_non_string_text_does_not_crash_the_verifier(self):
+        truth = {"operator_confirmed": {"title": self.REAL}}
+        assert G1C.verify_numbers_traceable([{"slot": "s", "text": 75}], truth) == []
+        assert G1C.verify_numbers_traceable([{"slot": "s", "text": None}], truth) == []

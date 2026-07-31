@@ -43,10 +43,111 @@ SPEC_PATTERN = re.compile(
 
 NUMBER_PATTERN = re.compile(r"\d+(?:[.,]\d+)?")
 
+# Ratios a marketplace image is ever actually expressed in.
+COMMON_RATIOS = ((1, 1), (3, 4), (4, 3), (4, 5), (5, 4), (2, 3), (3, 2),
+                 (9, 16), (16, 9), (5, 7), (7, 5))
+
+
+def measure_aspect_ratio(image_path: str | pathlib.Path) -> str:
+    """Measure a reference's aspect ratio from the file, as a clean ratio string.
+
+    Deterministic on purpose. Asked for it, the design briefer returned "32:41"
+    for a 736x982 image -- a literal pixel reduction that no one designs to. The
+    ratio drives the layout-adaptation instruction, so it must be measured, not
+    described.
+    """
+    from PIL import Image
+    with Image.open(image_path) as im:
+        w, h = im.size
+    value = w / h
+    best = min(COMMON_RATIOS, key=lambda r: abs(r[0] / r[1] - value))
+    # Only snap when the real ratio is genuinely close to a designed one.
+    if abs(best[0] / best[1] - value) <= 0.03:
+        return f"{best[0]}:{best[1]}"
+    from fractions import Fraction
+    frac = Fraction(value).limit_denominator(20)
+    return f"{frac.numerator}:{frac.denominator}"
+
 
 def _normalise_for_lookup(text: str) -> str:
     """Lowercase and strip separators so '75 kPa' matches '75kpa'."""
     return re.sub(r"[\s ._\-–—/×x]+", "", (text or "").lower())
+
+
+# A figure with its unit: "75kpa", "75 kPa", "1,000 W", "17x20 cm". Unit optional.
+# The boundary excludes a preceding DIGIT, not a preceding word character: with
+# \w the "20cm" in "17x20cm" was swallowed (the "17x" match consumed the x, and
+# the lookbehind then blocked 20), so the product's own bag width was untraceable
+# and legitimate copy saying "20 cm" was rejected.
+_QUANTITY = re.compile(
+    r"(?<![\d.,])(\d{1,3}(?:[.,]\d{3})+|\d+(?:[.,]\d+)?)\s*([a-zA-Z\u00b5\u03bc\u00b0]{1,6})?")
+
+# Spellings of the same unit. Copy is written for humans and the listing title
+# for a search engine, so the same figure legitimately appears as "120W" and
+# "120 Watt". Different UNITS are still different claims -- no conversion here.
+_UNIT_ALIASES = {
+    "watt": "w", "watts": "w", "wat": "w", "vati": "w", "vat": "w",
+    "kilowatt": "kw", "kilowatts": "kw",
+    "kpa": "kpa", "kilopascal": "kpa", "kilopascali": "kpa",
+    "centimetri": "cm", "centimetru": "cm", "cm": "cm",
+    "milimetri": "mm", "milimetru": "mm",
+    "metri": "m", "metru": "m",
+    "kilograme": "kg", "kilogram": "kg", "grame": "g", "gram": "g",
+    "litri": "l", "litru": "l", "mililitri": "ml",
+    "volti": "v", "volt": "v", "volts": "v",
+    "ore": "h", "ora": "h", "hours": "h", "hour": "h",
+    "minute": "min", "minutes": "min",
+}
+
+
+def _canonical_unit(unit: str) -> str:
+    u = (unit or "").lower()
+    return _UNIT_ALIASES.get(u, u)
+
+
+# Short words that may follow a number without being its unit.
+_NON_UNIT_WORDS = frozenset({
+    "de", "in", "si", "la", "cu", "and", "or", "the", "buc", "pcs", "x",
+    "ani", "luni", "zile", "din", "pe", "st", "nd", "rd", "th",
+})
+
+
+def _parse_number(raw: str) -> float | None:
+    """'1,000' -> 1000.0, '7.5' -> 7.5, '7,5' -> 7.5.
+
+    A dot or comma followed by exactly three digits (with digits before it) is a
+    thousands separator; anything else is a decimal separator. That covers both
+    "1,000 W" and Romanian/German "1.000 W" without mistaking the decimal "7,5"
+    for a thousands group.
+    """
+    raw = raw.strip()
+    if re.fullmatch(r"\d{1,3}(?:[.,]\d{3})+", raw):
+        return float(re.sub(r"[.,]", "", raw))
+    try:
+        return float(raw.replace(",", "."))
+    except ValueError:
+        return None
+
+
+def _quantities(text: str) -> list[tuple[float, str, str]]:
+    """Extract (value, lowercased unit, original span) triples.
+
+    The original span is kept so an error message can quote the copy exactly as
+    written -- reporting "70 kpa" for text that says "70 kPa" makes the operator
+    hunt for a defect that is not there.
+    """
+    out: list[tuple[float, str, str]] = []
+    for m in _QUANTITY.finditer(text or ""):
+        value = _parse_number(m.group(1))
+        if value is None:
+            continue
+        raw_unit = (m.group(2) or "").lower()
+        if raw_unit in _NON_UNIT_WORDS:
+            unit, span = "", m.group(1)
+        else:
+            unit, span = _canonical_unit(raw_unit), m.group(0).strip()
+        out.append((value, unit, span))
+    return out
 
 
 def truth_blob(truth: dict) -> str:
@@ -63,29 +164,48 @@ def truth_blob(truth: dict) -> str:
 
 
 def verify_numbers_traceable(slots: list[dict], truth: dict) -> list[dict]:
-    """Every figure in the copy must appear in the operator's product info.
+    """Every figure in the copy must be evidenced by the operator's product info.
 
-    This is the mechanical guard against the single most damaging error in the
-    pipeline. The 2026-07-11 run put a wrong "70 kPa" on the image (the product
-    is 75 kPa) because a human typed it into a follow-up instruction, and it took
-    an explicit fact-defence line to undo. Once the fact list is frozen it is
-    repeated verbatim on every subsequent round (R3), so a wrong number does not
-    spoil one image, it spoils all of them.
+    Compares (value, unit) pairs, not substrings. The substring version passed
+    several real errors: "7.5 W" matched a truth pack containing only "75 kPa"
+    (the separator was stripped), "75 W" matched SKU "X7500", and "75 W" matched
+    "75 kPa" because the unit was ignored -- while "1000 W" was wrongly rejected
+    against "1,000 W".
 
-    Returns a list of untraceable findings; empty means every number checks out.
+    A figure carrying a unit must match both value and unit. A bare count
+    ("100 DE PUNGI") only has to match a value, since the noun carries the
+    meaning.
+
+    This is the mechanical guard against the most damaging error in the
+    pipeline: the 2026-07-11 run printed "70 kPa" for a 75 kPa product because a
+    human typed it. Frozen copy is repeated verbatim on every round (R3), so a
+    wrong figure spoils the job rather than one image.
+
+    Returns a list of untraceable findings; empty means everything checks out.
     """
-    blob = _normalise_for_lookup(truth_blob(truth))
+    known = _quantities(truth_blob(truth))
+    known_values = {v for v, _, _ in known}
+    known_pairs = {(v, u) for v, u, _ in known if u}
+
     findings: list[dict] = []
     for slot in slots or []:
-        text = (slot.get("text") or "").strip()
-        for match in NUMBER_PATTERN.finditer(text):
-            number = match.group(0)
-            if _normalise_for_lookup(number) not in blob:
+        text = str(slot.get("text") or "").strip()
+        for value, unit, span in _quantities(text):
+            if unit:
+                # No "the value exists somewhere unitless, so any unit is fine"
+                # escape hatch: "6-In-1" in the title must not license "6 W".
+                ok = (value, unit) in known_pairs
+            else:
+                ok = value in known_values
+            if not ok:
+                shown = span
                 findings.append({
                     "slot": slot.get("slot"),
                     "text": text,
-                    "number": number,
-                    "why": "this figure does not appear in the product information",
+                    "number": shown,
+                    "why": ("this value with this unit does not appear in the "
+                            "product information" if unit else
+                            "this figure does not appear in the product information"),
                 })
     return findings
 
