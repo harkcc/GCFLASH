@@ -336,6 +336,12 @@ product. None may appear on our image in any language. If you see any of them
 reproduced, that is a replace_claim_text repair and it outranks cosmetic issues:
 {donor_claims}
 
+The target canvas is {canvas}, and the current candidate measures {measured}.
+The canvas is fixed by the job contract and is INDEPENDENT of the reference's own
+shape (R5). The reference being a different shape is not a defect: our layout is
+supposed to be re-distributed into {canvas}. Only choose recompose_aspect if the
+candidate itself is NOT {canvas}.
+
 Rounds used: {used} of {budget}.
 
 Repair menu -- choose EXACTLY ONE:
@@ -362,6 +368,7 @@ Output JSON matching the schema exactly, with no extra commentary."""
 
 def judge_candidate(candidate_png: str, reference_image: str, *, facts: dict,
                     traits: dict, repairs_used: int, round_budget: int,
+                    canvas: str = "1:1", measured_aspect: str = "unknown",
                     donor_claims: list[str] | None = None,
                     provider: str = "codex", timeout_s: int = 300,
                     model: str | None = None,
@@ -379,7 +386,7 @@ def judge_candidate(candidate_png: str, reference_image: str, *, facts: dict,
     prompt = JUDGE_PROMPT.format(
         facts=facts_lines, native_text=native, traits=traits_lines,
         used=repairs_used, budget=round_budget, menu=menu_lines,
-        donor_claims=donor)
+        canvas=canvas, measured=measured_aspect, donor_claims=donor)
     out = _call(prompt, [candidate_png, reference_image], SCHEMA_JUDGE,
                 provider=provider, timeout_s=timeout_s, model=model,
                 reasoning_effort=reasoning_effort, node="repair_judge")

@@ -400,10 +400,18 @@ def cmd_review(args: argparse.Namespace) -> int:
         print("no candidate image to review", file=sys.stderr)
         return 1
 
+    canvas = (req.get("intent") or {}).get("canvas") or "1:1"
+    with Image.open(candidate) as _im:
+        cand_ratio = _im.width / _im.height
+    measured = f"{cand_ratio:.3f} ({_im.width}x{_im.height})"
+    want = _canvas_ratio(canvas)
+    on_canvas = want is not None and abs(cand_ratio - want) <= ASPECT_TOLERANCE
+
     print(f"judging {candidate} ...", flush=True)
     try:
         decision = describers.judge_candidate(
             str(candidate), ref_image, facts=facts, traits=traits,
+            canvas=canvas, measured_aspect=measured,
             donor_claims=facts.get("must_replace_from_reference") or [],
             repairs_used=st.repairs_used, round_budget=st.round_budget,
             provider=args.provider, timeout_s=args.describe_timeout,
@@ -414,11 +422,26 @@ def cmd_review(args: argparse.Namespace) -> int:
         print(f"STOP (SPEC §11 condition 3): {exc}", file=sys.stderr)
         return 5
 
+    # R5 is a contract, not a preference: the target canvas is independent of the
+    # reference's shape. A judge that has just been shown a 3:4 reference will
+    # otherwise propose reshaping a correct 1:1 candidate to match it, which both
+    # breaks the contract and burns a repair round.
+    contradiction = None
+    if decision.get("repair") == "recompose_aspect" and on_canvas:
+        contradiction = (
+            f"the candidate already measures {measured} and the target canvas is "
+            f"{canvas}; recompose_aspect would move it OFF contract (R5)")
+        decision["_runner_warning"] = contradiction
+
     rec = st.rounds[-1]
     _write_json(st.round_dir(rec) / "judge_decision.json", decision)
     st.update_round(rec.index, judge_decision=decision)
 
     print(json.dumps(decision, ensure_ascii=False, indent=2))
+    if contradiction:
+        print(f"\nWARNING: {contradiction}.\n"
+              f"  Do not run this repair as prefilled. Pick another repair, or "
+              f"approve.", file=sys.stderr)
     print(f"\nbudget: {st.repairs_used}/{st.round_budget} used, "
           f"{st.budget_remaining} left")
     print("The judge only PREFILLS (R10). You decide:\n"

@@ -583,3 +583,67 @@ class TestNumberVerifierSecondReviewRegressions:
         truth = {"operator_confirmed": {"title": self.REAL}}
         assert G1C.verify_numbers_traceable([{"slot": "s", "text": 75}], truth) == []
         assert G1C.verify_numbers_traceable([{"slot": "s", "text": None}], truth) == []
+
+
+class TestJudgeKnowsTheCanvasContract:
+    """Regression from the 2026-07-30 v2 run.
+
+    Shown a 3:4 reference and a correct 1:1 candidate, the judge chose
+    recompose_aspect and asked to reshape the square into a portrait "to follow
+    the reference's vertical flow". It had never been told the target canvas, so
+    the only shape it could compare against was the reference's. R5 says the
+    target canvas is a first-class parameter, independent of the reference.
+    """
+
+    def test_prompt_states_the_canvas_is_independent_of_the_reference(self):
+        from workflow.reference_generation import describers
+        p = describers.JUDGE_PROMPT
+        assert "{canvas}" in p and "{measured}" in p
+        assert "INDEPENDENT of the reference" in p
+        assert "is not a defect" in p
+
+    def test_judge_forwards_canvas_and_measurement(self, monkeypatch):
+        from workflow.reference_generation import describers
+        seen = {}
+
+        def fake_call(prompt, images, schema, **kw):
+            seen["prompt"] = prompt
+            return {"repair": "add_breathing_room", "prompt_delta": "x" * 250,
+                    "fact_violations": [], "product_integrity_ok": True,
+                    "stop_recommended": False, "reason": "r"}
+
+        monkeypatch.setattr(describers, "_call", fake_call)
+        describers.judge_candidate(
+            "/tmp/c.png", "/tmp/r.jpg",
+            facts={"copy_slots": [{"slot": "brand", "text": "EXCITAT"}]},
+            traits={"product_visual_traits": ["black body"]},
+            repairs_used=0, round_budget=8,
+            canvas="1:1", measured_aspect="1.000 (1600x1600)")
+        # The prompt is hard-wrapped, so compare on normalised whitespace.
+        flat = " ".join(seen["prompt"].split())
+        assert "The target canvas is 1:1" in flat
+        assert "1.000 (1600x1600)" in flat
+        assert "Only choose recompose_aspect if the candidate itself is NOT 1:1" \
+            in flat
+
+    def test_donor_claims_reach_the_judge(self, monkeypatch):
+        from workflow.reference_generation import describers
+        seen = {}
+
+        def fake_call(prompt, images, schema, **kw):
+            seen["prompt"] = prompt
+            return {"repair": "reduce_clutter", "prompt_delta": "x" * 250,
+                    "fact_violations": [], "product_integrity_ok": True,
+                    "stop_recommended": False, "reason": "r"}
+
+        monkeypatch.setattr(describers, "_call", fake_call)
+        describers.judge_candidate(
+            "/tmp/c.png", "/tmp/r.jpg",
+            facts={"copy_slots": [{"slot": "brand", "text": "EXCITAT"}]},
+            traits={"product_visual_traits": ["black body"]},
+            repairs_used=0, round_budget=8,
+            donor_claims=["1 год гарантии", "20 пакетов в подарок"])
+        # The judge is the only place that can see a donor claim reproduced in
+        # the render, so it has to know what they were.
+        assert "1 год гарантии" in seen["prompt"]
+        assert "20 пакетов в подарок" in seen["prompt"]
